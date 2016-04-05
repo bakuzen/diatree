@@ -33,18 +33,15 @@ public class DiaTreeServlet  extends HttpServlet implements Configurable {
 	 */
 	private static final long serialVersionUID = 6004898157870048197L;
 	
-	private ArrayBlockingQueue<PrintWriter> writers;
 	
 	HttpServletResponse response;
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
-		writers = new ArrayBlockingQueue<PrintWriter>(1);
+		
 	}
 
-	
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
      
         //content type must be set to text/event-stream
         response.setContentType("text/event-stream");   
@@ -62,7 +59,6 @@ public class DiaTreeServlet  extends HttpServlet implements Configurable {
 				e.printStackTrace();
 			}
         }
- 
     }
     
     public void send(String data) {
@@ -71,23 +67,14 @@ public class DiaTreeServlet  extends HttpServlet implements Configurable {
 		try {
 			PrintWriter w = response.getWriter();
 			
-			JSONParser parser = new JSONParser();
-			
-			String s = "{\r\n  \"name\": \""+data+"\",\r\n  \"children\": [\r\n    {\r\n     \"name\": \"parent A\",\r\n     \"children\": [\r\n       {\"name\": \"child A1\"},\r\n       {\"name\": \"child A2\"},\r\n       {\r\n       \"name\": \"child A3\",\r\n       \"children\": [\r\n        {\"name\":\"gchild1\"}\r\n       ]\r\n       \r\n       }\r\n     ]\r\n    },{\r\n     \"name\": \"parent B\",\r\n     \"children\": [\r\n       {\"name\": \"child B1\"},\r\n       {\"name\": \"child B2\"}\r\n     ]\r\n    }\r\n  ]\r\n}";
-			Object obj = parser.parse(s);
-			
-	    	w.write("data:" + obj.toString() + "\n\n");
+	    	w.write("data:" + data + "\n\n");
 	    	w.flush();
+	    	
 		} 
 		catch (IOException e) {
 			e.printStackTrace();
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
+		} 
     }
-
 
 
 }

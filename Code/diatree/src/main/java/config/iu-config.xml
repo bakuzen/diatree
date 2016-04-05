@@ -14,7 +14,7 @@
         <property name="baseData" value="${baseData}"/>
         <!--property name="brutalPruner" value="trivialPruner"/-->
         <propertylist name="hypChangeListeners">
-          <item>speechToServlet</item>
+          <item>tree</item>
 <!--         	<item>printer</item> -->
 <!--           <item>${dialogueManager}</item> 
            <item>topdownrevoketestmodule</item>
@@ -34,7 +34,7 @@
         </propertylist>
     </component>
     
-    <component name="speechToServlet" type="module.SpeechToServlet">
+    <component name="tree" type="module.TreeModule">
     	<property name="servlet" value="diatree"/>
     	<propertylist name="hypChangeListeners">
 		</propertylist>
