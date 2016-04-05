@@ -1,0 +1,143 @@
+
+    <property name="deltifier" value="none"/>
+    <property name="deltifierParam" value="0"/>
+    <property name="baseData" value="baseData"/>
+    <property name="dialogueManager" value="echoDialogueManager"/>
+
+    <!-- ******************************************************** -->
+    <!-- The incremental processing configuration                 -->
+    <!-- ******************************************************** -->
+    <!--component name="currentASRHypothesis" type="test.inpro.sphinx.RevokingSphinxASRSource"-->
+    <component name="currentASRHypothesis" type="inpro.incremental.source.SphinxASR">
+        <property name="frontend" value="${frontend}"/>
+        <property name="asrFilter" value="${deltifier}"/>
+        <property name="baseData" value="${baseData}"/>
+        <!--property name="brutalPruner" value="trivialPruner"/-->
+        <propertylist name="hypChangeListeners">
+          <item>speechToServlet</item>
+<!--         	<item>printer</item> -->
+<!--           <item>${dialogueManager}</item> 
+           <item>topdownrevoketestmodule</item>
+           <item>iuBasedFloorTracker</item> -->
+<!--
+           <item>iuBasedFloorTracker</item>
+           <item>${dialogueManager}</item>
+           <item>labelWriter2</item>
+           <item>${semanticComposer}</item>
+           <item>hypViewer</item>
+           <item>outputForSimpleText</item>
+           <item>iuNetworkViewer</item>
+           <item>consoleNotifier</item>
+           <item>oaaNotifier</item>
+           <item>iSS</item>
+-->
+        </propertylist>
+    </component>
+    
+    <component name="speechToServlet" type="module.SpeechToServlet">
+    	<property name="servlet" value="diatree"/>
+    	<propertylist name="hypChangeListeners">
+		</propertylist>
+    </component>
+    
+    <component name="diatree" type="servlet.DiaTreeServlet"/>
+    
+    <component name="vad" type="inpro.incremental.source.VoiceActivityDetector">
+        <propertylist name="hypChangeListeners">
+         <item>printer</item>
+		</propertylist>
+	</component>
+	
+	 <component name="printer" type="inpro.incremental.processor.IUPrinter">
+        <propertylist name="hypChangeListeners">
+		</propertylist>
+	</component>
+    
+    <component name="googleASR" type="inpro.incremental.source.GoogleASR">
+        <property name="apiKey" value="AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"/>
+    	<property name="samplingRate" value="44100"/>
+    	<property name="lang" value="${language}"/>
+        <property name="frontend" value="${frontend}"/>
+        <propertylist name="hypChangeListeners">
+	</propertylist>
+
+    </component>
+
+    
+    <component name="kaldiASR" type="inpro.incremental.source.KaldiASR">
+        <property name="server" value="localhost"/>
+        <property name="port" value="5010"/>
+        <propertylist name="hypChangeListeners">
+	</propertylist>
+    </component>    
+    
+    <component name="topdownrevoketestmodule" type="work.inpro.sphinx.topdownrevoke.TopDownRevokeTestModule" />
+    
+    <component name="iSS" type="inpro.incremental.processor.SynthesisModule">
+    	<property name="dispatcher" value="dispatchStream" />
+    </component>
+
+    <component name="iuBasedFloorTracker" type="inpro.incremental.processor.IUBasedFloorTracker">
+        <property name="useProsody" value="true" />
+        <property name="risingProsodyTimeout" value="150" />
+        <property name="anyProsodyTimeout" value="600" />
+        <propertylist name="ftlisteners">
+            <item>${dialogueManager}</item>
+        </propertylist>
+    </component>
+    <component name="textBasedFloorTracker" type="inpro.incremental.processor.TextBasedFloorTracker">
+        <propertylist name="listeners">
+            <item>${dialogueManager}</item>
+        </propertylist>
+    </component>
+
+    <component name="echoDialogueManager" type="demo.inpro.system.echodm.dm.EchoDialogueManager">
+        <property name="actionManager" value="audioActionManager"/>
+        <property name="floorTracker" value="iuBasedFloorTracker"/>
+        <property name="dispatchStream" value="dispatchStream" />
+        <propertylist name="hypChangeListeners">
+            <item>audioActionManager</item>
+        </propertylist>
+    </component>
+    
+    <component name="baseData" type="inpro.incremental.basedata.BaseData">
+    	<property name="eotFeatureAggregator" value="eotFeatureAggregator" />
+    </component>
+    
+    <component name="eotFeatureAggregator" type="inpro.features.EOTFeatureAggregator">
+    	<property name="pitchWindows" value="5 10 20 50"/>
+    	<property name="energyWindows" value="5 10 20 50"/>
+    	<property name="vEnergyWindows" value="5 10 20 50"/>
+    	<property name="timeIntoAudio" value="false"/>
+    	<property name="includeFrameCount" value="false"/>
+    </component>
+
+    <component name="none" type="inpro.incremental.deltifier.ASRWordDeltifier"/>
+    <component name="nonIncr" type="inpro.incremental.deltifier.NonIncrementalDeltifier"/>
+    <component name="fixedLag" type="inpro.incremental.deltifier.FixedLagDeltifier">
+        <property name="fixedLag" value="${deltifierParam}"/>
+    </component>
+    <component name="smoothing" type="inpro.incremental.deltifier.SmoothingDeltifier">
+        <property name="smoothing" value="${deltifierParam}"/>
+    </component>
+
+    <component name="outputForSimpleText" type="inpro.incremental.sink.OutputForSimpleText"/>
+    <component name="consoleNotifier" type="inpro.incremental.sink.ConsoleNotifier"/>
+    <component name="tedNotifier" type="inpro.incremental.sink.TEDviewNotifier"/>
+    <component name="labelWriter2" type="inpro.incremental.sink.LabelWriter"/>
+    <component name="hypViewer" type="inpro.incremental.sink.CurrentHypothesisViewer"/>
+<!--    <component name="iuNetworkViewer" type="inpro.incremental.sink.IUNetworkViewer"/> -->
+
+    <component name="dotNotifier" type="inpro.incremental.sink.IUNetworkToDOT">
+        <property name="runDot" value="true" />
+        <property name="outputFormat" value="png" />
+    </component>
+
+    <component name="dispatchStream" type="inpro.audio.DispatchStream">
+        <property name="sendSilence" value="true"/>
+    </component>
+
+    <component name="dispatchStream2" type="inpro.audio.DispatchStream">
+        <property name="sendSilence" value="true"/>
+    </component>
+    
