@@ -7,6 +7,7 @@ import org.apache.catalina.connector.Connector;
 import org.apache.catalina.startup.Tomcat;
 import org.apache.log4j.Logger;
 
+import servlet.JsonServletTest;
 import servlet.MainServlet;
 
 import java.io.File;
@@ -52,6 +53,9 @@ public class EmbeddedTomcat {
 
 	    Tomcat.addServlet(ctx, "main", new MainServlet());
 	    ctx.addServletMapping("/main", "main");
+	    
+	    Tomcat.addServlet(ctx, "json", new JsonServletTest());
+	    ctx.addServletMapping("/json", "json");
 	    
 
   }

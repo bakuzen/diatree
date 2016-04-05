@@ -28,6 +28,7 @@ var svg = d3.select("body").append("svg")
    .attr("height",height)    
    .append("g")    
    .attr("transform","translate(100,0)"); 
+   
 d3.json("js/dendrogram01.json", function(error, root){    
    var nodes = cluster.nodes(root);    
    var links = cluster.links(nodes);    
