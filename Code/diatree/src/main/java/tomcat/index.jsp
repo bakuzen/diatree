@@ -5,7 +5,6 @@
 
 <html>
 <body onload="start()">
-    ASR: <span id="asr"></span>
      
 <meta charset="utf-8" />
 <style>
@@ -26,9 +25,6 @@
 <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>     
     <script type="text/javascript">
     function start() {
-
-
-        
         var width = 600; 
         var height = 500; 
         var cluster = d3.layout.cluster()    
@@ -37,18 +33,14 @@
            .projection (function(d) { return [d.y, d.x];}); 
 
         var svg; 
-        
  
         var eventSource = new EventSource("diatree");
          
             eventSource.onmessage = function(event) {
 
-//             d3.select("div.parent").html("");
-//             d3.select("g.parent").selectAll("*").remove();
-//             d3.selectAll("svg > *").remove();
-            
             var myJson = event.data;
 
+            
             if (svg) {
                 d3.select("body").selectAll("svg").remove();
             }
