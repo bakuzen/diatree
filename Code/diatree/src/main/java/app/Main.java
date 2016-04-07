@@ -16,6 +16,7 @@ import edu.cmu.sphinx.util.props.S4Component;
 import inpro.apps.SimpleReco;
 import inpro.apps.util.RecoCommandLineParser;
 import inpro.incremental.PushBuffer;
+import inpro.incremental.source.GoogleASR;
 import inpro.incremental.source.SphinxASR;
 import servlet.DiaTreeServlet;
 import tomcat.EmbeddedTomcat;
@@ -26,7 +27,7 @@ public class Main {
 	public final static String PROP_CURRENT_HYPOTHESIS = "currentASRHypothesis";	
 	
 	@S4Component(type = DiaTreeServlet.class)
-	public final static String DIATREE_SERVLET = "diatree";	
+	public final static String DIATREE_SERVLET = "diatree";
 	
 	
 	private static PropertySheet ps;
@@ -43,8 +44,10 @@ public class Main {
 		tomcat.start();
 		
 		SphinxASR webSpeech = (SphinxASR) cm.lookup(PROP_CURRENT_HYPOTHESIS);
+//		GoogleASR webSpeech = (GoogleASR) cm.lookup("googleASR");
 		
-		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M"});
+//		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"});
+		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M"});	
 		
 		new Thread(){ 
 			public void run() {

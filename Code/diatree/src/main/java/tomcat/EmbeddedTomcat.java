@@ -54,9 +54,11 @@ public class EmbeddedTomcat {
 	    Tomcat.addServlet(ctx, "main", new MainServlet());
 	    ctx.addServletMapping("/main", "main");
 	    
-	    Tomcat.addServlet(ctx, "json", new JsonServletTest());
-	    ctx.addServletMapping("/json", "json");
-  }
+//	    Tomcat.addServlet(ctx, "test", new JsonServletTest());
+//	    ctx.addServletMapping("/test", "test");
+	    
+	}
+	    
 	
 	public void start() throws LifecycleException {
 	    tomcat.start();

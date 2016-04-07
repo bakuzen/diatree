@@ -11,6 +11,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import model.Constants;
+import sium.nlu.context.Properties;
+import sium.nlu.context.Property;
 import sium.nlu.language.LingEvidence;
 
 /*
@@ -98,10 +100,13 @@ public class Domain {
 	private void createEmptyTables(String s) throws SQLException {
 		Statement stat = createStatement();
 		stat.execute(String.format("CREATE TABLE intent (iid INTEGER PRIMARY KEY AUTOINCREMENT, intent TEXT)")); // an intent is an abstraction over concepts
+		stat.execute(String.format("CREATE TABLE intent_seuqence (left INTEGER, right INTEGER)")); // intents that go together (e.g., food+time+place)
 		stat.execute(String.format("CREATE TABLE concept (cid INTEGER PRIMARY KEY AUTOINCREMENT, concept TEXT)")); // concepts abstract over chunks of utterances
 		stat.execute(String.format("CREATE TABLE concept_intent (cid INTEGER, iid INTEGER)")); // concepts group to make intents
+		stat.execute(String.format("CREATE TABLE property (pid INTEGER PRIMARY KEY AUTOINCREMENT, property TEXT)")); // concepts abstract over chunks of utterances
+		stat.execute(String.format("CREATE TABLE property_concept (pid INTEGER, cid INTEGER)")); // concepts group to make intents		
 		stat.execute(String.format("CREATE TABLE word (wid INTEGER PRIMARY KEY AUTOINCREMENT, word TEXT)")); // words represent the utterances
-		stat.execute(String.format("CREATE TABLE sequence (left INTEGER, right INTEGER, cid INTEGER)")); // word sequences map to concepts
+		stat.execute(String.format("CREATE TABLE sequence (left INTEGER, right INTEGER, cid INTEGER)")); // word sequences map to concepts (via properties, but that's not represented here)
 	}
 
 	public int getNumberOfConceptsForIntent(int intentID) throws SQLException {
@@ -186,7 +191,7 @@ public class Domain {
 	}
 
 	public List<LingEvidence> getUtterancesForConcept(int cid) throws SQLException {
-		
+//		TODO: FIX THIS TO WORK VIA PROPERTIES
 		ArrayList<LingEvidence> ling = new ArrayList<LingEvidence>();
 		Statement stat = createStatement();
 		String query = "SELECT w1.word as word1, w2.word as word2 FROM sequence, word w1, word w2 WHERE w1.wid = sequence.left AND w2.wid = sequence.right AND cid = %d";
@@ -249,18 +254,86 @@ public class Domain {
 	}
 	
 	public void offerNewConceptIntentAttachment(String concept, String intent) throws SQLException {
-		if (!checkAttacmentExistence(concept, intent)) {
+		if (!checkConceptIntentAttacmentExistence(concept, intent)) {
 			attachConceptToIntent(concept, intent);
 		}
 	}
 
-	private boolean checkAttacmentExistence(String concept, String intent) throws SQLException {
+	private boolean checkConceptIntentAttacmentExistence(String concept, String intent) throws SQLException {
 		int cid = getConceptID(concept);
 		int iid = getIntentID(intent);
 		Statement stat = createStatement();
 		ResultSet res = stat.executeQuery(String.format("SELECT * FROM concept_intent WHERE cid=%d AND iid=%d", cid, iid));
 		if (res.isAfterLast()) return false;
 		return true;
+	}
+	
+	private boolean checkPropertyConceptAttacmentExistence(String property, String concept) throws SQLException {
+		int pid = getPropertyID(property);
+		int cid = getConceptID(concept);
+		Statement stat = createStatement();
+		ResultSet res = stat.executeQuery(String.format("SELECT * FROM property_concept WHERE pid=%d AND cid=%d", pid, cid));
+		if (res.isAfterLast()) return false;
+		return true;
+	}	
+
+	public void offerNewProperty(String property) throws SQLException {
+		List<String> properties = this.getProperties();
+		if (properties.contains(property)) return;
+		this.addNewProperty(property);
+	}
+
+	private void addNewProperty(String property) throws SQLException {
+		Statement stat = createStatement();
+		property = property.replace(" ", "_");
+		stat.execute(String.format("INSERT INTO property (property) VALUES ('%s')", property));		
+	}
+
+	private List<String> getProperties() throws SQLException {
+		Statement stat = createStatement();
+		ResultSet result = stat.executeQuery(String.format("SELECT distinct property FROM property"));
+		List<String> properties = new ArrayList<String>();
+		while (result.next()) {
+			properties.add(result.getString("property"));
+		}
+		return properties;
+	}
+
+	private void attachPropertyToConcept(String p, String c) throws SQLException {
+		int cid = getConceptID(c);
+		int pid = getPropertyID(p);
+		Statement stat = createStatement();
+		stat.execute(String.format("INSERT INTO property_concept (pid, cid) VALUES (%d, %d)", pid, cid));
+	}
+
+	private int getPropertyID(String property) throws SQLException {
+		Statement stat = createStatement();
+		property = property.replace(" " , "_");
+		ResultSet result = stat.executeQuery(String.format("SELECT pid FROM property WHERE property='%s'", property));
+		return result.getInt("pid");
+	}
+
+	public void offerNewPropertyConceptAttachment(String p, String c) throws SQLException {
+		if (!checkPropertyConceptAttacmentExistence(p, c)) {
+			attachPropertyToConcept(p, c);
+		}
+	}
+
+	public Properties<Property<String>> getPropertiesForConcept(String concept) throws SQLException {
+		Statement stat = createStatement();
+		ResultSet result = stat.executeQuery(String.format("SELECT distinct property FROM property p, concept c, property_concept pc where c.cid = pc.cid AND p.pid = pc.pid and c.concept = '%s'", concept));
+		Properties<Property<String>> properties =  new Properties<Property<String>>();
+		while (result.next()) {
+			properties.add(new Property<String>(result.getString("property")));
+		}
+		return properties;
+	}
+
+	public String getIntentForConcept(String concept) throws SQLException {
+		Statement stat = createStatement();
+		ResultSet result = stat.executeQuery(String.format("SELECT intent FROM intent i, concept c, concept_intent ci where c.cid = ci.cid AND i.iid = ci.iid and c.concept = '%s'", concept));
+		return result.getString("intent");
+		
 	}
 
 }

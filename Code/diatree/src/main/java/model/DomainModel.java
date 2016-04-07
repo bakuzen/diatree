@@ -7,6 +7,8 @@ import java.util.TreeSet;
 
 import model.db.Domain;
 import sium.nlu.context.Context;
+import sium.nlu.context.Properties;
+import sium.nlu.context.Property;
 import sium.nlu.grounding.Grounder;
 import sium.nlu.language.LingEvidence;
 import sium.nlu.language.mapping.CoocurrenceMapping;
@@ -40,14 +42,15 @@ public class DomainModel {
 	}
 	
 	/*
-	 * This takes information out of the database and trains a maxent model. The class labels are the concepts. The features
-	 * are a bunch of bigrams. Essentially, we are training concept-level language models. 
+	 * This takes information out of the database and trains a maxent model. The class labels are the properties of the concepts. The features
+	 * are a bunch of ngrams. Essentially, we are training propery-level language models. 
 	 */
 	public void train() throws SQLException {
 		for (Integer cid : db.getConceptIDs()) {
 			Context<String,String> context = new Context<String,String>();
 			String concept = db.getConcept(cid);
-			context.addPropertyToEntity(concept, concept);
+			Properties<Property<String>> properties = db.getPropertiesForConcept(concept);
+			context.setEntity(concept, properties);
 			for (LingEvidence ling : db.getUtterancesForConcept(cid)) {
 				mapping.addEvidenceToTrain(ling, context.getPropertiesForEntity(concept));
 			}
@@ -59,13 +62,12 @@ public class DomainModel {
 	public void newUtterance() {
 		grounder.clear();
 		ling = new LingEvidence();
-		this.addIncrement(Constants.S_TAG);
+//		this.addIncrement(Constants.S_TAG);
 	}
 	
 	/*
 	 * The Context object is from SIUM. It holds information about what can be predicted. In this case, 
-	 * we want a distribution over all the concepts (their properties are themselves...something brought
-	 * over from the reference resolution literature...I won't explain that any further). 
+	 * we want a distribution over all the concepts (from their properties). 
 	 */
 	public Context<String,String> getContext() {
 		
@@ -73,7 +75,8 @@ public class DomainModel {
 		try {
 			for (String intent: db.getIntents()) {
 				for (String concept : db.getConceptsForIntent(intent)) {
-					context.addPropertyToEntity(intent, concept);
+					Properties<Property<String>> properties = db.getPropertiesForConcept(concept);
+					context.setEntity(concept, properties);
 				}
 			}
 		} 
@@ -92,46 +95,36 @@ public class DomainModel {
 		if (ling.hasKey("w1"))
 			ling.addEvidence("w2", ling.getValue("w1"));
 		ling.addEvidence("w1", word);
-		grounder.groundIncrement(getContext(), mapping.applyEvidenceToContext(ling));
+		Distribution<String> groundedResult = mapping.applyEvidenceToContext(ling);
+//		did someone say a word that is the same spelling as a property? Give that property some credit. 
+		if (getContext().getPropertiesSet().contains(word)) { 
+			groundedResult.setProbabilityForItem(word, 1.0);
+		}
+//		TODO: handle word spelling distance?
+		grounder.groundIncrement(getContext(), groundedResult);
 		return grounder.getPosterior();
 		
 	}
 	
 
-	public HashMap<String,String> getPredictedFrame() throws SQLException {
+	public Frame getPredictedFrame() throws SQLException {
 		
 		Distribution<String> frameDist = new Distribution<String>(getPosterior());
 		frameDist.normalize();
-		List<Double> margins = frameDist.getMargins();
-
-//		we need to prune off slots that fall under a certain criterion: find the largest margin, 
-//		if that margin is greater than some defined value, prune everything below it from the distribution
-		double max = Double.MIN_VALUE;
-		for (Double margin: margins) if (margin > max) max = margin;
-		int n = margins.indexOf(max) + 1;
 		
-//		This actually does the pruning by getting the items above the margin		
-		TreeSet<DistRow<String>> posterior = frameDist.getDistribution();
-		if (max > Constants.CUTOFF) {
-			posterior = getPosterior().getTopN(n);
+		
+//		We take all the concepts and find what intent they belong to, then we return
+//		a frame of intents (above a threshold) with a distribution (over concepts) for each intent value
+		Frame frame = new Frame();
+		
+		for (DistRow<String> row : frameDist.getDistribution()) {
+			String intent = db.getIntentForConcept(row.getEntity());
+			frame.add(intent, row.getEntity(), row.getProbability());
 		}
 		
-		HashMap<String,String> frame = new HashMap<String,String>();
-		Distribution<String> predictedConcepts = getCombinedProperties();
+		frame.normalizeAll();
 		
-//		now we step through the intents that were not pruned and find each one's argmax concept
-		for (DistRow<String> intent : posterior) {
-			int minRank = Integer.MAX_VALUE;
-			String minConcept = null;
-			for (String concept : db.getConceptsForIntent(intent.getEntity())) {
-				int rank = predictedConcepts.findRank(concept);
-				if (rank < minRank) {
-					minConcept = concept;
-					minRank = rank;
-				}
-			}
-			frame.put(intent.getEntity(), minConcept);
-		}
+		
 		
 		return frame;
 		
@@ -175,11 +168,10 @@ public class DomainModel {
 	public Distribution<String> getCombinedProperties() {
 		return this.grounder.getCombinedProperties();
 	}
-	
-	public Distribution<String> endUtterance() {
-		return addIncrement(Constants.S_TAG);
-		
-	}
+//	
+//	public Distribution<String> endUtterance() {
+//		return addIncrement(Constants.S_TAG);
+//	}
 	
 
 }

@@ -1,0 +1,57 @@
+{ "intent": "food", 
+    "concepts": [
+	{ "concept":"thai",
+	  "properties": [
+	   {"property":"thai"},
+	   {"property":"curry"},
+	   {"property":"spicy"},
+	   {"property":"rice"},
+	   {"property":"vegeterian"}
+	  ]
+	},
+	{ "concept":"indian",
+	  "properties": [
+	   {"property":"indian"},
+	   {"property":"curry"},
+	   {"property":"spicy"},
+	   {"property":"rice"},
+	   {"property":"vegeterian"}
+	  ]
+	},
+	{ "concept":"french",
+	  "properties": [
+	   {"property":"french"},
+	   {"property":"cheese"}
+	  ]
+	},
+	{ "concept":"mexican",
+	  "properties": [
+	   {"property":"mexican"},
+	   {"property":"spicy"},
+	   {"property":"tortilla"}
+	  ]
+	}
+     ],
+
+    "examples" : [
+     { "concept":"thai",
+       "example":"i want thai food"
+     },
+     { "concept":"thai",
+       "example":"i want some thai curry"
+     },
+     { "concept":"indian",
+       "example":"i want indian food"
+     },
+     { "concept":"indian",
+       "example":"i want some indian curry"
+     },
+     { "concept":"french",
+       "example":"i want french food"
+     },
+     { "concept":"mexican",
+       "example":"i want mexican food"
+     }
+
+    ]
+}

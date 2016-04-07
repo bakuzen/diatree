@@ -20,20 +20,7 @@ public class JsonServletTest extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-			JSONObject json = new JSONObject();
-			
-			JSONParser parser = new JSONParser();
-			
-			String s = "{\r\n  \"name\": \"diatree!\",\r\n  \"children\": [\r\n    {\r\n     \"name\": \"parent A\",\r\n     \"children\": [\r\n       {\"name\": \"child A1\"},\r\n       {\"name\": \"child A2\"},\r\n       {\r\n       \"name\": \"child A3\",\r\n       \"children\": [\r\n        {\"name\":\"gchild1\"}\r\n       ]\r\n       \r\n       }\r\n     ]\r\n    },{\r\n     \"name\": \"parent B\",\r\n     \"children\": [\r\n       {\"name\": \"child B1\"},\r\n       {\"name\": \"child B2\"}\r\n     ]\r\n    }\r\n  ]\r\n}";
-			
-			try {
-				Object obj = parser.parse(s);
-				request.setAttribute("json", obj.toString());
-			} catch (ParseException e) {
-				e.printStackTrace();
-			}
-		
-			request.getRequestDispatcher("json.jsp").forward(request, response);
+			request.getRequestDispatcher("index.jsp").forward(request, response);
 		
 	}
 	

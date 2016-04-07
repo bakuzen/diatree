@@ -1,0 +1,45 @@
+{ "intent": "location", 
+    "concepts": [
+	{ "concept":"downtown",
+	  "properties": [
+	   {"property":"downtown"}
+	  ]
+	},
+	{ "concept":"university",
+	  "properties": [
+	   {"property":"university"},
+	   {"property":"uni"}
+	  ]
+	},
+	{ "concept":"park",
+	  "properties": [
+	   {"property":"park"}
+	  ]
+	},
+    { "concept":"near",
+	  "properties": [
+	   {"property":"nearby"},
+	   {"property":"near"},
+	   {"property":"here"}
+	  ]
+	}
+
+     ],
+
+    "examples" : [
+     { "concept":"downtown",
+       "example":"around downtown"
+     },
+     { "concept":"park",
+       "example":"around the park"
+     },
+     { "concept":"university",
+       "example":"around the uni"
+     },   
+     { "concept":"near",
+       "example":"around here"
+     }
+
+
+    ]
+}
