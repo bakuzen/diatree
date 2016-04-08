@@ -14,7 +14,7 @@
         <property name="baseData" value="${baseData}"/>
         <!--property name="brutalPruner" value="trivialPruner"/-->
         <propertylist name="hypChangeListeners">
-          <item>traverse</item>
+          <item>tree</item>
 <!--         	<item>printer</item> -->
 <!--           <item>${dialogueManager}</item> 
            <item>topdownrevoketestmodule</item>
@@ -36,6 +36,7 @@
     
     <component name="tree" type="module.TreeModule">
     	<property name="servlet" value="diatree"/>
+    	<property name="domain" value="sigdial"/>
     	<propertylist name="hypChangeListeners">
 		</propertylist>
     </component>
@@ -61,12 +62,12 @@
     
     <component name="googleASR" type="inpro.incremental.source.GoogleASR">
         <property name="apiKey" value="AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"/>
-    	<property name="samplingRate" value="44100"/>
+    	<property name="samplingRate" value="16000"/>
     	<property name="lang" value="${language}"/>
         <property name="frontend" value="${frontend}"/>
         <propertylist name="hypChangeListeners">
-        	<item>printer</item>
-        	<item>traverse</item>
+<!--         	<item>printer</item> -->
+        	<item>tree</item>
 		</propertylist>
 
     </component>

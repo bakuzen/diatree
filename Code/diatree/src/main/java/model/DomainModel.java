@@ -106,6 +106,11 @@ public class DomainModel {
 		
 	}
 	
+	public void revokeIncrement(String word) {
+		grounder.undoStep();
+	}
+	
+	
 
 	public Frame getPredictedFrame() throws SQLException {
 		
@@ -123,8 +128,6 @@ public class DomainModel {
 		}
 		
 		frame.normalizeAll();
-		
-		
 		
 		return frame;
 		
@@ -172,6 +175,7 @@ public class DomainModel {
 //	public Distribution<String> endUtterance() {
 //		return addIncrement(Constants.S_TAG);
 //	}
+
 	
 
 }

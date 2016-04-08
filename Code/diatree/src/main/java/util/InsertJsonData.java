@@ -16,6 +16,7 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import model.Constants;
+import model.DomainModel;
 import model.db.Domain;
 
 public class InsertJsonData {
@@ -54,6 +55,8 @@ public class InsertJsonData {
 		db.createNewDomain(domain);
 		db.setDomain(domain);
 		
+
+		
 		try { 
 			walk(filePath);
 		} 
@@ -64,6 +67,10 @@ public class InsertJsonData {
 //			destroy();
 		}
 
+		
+		DomainModel model = new DomainModel(db, domain);
+		model.train();
+		
 //		writer.close();
 		
 	}

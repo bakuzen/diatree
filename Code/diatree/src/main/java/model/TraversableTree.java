@@ -13,6 +13,11 @@ public class TraversableTree {
 	private Node root;
 	private LinkedList<Node> trail;
 	
+	public TraversableTree() {
+		this.setRoot(null);
+		trail = new LinkedList<Node>();
+	}
+	
 	public TraversableTree(Node r) {
 		this.setRoot(r);
 		trail = new LinkedList<Node>();
@@ -56,10 +61,19 @@ public class TraversableTree {
 	public void addCurrent(Node n) {
 		trail.push(n);
 	}
+	
+	public boolean inTrail(String n) {
+		for (Node t : this.trail) 
+			if (t.getName().equals(n)) {
+				return true;
+			}
+		return false;
+	}
 
 	public String getJsonString() {
 		
 		try {
+			if (getRoot() == null) return null;
 			JSONObject rootJSON = new JSONObject();
 			rootJSON.put("name", getRoot().getName());
 			if (getRoot().hasBeenTraversed()) {
@@ -115,6 +129,41 @@ public class TraversableTree {
 			trail.peek().toggleOffHasBeenTraversed();
 			trail.pop();
 		}
+	}
+
+	public String getJsonForFrame(Frame predictedFrame) {
+		
+		Frame argmaxFrame = predictedFrame.getArgMaxFrame();
+		
+		this.setRoot(new Node(""));
+		if (this.getCurrent() == null) this.addCurrent(getRoot());
+		
+		if (argmaxFrame.size() == 0) {
+			for (String intent : predictedFrame.getIntents())
+				this.getRoot().addChild(new Node(intent));
+				this.addCurrent(getRoot());
+		}
+		else {
+			for (String intent : predictedFrame.getArgMaxFrame().getIntents()) {
+				if (!this.inTrail(intent)) {
+					Node current = getCurrent();
+					Node n = new Node(intent + ":"+ predictedFrame.getValueForIntent(intent));
+					current.addChild(n);
+					this.addCurrent(n);
+				}
+				else {
+					
+				}
+			}
+		}
+		
+		
+		return getJsonString();
+	}
+
+	public void clear() {
+		this.trail.clear();
+		this.setRoot(null);
 	}
 	
 	

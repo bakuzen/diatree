@@ -46,9 +46,9 @@ public class TraverseModule extends IUModule {
 		
 		der.addChild(new Node("balken"));
 		der.addChild(new Node("strich"));
-		der.addChild(new Node("l"));
 		
 		die.addChild(new Node("schlange"));
+		die.addChild(new Node("mensa"));
 		
 		das.addChild(new Node("kreuz"));
 		das.addChild(new Node("ding"));
@@ -66,12 +66,12 @@ public class TraverseModule extends IUModule {
 	protected void leftBufferUpdate(Collection<? extends IU> ius, List<? extends EditMessage<? extends IU>> edits) {
 		
 		for (EditMessage<? extends IU> edit : edits) {
-			String word = edit.getIU().toPayLoad();
+			String word = edit.getIU().toPayLoad().toLowerCase();
 			System.out.println(edit);
 			switch(edit.getType()) {
 			
 			case ADD:
-				if (word.equals("OKAY"))
+				if (word.equals("okay"))
 					tree.resetTraversal();
 				tree.newWord(word);
 				send(tree.getJsonString());
