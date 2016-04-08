@@ -1,43 +1,44 @@
 package module;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 import edu.cmu.sphinx.util.props.PropertyException;
 import edu.cmu.sphinx.util.props.PropertySheet;
-import edu.cmu.sphinx.util.props.S4Component;
+import edu.cmu.sphinx.util.props.S4String;
 import inpro.incremental.IUModule;
 import inpro.incremental.unit.EditMessage;
+import inpro.incremental.unit.EditType;
 import inpro.incremental.unit.IU;
-import model.TraversableTree;
-import servlet.DiaTreeServlet;
+import model.DomainModel;
+import model.db.Domain;
+import model.iu.FrameIU;
 
-public class TreeModule extends IUModule {
+public class INLUModule extends IUModule {
 
+	@S4String(defaultValue = "test")
+	public final static String DOMAIN = "domain";
 	
-	@S4Component(type = DiaTreeServlet.class)
-	public final static String DIATREE_SERVLET = "servlet";
-	
-
-	private DiaTreeServlet servlet;
-	private TraversableTree tree;
-	
+	private DomainModel model;
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
 		super.newProperties(ps);
-		servlet = (DiaTreeServlet) ps.getComponent(DIATREE_SERVLET);
+		Domain db = new Domain();
+		try {
+			db.setDomain(ps.getString(DOMAIN));
+			model = new DomainModel(db, ps.getString(DOMAIN));
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
 	}
-
-	private void send(String data) {
-		if (data == null) return;
-		servlet.send(data);
-	}
-
+	
 	@Override
 	protected void leftBufferUpdate(Collection<? extends IU> ius, List<? extends EditMessage<? extends IU>> edits) {
-		
 		for (EditMessage<? extends IU> edit : edits) {
 			
 			String word = edit.getIU().toPayLoad().toLowerCase();
@@ -46,8 +47,9 @@ public class TreeModule extends IUModule {
 			case ADD:
 				
 				if (word.equals("okay")) {
-					tree.clear();
+					model.newUtterance();
 				}
+				model.addIncrement(word);
 				update();
 				break;
 			case COMMIT:
@@ -58,20 +60,23 @@ public class TreeModule extends IUModule {
 				break;
 			default:
 				break;
-				
 			}
 		}
 	}
 
 	private void update() {
-//		try {
-			tree = new TraversableTree();
-//			String json = tree.getJsonForFrame(model.getPredictedFrame());
-//			System.out.println(json);
-//			send(json);
-//		} 
-//		catch (SQLException e) {
-//			e.printStackTrace();
-//		}
+		List<EditMessage<FrameIU>> edits = new ArrayList<EditMessage<FrameIU>>();
+		
+		
+		try {
+			edits.add(new EditMessage<FrameIU>(EditType.ADD, new FrameIU(model.getPredictedFrame())));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		super.rightBuffer.setBuffer(edits);
+		super.notifyListeners();
+		
 	}
+
 }

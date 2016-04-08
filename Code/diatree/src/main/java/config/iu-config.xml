@@ -14,32 +14,40 @@
         <property name="baseData" value="${baseData}"/>
         <!--property name="brutalPruner" value="trivialPruner"/-->
         <propertylist name="hypChangeListeners">
-          <item>tree</item>
+          <item>inlu</item>
 <!--         	<item>printer</item> -->
-<!--           <item>${dialogueManager}</item> 
-           <item>topdownrevoketestmodule</item>
-           <item>iuBasedFloorTracker</item> -->
-<!--
-           <item>iuBasedFloorTracker</item>
-           <item>${dialogueManager}</item>
-           <item>labelWriter2</item>
-           <item>${semanticComposer}</item>
-           <item>hypViewer</item>
-           <item>outputForSimpleText</item>
-           <item>iuNetworkViewer</item>
-           <item>consoleNotifier</item>
-           <item>oaaNotifier</item>
-           <item>iSS</item>
--->
         </propertylist>
     </component>
     
-    <component name="tree" type="module.TreeModule">
-    	<property name="servlet" value="diatree"/>
+     <component name="inlu" type="module.INLUModule">
     	<property name="domain" value="sigdial"/>
     	<propertylist name="hypChangeListeners">
+    	 	<item>dm</item>
 		</propertylist>
-    </component>
+    </component> 
+
+    <component name="dm" type="module.DialogueManager">
+       <property name="domainFile" value="domains/sigdial/opendial/sigdial.xml"/>
+       <property name="showGUI" value="false"/>
+    <propertylist name="openDialModules">
+       <item>decision</item>
+    </propertylist>       
+    <propertylist name="hypChangeListeners">
+    </propertylist>
+   </component>  
+   
+    <component name="decision" type="module.opendial.ConfigurableModule">
+        <property name="effectVariable" value="decision"/>
+	    <propertylist name="hypChangeListeners">
+ 	   	 	<item>printer</item> 
+	    </propertylist>
+    </component>     
+    
+    <component name="tree" type="module.TreeModule">
+    	<property name="servlet" value="diatree"/>
+    	<propertylist name="hypChangeListeners">
+		</propertylist>
+    </component>    
     
     <component name="traverse" type="module.TraverseModule">
     	<property name="servlet" value="diatree"/>

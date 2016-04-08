@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<domain>
+
+
+	<initialstate>
+	
+		<variable id="FrameIU">
+			<value>null</value>
+		</variable>
+	
+		
+	</initialstate>
+
+	<model trigger="FrameIU">
+	
+		<rule id="rule1">
+			<case>
+				<condition>
+					<if var="FrameIU" relation="!=" value=""/>
+				</condition>
+				<effect>
+					<set var="decision" value="{FrameIU}"/>
+				</effect>				
+			</case>
+		</rule>
+		
+	</model>
+
+</domain>
