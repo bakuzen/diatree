@@ -5,22 +5,48 @@
 
 	<initialstate>
 	
-		<variable id="FrameIU">
-			<value>null</value>
-		</variable>
-	
+		<variable id="SlotIU"><value>null</value></variable>
 		
 	</initialstate>
 
-	<model trigger="FrameIU">
+
+
+	<model trigger="SlotIU">
 	
-		<rule id="rule1">
+		<rule id="ruleVerify">
 			<case>
 				<condition>
-					<if var="FrameIU" relation="!=" value=""/>
+					<if var="SlotIU" relation="&gt;" value="0.85"/>
+					<if var="SlotIU" relation="in" value="confirm"/>
+<!-- 					<if var="confirmState" relation="=" value="true"/> -->
 				</condition>
 				<effect>
-					<set var="decision" value="{FrameIU}"/>
+					<set var="decision" value="verified"/>
+					<set var="confirmState" value="false"/>
+				</effect>				
+			</case>
+		</rule>		
+	
+		<rule id="ruleConfirm">
+			<case>
+				<condition>
+					<if var="SlotIU" relation="&gt;" value="0.65"/>
+					<if var="SlotIU" relation="&lt;" value="0.75"/>
+				</condition>
+				<effect>
+					<set var="decision" value="confirm"/>
+					<set var="confirmState" value="true"/>
+				</effect>				
+			</case>
+		</rule>	
+	
+		<rule id="ruleSelect">
+			<case>
+				<condition>
+					<if var="SlotIU" relation="&gt;" value="0.74"/>
+				</condition>
+				<effect>
+					<set var="decision" value="select"/>
 				</effect>				
 			</case>
 		</rule>

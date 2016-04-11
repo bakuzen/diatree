@@ -1,0 +1,25 @@
+{ "intent": "price", 
+    "concepts": [
+	{ "concept":"high",
+	  "properties": [
+	   {"property":"expensive"},
+	   {"property":"high"},
+	   {"property":"fancy"}
+	  ]
+	},
+	{ "concept":"medium",
+	  "properties": [
+	   {"property":"middle"},
+	   {"property":"medium"},
+	   {"property":"normal"}
+	  ]
+	},
+	{ "concept":"low",
+	  "properties": [
+	   {"property":"cheap"},
+	   {"property":"quick"},
+	   {"property":"fast"}
+	  ]
+	}
+     ]
+}

@@ -39,7 +39,7 @@
     <component name="decision" type="module.opendial.ConfigurableModule">
         <property name="effectVariable" value="decision"/>
 	    <propertylist name="hypChangeListeners">
- 	   	 	<item>printer</item> 
+ 	   	 	<item>tree</item> 
 	    </propertylist>
     </component>     
     

@@ -108,13 +108,14 @@ public class InsertJsonData {
 					db.offerNewPropertyConceptAttachment(propertyName, conceptName);
 				}
 			}
-			
-			JSONArray examples = json.getJSONArray("examples");
-			for (int i=0; i<examples.length(); i++) {
-				JSONObject example = new JSONObject(new JSONTokener(examples.get(i).toString()));
-				String conceptName = example.getString("concept");
-				String exampleString = example.getString("example");
-				db.addExampleForConcept(conceptName, exampleString);
+			if (json.has("examples")) {
+				JSONArray examples = json.getJSONArray("examples");
+				for (int i=0; i<examples.length(); i++) {
+					JSONObject example = new JSONObject(new JSONTokener(examples.get(i).toString()));
+					String conceptName = example.getString("concept");
+					String exampleString = example.getString("example");
+					db.addExampleForConcept(conceptName, exampleString);
+				}
 			}
 	}
 	

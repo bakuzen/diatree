@@ -84,7 +84,8 @@ public class Main {
 //			}
 //		}.start();
 		
-		String[] uwords = {"yeah", "i", "want", "some", "thai", "food", "around", "downtown"};
+//		String[] uwords = {"i", "want", "some", "cheap", "thai", "yes", "food", "around", "downtown"};
+		String[] uwords = {"food", "indian", "no", "thai", "yes", "cheap", "downtown"};
 		List<String> words = Arrays.asList(uwords);
 		
 		WordIU prev = WordIU.FIRST_WORD_IU;

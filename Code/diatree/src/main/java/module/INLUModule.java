@@ -12,8 +12,11 @@ import inpro.incremental.IUModule;
 import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.EditType;
 import inpro.incremental.unit.IU;
+import inpro.incremental.unit.SlotIU;
 import model.DomainModel;
+import model.Frame;
 import model.db.Domain;
+import model.iu.ConfidenceIU;
 import model.iu.FrameIU;
 
 public class INLUModule extends IUModule {
@@ -21,7 +24,7 @@ public class INLUModule extends IUModule {
 	@S4String(defaultValue = "test")
 	public final static String DOMAIN = "domain";
 	
-	private DomainModel model;
+	public static DomainModel model;
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
@@ -42,6 +45,7 @@ public class INLUModule extends IUModule {
 		for (EditMessage<? extends IU> edit : edits) {
 			
 			String word = edit.getIU().toPayLoad().toLowerCase();
+			System.out.println("CURRENT WORD: " + word);
 			switch(edit.getType()) {
 			
 			case ADD:
@@ -65,17 +69,27 @@ public class INLUModule extends IUModule {
 	}
 
 	private void update() {
-		List<EditMessage<FrameIU>> edits = new ArrayList<EditMessage<FrameIU>>();
+		
 		
 		
 		try {
-			edits.add(new EditMessage<FrameIU>(EditType.ADD, new FrameIU(model.getPredictedFrame())));
+			
+//			for (String intent : model.getPredictedFrame().getIntents()) {
+//				System.out.println(intent + " " + model.getPredictedFrame().getEntropyForIntent(intent));
+//			}
+			
+			for (String intent : model.getPredictedFrame().getIntents()) {
+				List<EditMessage<? extends IU>> edits = new ArrayList<EditMessage<? extends IU>>();
+				FrameIU frameIU = new FrameIU(model.getPredictedFrame());
+				SlotIU slotIU = frameIU.getSlotIUForIntent(intent);
+				if (slotIU == null || slotIU.getDistribution() == null || slotIU.getDistribution().isEmpty()) continue; // this sometimes happens when newUtterance() is called
+				edits.add(new EditMessage<SlotIU>(EditType.ADD, slotIU));
+				super.rightBuffer.setBuffer(edits);
+				super.notifyListeners();
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		super.rightBuffer.setBuffer(edits);
-		super.notifyListeners();
 		
 	}
 

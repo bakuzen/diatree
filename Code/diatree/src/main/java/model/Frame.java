@@ -29,10 +29,18 @@ public class Frame {
 		}
 	}
 	
+	public double getEntropyForIntent(String intent) {
+		return frame.get(intent).getEntropy();
+	}
+	
 	public Frame getArgMaxFrame() {
+		return getArgMaxFrame(Constants.CUTOFF);
+	}
+	
+	public Frame getArgMaxFrame(double cutoff) {
 		Frame f = new Frame();
 		for (String intent: frame.keySet()) {
-			if (frame.get(intent).getEntropy() < Constants.CUTOFF)
+			if (frame.get(intent).getConfidence() > cutoff)
 				f.add(intent, frame.get(intent).getArgMax().getEntity(), frame.get(intent).getArgMax().getProbability());
 		}
 		return f;
@@ -56,6 +64,10 @@ public class Frame {
 	
 	public String toString() {
 		return frame.toString();
+	}
+
+	public Distribution<String> getDistributionForIntent(String intent) {
+		return this.frame.get(intent);
 	}
 
 }

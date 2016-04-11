@@ -2,7 +2,7 @@ package model;
 
 public class Constants {
 	
-	public static final double CUTOFF = 0.99; 
+	public static final double CUTOFF = 0.7; 
 
 	public static final String BASE_FILE_PATH = "domains/";
 	

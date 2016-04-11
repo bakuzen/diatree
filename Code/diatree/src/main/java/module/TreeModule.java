@@ -1,6 +1,7 @@
 package module;
 
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 import edu.cmu.sphinx.util.props.PropertyException;
@@ -9,6 +10,7 @@ import edu.cmu.sphinx.util.props.S4Component;
 import inpro.incremental.IUModule;
 import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.IU;
+import inpro.incremental.unit.SlotIU;
 import model.TraversableTree;
 import servlet.DiaTreeServlet;
 
@@ -21,12 +23,14 @@ public class TreeModule extends IUModule {
 
 	private DiaTreeServlet servlet;
 	private TraversableTree tree;
+	private LinkedList<SlotIU> confirmStack;
 	
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
 		super.newProperties(ps);
 		servlet = (DiaTreeServlet) ps.getComponent(DIATREE_SERVLET);
+		confirmStack = new LinkedList<SlotIU>();
 		
 	}
 
@@ -40,27 +44,51 @@ public class TreeModule extends IUModule {
 		
 		for (EditMessage<? extends IU> edit : edits) {
 			
-			String word = edit.getIU().toPayLoad().toLowerCase();
-			switch(edit.getType()) {
-			
-			case ADD:
-				
-				if (word.equals("okay")) {
-					tree.clear();
+			SlotIU decisionIU = (SlotIU) edit.getIU();
+			SlotIU slotIU = (SlotIU) edit.getIU().groundedIn().get(0);
+			String concept = slotIU.getDistribution().getArgMax().getEntity();
+			String decision = decisionIU.getDistribution().getArgMax().getEntity();
+			if ("verified".equals(decision)){
+				SlotIU sIU = popConfirmStack();
+				String c = sIU.getDistribution().getArgMax().getEntity();
+
+				if ("yes".equals(concept)) {
+					System.out.println("verified! need to expand " + c);
 				}
-				update();
-				break;
-			case COMMIT:
-				break;
-			case REVOKE:
-//				TODO we need to be able to revoke, but only when the graph seems to deem it necessary
-//				model.revokeIncrement(word);
-				break;
-			default:
-				break;
-				
+				if ("no".equals(concept)) {
+					System.out.println("verification failed! need to abort " + c);
+				}
+				resetUtterance();
+			}
+			else if ("confirm".equals(decision)) {
+				pushToConfirmStack(slotIU);
+				System.out.println("need to confirm " + concept);
+			}
+			else if ("select".equals(decision)) {
+				if (!checkConfirmStackIsEmpty()) {
+					throw new RuntimeException("Cannot select until the stack has been handled!");
+				}
+				System.out.println("need to expand " + concept);
+
+				resetUtterance();
 			}
 		}
+	}
+
+	private void pushToConfirmStack(SlotIU slotIU) {
+		confirmStack.push(slotIU);
+	}
+	
+	private boolean checkConfirmStackIsEmpty() {
+		return confirmStack.isEmpty();
+	}
+	
+	private SlotIU popConfirmStack() {
+		return confirmStack.pop();
+	}
+
+	private void resetUtterance() {
+		INLUModule.model.newUtterance();
 	}
 
 	private void update() {
