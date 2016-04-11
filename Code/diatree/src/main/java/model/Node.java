@@ -8,9 +8,13 @@ public class Node implements Comparable<Node> {
 	private String name;
 	private TreeSet<Node> children;
 	private boolean hasBeenTraversed;
+	
 	public Node(String n) {
 		this.setName(n);
 		this.children = new TreeSet<Node>();
+	}
+	public void clearChildren() {
+		children.clear();
 	}
 	public void addChild(Node child) {
 		children.add(child);
@@ -39,5 +43,14 @@ public class Node implements Comparable<Node> {
 	@Override
 	public int compareTo(Node o) {
 		return this.getName().compareTo(o.getName());
+	}
+	public Node getChildNode(String intent) {
+		for (Node child : getChildren())
+			if (child.getName().equals(intent))
+				return child;
+		return null;
+	}
+	public String toString() {
+		return "node:"+this.getName() + " children:" + this.getChildren();
 	}
 }

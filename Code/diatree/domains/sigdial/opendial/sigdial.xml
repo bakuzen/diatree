@@ -51,6 +51,17 @@
 			</case>
 		</rule>
 		
+		<rule id="ruleWait">
+			<case>
+				<condition>
+ 					<if var="SlotIU" relation="&lt;" value="0.66"/>
+				</condition>
+				<effect>
+					<set var="decision" value="wait"/>
+				</effect>				
+			</case>
+		</rule>		
+		
 	</model>
 
 </domain>

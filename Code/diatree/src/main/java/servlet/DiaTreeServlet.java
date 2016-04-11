@@ -62,18 +62,29 @@ public class DiaTreeServlet  extends HttpServlet implements Configurable {
     }
     
     public void send(String data) {
-    	if (data.contains("<")) return;
-    	if (response == null) return;
-		try {
-			PrintWriter w = response.getWriter();
+    	
+    	new Thread(){ 
+			public void run() {
+		    	if (data.contains("<")) return;
+		    	while (response == null) {
+		    		try {
+						Thread.sleep(500);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+		    	}
+				try {
+					PrintWriter w = response.getWriter();
+			    	w.write("data:" + data + "\n\n");
+			    	w.flush();
+			    	
+				} 
+				catch (IOException e) {
+					e.printStackTrace();
+				} 
 			
-	    	w.write("data:" + data + "\n\n");
-	    	w.flush();
-	    	
-		} 
-		catch (IOException e) {
-			e.printStackTrace();
-		} 
+	    	}
+		}.start();
     }
 
 

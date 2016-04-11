@@ -25,10 +25,10 @@
 <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>     
     <script type="text/javascript">
     function start() {
-        var width = 600; 
+        var width = 900; 
         var height = 500; 
         var cluster = d3.layout.cluster()    
-           .size([height, width-200]); 
+           .size([height, width-400]); 
         var diagonal = d3.svg.diagonal()    
            .projection (function(d) { return [d.y, d.x];}); 
 

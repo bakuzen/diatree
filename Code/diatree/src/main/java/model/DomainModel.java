@@ -3,6 +3,7 @@ package model;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 import java.util.TreeSet;
 
 import model.db.Domain;
@@ -132,6 +133,19 @@ public class DomainModel {
 		return frame;
 		
 	}
+	
+	public List<String> getPossibleIntents() {
+		try {
+			List<String> intents = this.db.getIntents();
+			if (intents.contains("confirm")) {
+				intents.remove("confirm");
+			}
+			return intents;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 
 
@@ -175,6 +189,15 @@ public class DomainModel {
 //	public Distribution<String> endUtterance() {
 //		return addIncrement(Constants.S_TAG);
 //	}
+
+	public List<String> getPossibleIntentsForConcept(String intent) {
+		try {
+			return this.getDB().getConceptsForIntent(intent);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 	
 

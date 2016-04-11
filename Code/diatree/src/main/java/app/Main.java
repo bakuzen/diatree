@@ -93,7 +93,7 @@ public class Main {
 			WordIU wiu = new WordIU(word, prev, null);
 			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
 			notifyListeners(hypListeners);
-			Thread.sleep(500);
+			Thread.sleep(2500);
 			prev = wiu;
 		}
 		
