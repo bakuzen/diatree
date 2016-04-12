@@ -54,32 +54,35 @@ public class TreeModule extends IUModule {
 		for (EditMessage<? extends IU> edit : edits) {
 			
 			SlotIU decisionIU = (SlotIU) edit.getIU();
+			if (edit.getIU().groundedIn().isEmpty()) continue; // simple check in case something gets through that shouldn't
 			SlotIU slotIU = (SlotIU) edit.getIU().groundedIn().get(0);
 			String concept = slotIU.getDistribution().getArgMax().getEntity();
 			String intent = slotIU.getName();
 			String decision = decisionIU.getDistribution().getArgMax().getEntity();
 //			System.out.println("decision:" + decision + " intent:" + intent + " concept:" + concept);
 			if ("verified".equals(decision)){
-				SlotIU sIU = popConfirmStack();
-				String c = sIU.getDistribution().getArgMax().getEntity();
-				String i = sIU.getName();
-
-				if ("yes".equals(concept)) {
-					expand(i, c);
+				if (!confirmStack.isEmpty()) {
+					SlotIU sIU = popConfirmStack();
+					String c = sIU.getDistribution().getArgMax().getEntity();
+					String i = sIU.getName();
+	
+					if ("yes".equals(concept)) {
+						expand(i, c);
+					}
+					if ("no".equals(concept)) {
+						abortConfirmation(i, c);
+					}
+					resetUtterance();
 				}
-				if ("no".equals(concept)) {
-					abortConfirmation(i, c);
-				}
-				resetUtterance();
 			}
 			else if ("confirm".equals(decision)) {
 				pushToConfirmStack(slotIU);
 				offerConfirmation(intent, concept);
 			}
 			else if ("select".equals(decision)) {
-				if (!checkConfirmStackIsEmpty()) {
-					throw new RuntimeException("Cannot select until the stack has been handled!");
-				}
+//				if (!checkConfirmStackIsEmpty()) {
+//					throw new RuntimeException("Cannot select until the stack has been handled!");
+//				}
 				expand(intent, concept);
 
 				resetUtterance();
@@ -103,7 +106,9 @@ public class TreeModule extends IUModule {
 
 	private void expand(String intent, String concept) {
 		Node top = getTopNode();
-		top.getChildNode(intent).clearChildren();
+		Node child = top.getChildNode(intent);
+//		if (child == null) return;
+		child.clearChildren();
 		Node n = new Node(intent +":" + concept);
 		top.clearChildren();
 		top.addChild(n);
@@ -122,6 +127,7 @@ public class TreeModule extends IUModule {
 		Node top = getTopNode();
 		
 		Node forExpansion = top.getChildNode(intent);
+		if (forExpansion == null) return;
 		for (String concept : getPossibleConceptsForIntent(intent)) {
 			forExpansion.addChild(new Node(concept));
 		}

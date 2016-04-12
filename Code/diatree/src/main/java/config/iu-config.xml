@@ -74,8 +74,8 @@
     	<property name="lang" value="${language}"/>
         <property name="frontend" value="${frontend}"/>
         <propertylist name="hypChangeListeners">
-<!--         	<item>printer</item> -->
-        	<item>tree</item>
+        	<item>printer</item>
+        	<item>inlu</item>
 		</propertylist>
 
     </component>

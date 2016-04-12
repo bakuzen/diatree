@@ -65,37 +65,37 @@ public class Main {
 //		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M"});	
 		
 		
-//		new Thread(){ 
-//			public void run() {
-//				
-//				try {
-//					SimpleReco simpleReco = new SimpleReco(cm, rclp);
-//					simpleReco.recognizeInfinitely();
-//				} 
-//				catch (PropertyException e) {
-//					e.printStackTrace();
-//				} 
-//				catch (IOException e) {
-//					e.printStackTrace();
-//				} 
-//				catch (UnsupportedAudioFileException e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		}.start();
+		new Thread(){ 
+			public void run() {
+				
+				try {
+					SimpleReco simpleReco = new SimpleReco(cm, rclp);
+					simpleReco.recognizeInfinitely();
+				} 
+				catch (PropertyException e) {
+					e.printStackTrace();
+				} 
+				catch (IOException e) {
+					e.printStackTrace();
+				} 
+				catch (UnsupportedAudioFileException e) {
+					e.printStackTrace();
+				}
+			}
+		}.start();
 		
 //		String[] uwords = {"i", "want", "some", "cheap", "thai", "yes", "food", "around", "downtown"};
-		String[] uwords = {"food", "indian", "no", "thai", "yes", "cheap", "downtown"};
-		List<String> words = Arrays.asList(uwords);
-		
-		WordIU prev = WordIU.FIRST_WORD_IU;
-		for (String word : words) {
-			WordIU wiu = new WordIU(word, prev, null);
-			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-			notifyListeners(hypListeners);
-			Thread.sleep(2500);
-			prev = wiu;
-		}
+//		String[] uwords = {"food", "indian", "no", "thai", "yes", "cheap", "downtown"};
+//		List<String> words = Arrays.asList(uwords);
+//		
+//		WordIU prev = WordIU.FIRST_WORD_IU;
+//		for (String word : words) {
+//			WordIU wiu = new WordIU(word, prev, null);
+//			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+//			notifyListeners(hypListeners);
+//			Thread.sleep(500);
+//			prev = wiu;
+//		}
 		
 	}
 	
