@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Collection;
 import java.util.LinkedList;
 
 import org.json.JSONArray;
@@ -12,6 +13,7 @@ public class TraversableTree {
 	
 	private Node root;
 	private LinkedList<Node> trail;
+	private int depth;
 	
 	public TraversableTree() {
 		this.setRoot(null);
@@ -76,6 +78,7 @@ public class TraversableTree {
 			if (getRoot() == null) return null;
 			JSONObject rootJSON = new JSONObject();
 			rootJSON.put("name", getRoot().getName());
+			rootJSON.put("depth", getDepth());
 			if (getRoot().hasBeenTraversed()) {
 				rootJSON.put("type", "red");
 				rootJSON.put("level", "red");
@@ -91,6 +94,10 @@ public class TraversableTree {
 		return null;
 	}
 	
+	private int getDepth() {
+		return this.depth;
+	}
+
 	private void jsonHelp(Node n, JSONObject j) throws JSONException {
 		
 		if (n.getChildren().size() > 0) {
@@ -164,6 +171,11 @@ public class TraversableTree {
 	public void clear() {
 		this.trail.clear();
 		this.setRoot(null);
+	}
+
+	public void setDepth(int nodeDepth) {
+		this.depth = nodeDepth;
+		
 	}
 	
 	

@@ -21,6 +21,7 @@
     
      <component name="inlu" type="module.INLUModule">
     	<property name="domain" value="sigdial"/>
+    	<property name="module" value="tree"/>
     	<propertylist name="hypChangeListeners">
     	 	<item>dm</item>
 		</propertylist>
@@ -55,7 +56,9 @@
 		</propertylist>
     </component>    
     
-    <component name="diatree" type="servlet.DiaTreeServlet"/>
+    <component name="diatree" type="servlet.DiaTreeServlet">
+     <property name="module" value="tree"/>
+    </component>
     
     <component name="vad" type="inpro.incremental.source.VoiceActivityDetector">
         <propertylist name="hypChangeListeners">

@@ -53,4 +53,9 @@ public class Node implements Comparable<Node> {
 	public String toString() {
 		return "node:"+this.getName() + " children:" + this.getChildren();
 	}
+	public boolean hasChild(String intent) {
+		Node n = getChildNode(intent);
+		if (n == null) return false;
+		return true;
+	}
 }

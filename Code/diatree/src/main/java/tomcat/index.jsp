@@ -25,7 +25,7 @@
 <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>     
     <script type="text/javascript">
     function start() {
-        var width = 900; 
+        var width = 700; 
         var height = 500; 
         var cluster = d3.layout.cluster()    
            .size([height, width-400]); 
@@ -38,8 +38,14 @@
          
             eventSource.onmessage = function(event) {
 
+
+
             var myJson = event.data;
 
+            root = JSON.parse(myJson);
+
+            width = 200 * root.depth;
+            cluster = d3.layout.cluster().size([height, width-400]); 
             
             if (svg) {
                 d3.select("body").selectAll("svg").remove();
@@ -51,7 +57,8 @@
             .append("g")    
             .attr("transform","translate(100,0)");             
             
-              root = JSON.parse(myJson);
+
+              
               var nodes = cluster.nodes(root);    
               var links = cluster.links(nodes);    
               var link = svg.selectAll(".link")       

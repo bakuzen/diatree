@@ -7,6 +7,7 @@ import java.util.List;
 
 import edu.cmu.sphinx.util.props.PropertyException;
 import edu.cmu.sphinx.util.props.PropertySheet;
+import edu.cmu.sphinx.util.props.S4Component;
 import edu.cmu.sphinx.util.props.S4String;
 import inpro.incremental.IUModule;
 import inpro.incremental.unit.EditMessage;
@@ -20,6 +21,10 @@ import model.iu.ConfidenceIU;
 import model.iu.FrameIU;
 
 public class INLUModule extends IUModule {
+	
+	@S4Component(type = TreeModule.class)
+	public final static String TREE_MODULE = "module";
+	private TreeModule tree;
 
 	@S4String(defaultValue = "test")
 	public final static String DOMAIN = "domain";
@@ -29,6 +34,8 @@ public class INLUModule extends IUModule {
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
 		super.newProperties(ps);
+		tree = (TreeModule) ps.getComponent(TREE_MODULE);
+		
 		Domain db = new Domain();
 		try {
 			db.setDomain(ps.getString(DOMAIN));
@@ -37,6 +44,7 @@ public class INLUModule extends IUModule {
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
 		
 	}
 	
@@ -52,7 +60,7 @@ public class INLUModule extends IUModule {
 				
 				if (word.equals("okay")) {
 					model.newUtterance();
-					TreeModule.firstDisplay = true;
+					tree.initDisplay();
 				}
 				model.addIncrement(word);
 				update();
