@@ -47,12 +47,12 @@ public class EmbeddedTomcat {
 	    tomcat.getConnector().setRedirectPort(8081);
 
 	    String domainPath = EmbeddedTomcat.class.getProtectionDomain().getCodeSource().getLocation().getPath() + "tomcat/";
-	    tomcat.addWebapp(tomcat.getHost(), "", new File(domainPath).getAbsolutePath()); 
+	    ctx = tomcat.addWebapp(tomcat.getHost(), "", new File(domainPath).getAbsolutePath()); 
 	    
-	    ctx = tomcat.addContext("/", new File(".").getAbsolutePath());
-
-	    Tomcat.addServlet(ctx, "main", new MainServlet());
-	    ctx.addServletMapping("/main", "main");
+//	    ctx = tomcat.addContext("/d", new File(".").getAbsolutePath());
+//
+//	    Tomcat.addServlet(ctx, "main", new MainServlet());
+//	    ctx.addServletMapping("/main", "main");
 	    
 //	    Tomcat.addServlet(ctx, "test", new JsonServletTest());
 //	    ctx.addServletMapping("/test", "test");

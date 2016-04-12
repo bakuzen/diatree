@@ -107,7 +107,7 @@ public class TreeModule extends IUModule {
 	private void expand(String intent, String concept) {
 		Node top = getTopNode();
 		Node child = top.getChildNode(intent);
-//		if (child == null) return;
+		if (child == null) return;
 		child.clearChildren();
 		Node n = new Node(intent +":" + concept);
 		top.clearChildren();

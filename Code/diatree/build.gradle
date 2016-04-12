@@ -32,6 +32,7 @@ eclipse {
 	}
 }
 
+mainClassName = 'app.Main'
 ext.projectName = 'diatree'
 ext.projectDescription = 'Dialogue Tree'
 ext.projectUrl = 'https://bitbucket.org/dsgbielefeld/027_dialogue_management'
@@ -43,6 +44,7 @@ version = '0.1'
 // In this section you declare where to find the dependencies of your project
 repositories {
 jcenter()
+	flatDir { dirs file("${projectDir}/lib") }
     mavenCentral()
      maven {
         // for the DSG deployed jars
@@ -54,22 +56,37 @@ jcenter()
             artifact "[artifact].[ext]"
         }	
      }
+     
+     maven { url 'https://repository.apache.org/content/repositories/releases/' }
 }
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
+    compile name: 'nbayes'
+    compile name: 'sqlite'
     // The production code uses the SLF4J logging API at compile time
-    compile 'de.dsg:sium:0.7'
+    compile 'de.dsg:sium:0.74'
     compile 'de.dsg:wac:0.2'
-    //compile 'de.dsg:inprotk:1.2'
+    compile 'de.dsg:inprotk:1.33'
     compile 'de.dsg:sium-inpro:1.2'
+    compile 'de.dsg:dm:0.33'
     compile 'de.dsg:opendial:1.43'
     compile 'org.slf4j:slf4j-api:1.7.12'
-
-    // Declare the dependency for your favourite test framework you want to use in your tests.
-    // TestNG is also supported by the Gradle Test task. Just change the
-    // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
-    // 'test.useTestNG()' to your build script.
+    compile 'org.json:json:20151123'
+    
+    compile 'org.apache.opennlp:opennlp-tools:1.5.3'
+    compile 'org.apache.opennlp:opennlp-maxent:3.0.3'    
+    
+    //embedded tomcat
+    compile 'org.apache.tomcat.embed:tomcat-embed-core:8.5.0'
+    compile 'org.apache.tomcat.embed:tomcat-embed-logging-juli:8.5.0'
+    compile 'org.apache.tomcat.embed:tomcat-embed-jasper:8.5.0'
+    compile 'org.apache.tomcat:tomcat-jasper:8.5.0'
+    compile 'org.apache.tomcat:tomcat-jasper-el:8.5.0'
+    compile 'org.apache.tomcat:tomcat-jsp-api:8.5.0'
+    
+    compile 'com.googlecode.json-simple:json-simple:1.1'
+//    compile 'org.json:json:20151123'
     compile  'log4j:log4j:1.2.16'
     testCompile group: 'junit', name: 'junit-dep', version: '4.11'
     compile group: 'junit', name: 'junit-dep', version: '4.11'
