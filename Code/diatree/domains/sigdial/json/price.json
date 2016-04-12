@@ -4,6 +4,7 @@
 	  "properties": [
 	   {"property":"expensive"},
 	   {"property":"high"},
+	   {"property":"spendy"},
 	   {"property":"fancy"}
 	  ]
 	},
@@ -17,7 +18,7 @@
 	{ "concept":"low",
 	  "properties": [
 	   {"property":"cheap"},
-	   {"property":"quick"},
+	   {"property":"low"},
 	   {"property":"fast"}
 	  ]
 	}

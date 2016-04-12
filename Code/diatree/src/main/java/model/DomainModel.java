@@ -18,6 +18,7 @@ import sium.nlu.language.mapping.MaxEntMapping;
 import sium.nlu.language.mapping.NaiveBayesMapping;
 import sium.nlu.stat.DistRow;
 import sium.nlu.stat.Distribution;
+import util.LevenshteinDistance;
 
 /*
  * This class is an interface between an user interface and SINLU. The idea is to be able to do some simple NLU
@@ -100,6 +101,15 @@ public class DomainModel {
 //		did someone say a word that is the same spelling as a property? Give that property some credit. 
 		if (getContext().getPropertiesSet().contains(word)) { 
 			groundedResult.setProbabilityForItem(word, 1.0);
+		}
+		else {
+//			try a probability derived from the Lev distance. Takes a long time to step through, though. 
+			for (String concept : getContext().getPropertiesSet()) {
+				double lprob = LevenshteinDistance.getProbability(word, concept);
+				if (lprob > Constants.WORD_DISTANCE_THRESHOLD) {
+					groundedResult.setProbabilityForItem(concept, lprob);
+				}
+			}
 		}
 //		TODO: handle word spelling distance?
 		grounder.groundIncrement(getContext(), groundedResult);

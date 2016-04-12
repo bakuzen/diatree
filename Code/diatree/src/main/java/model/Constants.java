@@ -8,4 +8,6 @@ public class Constants {
 	
 	public static final String S_TAG = "<s>";
 
+	public static final double WORD_DISTANCE_THRESHOLD = 0.6;
+
 }
