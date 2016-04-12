@@ -1,8 +1,11 @@
 package app;
 
+import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -45,7 +48,7 @@ public class Main {
 	private List<PushBuffer> hypListeners;
 	List<EditMessage<IU>> edits = new ArrayList<EditMessage<IU>>();
 	
-	private void run() throws LifecycleException, InterruptedException, PropertyException, MalformedURLException {
+	private void run() throws LifecycleException, InterruptedException, PropertyException, IOException, URISyntaxException {
 		
 		EmbeddedTomcat tomcat = new EmbeddedTomcat();
 		
@@ -63,7 +66,11 @@ public class Main {
 //		for Sphinx ASR
 //		SphinxASR webSpeech = (SphinxASR) cm.lookup(PROP_CURRENT_HYPOTHESIS);
 //		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M"});	
-		
+
+		if(Desktop.isDesktopSupported())
+		{
+		  Desktop.getDesktop().browse(new URI("http://localhost:8080"));
+		}
 		
 		new Thread(){ 
 			public void run() {
@@ -113,6 +120,10 @@ public class Main {
 			e.printStackTrace();
 		} 
 		catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
 			e.printStackTrace();
 		}
 	}
