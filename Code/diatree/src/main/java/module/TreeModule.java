@@ -27,13 +27,17 @@ public class TreeModule extends IUModule {
 	private LinkedList<SlotIU> confirmStack;
 	private LinkedList<Node> expandedNodes;
 	private LinkedList<String> remainingIntents;
-	private boolean firstDisplay;
+	public static boolean firstDisplay;
 	
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
 		super.newProperties(ps);
 		servlet = (DiaTreeServlet) ps.getComponent(DIATREE_SERVLET);
+		reset();
+	}
+	
+	public void reset() {
 		confirmStack = new LinkedList<SlotIU>();
 		expandedNodes = new LinkedList<Node>();
 		remainingIntents = new LinkedList<String>();
@@ -119,6 +123,8 @@ public class TreeModule extends IUModule {
 
 	private void offerConfirmation(String intent, String concept) {
 		offerExpansion(intent);
+		if (getTopNode() == null) return; 
+		if (getTopNode().getChildNode(intent) == null) return;
 		Node childToConfirm = getTopNode().getChildNode(intent).getChildNode(concept);
 		childToConfirm.setName(concept + "?");
 	}
@@ -194,6 +200,7 @@ public class TreeModule extends IUModule {
 	}
 
 	private void initDisplay() {
+		reset();
 		remainingIntents = new LinkedList<String>(getPossibleIntents());
 		
 		

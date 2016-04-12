@@ -52,6 +52,7 @@ public class INLUModule extends IUModule {
 				
 				if (word.equals("okay")) {
 					model.newUtterance();
+					TreeModule.firstDisplay = true;
 				}
 				model.addIncrement(word);
 				update();
