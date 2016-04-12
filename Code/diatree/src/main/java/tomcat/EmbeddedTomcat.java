@@ -49,6 +49,8 @@ public class EmbeddedTomcat {
 	    String domainPath = EmbeddedTomcat.class.getProtectionDomain().getCodeSource().getLocation().getPath() + "tomcat/";
 	    ctx = tomcat.addWebapp(tomcat.getHost(), "", new File(domainPath).getAbsolutePath()); 
 	    
+	    ctx.addWelcomeFile("index.jsp");
+	    
 //	    ctx = tomcat.addContext("/d", new File(".").getAbsolutePath());
 //
 //	    Tomcat.addServlet(ctx, "main", new MainServlet());
