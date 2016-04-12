@@ -60,7 +60,7 @@ public class INLUModule extends IUModule {
 				
 				if (word.equals("okay")) {
 					model.newUtterance();
-					tree.initDisplay();
+					tree.initDisplay(false);
 				}
 				model.addIncrement(word);
 				update();

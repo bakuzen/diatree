@@ -58,20 +58,23 @@ public class TreeModule extends IUModule {
 	protected void leftBufferUpdate(Collection<? extends IU> ius, List<? extends EditMessage<? extends IU>> edits) {
 		
 		if (isFirstDisplay())
-			initDisplay();
+			initDisplay(false);
 		
 		for (EditMessage<? extends IU> edit : edits) {
 			
 			SlotIU decisionIU = (SlotIU) edit.getIU();
 			if (edit.getIU().groundedIn().isEmpty()) continue; // simple check in case something gets through that shouldn't
+			
 			SlotIU slotIU = (SlotIU) edit.getIU().groundedIn().get(0);
 			String concept = slotIU.getDistribution().getArgMax().getEntity();
 			String intent = slotIU.getName();
+			Double confidence = slotIU.getConfidence();
 			String decision = decisionIU.getDistribution().getArgMax().getEntity();
-//			System.out.println("decision:" + decision + " intent:" + intent + " concept:" + concept);
+			
+			System.out.println("decision:" + decision + " intent:" + intent + " concept:" + concept + " confidence:" + confidence );
+			
 			if ("verified".equals(decision)){
 				if (!checkConfirmStackIsEmpty()) {
-				
 					SlotIU sIU = popConfirmStack();
 					String c = sIU.getDistribution().getArgMax().getEntity();
 					String i = sIU.getName();
@@ -83,6 +86,10 @@ public class TreeModule extends IUModule {
 						abortConfirmation(i, c);
 					}
 					resetUtterance();
+				}
+				else {
+					if ("no".equals(concept))
+						abort();
 				}
 			}
 			else if ("confirm".equals(decision)) {
@@ -108,6 +115,7 @@ public class TreeModule extends IUModule {
 	
 	private void abortConfirmation(String intent, String concept) {
 		log.info(logString("abortConfirmation", intent, concept));
+		if (!getTopNode().hasChild(intent)) return;
 		Node childToConfirm = getTopNode().getChildNode(intent).getChildNode(concept+"?");
 		childToConfirm.setName(concept);
 	}
@@ -120,6 +128,11 @@ public class TreeModule extends IUModule {
 	}
 
 	private void abort() {
+		log.info(logString("abort()", "", ""));
+		if (getTopNode() == getRootNode() || getTopNode() == null) {
+			initDisplay(false);
+			return;
+		}
 		getTopNode().clearChildren();
 		popExpandedNode();
 	}
@@ -133,6 +146,14 @@ public class TreeModule extends IUModule {
 			if ("no".equals(concept)) {
 				abort();
 			}
+		}
+//		another case is if someone is referring to an intent (not a concept of an intent)
+//		when that happens, show the expansion of that intent
+		if ("intent".equals(intent)) {
+			offerExpansion(concept);
+//			Node child = getTopNode().getChildNode(intent);
+//			this.pushExpandedNode(child);
+			return;
 		}
 		Node top = getTopNode();
 		if (!top.hasChild(intent)) // this could happen when someone says the same word more than once
@@ -151,6 +172,7 @@ public class TreeModule extends IUModule {
 		log.info(logString("offerConfirmation", intent, concept));
 		offerExpansion(intent);
 		if (!getTopNode().hasChild(intent)) return;
+		if (!getTopNode().getChildNode(intent).hasChild(concept)) return;
 		Node childToConfirm = getTopNode().getChildNode(intent).getChildNode(concept);
 		childToConfirm.setName(concept + "?");
 	}
@@ -159,9 +181,12 @@ public class TreeModule extends IUModule {
 		log.info(logString("offerExpansion", intent, ""));
 		Node top = getTopNode();
 		
-		if (!top.hasChild(intent)) return; // this avoids problems with repititions
+		if (!top.hasChild(intent)) return; // this avoids problems with repetitions
 		
 		Node forExpansion = top.getChildNode(intent);
+		if (forExpansion.isExpanded()) return; // another case of repetition
+		
+		forExpansion.setExpanded(true);
 		for (String concept : getPossibleConceptsForIntent(intent)) {
 			forExpansion.addChild(new Node(concept));
 		}
@@ -197,6 +222,8 @@ public class TreeModule extends IUModule {
 	}
 	
 	private Node popExpandedNode() {
+		if (!expandedNodes.isEmpty())
+			expandedNodes.peek().setExpanded(false);
 		return expandedNodes.pop();
 	}
 	
@@ -205,12 +232,12 @@ public class TreeModule extends IUModule {
 		return expandedNodes.peek();
 	}
 	
-	private Node getRootNote() {
+	private Node getRootNode() {
 		return expandedNodes.peekLast();
 	}
 	
 	private void update() {
-		tree = new TraversableTree(this.getRootNote());
+		tree = new TraversableTree(this.getRootNode());
 		tree.setDepth(getNodeDepth());
 		String json = tree.getJsonString();
 		send(json);
@@ -224,15 +251,17 @@ public class TreeModule extends IUModule {
 		remainingIntents.remove(intent);
 	}
 
-	 public void initDisplay() {
+	 public void initDisplay(boolean update) {
 		reset();
 		remainingIntents = new LinkedList<String>(getPossibleIntents());
+		remainingIntents.remove("intent"); // keyword, but used in a similar way--shouldn't be displayed
 		
 		Node root = new Node("");
 		this.pushExpandedNode(root);
 		this.addRemainingIntents();
 		this.setFirstDisplay(false);
-		update();
+		if (update)
+			update();
 	}
 
 	private void addRemainingIntents() {

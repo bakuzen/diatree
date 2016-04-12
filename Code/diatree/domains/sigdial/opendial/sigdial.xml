@@ -4,12 +4,9 @@
 
 
 	<initialstate>
-	
 		<variable id="SlotIU"><value>null</value></variable>
-		
+		<variable id="confirmState"><value>false</value></variable>
 	</initialstate>
-
-
 
 	<model trigger="SlotIU">
 	
@@ -18,7 +15,7 @@
 				<condition>
 					<if var="SlotIU" relation="&gt;" value="0.85"/>
 					<if var="SlotIU" relation="in" value="confirm"/>
-<!-- 					<if var="confirmState" relation="=" value="true"/> -->
+<!-- 					<if var="confirmState" relation="in" value="true"/> -->
 				</condition>
 				<effect>
 					<set var="decision" value="verified"/>

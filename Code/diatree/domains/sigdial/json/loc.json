@@ -19,7 +19,6 @@
     { "concept":"near",
 	  "properties": [
 	   {"property":"nearby"},
-	   {"property":"near"},
 	   {"property":"here"}
 	  ]
 	}

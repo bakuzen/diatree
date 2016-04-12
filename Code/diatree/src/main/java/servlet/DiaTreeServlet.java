@@ -58,7 +58,7 @@ public class DiaTreeServlet  extends HttpServlet implements Configurable {
         
         this.response = response;
         
-        tree.initDisplay();
+        tree.initDisplay(true);
         
 //      hack to keep the response from being committed which is needed for us to send more data using the send method 
         while (true) {

@@ -1,0 +1,22 @@
+{ "intent": "intent", 
+    "concepts": [
+	{ "concept":"food",
+	  "properties": [
+	   {"property":"food"},
+	   {"property":"eat"},
+	   {"property":"hungry"}
+	  ]
+	},
+	{ "concept":"price",
+	  "properties": [
+	   {"property":"price"},
+	   {"property":"cost"}
+	  ]
+	},	
+	{ "concept":"loc",
+	  "properties": [
+	   {"property":"location"}
+	  ]
+	}
+    ]
+}

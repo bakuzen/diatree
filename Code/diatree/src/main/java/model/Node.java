@@ -8,6 +8,7 @@ public class Node implements Comparable<Node> {
 	private String name;
 	private TreeSet<Node> children;
 	private boolean hasBeenTraversed;
+	private boolean isExpanded;
 	
 	public Node(String n) {
 		this.setName(n);
@@ -57,5 +58,11 @@ public class Node implements Comparable<Node> {
 		Node n = getChildNode(intent);
 		if (n == null) return false;
 		return true;
+	}
+	public boolean isExpanded() {
+		return isExpanded;
+	}
+	public void setExpanded(boolean isExpanded) {
+		this.isExpanded = isExpanded;
 	}
 }
