@@ -58,7 +58,7 @@ public class TreeModule extends IUModule {
 	protected void leftBufferUpdate(Collection<? extends IU> ius, List<? extends EditMessage<? extends IU>> edits) {
 		
 		if (isFirstDisplay())
-			initDisplay(false);
+			initDisplay(false, true);
 		
 		for (EditMessage<? extends IU> edit : edits) {
 			
@@ -71,7 +71,7 @@ public class TreeModule extends IUModule {
 			Double confidence = slotIU.getConfidence();
 			String decision = decisionIU.getDistribution().getArgMax().getEntity();
 			
-			System.out.println("decision:" + decision + " intent:" + intent + " concept:" + concept + " confidence:" + confidence );
+//			System.out.println("decision:" + decision + " intent:" + intent + " concept:" + concept + " confidence:" + confidence );
 			
 			if ("verified".equals(decision)){
 				if (!checkConfirmStackIsEmpty()) {
@@ -115,9 +115,13 @@ public class TreeModule extends IUModule {
 	
 	private void abortConfirmation(String intent, String concept) {
 		log.info(logString("abortConfirmation", intent, concept));
-		if (!getTopNode().hasChild(intent)) return;
+		if (!getTopNode().hasChild(intent)){
+			return;
+		}
 		Node childToConfirm = getTopNode().getChildNode(intent).getChildNode(concept+"?");
+		if (childToConfirm == null) return;
 		childToConfirm.setName(concept);
+		childToConfirm.setHasBeenTraversed(false);
 	}
 
 	private String logString(String method, String intent, String concept) {
@@ -130,7 +134,7 @@ public class TreeModule extends IUModule {
 	private void abort() {
 		log.info(logString("abort()", "", ""));
 		if (getTopNode() == getRootNode() || getTopNode() == null) {
-			initDisplay(false);
+			initDisplay(false, true);
 			return;
 		}
 		getTopNode().clearChildren();
@@ -147,54 +151,94 @@ public class TreeModule extends IUModule {
 				abort();
 			}
 		}
+		if (this.intentSettled(intent)) {
+//			been here, done that
+			return;
+		}
 //		another case is if someone is referring to an intent (not a concept of an intent)
 //		when that happens, show the expansion of that intent
 		if ("intent".equals(intent)) {
 			offerExpansion(concept);
-//			Node child = getTopNode().getChildNode(intent);
-//			this.pushExpandedNode(child);
 			return;
 		}
+		
 		Node top = getTopNode();
-		if (!top.hasChild(intent)) // this could happen when someone says the same word more than once
+		if (!top.hasChild(intent))  // this could happen when someone says the same word more than once
 			return;
-		Node child = top.getChildNode(intent);
-		child.clearChildren();
+		
+		
+//		Node child = top.getChildNode(intent);
+//		child.clearChildren();
 		Node n = new Node(intent +":" + concept);
 		top.clearChildren();
 		top.addChild(n);
 		this.pushExpandedNode(n);
 		this.removeRemainingIntent(intent);
+		this.clearConfirmStack();
 		this.addRemainingIntents();
+	}
+
+	private void clearConfirmStack() {
+		this.confirmStack.clear();
 	}
 
 	private void offerConfirmation(String intent, String concept) {
 		log.info(logString("offerConfirmation", intent, concept));
-		offerExpansion(intent);
-		if (!getTopNode().hasChild(intent)) return;
-		if (!getTopNode().getChildNode(intent).hasChild(concept)) return;
-		Node childToConfirm = getTopNode().getChildNode(intent).getChildNode(concept);
-		childToConfirm.setName(concept + "?");
+		if (this.intentSettled(intent)) {
+//			no need to confirm something that has been expanded already
+			return;
+		}
+		if (!getTopNode().getChildNode(intent).hasChild(concept)) {
+			return;
+		}
+		if (offerExpansion(intent)) {
+			Node childToConfirm = getTopNode().getChildNode(intent).getChildNode(concept);
+			childToConfirm.setName(concept + "?");
+			childToConfirm.setHasBeenTraversed(true);
+		}
 	}
 
-	private void offerExpansion(String intent) {
+	private boolean offerExpansion(String intent) {
 		log.info(logString("offerExpansion", intent, ""));
+
+		if (this.intentSettled(intent)) {
+//			been here, done that
+			return false;
+		}
+
 		Node top = getTopNode();
-		
-		if (!top.hasChild(intent)) return; // this avoids problems with repetitions
+		if (!top.hasChild(intent)) {
+			return false; // this avoids problems with repetitions
+		}
 		
 		Node forExpansion = top.getChildNode(intent);
-		if (forExpansion.isExpanded()) return; // another case of repetition
+		if (forExpansion.isExpanded()) {
+			return true; // another case of repetition
+		}
 		
 		forExpansion.setExpanded(true);
 		for (String concept : getPossibleConceptsForIntent(intent)) {
 			forExpansion.addChild(new Node(concept));
 		}
+		forExpansion.setHasBeenTraversed(true);
+		return true;
+	}
+
+	private boolean intentSettled(String intent) {
+		for (Node i : expandedNodes) {
+			if (i.getName().startsWith(intent)) return true;
+		}
+		return false;
 	}
 
 	private void pushToConfirmStack(SlotIU slotIU) {
 		logString("pushToConfirmStack", slotIU.toPayLoad(), "");
-		confirmStack.push(slotIU);
+//		don't add the same thing multiple times
+		for (SlotIU sIU : confirmStack) {
+			if (sIU.getName().equals(slotIU.getName()))
+				return;
+		}
+	    confirmStack.push(slotIU);
 	}
 	
 	private boolean checkConfirmStackIsEmpty() {
@@ -251,8 +295,10 @@ public class TreeModule extends IUModule {
 		remainingIntents.remove(intent);
 	}
 
-	 public void initDisplay(boolean update) {
-		reset();
+	 public void initDisplay(boolean update, boolean reset) {
+		 
+		if (reset) 
+			reset();
 		remainingIntents = new LinkedList<String>(getPossibleIntents());
 		remainingIntents.remove("intent"); // keyword, but used in a similar way--shouldn't be displayed
 		

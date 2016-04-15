@@ -1,7 +1,10 @@
 package servlet;
 
+import java.awt.Desktop;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.BufferOverflowException;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -12,6 +15,7 @@ import java.util.concurrent.BlockingQueue;
 import javax.servlet.AsyncContext;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,6 +30,7 @@ import edu.cmu.sphinx.util.props.PropertyException;
 import edu.cmu.sphinx.util.props.PropertySheet;
 import edu.cmu.sphinx.util.props.S4Component;
 import module.TreeModule;
+import util.ClientUtils;
 
 
 @WebServlet(urlPatterns = {"/diatree"}, asyncSupported=true)
@@ -58,7 +63,7 @@ public class DiaTreeServlet  extends HttpServlet implements Configurable {
         
         this.response = response;
         
-        tree.initDisplay(true);
+        tree.initDisplay(true, false);
         
 //      hack to keep the response from being committed which is needed for us to send more data using the send method 
         while (true) {
@@ -83,15 +88,19 @@ public class DiaTreeServlet  extends HttpServlet implements Configurable {
 					}
 		    	}
 				try {
-					PrintWriter w = response.getWriter();
-			    	w.write("data:" + data + "\n\n");
+					ServletOutputStream w = response.getOutputStream();
+			    	w.print("data:" + data + "\n\n");
 			    	w.flush();
 			    	
 				} 
 				catch (IOException e) {
-					e.printStackTrace();
+//					e.printStackTrace();
+					Log.error("Pipe Broken! Trying to reconnect...");
+					ClientUtils.openNewClient();
 				}
 				catch (BufferOverflowException e) {
+					e.printStackTrace();
+					
 					Log.warn("Buffer overflow detected in socket to client.");
 				}
 			

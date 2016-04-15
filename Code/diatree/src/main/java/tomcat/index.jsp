@@ -5,7 +5,7 @@
 
 <html>
 <body onload="start()">
-     
+<!-- <span id="foo"></span> -->
 <meta charset="utf-8" />
 <style>
 .node circle {     
@@ -39,7 +39,7 @@
             eventSource.onmessage = function(event) {
 
 
-
+//             document.getElementById('foo').innerHTML = event.data;
             var myJson = event.data;
 
             root = JSON.parse(myJson);

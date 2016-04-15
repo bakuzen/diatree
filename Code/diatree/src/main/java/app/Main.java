@@ -1,8 +1,11 @@
 package app;
 
+import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -28,6 +31,7 @@ import inpro.incremental.unit.IU;
 import inpro.incremental.unit.WordIU;
 import servlet.DiaTreeServlet;
 import tomcat.EmbeddedTomcat;
+import util.ClientUtils;
 
 public class Main {
 	
@@ -63,7 +67,8 @@ public class Main {
 //		for Sphinx ASR
 //		SphinxASR webSpeech = (SphinxASR) cm.lookup(PROP_CURRENT_HYPOTHESIS);
 //		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M"});	
-		
+
+		ClientUtils.openNewClient();
 		
 		new Thread(){ 
 			public void run() {
@@ -114,7 +119,7 @@ public class Main {
 		} 
 		catch (MalformedURLException e) {
 			e.printStackTrace();
-		}
+		} 
 	}
 	
 	public void notifyListeners(List<PushBuffer> listeners) {

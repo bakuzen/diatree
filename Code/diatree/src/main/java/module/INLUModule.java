@@ -58,9 +58,10 @@ public class INLUModule extends IUModule {
 			
 			case ADD:
 				
-				if (word.equals("okay")) {
+				if (word.equals("reset")) {
 					model.newUtterance();
-					tree.initDisplay(false);
+					tree.initDisplay(true, true);
+					continue;
 				}
 				model.addIncrement(word);
 				update();
