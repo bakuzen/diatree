@@ -58,7 +58,7 @@ public class INLUModule extends IUModule {
 			
 			case ADD:
 				
-				if (word.equals("okay")) {
+				if (word.equals("restart")) {
 					model.newUtterance();
 					tree.initDisplay(false);
 				}
