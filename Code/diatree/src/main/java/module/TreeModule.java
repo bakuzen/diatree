@@ -68,7 +68,7 @@ public class TreeModule extends IUModule {
 			SlotIU slotIU = (SlotIU) edit.getIU().groundedIn().get(0);
 			String concept = slotIU.getDistribution().getArgMax().getEntity();
 			String intent = slotIU.getName();
-			Double confidence = slotIU.getConfidence();
+//			Double confidence = slotIU.getConfidence();
 			String decision = decisionIU.getDistribution().getArgMax().getEntity();
 			
 //			System.out.println("decision:" + decision + " intent:" + intent + " concept:" + concept + " confidence:" + confidence );
