@@ -1,0 +1,89 @@
+{
+  "concepts": [
+    {
+      "concept": "flight",
+      "properties": []
+    },
+    {
+      "concept": "ground service",
+      "properties": []
+    },
+    {
+      "concept": "aircraft",
+      "properties": []
+    },
+    {
+      "concept": "flight no",
+      "properties": []
+    },
+    {
+      "concept": "airline",
+      "properties": []
+    },
+    {
+      "concept": "flight airfare",
+      "properties": []
+    },
+    {
+      "concept": "abbreviation",
+      "properties": []
+    },
+    {
+      "concept": "capacity",
+      "properties": []
+    },
+    {
+      "concept": "airfare",
+      "properties": []
+    },
+    {
+      "concept": "airport distance",
+      "properties": []
+    },
+    {
+      "concept": "ground fare",
+      "properties": []
+    },
+    {
+      "concept": "city",
+      "properties": []
+    },
+    {
+      "concept": "airport",
+      "properties": []
+    },
+    {
+      "concept": "minimum connect time",
+      "properties": []
+    },
+    {
+      "concept": "location",
+      "properties": []
+    },
+    {
+      "concept": "restriction",
+      "properties": []
+    },
+    {
+      "concept": "airline flight no",
+      "properties": []
+    },
+    {
+      "concept": "flight aircraft flight no",
+      "properties": []
+    },
+    {
+      "concept": "flight airline",
+      "properties": []
+    },
+    {
+      "concept": "distance",
+      "properties": []
+    },
+    {
+      "concept": "flight time",
+      "properties": []
+    }
+  ],
+  "intent": "goal"
+}

@@ -1,0 +1,807 @@
+{
+  "concepts": [
+    {
+      "concept": "denver airport",
+      "properties": [{"property": "denver airport"}]
+    },
+    {
+      "concept": "san francisco international",
+      "properties": [{"property": "san francisco international"}]
+    },
+    {
+      "concept": "stapleton airport",
+      "properties": [{"property": "stapleton airport"}]
+    },
+    {
+      "concept": "logan airport",
+      "properties": [{"property": "logan airport"}]
+    },
+    {
+      "concept": "dfw",
+      "properties": [{"property": "dfw"}]
+    },
+    {
+      "concept": "bwi",
+      "properties": [{"property": "bwi"}]
+    },
+    {
+      "concept": "oak",
+      "properties": [{"property": "oak"}]
+    },
+    {
+      "concept": "atl",
+      "properties": [{"property": "atl"}]
+    },
+    {
+      "concept": "logan",
+      "properties": [{"property": "logan"}]
+    },
+    {
+      "concept": "sfo",
+      "properties": [{"property": "sfo"}]
+    },
+    {
+      "concept": "san francisco airport",
+      "properties": [{"property": "san francisco airport"}]
+    },
+    {
+      "concept": "stapleton international airport",
+      "properties": [{"property": "stapleton international airport"}]
+    },
+    {
+      "concept": "dallas airport",
+      "properties": [{"property": "dallas airport"}]
+    },
+    {
+      "concept": "pittsburgh airport",
+      "properties": [{"property": "pittsburgh airport"}]
+    },
+    {
+      "concept": "la guardia",
+      "properties": [{"property": "la guardia"}]
+    },
+    {
+      "concept": "dulles",
+      "properties": [{"property": "dulles"}]
+    },
+    {
+      "concept": "salt lake city airport",
+      "properties": [{"property": "salt lake city airport"}]
+    },
+    {
+      "concept": "orlando airport",
+      "properties": [{"property": "orlando airport"}]
+    },
+    {
+      "concept": "orlando international",
+      "properties": [{"property": "orlando international"}]
+    },
+    {
+      "concept": "houston intercontinental",
+      "properties": [{"property": "houston intercontinental"}]
+    },
+    {
+      "concept": "ohare",
+      "properties": [{"property": "ohare"}]
+    },
+    {
+      "concept": "jfk",
+      "properties": [{"property": "jfk"}]
+    },
+    {
+      "concept": "mco",
+      "properties": [{"property": "mco"}]
+    },
+    {
+      "concept": "ewr",
+      "properties": [{"property": "ewr"}]
+    },
+    {
+      "concept": "bur",
+      "properties": [{"property": "bur"}]
+    },
+    {
+      "concept": "san diego airport",
+      "properties": [{"property": "san diego airport"}]
+    },
+    {
+      "concept": "phoenix airport",
+      "properties": [{"property": "phoenix airport"}]
+    },
+    {
+      "concept": "lax",
+      "properties": [{"property": "lax"}]
+    },
+    {
+      "concept": "milwaukee airport",
+      "properties": [{"property": "milwaukee airport"}]
+    },
+    {
+      "concept": "ontario international",
+      "properties": [{"property": "ontario international"}]
+    },
+    {
+      "concept": "la guardia airport",
+      "properties": [{"property": "la guardia airport"}]
+    },
+    {
+      "concept": "long beach airport",
+      "properties": [{"property": "long beach airport"}]
+    },
+    {
+      "concept": "boston airport",
+      "properties": [{"property": "boston airport"}]
+    },
+    {
+      "concept": "toronto international airport",
+      "properties": [{"property": "toronto international airport"}]
+    },
+    {
+      "concept": "los angeles international airport",
+      "properties": [{"property": "los angeles international airport"}]
+    },
+    {
+      "concept": "san francisco international airport",
+      "properties": [{"property": "san francisco international airport"}]
+    },
+    {
+      "concept": "mia",
+      "properties": [{"property": "mia"}]
+    },
+    {
+      "concept": "bna",
+      "properties": [{"property": "bna"}]
+    },
+    {
+      "concept": "ord",
+      "properties": [{"property": "ord"}]
+    },
+    {
+      "concept": "love field",
+      "properties": [{"property": "love field"}]
+    },
+    {
+      "concept": "hou",
+      "properties": [{"property": "hou"}]
+    },
+    {
+      "concept": "general mitchell international",
+      "properties": [{"property": "general mitchell international"}]
+    },
+    {
+      "concept": "general mitchell airport",
+      "properties": [{"property": "general mitchell airport"}]
+    },
+    {
+      "concept": "general mitchell",
+      "properties": [{"property": "general mitchell"}]
+    },
+    {
+      "concept": "yyz",
+      "properties": [{"property": "yyz"}]
+    },
+    {
+      "concept": "lester pearson airport",
+      "properties": [{"property": "lester pearson airport"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "denver airport",
+      "example": "denver airport"
+    },
+    {
+      "concept": "san francisco international",
+      "example": "san francisco international"
+    },
+    {
+      "concept": "stapleton airport",
+      "example": "stapleton airport"
+    },
+    {
+      "concept": "logan airport",
+      "example": "logan airport"
+    },
+    {
+      "concept": "logan airport",
+      "example": "logan airport"
+    },
+    {
+      "concept": "logan airport",
+      "example": "logan airport"
+    },
+    {
+      "concept": "dfw",
+      "example": "dfw"
+    },
+    {
+      "concept": "dfw",
+      "example": "dfw"
+    },
+    {
+      "concept": "dfw",
+      "example": "dfw"
+    },
+    {
+      "concept": "dfw",
+      "example": "dfw"
+    },
+    {
+      "concept": "dfw",
+      "example": "dfw"
+    },
+    {
+      "concept": "dfw",
+      "example": "dfw"
+    },
+    {
+      "concept": "bwi",
+      "example": "bwi"
+    },
+    {
+      "concept": "oak",
+      "example": "oak"
+    },
+    {
+      "concept": "atl",
+      "example": "atl"
+    },
+    {
+      "concept": "bwi",
+      "example": "bwi"
+    },
+    {
+      "concept": "bwi",
+      "example": "bwi"
+    },
+    {
+      "concept": "dfw",
+      "example": "dfw"
+    },
+    {
+      "concept": "logan",
+      "example": "logan"
+    },
+    {
+      "concept": "bwi",
+      "example": "bwi"
+    },
+    {
+      "concept": "logan",
+      "example": "logan"
+    },
+    {
+      "concept": "bwi",
+      "example": "bwi"
+    },
+    {
+      "concept": "bwi",
+      "example": "bwi"
+    },
+    {
+      "concept": "bwi",
+      "example": "bwi"
+    },
+    {
+      "concept": "dfw",
+      "example": "dfw"
+    },
+    {
+      "concept": "sfo",
+      "example": "sfo"
+    },
+    {
+      "concept": "sfo",
+      "example": "sfo"
+    },
+    {
+      "concept": "san francisco airport",
+      "example": "san francisco airport"
+    },
+    {
+      "concept": "stapleton international airport",
+      "example": "stapleton international airport"
+    },
+    {
+      "concept": "bwi",
+      "example": "bwi"
+    },
+    {
+      "concept": "denver airport",
+      "example": "denver airport"
+    },
+    {
+      "concept": "denver airport",
+      "example": "denver airport"
+    },
+    {
+      "concept": "denver airport",
+      "example": "denver airport"
+    },
+    {
+      "concept": "denver airport",
+      "example": "denver airport"
+    },
+    {
+      "concept": "denver airport",
+      "example": "denver airport"
+    },
+    {
+      "concept": "dallas airport",
+      "example": "dallas airport"
+    },
+    {
+      "concept": "pittsburgh airport",
+      "example": "pittsburgh airport"
+    },
+    {
+      "concept": "bwi",
+      "example": "bwi"
+    },
+    {
+      "concept": "bwi",
+      "example": "bwi"
+    },
+    {
+      "concept": "logan",
+      "example": "logan"
+    },
+    {
+      "concept": "logan",
+      "example": "logan"
+    },
+    {
+      "concept": "atl",
+      "example": "atl"
+    },
+    {
+      "concept": "bwi",
+      "example": "bwi"
+    },
+    {
+      "concept": "sfo",
+      "example": "sfo"
+    },
+    {
+      "concept": "bwi",
+      "example": "bwi"
+    },
+    {
+      "concept": "la guardia",
+      "example": "la guardia"
+    },
+    {
+      "concept": "la guardia",
+      "example": "la guardia"
+    },
+    {
+      "concept": "dulles",
+      "example": "dulles"
+    },
+    {
+      "concept": "salt lake city airport",
+      "example": "salt lake city airport"
+    },
+    {
+      "concept": "orlando airport",
+      "example": "orlando airport"
+    },
+    {
+      "concept": "orlando airport",
+      "example": "orlando airport"
+    },
+    {
+      "concept": "orlando international",
+      "example": "orlando international"
+    },
+    {
+      "concept": "houston intercontinental",
+      "example": "houston intercontinental"
+    },
+    {
+      "concept": "ohare",
+      "example": "ohare"
+    },
+    {
+      "concept": "jfk",
+      "example": "jfk"
+    },
+    {
+      "concept": "la guardia",
+      "example": "la guardia"
+    },
+    {
+      "concept": "la guardia",
+      "example": "la guardia"
+    },
+    {
+      "concept": "jfk",
+      "example": "jfk"
+    },
+    {
+      "concept": "sfo",
+      "example": "sfo"
+    },
+    {
+      "concept": "sfo",
+      "example": "sfo"
+    },
+    {
+      "concept": "jfk",
+      "example": "jfk"
+    },
+    {
+      "concept": "mco",
+      "example": "mco"
+    },
+    {
+      "concept": "mco",
+      "example": "mco"
+    },
+    {
+      "concept": "mco",
+      "example": "mco"
+    },
+    {
+      "concept": "mco",
+      "example": "mco"
+    },
+    {
+      "concept": "mco",
+      "example": "mco"
+    },
+    {
+      "concept": "mco",
+      "example": "mco"
+    },
+    {
+      "concept": "mco",
+      "example": "mco"
+    },
+    {
+      "concept": "mco",
+      "example": "mco"
+    },
+    {
+      "concept": "mco",
+      "example": "mco"
+    },
+    {
+      "concept": "ewr",
+      "example": "ewr"
+    },
+    {
+      "concept": "ewr",
+      "example": "ewr"
+    },
+    {
+      "concept": "ewr",
+      "example": "ewr"
+    },
+    {
+      "concept": "ewr",
+      "example": "ewr"
+    },
+    {
+      "concept": "ewr",
+      "example": "ewr"
+    },
+    {
+      "concept": "ewr",
+      "example": "ewr"
+    },
+    {
+      "concept": "bur",
+      "example": "bur"
+    },
+    {
+      "concept": "san diego airport",
+      "example": "san diego airport"
+    },
+    {
+      "concept": "phoenix airport",
+      "example": "phoenix airport"
+    },
+    {
+      "concept": "lax",
+      "example": "lax"
+    },
+    {
+      "concept": "milwaukee airport",
+      "example": "milwaukee airport"
+    },
+    {
+      "concept": "la guardia",
+      "example": "la guardia"
+    },
+    {
+      "concept": "la guardia",
+      "example": "la guardia"
+    },
+    {
+      "concept": "ontario international",
+      "example": "ontario international"
+    },
+    {
+      "concept": "salt lake city airport",
+      "example": "salt lake city airport"
+    },
+    {
+      "concept": "la guardia airport",
+      "example": "la guardia airport"
+    },
+    {
+      "concept": "long beach airport",
+      "example": "long beach airport"
+    },
+    {
+      "concept": "la guardia",
+      "example": "la guardia"
+    },
+    {
+      "concept": "la guardia",
+      "example": "la guardia"
+    },
+    {
+      "concept": "boston airport",
+      "example": "boston airport"
+    },
+    {
+      "concept": "toronto international airport",
+      "example": "toronto international airport"
+    },
+    {
+      "concept": "los angeles international airport",
+      "example": "los angeles international airport"
+    },
+    {
+      "concept": "san francisco international airport",
+      "example": "san francisco international airport"
+    },
+    {
+      "concept": "mia",
+      "example": "mia"
+    },
+    {
+      "concept": "bna",
+      "example": "bna"
+    },
+    {
+      "concept": "ord",
+      "example": "ord"
+    },
+    {
+      "concept": "ewr",
+      "example": "ewr"
+    },
+    {
+      "concept": "jfk",
+      "example": "jfk"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "hou",
+      "example": "hou"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "love field",
+      "example": "love field"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell airport",
+      "example": "general mitchell airport"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "general mitchell",
+      "example": "general mitchell"
+    },
+    {
+      "concept": "general mitchell international",
+      "example": "general mitchell international"
+    },
+    {
+      "concept": "yyz",
+      "example": "yyz"
+    },
+    {
+      "concept": "lester pearson airport",
+      "example": "lester pearson airport"
+    }
+  ],
+  "intent": "airport"
+}

@@ -1,0 +1,173 @@
+{ "intent": "wer", 
+    "concepts": [
+	{ "concept":"Alexander",
+	  "properties": [
+	   {"property":"Alexander"},
+	   {"property":"male"}
+	  ]
+	},
+	{ "concept":"Andreas",
+	  "properties": [
+	   {"property":"Andreas"},
+	   {"property":"male"}
+	  ]
+	},
+	{ "concept":"Benjamin",
+	  "properties": [
+	   {"property":"Benjamin"},
+	   {"property":"male"}
+	  ]
+	},
+	{ "concept":"Christian",
+	  "properties": [
+	   {"property":"Christian"},
+	   {"property":"male"}
+	  ]
+	},
+	{ "concept":"Daniel",
+	  "properties": [
+	   {"property":"Daniel"},
+	   {"property":"male"}
+	  ]
+	},
+	{ "concept":"David",
+	  "properties": [
+	   {"property":"David"},
+	   {"property":"male"}
+	  ]
+	},
+	{ "concept":"Dennis",
+	  "properties": [
+	   {"property":"Dennis"},
+	   {"property":"male"}
+	  ]
+	},
+	{ "concept":"Dieter",
+	  "properties": [
+	   {"property":"Dieter"},
+	   {"property":"male"}
+	  ]
+	},	
+	{ "concept":"Florian",
+	  "properties": [
+	   {"property":"Florian"},
+	   {"property":"male"}
+	  ]
+	},
+	{ "concept":"Dominik",
+	  "properties": [
+	   {"property":"Dominik"},
+	   {"property":"male"}
+	  ]
+	},
+	{ "concept":"Jens",
+	  "properties": [
+	   {"property":"Jens"},
+	   {"property":"male"}
+	  ]
+	},	
+	{ "concept":"Mathias",
+	  "properties": [
+	   {"property":"Mathias"},
+	   {"property":"male"}
+	  ]
+	},
+    { "concept":"Stefan",
+	  "properties": [
+	   {"property":"Stefan"},
+	   {"property":"male"}
+	  ]
+	},
+	{ "concept":"Michael",
+	  "properties": [
+	   {"property":"Michael"},
+	   {"property":"male"}
+	  ]
+	},
+	
+	{ "concept":"Andrea",
+	  "properties": [
+	   {"property":"Andrea"},
+	   {"property":"female"}
+	  ]
+	},
+	{ "concept":"Angelika",
+	  "properties": [
+	   {"property":"Angelika"},
+	   {"property":"female"}
+	  ]
+	},
+	{ "concept":"Anne",
+	  "properties": [
+	   {"property":"Anne"},
+	   {"property":"female"}
+	  ]
+	},
+	{ "concept":"Birgit",
+	  "properties": [
+	   {"property":"Birgit"},
+	   {"property":"female"}
+	  ]
+	},
+	{ "concept":"Christina",
+	  "properties": [
+	   {"property":"Christina"},
+	   {"property":"female"}
+	  ]
+	},
+	{ "concept":"Claudia",
+	  "properties": [
+	   {"property":"Claudia"},
+	   {"property":"female"}
+	  ]
+	},	
+	{ "concept":"Diana",
+	  "properties": [
+	   {"property":"Diana"},
+	   {"property":"female"}
+	  ]
+	},
+	{ "concept":"Franziska",
+	  "properties": [
+	   {"property":"Franziska"},
+	   {"property":"female"}
+	  ]
+	},
+	{ "concept":"Jana",
+	  "properties": [
+	   {"property":"Jana"},
+	   {"property":"female"}
+	  ]
+	},	
+	{ "concept":"Kerstin",
+	  "properties": [
+	   {"property":"Kerstin"},
+	   {"property":"female"}
+	  ]
+	},
+	{ "concept":"Lea",
+	  "properties": [
+	   {"property":"Lea"},
+	   {"property":"female"}
+	  ]
+	},
+	{ "concept":"Melanie",
+	  "properties": [
+	   {"property":"Melanie"},
+	   {"property":"female"}
+	  ]
+	},
+	{ "concept":"Sabine",
+	  "properties": [
+	   {"property":"Sabine"},
+	   {"property":"female"}
+	  ]
+	},
+	{ "concept":"Tanja",
+	  "properties": [
+	   {"property":"Tanja"},
+	   {"property":"female"}
+	  ]
+	}				
+    ]
+}

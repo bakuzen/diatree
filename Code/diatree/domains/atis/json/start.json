@@ -1,0 +1,231 @@
+{
+  "concepts": [
+    {
+      "concept": "4",
+      "properties": [{"property": "4"}]
+    },
+    {
+      "concept": "1133am",
+      "properties": [{"property": "1133am"}]
+    },
+    {
+      "concept": "5",
+      "properties": [{"property": "5"}]
+    },
+    {
+      "concept": "6",
+      "properties": [{"property": "6"}]
+    },
+    {
+      "concept": "6pm",
+      "properties": [{"property": "6pm"}]
+    },
+    {
+      "concept": "12",
+      "properties": [{"property": "12"}]
+    },
+    {
+      "concept": "1 oclock",
+      "properties": [{"property": "1 oclock"}]
+    },
+    {
+      "concept": "2pm",
+      "properties": [{"property": "2pm"}]
+    },
+    {
+      "concept": "445",
+      "properties": [{"property": "445"}]
+    },
+    {
+      "concept": "5pm",
+      "properties": [{"property": "5pm"}]
+    },
+    {
+      "concept": "430pm",
+      "properties": [{"property": "430pm"}]
+    },
+    {
+      "concept": "3",
+      "properties": [{"property": "3"}]
+    },
+    {
+      "concept": "1850",
+      "properties": [{"property": "1850"}]
+    },
+    {
+      "concept": "10am",
+      "properties": [{"property": "10am"}]
+    },
+    {
+      "concept": "415",
+      "properties": [{"property": "415"}]
+    },
+    {
+      "concept": "1030am",
+      "properties": [{"property": "1030am"}]
+    },
+    {
+      "concept": "1115am",
+      "properties": [{"property": "1115am"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "1133am",
+      "example": "1133am"
+    },
+    {
+      "concept": "5",
+      "example": "5"
+    },
+    {
+      "concept": "6",
+      "example": "6"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "1 oclock",
+      "example": "1 oclock"
+    },
+    {
+      "concept": "2pm",
+      "example": "2pm"
+    },
+    {
+      "concept": "445",
+      "example": "445"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "430pm",
+      "example": "430pm"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "3",
+      "example": "3"
+    },
+    {
+      "concept": "1850",
+      "example": "1850"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "415",
+      "example": "415"
+    },
+    {
+      "concept": "1030am",
+      "example": "1030am"
+    },
+    {
+      "concept": "1115am",
+      "example": "1115am"
+    },
+    {
+      "concept": "1115am",
+      "example": "1115am"
+    },
+    {
+      "concept": "1115am",
+      "example": "1115am"
+    },
+    {
+      "concept": "1115am",
+      "example": "1115am"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    }
+  ],
+  "intent": "start"
+}

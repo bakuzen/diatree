@@ -1,0 +1,127 @@
+{
+  "concepts": [
+    {
+      "concept": "return",
+      "properties": [{"property": "return"}]
+    },
+    {
+      "concept": "returning",
+      "properties": [{"property": "returning"}]
+    },
+    {
+      "concept": "back",
+      "properties": [{"property": "back"}]
+    },
+    {
+      "concept": "following day",
+      "properties": [{"property": "following day"}]
+    },
+    {
+      "concept": "next day",
+      "properties": [{"property": "next day"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "returning",
+      "example": "returning"
+    },
+    {
+      "concept": "returning",
+      "example": "returning"
+    },
+    {
+      "concept": "returning",
+      "example": "returning"
+    },
+    {
+      "concept": "back",
+      "example": "back"
+    },
+    {
+      "concept": "back",
+      "example": "back"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "back",
+      "example": "back"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "back",
+      "example": "back"
+    },
+    {
+      "concept": "back",
+      "example": "back"
+    },
+    {
+      "concept": "back",
+      "example": "back"
+    },
+    {
+      "concept": "returning",
+      "example": "returning"
+    },
+    {
+      "concept": "returning",
+      "example": "returning"
+    },
+    {
+      "concept": "following day",
+      "example": "following day"
+    },
+    {
+      "concept": "returning",
+      "example": "returning"
+    },
+    {
+      "concept": "next day",
+      "example": "next day"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "back",
+      "example": "back"
+    },
+    {
+      "concept": "next day",
+      "example": "next day"
+    },
+    {
+      "concept": "returning",
+      "example": "returning"
+    },
+    {
+      "concept": "returning",
+      "example": "returning"
+    },
+    {
+      "concept": "returning",
+      "example": "returning"
+    }
+  ],
+  "intent": "return"
+}

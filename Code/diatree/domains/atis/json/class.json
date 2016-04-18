@@ -1,0 +1,987 @@
+{
+  "concepts": [
+    {
+      "concept": "coach class",
+      "properties": [{"property": "coach class"}]
+    },
+    {
+      "concept": "first class",
+      "properties": [{"property": "first class"}]
+    },
+    {
+      "concept": "coach",
+      "properties": [{"property": "coach"}]
+    },
+    {
+      "concept": "first",
+      "properties": [{"property": "first"}]
+    },
+    {
+      "concept": "economy",
+      "properties": [{"property": "economy"}]
+    },
+    {
+      "concept": "business class",
+      "properties": [{"property": "business class"}]
+    },
+    {
+      "concept": "thrift",
+      "properties": [{"property": "thrift"}]
+    },
+    {
+      "concept": "class",
+      "properties": [{"property": "class"}]
+    },
+    {
+      "concept": "yn",
+      "properties": [{"property": "yn"}]
+    },
+    {
+      "concept": "economy class",
+      "properties": [{"property": "economy class"}]
+    },
+    {
+      "concept": "coach economy class",
+      "properties": [{"property": "coach economy class"}]
+    },
+    {
+      "concept": "thrift economy",
+      "properties": [{"property": "thrift economy"}]
+    },
+    {
+      "concept": "economy thrift",
+      "properties": [{"property": "economy thrift"}]
+    },
+    {
+      "concept": "k",
+      "properties": [{"property": "k"}]
+    },
+    {
+      "concept": "economic class",
+      "properties": [{"property": "economic class"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "thrift",
+      "example": "thrift"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "class",
+      "example": "class"
+    },
+    {
+      "concept": "yn",
+      "example": "yn"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "coach economy class",
+      "example": "coach economy class"
+    },
+    {
+      "concept": "thrift economy",
+      "example": "thrift economy"
+    },
+    {
+      "concept": "thrift economy",
+      "example": "thrift economy"
+    },
+    {
+      "concept": "thrift economy",
+      "example": "thrift economy"
+    },
+    {
+      "concept": "economy thrift",
+      "example": "economy thrift"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "k",
+      "example": "k"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economic class",
+      "example": "economic class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    }
+  ],
+  "intent": "class"
+}

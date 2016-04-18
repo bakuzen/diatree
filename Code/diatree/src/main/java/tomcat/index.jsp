@@ -1,12 +1,10 @@
-<!DOCTYPE HTML>
-
-
+<!DOCTYPE HTML> <meta charset="utf-8">
 
 
 <html>
 <body onload="start()">
 <!-- <span id="foo"></span> -->
-<meta charset="utf-8" />
+
 <style>
 .node circle {     
   fill: #fff;    
@@ -22,11 +20,11 @@
   stroke-width: 1.5px; 
 }
 </style> 
-<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>     
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>     
     <script type="text/javascript">
     function start() {
         var width = 700; 
-        var height = 500; 
+        var height = 1000; 
         var cluster = d3.layout.cluster()    
            .size([height, width-400]); 
         var diagonal = d3.svg.diagonal()    

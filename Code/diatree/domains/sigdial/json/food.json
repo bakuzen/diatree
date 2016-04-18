@@ -1,57 +1,59 @@
-{ "intent": "food", 
+{ "intent": "essen", 
     "concepts": [
 	{ "concept":"thai",
 	  "properties": [
 	   {"property":"thai"},
 	   {"property":"curry"},
-	   {"property":"spicy"},
-	   {"property":"rice"},
-	   {"property":"vegeterian"}
+	   {"property":"scharf"},
+	   {"property":"reis"},
+	   {"property":"vegetarisch"}
 	  ]
 	},
 	{ "concept":"indian",
 	  "properties": [
 	   {"property":"indian"},
 	   {"property":"curry"},
-	   {"property":"spicy"},
-	   {"property":"rice"},
-	   {"property":"vegeterian"}
+	   {"property":"scharf"},
+	   {"property":"reis"},
+	   {"property":"vegetarisch"}
 	  ]
 	},
-	{ "concept":"french",
+	{ "concept":"franzözisch",
 	  "properties": [
-	   {"property":"french"},
-	   {"property":"cheese"}
+	   {"property":"franzözisch"},
+	   {"property":"käse"}
 	  ]
 	},
-	{ "concept":"mexican",
+	{ "concept":"mexicanisch",
 	  "properties": [
 	   {"property":"mexican"},
-	   {"property":"spicy"},
+	   {"property":"scharf"},
 	   {"property":"tortilla"}
 	  ]
 	}
-     ],
-
-    "examples" : [
-     { "concept":"thai",
-       "example":"i want thai food"
-     },
-     { "concept":"thai",
-       "example":"i want some thai curry"
-     },
-     { "concept":"indian",
-       "example":"i want indian food"
-     },
-     { "concept":"indian",
-       "example":"i want some indian curry"
-     },
-     { "concept":"french",
-       "example":"i want french food"
-     },
-     { "concept":"mexican",
-       "example":"i want mexican food"
-     }
-
+    
+    ],
+    
+     "examples": [
+    {
+      "concept": "thai",
+      "example": "ich möchte thai"
+    },
+    {
+      "concept": "indian",
+      "example": "ich möchte indian"
+    },
+    {
+      "concept": "thai",
+      "example": "ich möchte thai"
+    },
+    {
+      "concept": "franzözisch",
+      "example": "ich möchte franzözisch"
+    },   
+    {
+      "concept": "mexicanisch",
+      "example": "ich möchte mexicanisch"
+    }
     ]
 }

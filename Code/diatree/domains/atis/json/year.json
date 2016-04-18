@@ -1,0 +1,103 @@
+{
+  "concepts": [
+    {
+      "concept": "1991",
+      "properties": [{"property": "1991"}]
+    },
+    {
+      "concept": "1992",
+      "properties": [{"property": "1992"}]
+    },
+    {
+      "concept": "1993",
+      "properties": [{"property": "1993"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1992",
+      "example": "1992"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "1992",
+      "example": "1992"
+    },
+    {
+      "concept": "1992",
+      "example": "1992"
+    },
+    {
+      "concept": "1993",
+      "example": "1993"
+    }
+  ],
+  "intent": "year"
+}

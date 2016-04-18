@@ -1,25 +1,15 @@
-{ "intent": "price", 
+{ "intent": "preis", 
     "concepts": [
-	{ "concept":"high",
+	{ "concept":"teuer",
 	  "properties": [
-	   {"property":"expensive"},
-	   {"property":"high"},
-	   {"property":"spendy"},
-	   {"property":"fancy"}
+	   {"property":"teuer"},
+	   {"property":"hoch"}
 	  ]
 	},
-	{ "concept":"medium",
+	{ "concept":"günstig",
 	  "properties": [
-	   {"property":"middle"},
-	   {"property":"medium"},
-	   {"property":"normal"}
-	  ]
-	},
-	{ "concept":"low",
-	  "properties": [
-	   {"property":"cheap"},
-	   {"property":"low"},
-	   {"property":"fast"}
+	   {"property":"schnell"},
+	   {"property":"günstig"}
 	  ]
 	}
      ]

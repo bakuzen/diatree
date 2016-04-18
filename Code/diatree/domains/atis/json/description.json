@@ -1,0 +1,235 @@
+{
+  "concepts": [
+    {
+      "concept": "dinner",
+      "properties": [{"property": "dinner"}]
+    },
+    {
+      "concept": "breakfast",
+      "properties": [{"property": "breakfast"}]
+    },
+    {
+      "concept": "lunch",
+      "properties": [{"property": "lunch"}]
+    },
+    {
+      "concept": "snack",
+      "properties": [{"property": "snack"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "lunch",
+      "example": "lunch"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "snack",
+      "example": "snack"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "lunch",
+      "example": "lunch"
+    },
+    {
+      "concept": "lunch",
+      "example": "lunch"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "lunch",
+      "example": "lunch"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "lunch",
+      "example": "lunch"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "lunch",
+      "example": "lunch"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "lunch",
+      "example": "lunch"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "breakfast",
+      "example": "breakfast"
+    },
+    {
+      "concept": "snack",
+      "example": "snack"
+    },
+    {
+      "concept": "lunch",
+      "example": "lunch"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    },
+    {
+      "concept": "dinner",
+      "example": "dinner"
+    }
+  ],
+  "intent": "description"
+}

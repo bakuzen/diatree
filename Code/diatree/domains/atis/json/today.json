@@ -1,0 +1,347 @@
+{
+  "concepts": [
+    {
+      "concept": "tomorrow",
+      "properties": [{"property": "tomorrow"}]
+    },
+    {
+      "concept": "today",
+      "properties": [{"property": "today"}]
+    },
+    {
+      "concept": "day after tomorrow",
+      "properties": [{"property": "day after tomorrow"}]
+    },
+    {
+      "concept": "the day after tomorrow",
+      "properties": [{"property": "the day after tomorrow"}]
+    },
+    {
+      "concept": "this",
+      "properties": [{"property": "this"}]
+    },
+    {
+      "concept": "following day",
+      "properties": [{"property": "following day"}]
+    },
+    {
+      "concept": "tonight",
+      "properties": [{"property": "tonight"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "day after tomorrow",
+      "example": "day after tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "the day after tomorrow",
+      "example": "the day after tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "the day after tomorrow",
+      "example": "the day after tomorrow"
+    },
+    {
+      "concept": "the day after tomorrow",
+      "example": "the day after tomorrow"
+    },
+    {
+      "concept": "the day after tomorrow",
+      "example": "the day after tomorrow"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "this",
+      "example": "this"
+    },
+    {
+      "concept": "this",
+      "example": "this"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "following day",
+      "example": "following day"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tonight",
+      "example": "tonight"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    }
+  ],
+  "intent": "today"
+}

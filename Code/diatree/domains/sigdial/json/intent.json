@@ -1,21 +1,28 @@
 { "intent": "intent", 
     "concepts": [
-	{ "concept":"food",
+	{ "concept":"essen",
 	  "properties": [
-	   {"property":"food"},
-	   {"property":"eat"},
-	   {"property":"hungry"}
+	   {"property":"malzeit"},
+	   {"property":"essen"},
+	   {"property":"hunger"}
 	  ]
 	},
-	{ "concept":"price",
+	{ "concept":"preis",
 	  "properties": [
-	   {"property":"price"},
-	   {"property":"cost"}
+	   {"property":"preis"},
+	   {"property":"kostet"}
 	  ]
 	},	
-	{ "concept":"loc",
+	{ "concept":"wer",
 	  "properties": [
-	   {"property":"location"}
+	   {"property":"wer"},
+	   {"property":"name"}
+	  ]
+	},		
+	{ "concept":"wo",
+	  "properties": [
+	   {"property":"wo"},
+	   {"property":"platz"}
 	  ]
 	}
     ]

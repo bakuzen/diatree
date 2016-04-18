@@ -88,9 +88,9 @@ public class DiaTreeServlet  extends HttpServlet implements Configurable {
 					}
 		    	}
 				try {
-					ServletOutputStream w = response.getOutputStream();
-			    	w.print("data:" + data + "\n\n");
-			    	w.flush();
+					PrintWriter writer = response.getWriter(); // needs to be a PrintWriter or unicode won't work
+			    	writer.write("data:" + data+ "\n\n");
+			    	writer.flush();
 			    	
 				} 
 				catch (IOException e) {

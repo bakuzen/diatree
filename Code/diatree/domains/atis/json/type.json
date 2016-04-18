@@ -1,0 +1,1167 @@
+{
+  "concepts": [
+    {
+      "concept": "coach class",
+      "properties": [{"property": "coach class"}]
+    },
+    {
+      "concept": "first class",
+      "properties": [{"property": "first class"}]
+    },
+    {
+      "concept": "coach",
+      "properties": [{"property": "coach"}]
+    },
+    {
+      "concept": "first",
+      "properties": [{"property": "first"}]
+    },
+    {
+      "concept": "economy",
+      "properties": [{"property": "economy"}]
+    },
+    {
+      "concept": "business class",
+      "properties": [{"property": "business class"}]
+    },
+    {
+      "concept": "thrift",
+      "properties": [{"property": "thrift"}]
+    },
+    {
+      "concept": "economy class",
+      "properties": [{"property": "economy class"}]
+    },
+    {
+      "concept": "coach economy class",
+      "properties": [{"property": "coach economy class"}]
+    },
+    {
+      "concept": "thrift economy",
+      "properties": [{"property": "thrift economy"}]
+    },
+    {
+      "concept": "economy thrift",
+      "properties": [{"property": "economy thrift"}]
+    },
+    {
+      "concept": "rental car",
+      "properties": [{"property": "rental car"}]
+    },
+    {
+      "concept": "limousine",
+      "properties": [{"property": "limousine"}]
+    },
+    {
+      "concept": "air taxi operation",
+      "properties": [{"property": "air taxi operation"}]
+    },
+    {
+      "concept": "car rental",
+      "properties": [{"property": "car rental"}]
+    },
+    {
+      "concept": "limo",
+      "properties": [{"property": "limo"}]
+    },
+    {
+      "concept": "economic class",
+      "properties": [{"property": "economic class"}]
+    },
+    {
+      "concept": "car",
+      "properties": [{"property": "car"}]
+    },
+    {
+      "concept": "limousines",
+      "properties": [{"property": "limousines"}]
+    },
+    {
+      "concept": "taxi services",
+      "properties": [{"property": "taxi services"}]
+    },
+    {
+      "concept": "car rentals",
+      "properties": [{"property": "car rentals"}]
+    },
+    {
+      "concept": "rental cars",
+      "properties": [{"property": "rental cars"}]
+    },
+    {
+      "concept": "train",
+      "properties": [{"property": "train"}]
+    },
+    {
+      "concept": "taxi",
+      "properties": [{"property": "taxi"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "thrift",
+      "example": "thrift"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "coach economy class",
+      "example": "coach economy class"
+    },
+    {
+      "concept": "thrift economy",
+      "example": "thrift economy"
+    },
+    {
+      "concept": "thrift economy",
+      "example": "thrift economy"
+    },
+    {
+      "concept": "thrift economy",
+      "example": "thrift economy"
+    },
+    {
+      "concept": "economy thrift",
+      "example": "economy thrift"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "air taxi operation",
+      "example": "air taxi operation"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "car rental",
+      "example": "car rental"
+    },
+    {
+      "concept": "limo",
+      "example": "limo"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "economic class",
+      "example": "economic class"
+    },
+    {
+      "concept": "car",
+      "example": "car"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "limo",
+      "example": "limo"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "car rental",
+      "example": "car rental"
+    },
+    {
+      "concept": "car rental",
+      "example": "car rental"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "limousines",
+      "example": "limousines"
+    },
+    {
+      "concept": "taxi services",
+      "example": "taxi services"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "car rentals",
+      "example": "car rentals"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "rental cars",
+      "example": "rental cars"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy class",
+      "example": "economy class"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "car rental",
+      "example": "car rental"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "economy",
+      "example": "economy"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "car",
+      "example": "car"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "car",
+      "example": "car"
+    },
+    {
+      "concept": "car",
+      "example": "car"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "coach class",
+      "example": "coach class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "business class",
+      "example": "business class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "train",
+      "example": "train"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "car",
+      "example": "car"
+    },
+    {
+      "concept": "car",
+      "example": "car"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "taxi",
+      "example": "taxi"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "coach",
+      "example": "coach"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    },
+    {
+      "concept": "first class",
+      "example": "first class"
+    }
+  ],
+  "intent": "type"
+}

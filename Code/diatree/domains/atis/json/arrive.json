@@ -1,0 +1,3011 @@
+{
+  "concepts": [
+    {
+      "concept": "1158pm",
+      "properties": [{"property": "1158pm"}]
+    },
+    {
+      "concept": "5 oclock",
+      "properties": [{"property": "5 oclock"}]
+    },
+    {
+      "concept": "afternoon",
+      "properties": [{"property": "afternoon"}]
+    },
+    {
+      "concept": "july",
+      "properties": [{"property": "july"}]
+    },
+    {
+      "concept": "seventh",
+      "properties": [{"property": "seventh"}]
+    },
+    {
+      "concept": "about",
+      "properties": [{"property": "about"}]
+    },
+    {
+      "concept": "12",
+      "properties": [{"property": "12"}]
+    },
+    {
+      "concept": "noon",
+      "properties": [{"property": "noon"}]
+    },
+    {
+      "concept": "around",
+      "properties": [{"property": "around"}]
+    },
+    {
+      "concept": "5",
+      "properties": [{"property": "5"}]
+    },
+    {
+      "concept": "5pm",
+      "properties": [{"property": "5pm"}]
+    },
+    {
+      "concept": "before",
+      "properties": [{"property": "before"}]
+    },
+    {
+      "concept": "10am",
+      "properties": [{"property": "10am"}]
+    },
+    {
+      "concept": "no later than",
+      "properties": [{"property": "no later than"}]
+    },
+    {
+      "concept": "2pm",
+      "properties": [{"property": "2pm"}]
+    },
+    {
+      "concept": "next",
+      "properties": [{"property": "next"}]
+    },
+    {
+      "concept": "monday",
+      "properties": [{"property": "monday"}]
+    },
+    {
+      "concept": "210pm",
+      "properties": [{"property": "210pm"}]
+    },
+    {
+      "concept": "november",
+      "properties": [{"property": "november"}]
+    },
+    {
+      "concept": "evening",
+      "properties": [{"property": "evening"}]
+    },
+    {
+      "concept": "eighth",
+      "properties": [{"property": "eighth"}]
+    },
+    {
+      "concept": "ninth",
+      "properties": [{"property": "ninth"}]
+    },
+    {
+      "concept": "fourth",
+      "properties": [{"property": "fourth"}]
+    },
+    {
+      "concept": "1",
+      "properties": [{"property": "1"}]
+    },
+    {
+      "concept": "between",
+      "properties": [{"property": "between"}]
+    },
+    {
+      "concept": "4",
+      "properties": [{"property": "4"}]
+    },
+    {
+      "concept": "and",
+      "properties": [{"property": "and"}]
+    },
+    {
+      "concept": "8pm",
+      "properties": [{"property": "8pm"}]
+    },
+    {
+      "concept": "august",
+      "properties": [{"property": "august"}]
+    },
+    {
+      "concept": "third",
+      "properties": [{"property": "third"}]
+    },
+    {
+      "concept": "fifth",
+      "properties": [{"property": "fifth"}]
+    },
+    {
+      "concept": "by",
+      "properties": [{"property": "by"}]
+    },
+    {
+      "concept": "mealtime",
+      "properties": [{"property": "mealtime"}]
+    },
+    {
+      "concept": "630",
+      "properties": [{"property": "630"}]
+    },
+    {
+      "concept": "after",
+      "properties": [{"property": "after"}]
+    },
+    {
+      "concept": "pm",
+      "properties": [{"property": "pm"}]
+    },
+    {
+      "concept": "later",
+      "properties": [{"property": "later"}]
+    },
+    {
+      "concept": "wednesday",
+      "properties": [{"property": "wednesday"}]
+    },
+    {
+      "concept": "1133am",
+      "properties": [{"property": "1133am"}]
+    },
+    {
+      "concept": "43pm",
+      "properties": [{"property": "43pm"}]
+    },
+    {
+      "concept": "earliest",
+      "properties": [{"property": "earliest"}]
+    },
+    {
+      "concept": "morning",
+      "properties": [{"property": "morning"}]
+    },
+    {
+      "concept": "8",
+      "properties": [{"property": "8"}]
+    },
+    {
+      "concept": "7pm",
+      "properties": [{"property": "7pm"}]
+    },
+    {
+      "concept": "9am",
+      "properties": [{"property": "9am"}]
+    },
+    {
+      "concept": "twenty second",
+      "properties": [{"property": "twenty second"}]
+    },
+    {
+      "concept": "6",
+      "properties": [{"property": "6"}]
+    },
+    {
+      "concept": "4pm",
+      "properties": [{"property": "4pm"}]
+    },
+    {
+      "concept": "one",
+      "properties": [{"property": "one"}]
+    },
+    {
+      "concept": "9 oclock",
+      "properties": [{"property": "9 oclock"}]
+    },
+    {
+      "concept": "thursday",
+      "properties": [{"property": "thursday"}]
+    },
+    {
+      "concept": "6pm",
+      "properties": [{"property": "6pm"}]
+    },
+    {
+      "concept": "saturday",
+      "properties": [{"property": "saturday"}]
+    },
+    {
+      "concept": "8am",
+      "properties": [{"property": "8am"}]
+    },
+    {
+      "concept": "tuesday",
+      "properties": [{"property": "tuesday"}]
+    },
+    {
+      "concept": "am",
+      "properties": [{"property": "am"}]
+    },
+    {
+      "concept": "tomorrow",
+      "properties": [{"property": "tomorrow"}]
+    },
+    {
+      "concept": "3 oclock",
+      "properties": [{"property": "3 oclock"}]
+    },
+    {
+      "concept": "8 oclock",
+      "properties": [{"property": "8 oclock"}]
+    },
+    {
+      "concept": "1145am",
+      "properties": [{"property": "1145am"}]
+    },
+    {
+      "concept": "near",
+      "properties": [{"property": "near"}]
+    },
+    {
+      "concept": "close to",
+      "properties": [{"property": "close to"}]
+    },
+    {
+      "concept": "1110",
+      "properties": [{"property": "1110"}]
+    },
+    {
+      "concept": "1pm",
+      "properties": [{"property": "1pm"}]
+    },
+    {
+      "concept": "7am",
+      "properties": [{"property": "7am"}]
+    },
+    {
+      "concept": "445",
+      "properties": [{"property": "445"}]
+    },
+    {
+      "concept": "515pm",
+      "properties": [{"property": "515pm"}]
+    },
+    {
+      "concept": "730pm",
+      "properties": [{"property": "730pm"}]
+    },
+    {
+      "concept": "430pm",
+      "properties": [{"property": "430pm"}]
+    },
+    {
+      "concept": "630pm",
+      "properties": [{"property": "630pm"}]
+    },
+    {
+      "concept": "10pm",
+      "properties": [{"property": "10pm"}]
+    },
+    {
+      "concept": "1 oclock",
+      "properties": [{"property": "1 oclock"}]
+    },
+    {
+      "concept": "12 oclock",
+      "properties": [{"property": "12 oclock"}]
+    },
+    {
+      "concept": "lunch",
+      "properties": [{"property": "lunch"}]
+    },
+    {
+      "concept": "12pm",
+      "properties": [{"property": "12pm"}]
+    },
+    {
+      "concept": "3",
+      "properties": [{"property": "3"}]
+    },
+    {
+      "concept": "2 oclock",
+      "properties": [{"property": "2 oclock"}]
+    },
+    {
+      "concept": "6 oclock",
+      "properties": [{"property": "6 oclock"}]
+    },
+    {
+      "concept": "1850",
+      "properties": [{"property": "1850"}]
+    },
+    {
+      "concept": "midnight",
+      "properties": [{"property": "midnight"}]
+    },
+    {
+      "concept": "2100",
+      "properties": [{"property": "2100"}]
+    },
+    {
+      "concept": "1700",
+      "properties": [{"property": "1700"}]
+    },
+    {
+      "concept": "charlotte",
+      "properties": [{"property": "charlotte"}]
+    },
+    {
+      "concept": "as soon thereafter as possible",
+      "properties": [{"property": "as soon thereafter as possible"}]
+    },
+    {
+      "concept": "sunday",
+      "properties": [{"property": "sunday"}]
+    },
+    {
+      "concept": "late",
+      "properties": [{"property": "late"}]
+    },
+    {
+      "concept": "late afternoon",
+      "properties": [{"property": "late afternoon"}]
+    },
+    {
+      "concept": "toronto",
+      "properties": [{"property": "toronto"}]
+    },
+    {
+      "concept": "montreal",
+      "properties": [{"property": "montreal"}]
+    },
+    {
+      "concept": "early",
+      "properties": [{"property": "early"}]
+    },
+    {
+      "concept": "friday",
+      "properties": [{"property": "friday"}]
+    },
+    {
+      "concept": "7",
+      "properties": [{"property": "7"}]
+    },
+    {
+      "concept": "7 oclock",
+      "properties": [{"property": "7 oclock"}]
+    },
+    {
+      "concept": "11am",
+      "properties": [{"property": "11am"}]
+    },
+    {
+      "concept": "10 oclock",
+      "properties": [{"property": "10 oclock"}]
+    },
+    {
+      "concept": "may",
+      "properties": [{"property": "may"}]
+    },
+    {
+      "concept": "twenty two",
+      "properties": [{"property": "twenty two"}]
+    },
+    {
+      "concept": "june",
+      "properties": [{"property": "june"}]
+    },
+    {
+      "concept": "first",
+      "properties": [{"property": "first"}]
+    },
+    {
+      "concept": "415",
+      "properties": [{"property": "415"}]
+    },
+    {
+      "concept": "530pm",
+      "properties": [{"property": "530pm"}]
+    },
+    {
+      "concept": "1030am",
+      "properties": [{"property": "1030am"}]
+    },
+    {
+      "concept": "1130am",
+      "properties": [{"property": "1130am"}]
+    },
+    {
+      "concept": "1115am",
+      "properties": [{"property": "1115am"}]
+    },
+    {
+      "concept": "1245pm",
+      "properties": [{"property": "1245pm"}]
+    },
+    {
+      "concept": "the same time",
+      "properties": [{"property": "the same time"}]
+    },
+    {
+      "concept": "230pm",
+      "properties": [{"property": "230pm"}]
+    },
+    {
+      "concept": "as early as possible",
+      "properties": [{"property": "as early as possible"}]
+    },
+    {
+      "concept": "9 oclock pm",
+      "properties": [{"property": "9 oclock pm"}]
+    },
+    {
+      "concept": "3pm",
+      "properties": [{"property": "3pm"}]
+    },
+    {
+      "concept": "11pm",
+      "properties": [{"property": "11pm"}]
+    },
+    {
+      "concept": "9pm",
+      "properties": [{"property": "9pm"}]
+    },
+    {
+      "concept": "march",
+      "properties": [{"property": "march"}]
+    },
+    {
+      "concept": "tenth",
+      "properties": [{"property": "tenth"}]
+    },
+    {
+      "concept": "dinnertime",
+      "properties": [{"property": "dinnertime"}]
+    },
+    {
+      "concept": "lunch time",
+      "properties": [{"property": "lunch time"}]
+    },
+    {
+      "concept": "fourteenth",
+      "properties": [{"property": "fourteenth"}]
+    },
+    {
+      "concept": "fifteenth",
+      "properties": [{"property": "fifteenth"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "1158pm",
+      "example": "1158pm"
+    },
+    {
+      "concept": "5 oclock",
+      "example": "5 oclock"
+    },
+    {
+      "concept": "afternoon",
+      "example": "afternoon"
+    },
+    {
+      "concept": "afternoon",
+      "example": "afternoon"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "about",
+      "example": "about"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "about",
+      "example": "about"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "5",
+      "example": "5"
+    },
+    {
+      "concept": "afternoon",
+      "example": "afternoon"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "5 oclock",
+      "example": "5 oclock"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "no later than",
+      "example": "no later than"
+    },
+    {
+      "concept": "2pm",
+      "example": "2pm"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "210pm",
+      "example": "210pm"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "eighth",
+      "example": "eighth"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "ninth",
+      "example": "ninth"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "ninth",
+      "example": "ninth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "1",
+      "example": "1"
+    },
+    {
+      "concept": "afternoon",
+      "example": "afternoon"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "fifth",
+      "example": "fifth"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "about",
+      "example": "about"
+    },
+    {
+      "concept": "mealtime",
+      "example": "mealtime"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "630",
+      "example": "630"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "5 oclock",
+      "example": "5 oclock"
+    },
+    {
+      "concept": "pm",
+      "example": "pm"
+    },
+    {
+      "concept": "later",
+      "example": "later"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "1133am",
+      "example": "1133am"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "43pm",
+      "example": "43pm"
+    },
+    {
+      "concept": "earliest",
+      "example": "earliest"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "8",
+      "example": "8"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "9am",
+      "example": "9am"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty second",
+      "example": "twenty second"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "2pm",
+      "example": "2pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "6",
+      "example": "6"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "afternoon",
+      "example": "afternoon"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "4pm",
+      "example": "4pm"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "one",
+      "example": "one"
+    },
+    {
+      "concept": "afternoon",
+      "example": "afternoon"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "9 oclock",
+      "example": "9 oclock"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "afternoon",
+      "example": "afternoon"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "4pm",
+      "example": "4pm"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "4pm",
+      "example": "4pm"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "8am",
+      "example": "8am"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "8",
+      "example": "8"
+    },
+    {
+      "concept": "9 oclock",
+      "example": "9 oclock"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "9 oclock",
+      "example": "9 oclock"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "9 oclock",
+      "example": "9 oclock"
+    },
+    {
+      "concept": "am",
+      "example": "am"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "3 oclock",
+      "example": "3 oclock"
+    },
+    {
+      "concept": "pm",
+      "example": "pm"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "8 oclock",
+      "example": "8 oclock"
+    },
+    {
+      "concept": "am",
+      "example": "am"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "6",
+      "example": "6"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "5 oclock",
+      "example": "5 oclock"
+    },
+    {
+      "concept": "pm",
+      "example": "pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "5",
+      "example": "5"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "1145am",
+      "example": "1145am"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "1145am",
+      "example": "1145am"
+    },
+    {
+      "concept": "afternoon",
+      "example": "afternoon"
+    },
+    {
+      "concept": "near",
+      "example": "near"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "close to",
+      "example": "close to"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "near",
+      "example": "near"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "1110",
+      "example": "1110"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "1110",
+      "example": "1110"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "1",
+      "example": "1"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "1pm",
+      "example": "1pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "close to",
+      "example": "close to"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "7am",
+      "example": "7am"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "445",
+      "example": "445"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "515pm",
+      "example": "515pm"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "5 oclock",
+      "example": "5 oclock"
+    },
+    {
+      "concept": "afternoon",
+      "example": "afternoon"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "730pm",
+      "example": "730pm"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "430pm",
+      "example": "430pm"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "630pm",
+      "example": "630pm"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "close to",
+      "example": "close to"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "10pm",
+      "example": "10pm"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "1 oclock",
+      "example": "1 oclock"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "1 oclock",
+      "example": "1 oclock"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "12 oclock",
+      "example": "12 oclock"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "12 oclock",
+      "example": "12 oclock"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "12",
+      "example": "12"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "lunch",
+      "example": "lunch"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "12pm",
+      "example": "12pm"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "3",
+      "example": "3"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "5 oclock",
+      "example": "5 oclock"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "2 oclock",
+      "example": "2 oclock"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "5 oclock",
+      "example": "5 oclock"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "6 oclock",
+      "example": "6 oclock"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "6 oclock",
+      "example": "6 oclock"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "1850",
+      "example": "1850"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "midnight",
+      "example": "midnight"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "2100",
+      "example": "2100"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "2100",
+      "example": "2100"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "1700",
+      "example": "1700"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "charlotte",
+      "example": "charlotte"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "as soon thereafter as possible",
+      "example": "as soon thereafter as possible"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "4pm",
+      "example": "4pm"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "10pm",
+      "example": "10pm"
+    },
+    {
+      "concept": "late",
+      "example": "late"
+    },
+    {
+      "concept": "afternoon",
+      "example": "afternoon"
+    },
+    {
+      "concept": "late afternoon",
+      "example": "late afternoon"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "about",
+      "example": "about"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "about",
+      "example": "about"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "toronto",
+      "example": "toronto"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "montreal",
+      "example": "montreal"
+    },
+    {
+      "concept": "early",
+      "example": "early"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "7",
+      "example": "7"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "5 oclock",
+      "example": "5 oclock"
+    },
+    {
+      "concept": "afternoon",
+      "example": "afternoon"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "7 oclock",
+      "example": "7 oclock"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "7 oclock",
+      "example": "7 oclock"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "7 oclock",
+      "example": "7 oclock"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "about",
+      "example": "about"
+    },
+    {
+      "concept": "8 oclock",
+      "example": "8 oclock"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "10pm",
+      "example": "10pm"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "10pm",
+      "example": "10pm"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "4pm",
+      "example": "4pm"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "11am",
+      "example": "11am"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "10 oclock",
+      "example": "10 oclock"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "early",
+      "example": "early"
+    },
+    {
+      "concept": "morning",
+      "example": "morning"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "11am",
+      "example": "11am"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "10pm",
+      "example": "10pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "4pm",
+      "example": "4pm"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "evening",
+      "example": "evening"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "10pm",
+      "example": "10pm"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "10pm",
+      "example": "10pm"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "twenty two",
+      "example": "twenty two"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "early",
+      "example": "early"
+    },
+    {
+      "concept": "afternoon",
+      "example": "afternoon"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "415",
+      "example": "415"
+    },
+    {
+      "concept": "530pm",
+      "example": "530pm"
+    },
+    {
+      "concept": "1030am",
+      "example": "1030am"
+    },
+    {
+      "concept": "1130am",
+      "example": "1130am"
+    },
+    {
+      "concept": "1115am",
+      "example": "1115am"
+    },
+    {
+      "concept": "1245pm",
+      "example": "1245pm"
+    },
+    {
+      "concept": "1115am",
+      "example": "1115am"
+    },
+    {
+      "concept": "1245pm",
+      "example": "1245pm"
+    },
+    {
+      "concept": "1115am",
+      "example": "1115am"
+    },
+    {
+      "concept": "1245pm",
+      "example": "1245pm"
+    },
+    {
+      "concept": "1115am",
+      "example": "1115am"
+    },
+    {
+      "concept": "1245pm",
+      "example": "1245pm"
+    },
+    {
+      "concept": "the same time",
+      "example": "the same time"
+    },
+    {
+      "concept": "the same time",
+      "example": "the same time"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "10am",
+      "example": "10am"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "230pm",
+      "example": "230pm"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "230pm",
+      "example": "230pm"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "4pm",
+      "example": "4pm"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "midnight",
+      "example": "midnight"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    },
+    {
+      "concept": "the same time",
+      "example": "the same time"
+    },
+    {
+      "concept": "the same time",
+      "example": "the same time"
+    },
+    {
+      "concept": "as early as possible",
+      "example": "as early as possible"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "9 oclock pm",
+      "example": "9 oclock pm"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "3pm",
+      "example": "3pm"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "4pm",
+      "example": "4pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "4pm",
+      "example": "4pm"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "11pm",
+      "example": "11pm"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "9pm",
+      "example": "9pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    },
+    {
+      "concept": "march",
+      "example": "march"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "9pm",
+      "example": "9pm"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "about",
+      "example": "about"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "by",
+      "example": "by"
+    },
+    {
+      "concept": "dinnertime",
+      "example": "dinnertime"
+    },
+    {
+      "concept": "around",
+      "example": "around"
+    },
+    {
+      "concept": "dinnertime",
+      "example": "dinnertime"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "before",
+      "example": "before"
+    },
+    {
+      "concept": "noon",
+      "example": "noon"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "after",
+      "example": "after"
+    },
+    {
+      "concept": "lunch time",
+      "example": "lunch time"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    }
+  ],
+  "intent": "arrive"
+}

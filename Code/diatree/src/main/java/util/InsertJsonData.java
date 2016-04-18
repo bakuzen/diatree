@@ -16,8 +16,9 @@ import model.db.Domain;
 public class InsertJsonData {
 	
 	private Domain db;
-	private String filePath = "domains/sigdial/json/";
 	private String domain = "sigdial";
+	private String filePath = "domains/"+domain+"/json/";
+	
 //	private FileWriter writer; 
 	
 	public static void main(String[] args) {
@@ -83,12 +84,15 @@ public class InsertJsonData {
 	}
 
 	private void handleJSONFile(String absolutePath) throws Exception {
+			System.out.println("Inserting " + absolutePath);
 			JSONTokener tok = new JSONTokener(new FileReader(absolutePath));
 			JSONObject json = new JSONObject(tok);
 			
 			String intent = json.getString("intent");
-			db.offerNewIntent(intent);
 			JSONArray concepts = json.getJSONArray("concepts");
+			if (concepts.length() < 2) return;
+			db.offerNewIntent(intent);
+			
 			for (int i=0; i<concepts.length(); i++) {
 				JSONObject concept = new JSONObject(new JSONTokener(concepts.get(i).toString()));
 				JSONArray properties = concept.getJSONArray("properties");

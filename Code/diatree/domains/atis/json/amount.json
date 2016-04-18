@@ -1,0 +1,267 @@
+{
+  "concepts": [
+    {
+      "concept": "329 dollars",
+      "properties": [{"property": "329 dollars"}]
+    },
+    {
+      "concept": "416 dollars",
+      "properties": [{"property": "416 dollars"}]
+    },
+    {
+      "concept": "200 dollars",
+      "properties": [{"property": "200 dollars"}]
+    },
+    {
+      "concept": "415 dollars",
+      "properties": [{"property": "415 dollars"}]
+    },
+    {
+      "concept": "500 dollars",
+      "properties": [{"property": "500 dollars"}]
+    },
+    {
+      "concept": "1500 dollars",
+      "properties": [{"property": "1500 dollars"}]
+    },
+    {
+      "concept": "1100 dollars",
+      "properties": [{"property": "1100 dollars"}]
+    },
+    {
+      "concept": "100",
+      "properties": [{"property": "100"}]
+    },
+    {
+      "concept": "300 dollars",
+      "properties": [{"property": "300 dollars"}]
+    },
+    {
+      "concept": "400 dollars",
+      "properties": [{"property": "400 dollars"}]
+    },
+    {
+      "concept": "1000 dollars",
+      "properties": [{"property": "1000 dollars"}]
+    },
+    {
+      "concept": "466 dollars",
+      "properties": [{"property": "466 dollars"}]
+    },
+    {
+      "concept": "932 dollars",
+      "properties": [{"property": "932 dollars"}]
+    },
+    {
+      "concept": "150 dollars",
+      "properties": [{"property": "150 dollars"}]
+    },
+    {
+      "concept": "1288",
+      "properties": [{"property": "1288"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "329 dollars",
+      "example": "329 dollars"
+    },
+    {
+      "concept": "416 dollars",
+      "example": "416 dollars"
+    },
+    {
+      "concept": "200 dollars",
+      "example": "200 dollars"
+    },
+    {
+      "concept": "415 dollars",
+      "example": "415 dollars"
+    },
+    {
+      "concept": "500 dollars",
+      "example": "500 dollars"
+    },
+    {
+      "concept": "1500 dollars",
+      "example": "1500 dollars"
+    },
+    {
+      "concept": "1100 dollars",
+      "example": "1100 dollars"
+    },
+    {
+      "concept": "1100 dollars",
+      "example": "1100 dollars"
+    },
+    {
+      "concept": "1100 dollars",
+      "example": "1100 dollars"
+    },
+    {
+      "concept": "100",
+      "example": "100"
+    },
+    {
+      "concept": "1100 dollars",
+      "example": "1100 dollars"
+    },
+    {
+      "concept": "300 dollars",
+      "example": "300 dollars"
+    },
+    {
+      "concept": "400 dollars",
+      "example": "400 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "1000 dollars",
+      "example": "1000 dollars"
+    },
+    {
+      "concept": "466 dollars",
+      "example": "466 dollars"
+    },
+    {
+      "concept": "466 dollars",
+      "example": "466 dollars"
+    },
+    {
+      "concept": "466 dollars",
+      "example": "466 dollars"
+    },
+    {
+      "concept": "932 dollars",
+      "example": "932 dollars"
+    },
+    {
+      "concept": "932 dollars",
+      "example": "932 dollars"
+    },
+    {
+      "concept": "466 dollars",
+      "example": "466 dollars"
+    },
+    {
+      "concept": "466 dollars",
+      "example": "466 dollars"
+    },
+    {
+      "concept": "466 dollars",
+      "example": "466 dollars"
+    },
+    {
+      "concept": "150 dollars",
+      "example": "150 dollars"
+    },
+    {
+      "concept": "466 dollars",
+      "example": "466 dollars"
+    },
+    {
+      "concept": "1288",
+      "example": "1288"
+    }
+  ],
+  "intent": "amount"
+}

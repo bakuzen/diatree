@@ -1,0 +1,115 @@
+{
+  "concepts": [
+    {
+      "concept": "ap80",
+      "properties": [{"property": "ap80"}]
+    },
+    {
+      "concept": "ap57",
+      "properties": [{"property": "ap57"}]
+    },
+    {
+      "concept": "ap/80",
+      "properties": [{"property": "ap/80"}]
+    },
+    {
+      "concept": "ap/57",
+      "properties": [{"property": "ap/57"}]
+    },
+    {
+      "concept": "ap68",
+      "properties": [{"property": "ap68"}]
+    },
+    {
+      "concept": "ap/55",
+      "properties": [{"property": "ap/55"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "ap80",
+      "example": "ap80"
+    },
+    {
+      "concept": "ap57",
+      "example": "ap57"
+    },
+    {
+      "concept": "ap80",
+      "example": "ap80"
+    },
+    {
+      "concept": "ap/80",
+      "example": "ap/80"
+    },
+    {
+      "concept": "ap/57",
+      "example": "ap/57"
+    },
+    {
+      "concept": "ap80",
+      "example": "ap80"
+    },
+    {
+      "concept": "ap68",
+      "example": "ap68"
+    },
+    {
+      "concept": "ap/57",
+      "example": "ap/57"
+    },
+    {
+      "concept": "ap/55",
+      "example": "ap/55"
+    },
+    {
+      "concept": "ap/57",
+      "example": "ap/57"
+    },
+    {
+      "concept": "ap/80",
+      "example": "ap/80"
+    },
+    {
+      "concept": "ap/57",
+      "example": "ap/57"
+    },
+    {
+      "concept": "ap/57",
+      "example": "ap/57"
+    },
+    {
+      "concept": "ap57",
+      "example": "ap57"
+    },
+    {
+      "concept": "ap57",
+      "example": "ap57"
+    },
+    {
+      "concept": "ap/57",
+      "example": "ap/57"
+    },
+    {
+      "concept": "ap/57",
+      "example": "ap/57"
+    },
+    {
+      "concept": "ap/57",
+      "example": "ap/57"
+    },
+    {
+      "concept": "ap/57",
+      "example": "ap/57"
+    },
+    {
+      "concept": "ap/57",
+      "example": "ap/57"
+    },
+    {
+      "concept": "ap/57",
+      "example": "ap/57"
+    }
+  ],
+  "intent": "restriction"
+}

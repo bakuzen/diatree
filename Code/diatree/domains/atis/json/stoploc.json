@@ -1,0 +1,1035 @@
+{
+  "concepts": [
+    {
+      "concept": "fort worth",
+      "properties": [{"property": "fort worth"}]
+    },
+    {
+      "concept": "denver",
+      "properties": [{"property": "denver"}]
+    },
+    {
+      "concept": "washington",
+      "properties": [{"property": "washington"}]
+    },
+    {
+      "concept": "pittsburgh",
+      "properties": [{"property": "pittsburgh"}]
+    },
+    {
+      "concept": "philadelphia",
+      "properties": [{"property": "philadelphia"}]
+    },
+    {
+      "concept": "dallas",
+      "properties": [{"property": "dallas"}]
+    },
+    {
+      "concept": "fort worth dallas",
+      "properties": [{"property": "fort worth dallas"}]
+    },
+    {
+      "concept": "dallas fort worth",
+      "properties": [{"property": "dallas fort worth"}]
+    },
+    {
+      "concept": "atlanta",
+      "properties": [{"property": "atlanta"}]
+    },
+    {
+      "concept": "dc",
+      "properties": [{"property": "dc"}]
+    },
+    {
+      "concept": "boston",
+      "properties": [{"property": "boston"}]
+    },
+    {
+      "concept": "phoenix",
+      "properties": [{"property": "phoenix"}]
+    },
+    {
+      "concept": "san francisco",
+      "properties": [{"property": "san francisco"}]
+    },
+    {
+      "concept": "st. louis",
+      "properties": [{"property": "st. louis"}]
+    },
+    {
+      "concept": "kansas city",
+      "properties": [{"property": "kansas city"}]
+    },
+    {
+      "concept": "milwaukee",
+      "properties": [{"property": "milwaukee"}]
+    },
+    {
+      "concept": "new york",
+      "properties": [{"property": "new york"}]
+    },
+    {
+      "concept": "chicago",
+      "properties": [{"property": "chicago"}]
+    },
+    {
+      "concept": "cincinnati",
+      "properties": [{"property": "cincinnati"}]
+    },
+    {
+      "concept": "nashville",
+      "properties": [{"property": "nashville"}]
+    },
+    {
+      "concept": "los angeles",
+      "properties": [{"property": "los angeles"}]
+    },
+    {
+      "concept": "minneapolis",
+      "properties": [{"property": "minneapolis"}]
+    },
+    {
+      "concept": "indianapolis",
+      "properties": [{"property": "indianapolis"}]
+    },
+    {
+      "concept": "charlotte",
+      "properties": [{"property": "charlotte"}]
+    },
+    {
+      "concept": "houston",
+      "properties": [{"property": "houston"}]
+    },
+    {
+      "concept": "other city",
+      "properties": [{"property": "other city"}]
+    },
+    {
+      "concept": "other cities",
+      "properties": [{"property": "other cities"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "fort worth",
+      "example": "fort worth"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "washington",
+      "example": "washington"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "fort worth dallas",
+      "example": "fort worth dallas"
+    },
+    {
+      "concept": "fort worth dallas",
+      "example": "fort worth dallas"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "fort worth",
+      "example": "fort worth"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas fort worth",
+      "example": "dallas fort worth"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas fort worth",
+      "example": "dallas fort worth"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "washington",
+      "example": "washington"
+    },
+    {
+      "concept": "dc",
+      "example": "dc"
+    },
+    {
+      "concept": "dallas fort worth",
+      "example": "dallas fort worth"
+    },
+    {
+      "concept": "dallas fort worth",
+      "example": "dallas fort worth"
+    },
+    {
+      "concept": "dallas fort worth",
+      "example": "dallas fort worth"
+    },
+    {
+      "concept": "dallas fort worth",
+      "example": "dallas fort worth"
+    },
+    {
+      "concept": "dallas fort worth",
+      "example": "dallas fort worth"
+    },
+    {
+      "concept": "dallas fort worth",
+      "example": "dallas fort worth"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "dallas fort worth",
+      "example": "dallas fort worth"
+    },
+    {
+      "concept": "dallas fort worth",
+      "example": "dallas fort worth"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "boston",
+      "example": "boston"
+    },
+    {
+      "concept": "boston",
+      "example": "boston"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "philadelphia",
+      "example": "philadelphia"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "pittsburgh",
+      "example": "pittsburgh"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "phoenix",
+      "example": "phoenix"
+    },
+    {
+      "concept": "washington",
+      "example": "washington"
+    },
+    {
+      "concept": "dc",
+      "example": "dc"
+    },
+    {
+      "concept": "dc",
+      "example": "dc"
+    },
+    {
+      "concept": "dc",
+      "example": "dc"
+    },
+    {
+      "concept": "san francisco",
+      "example": "san francisco"
+    },
+    {
+      "concept": "washington",
+      "example": "washington"
+    },
+    {
+      "concept": "dc",
+      "example": "dc"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "phoenix",
+      "example": "phoenix"
+    },
+    {
+      "concept": "dallas fort worth",
+      "example": "dallas fort worth"
+    },
+    {
+      "concept": "st. louis",
+      "example": "st. louis"
+    },
+    {
+      "concept": "kansas city",
+      "example": "kansas city"
+    },
+    {
+      "concept": "milwaukee",
+      "example": "milwaukee"
+    },
+    {
+      "concept": "st. louis",
+      "example": "st. louis"
+    },
+    {
+      "concept": "st. louis",
+      "example": "st. louis"
+    },
+    {
+      "concept": "new york",
+      "example": "new york"
+    },
+    {
+      "concept": "chicago",
+      "example": "chicago"
+    },
+    {
+      "concept": "cincinnati",
+      "example": "cincinnati"
+    },
+    {
+      "concept": "st. louis",
+      "example": "st. louis"
+    },
+    {
+      "concept": "nashville",
+      "example": "nashville"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "los angeles",
+      "example": "los angeles"
+    },
+    {
+      "concept": "st. louis",
+      "example": "st. louis"
+    },
+    {
+      "concept": "phoenix",
+      "example": "phoenix"
+    },
+    {
+      "concept": "st. louis",
+      "example": "st. louis"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "minneapolis",
+      "example": "minneapolis"
+    },
+    {
+      "concept": "indianapolis",
+      "example": "indianapolis"
+    },
+    {
+      "concept": "cincinnati",
+      "example": "cincinnati"
+    },
+    {
+      "concept": "milwaukee",
+      "example": "milwaukee"
+    },
+    {
+      "concept": "new york",
+      "example": "new york"
+    },
+    {
+      "concept": "new york",
+      "example": "new york"
+    },
+    {
+      "concept": "charlotte",
+      "example": "charlotte"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "cincinnati",
+      "example": "cincinnati"
+    },
+    {
+      "concept": "st. louis",
+      "example": "st. louis"
+    },
+    {
+      "concept": "chicago",
+      "example": "chicago"
+    },
+    {
+      "concept": "minneapolis",
+      "example": "minneapolis"
+    },
+    {
+      "concept": "milwaukee",
+      "example": "milwaukee"
+    },
+    {
+      "concept": "houston",
+      "example": "houston"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "houston",
+      "example": "houston"
+    },
+    {
+      "concept": "houston",
+      "example": "houston"
+    },
+    {
+      "concept": "houston",
+      "example": "houston"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "denver",
+      "example": "denver"
+    },
+    {
+      "concept": "other city",
+      "example": "other city"
+    },
+    {
+      "concept": "other cities",
+      "example": "other cities"
+    },
+    {
+      "concept": "indianapolis",
+      "example": "indianapolis"
+    },
+    {
+      "concept": "indianapolis",
+      "example": "indianapolis"
+    },
+    {
+      "concept": "indianapolis",
+      "example": "indianapolis"
+    },
+    {
+      "concept": "indianapolis",
+      "example": "indianapolis"
+    },
+    {
+      "concept": "indianapolis",
+      "example": "indianapolis"
+    },
+    {
+      "concept": "indianapolis",
+      "example": "indianapolis"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "atlanta",
+      "example": "atlanta"
+    },
+    {
+      "concept": "dallas",
+      "example": "dallas"
+    },
+    {
+      "concept": "minneapolis",
+      "example": "minneapolis"
+    },
+    {
+      "concept": "milwaukee",
+      "example": "milwaukee"
+    },
+    {
+      "concept": "milwaukee",
+      "example": "milwaukee"
+    },
+    {
+      "concept": "milwaukee",
+      "example": "milwaukee"
+    },
+    {
+      "concept": "milwaukee",
+      "example": "milwaukee"
+    }
+  ],
+  "intent": "stoploc"
+}

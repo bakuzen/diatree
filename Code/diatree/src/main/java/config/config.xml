@@ -14,7 +14,7 @@
 <!--  incremental configuration file                          -->
 <!-- ******************************************************** -->
 <config>
-    <property name="language" value="en-US"/>
+    <property name="language" value="de-de"/>
 
 	&sphinx;
 	&sphinxlang;

@@ -1,13 +1,13 @@
-{ "intent": "loc", 
+{ "intent": "wo", 
     "concepts": [
-	{ "concept":"downtown",
+	{ "concept":"stadtmitte",
 	  "properties": [
-	   {"property":"downtown"}
+	   {"property":"stadtmitte"}
 	  ]
 	},
-	{ "concept":"university",
+	{ "concept":"universität",
 	  "properties": [
-	   {"property":"university"},
+	   {"property":"universität"},
 	   {"property":"uni"}
 	  ]
 	},
@@ -16,29 +16,13 @@
 	   {"property":"park"}
 	  ]
 	},
-    { "concept":"near",
+    { "concept":"nähe",
 	  "properties": [
-	   {"property":"nearby"},
-	   {"property":"here"}
+	   {"property":"hierum"},
+	   {"property":"hier"}
 	  ]
 	}
 
-     ],
-
-    "examples" : [
-     { "concept":"downtown",
-       "example":"around downtown"
-     },
-     { "concept":"park",
-       "example":"around the park"
-     },
-     { "concept":"university",
-       "example":"around the uni"
-     },   
-     { "concept":"near",
-       "example":"around here"
-     }
-
-
     ]
+    
 }

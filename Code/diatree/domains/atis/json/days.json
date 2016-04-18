@@ -1,0 +1,171 @@
+{
+  "concepts": [
+    {
+      "concept": "daily",
+      "properties": [{"property": "daily"}]
+    },
+    {
+      "concept": "sa",
+      "properties": [{"property": "sa"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    },
+    {
+      "concept": "sa",
+      "example": "sa"
+    },
+    {
+      "concept": "sa",
+      "example": "sa"
+    },
+    {
+      "concept": "daily",
+      "example": "daily"
+    }
+  ],
+  "intent": "days"
+}

@@ -1,0 +1,287 @@
+{
+  "concepts": [
+    {
+      "concept": "between",
+      "properties": [{"property": "between"}]
+    },
+    {
+      "concept": "and",
+      "properties": [{"property": "and"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    },
+    {
+      "concept": "between",
+      "example": "between"
+    },
+    {
+      "concept": "and",
+      "example": "and"
+    }
+  ],
+  "intent": "range"
+}

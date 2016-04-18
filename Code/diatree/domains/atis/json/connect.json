@@ -1,0 +1,183 @@
+{
+  "concepts": [
+    {
+      "concept": "connecting",
+      "properties": [{"property": "connecting"}]
+    },
+    {
+      "concept": "direct",
+      "properties": [{"property": "direct"}]
+    },
+    {
+      "concept": "connections",
+      "properties": [{"property": "connections"}]
+    },
+    {
+      "concept": "connects",
+      "properties": [{"property": "connects"}]
+    },
+    {
+      "concept": "connect",
+      "properties": [{"property": "connect"}]
+    },
+    {
+      "concept": "minimum connection time",
+      "properties": [{"property": "minimum connection time"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "connections",
+      "example": "connections"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "connections",
+      "example": "connections"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "connects",
+      "example": "connects"
+    },
+    {
+      "concept": "connect",
+      "example": "connect"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "minimum connection time",
+      "example": "minimum connection time"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "connect",
+      "example": "connect"
+    },
+    {
+      "concept": "direct",
+      "example": "direct"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    },
+    {
+      "concept": "connecting",
+      "example": "connecting"
+    }
+  ],
+  "intent": "connect"
+}

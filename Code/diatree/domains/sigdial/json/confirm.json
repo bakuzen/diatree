@@ -2,18 +2,18 @@
     "concepts": [
 	{ "concept":"yes",
 	  "properties": [
-	   {"property":"yes"},
-	   {"property":"right"},
-	   {"property":"true"},
-	   {"property":"yeah"}
+	   {"property":"ja"},
+	   {"property":"richtig"},
+	   {"property":"gut"},
+	   {"property":"genau"},
+	   {"property":"klar"}
 	  ]
 	},
 	{ "concept":"no",
 	  "properties": [
-	   {"property":"no"},
-	   {"property":"wrong"},
-	   {"property":"nope"},
-	   {"property":"false"}
+	   {"property":"nicht"},
+	   {"property":"falsch"},
+	   {"property":"nein"}
 	  ]
 	}
      ]

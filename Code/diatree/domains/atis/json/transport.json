@@ -1,0 +1,211 @@
+{
+  "concepts": [
+    {
+      "concept": "rental car",
+      "properties": [{"property": "rental car"}]
+    },
+    {
+      "concept": "limousine",
+      "properties": [{"property": "limousine"}]
+    },
+    {
+      "concept": "air taxi operation",
+      "properties": [{"property": "air taxi operation"}]
+    },
+    {
+      "concept": "car rental",
+      "properties": [{"property": "car rental"}]
+    },
+    {
+      "concept": "limo",
+      "properties": [{"property": "limo"}]
+    },
+    {
+      "concept": "car",
+      "properties": [{"property": "car"}]
+    },
+    {
+      "concept": "limousines",
+      "properties": [{"property": "limousines"}]
+    },
+    {
+      "concept": "taxi services",
+      "properties": [{"property": "taxi services"}]
+    },
+    {
+      "concept": "car rentals",
+      "properties": [{"property": "car rentals"}]
+    },
+    {
+      "concept": "rental cars",
+      "properties": [{"property": "rental cars"}]
+    },
+    {
+      "concept": "train",
+      "properties": [{"property": "train"}]
+    },
+    {
+      "concept": "taxi",
+      "properties": [{"property": "taxi"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "air taxi operation",
+      "example": "air taxi operation"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "car rental",
+      "example": "car rental"
+    },
+    {
+      "concept": "limo",
+      "example": "limo"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "car",
+      "example": "car"
+    },
+    {
+      "concept": "limo",
+      "example": "limo"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "car rental",
+      "example": "car rental"
+    },
+    {
+      "concept": "car rental",
+      "example": "car rental"
+    },
+    {
+      "concept": "limousines",
+      "example": "limousines"
+    },
+    {
+      "concept": "taxi services",
+      "example": "taxi services"
+    },
+    {
+      "concept": "car rentals",
+      "example": "car rentals"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "rental cars",
+      "example": "rental cars"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "car rental",
+      "example": "car rental"
+    },
+    {
+      "concept": "car",
+      "example": "car"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    },
+    {
+      "concept": "car",
+      "example": "car"
+    },
+    {
+      "concept": "car",
+      "example": "car"
+    },
+    {
+      "concept": "train",
+      "example": "train"
+    },
+    {
+      "concept": "car",
+      "example": "car"
+    },
+    {
+      "concept": "car",
+      "example": "car"
+    },
+    {
+      "concept": "taxi",
+      "example": "taxi"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "limousine",
+      "example": "limousine"
+    },
+    {
+      "concept": "rental car",
+      "example": "rental car"
+    }
+  ],
+  "intent": "transport"
+}

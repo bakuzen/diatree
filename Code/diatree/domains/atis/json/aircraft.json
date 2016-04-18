@@ -1,0 +1,175 @@
+{
+  "concepts": [
+    {
+      "concept": "727",
+      "properties": [{"property": "727"}]
+    },
+    {
+      "concept": "dc10",
+      "properties": [{"property": "dc10"}]
+    },
+    {
+      "concept": "747",
+      "properties": [{"property": "747"}]
+    },
+    {
+      "concept": "m80",
+      "properties": [{"property": "m80"}]
+    },
+    {
+      "concept": "smallest",
+      "properties": [{"property": "smallest"}]
+    },
+    {
+      "concept": "f28",
+      "properties": [{"property": "f28"}]
+    },
+    {
+      "concept": "737",
+      "properties": [{"property": "737"}]
+    },
+    {
+      "concept": "j31",
+      "properties": [{"property": "j31"}]
+    },
+    {
+      "concept": "733",
+      "properties": [{"property": "733"}]
+    },
+    {
+      "concept": "72s",
+      "properties": [{"property": "72s"}]
+    },
+    {
+      "concept": "100",
+      "properties": [{"property": "100"}]
+    },
+    {
+      "concept": "767",
+      "properties": [{"property": "767"}]
+    },
+    {
+      "concept": "d9s",
+      "properties": [{"property": "d9s"}]
+    },
+    {
+      "concept": "73s",
+      "properties": [{"property": "73s"}]
+    },
+    {
+      "concept": "757",
+      "properties": [{"property": "757"}]
+    },
+    {
+      "concept": "d10",
+      "properties": [{"property": "d10"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "727",
+      "example": "727"
+    },
+    {
+      "concept": "727",
+      "example": "727"
+    },
+    {
+      "concept": "dc10",
+      "example": "dc10"
+    },
+    {
+      "concept": "747",
+      "example": "747"
+    },
+    {
+      "concept": "747",
+      "example": "747"
+    },
+    {
+      "concept": "747",
+      "example": "747"
+    },
+    {
+      "concept": "747",
+      "example": "747"
+    },
+    {
+      "concept": "747",
+      "example": "747"
+    },
+    {
+      "concept": "m80",
+      "example": "m80"
+    },
+    {
+      "concept": "smallest",
+      "example": "smallest"
+    },
+    {
+      "concept": "dc10",
+      "example": "dc10"
+    },
+    {
+      "concept": "f28",
+      "example": "f28"
+    },
+    {
+      "concept": "737",
+      "example": "737"
+    },
+    {
+      "concept": "j31",
+      "example": "j31"
+    },
+    {
+      "concept": "733",
+      "example": "733"
+    },
+    {
+      "concept": "72s",
+      "example": "72s"
+    },
+    {
+      "concept": "100",
+      "example": "100"
+    },
+    {
+      "concept": "f28",
+      "example": "f28"
+    },
+    {
+      "concept": "767",
+      "example": "767"
+    },
+    {
+      "concept": "72s",
+      "example": "72s"
+    },
+    {
+      "concept": "d9s",
+      "example": "d9s"
+    },
+    {
+      "concept": "73s",
+      "example": "73s"
+    },
+    {
+      "concept": "757",
+      "example": "757"
+    },
+    {
+      "concept": "737",
+      "example": "737"
+    },
+    {
+      "concept": "dc10",
+      "example": "dc10"
+    },
+    {
+      "concept": "d10",
+      "example": "d10"
+    }
+  ],
+  "intent": "aircraft"
+}

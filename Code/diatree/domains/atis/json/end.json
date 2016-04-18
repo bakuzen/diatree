@@ -1,0 +1,239 @@
+{
+  "concepts": [
+    {
+      "concept": "8pm",
+      "properties": [{"property": "8pm"}]
+    },
+    {
+      "concept": "43pm",
+      "properties": [{"property": "43pm"}]
+    },
+    {
+      "concept": "7pm",
+      "properties": [{"property": "7pm"}]
+    },
+    {
+      "concept": "10pm",
+      "properties": [{"property": "10pm"}]
+    },
+    {
+      "concept": "2",
+      "properties": [{"property": "2"}]
+    },
+    {
+      "concept": "4",
+      "properties": [{"property": "4"}]
+    },
+    {
+      "concept": "3 oclock",
+      "properties": [{"property": "3 oclock"}]
+    },
+    {
+      "concept": "6pm",
+      "properties": [{"property": "6pm"}]
+    },
+    {
+      "concept": "515pm",
+      "properties": [{"property": "515pm"}]
+    },
+    {
+      "concept": "2pm",
+      "properties": [{"property": "2pm"}]
+    },
+    {
+      "concept": "730pm",
+      "properties": [{"property": "730pm"}]
+    },
+    {
+      "concept": "630pm",
+      "properties": [{"property": "630pm"}]
+    },
+    {
+      "concept": "1 oclock",
+      "properties": [{"property": "1 oclock"}]
+    },
+    {
+      "concept": "5 oclock",
+      "properties": [{"property": "5 oclock"}]
+    },
+    {
+      "concept": "5pm",
+      "properties": [{"property": "5pm"}]
+    },
+    {
+      "concept": "530pm",
+      "properties": [{"property": "530pm"}]
+    },
+    {
+      "concept": "1130am",
+      "properties": [{"property": "1130am"}]
+    },
+    {
+      "concept": "1245pm",
+      "properties": [{"property": "1245pm"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    },
+    {
+      "concept": "43pm",
+      "example": "43pm"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "10pm",
+      "example": "10pm"
+    },
+    {
+      "concept": "2",
+      "example": "2"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "4",
+      "example": "4"
+    },
+    {
+      "concept": "3 oclock",
+      "example": "3 oclock"
+    },
+    {
+      "concept": "6pm",
+      "example": "6pm"
+    },
+    {
+      "concept": "515pm",
+      "example": "515pm"
+    },
+    {
+      "concept": "2pm",
+      "example": "2pm"
+    },
+    {
+      "concept": "730pm",
+      "example": "730pm"
+    },
+    {
+      "concept": "630pm",
+      "example": "630pm"
+    },
+    {
+      "concept": "7pm",
+      "example": "7pm"
+    },
+    {
+      "concept": "1 oclock",
+      "example": "1 oclock"
+    },
+    {
+      "concept": "1 oclock",
+      "example": "1 oclock"
+    },
+    {
+      "concept": "5 oclock",
+      "example": "5 oclock"
+    },
+    {
+      "concept": "2pm",
+      "example": "2pm"
+    },
+    {
+      "concept": "2pm",
+      "example": "2pm"
+    },
+    {
+      "concept": "2pm",
+      "example": "2pm"
+    },
+    {
+      "concept": "2pm",
+      "example": "2pm"
+    },
+    {
+      "concept": "2pm",
+      "example": "2pm"
+    },
+    {
+      "concept": "2pm",
+      "example": "2pm"
+    },
+    {
+      "concept": "2pm",
+      "example": "2pm"
+    },
+    {
+      "concept": "2pm",
+      "example": "2pm"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "5pm",
+      "example": "5pm"
+    },
+    {
+      "concept": "530pm",
+      "example": "530pm"
+    },
+    {
+      "concept": "1130am",
+      "example": "1130am"
+    },
+    {
+      "concept": "1245pm",
+      "example": "1245pm"
+    },
+    {
+      "concept": "1245pm",
+      "example": "1245pm"
+    },
+    {
+      "concept": "1245pm",
+      "example": "1245pm"
+    },
+    {
+      "concept": "1245pm",
+      "example": "1245pm"
+    },
+    {
+      "concept": "8pm",
+      "example": "8pm"
+    }
+  ],
+  "intent": "end"
+}
