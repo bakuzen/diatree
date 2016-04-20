@@ -1,0 +1,660 @@
+{
+  "concepts": [
+    {
+      "concept": "nonstop",
+      "properties": [{"property": "nonstop"}]
+    },
+    {
+      "concept": "without stopping",
+      "properties": [
+        {"property": "without"},
+        {"property": "stopping"}
+      ]
+    },
+    {
+      "concept": "one stop",
+      "properties": [
+        {"property": "one"},
+        {"property": "stop"}
+      ]
+    },
+    {
+      "concept": "directly",
+      "properties": [{"property": "directly"}]
+    },
+    {
+      "concept": "stops",
+      "properties": [{"property": "stops"}]
+    },
+    {
+      "concept": "stop",
+      "properties": [{"property": "stop"}]
+    },
+    {
+      "concept": "at least 3 stops",
+      "properties": [
+        {"property": "at"},
+        {"property": "least"},
+        {"property": "3"},
+        {"property": "stops"}
+      ]
+    },
+    {
+      "concept": "at least",
+      "properties": [
+        {"property": "at"},
+        {"property": "least"}
+      ]
+    },
+    {
+      "concept": "no stopovers",
+      "properties": [
+        {"property": "no"},
+        {"property": "stopovers"}
+      ]
+    },
+    {
+      "concept": "nonstops",
+      "properties": [{"property": "nonstops"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "without stopping",
+      "example": "without stopping"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "one stop",
+      "example": "one stop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "one stop",
+      "example": "one stop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "one stop",
+      "example": "one stop"
+    },
+    {
+      "concept": "directly",
+      "example": "directly"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "stops",
+      "example": "stops"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "stop",
+      "example": "stop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "stop",
+      "example": "stop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "stop",
+      "example": "stop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "at least 3 stops",
+      "example": "at least 3 stops"
+    },
+    {
+      "concept": "stops",
+      "example": "stops"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "at least",
+      "example": "at least"
+    },
+    {
+      "concept": "one stop",
+      "example": "one stop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "no stopovers",
+      "example": "no stopovers"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "one stop",
+      "example": "one stop"
+    },
+    {
+      "concept": "one stop",
+      "example": "one stop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "one stop",
+      "example": "one stop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "one stop",
+      "example": "one stop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstops",
+      "example": "nonstops"
+    },
+    {
+      "concept": "nonstops",
+      "example": "nonstops"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "one stop",
+      "example": "one stop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "nonstop",
+      "example": "nonstop"
+    },
+    {
+      "concept": "one stop",
+      "example": "one stop"
+    }
+  ],
+  "intent": "stop"
+}

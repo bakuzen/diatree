@@ -22,6 +22,16 @@
 	   {"property":"hier"}
 	  ]
 	}
+    { "concept":"bielefeld",
+	  "properties": [
+	   {"property":"bielefeld"}
+	  ]
+	}	
+	{ "concept":"herford",
+	  "properties": [
+	   {"property":"herford"}
+	  ]
+	}		
 
     ]
     

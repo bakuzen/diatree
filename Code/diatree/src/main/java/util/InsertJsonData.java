@@ -19,14 +19,15 @@ public class InsertJsonData {
 	private String domain = "atis";
 	private String filePath = "domains/"+domain+"/json/";
 	
-//	private FileWriter writer; 
 	
 	public static void main(String[] args) {
 		try {
 			new InsertJsonData().run();
-		} catch (SQLException e) {
+		} 
+		catch (SQLException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
+		} 
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
@@ -50,8 +51,6 @@ public class InsertJsonData {
 		db.createNewDomain(domain);
 		db.setDomain(domain);
 		
-
-		
 		try { 
 			walk(filePath);
 		} 
@@ -62,7 +61,6 @@ public class InsertJsonData {
 //			destroy();
 		}
 
-		
 		DomainModel model = new DomainModel(db, domain);
 		model.train();
 		
@@ -116,6 +114,7 @@ public class InsertJsonData {
 					String conceptName = example.getString("concept");
 					String exampleString = example.getString("example");
 					db.addExampleForConcept(conceptName, exampleString);
+					break;
 				}
 			}
 	}

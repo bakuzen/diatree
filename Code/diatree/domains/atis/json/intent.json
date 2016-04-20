@@ -1,0 +1,47 @@
+{
+  "concepts": [
+    {
+      "concept": "airline",
+      "properties": [{"property": "airline"}]
+    },
+    {
+      "concept": "airport",
+      "properties": [{"property": "airport"}]
+    },    
+    {
+      "concept": "city",
+      "properties": [{"property": "city"}]
+    },
+    {
+      "concept": "cost",
+      "properties": [{"property": "cost"}]
+    },    
+    {
+      "concept": "class",
+      "properties": [{"property": "class"}]
+    },    
+    {
+      "concept": "date",
+      "properties": [{"property": "date"}]
+    },
+    {
+      "concept": "meal",
+      "properties": [{"property": "meal"}]
+    },    
+    {
+      "concept": "to",
+      "properties": [{"property": "to"}]
+    },
+    {
+      "concept": "from",
+      "properties": [{"property": "from"}]
+    },    
+    {
+      "concept": "time",
+      "properties": [{"property": "time"}]
+    },        
+    
+        
+  ],
+  "intent": "intent"
+}

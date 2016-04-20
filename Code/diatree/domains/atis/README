@@ -1,0 +1,33 @@
+
+
+removed intents:
+
+any with fewer than 2 concepts
+basis
+code
+days
+end
+of
+start
+return
+type (same as class)
+year
+flight
+aircraft
+arrive
+booking
+connect
+day
+description
+mod
+name (airport?)
+number (date)
+stoploc
+today
+
+Notes:
+arrive and depart times should use the same intent
+date should be fixed a combination of date and day
+cost/fare intent
+city is wrong (denver san francisco)
+amount/cost 

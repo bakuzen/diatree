@@ -1,0 +1,140 @@
+{
+  "concepts": [
+    {
+      "concept": "continental",
+      "properties": [
+        {"property": "continental"},
+        {"property": "airlines"}
+      ]
+    },
+    {
+      "concept": "american",
+      "properties": [
+        {"property": "american"},
+        {"property": "airline"}
+      ]
+    },
+    {
+      "concept": "united",
+      "properties": [
+        {"property": "united"},
+        {"property": "airlines"}
+      ]
+    },
+    {
+      "concept": "delta",
+      "properties": [
+        {"property": "delta"},
+        {"property": "airlines"}
+      ]
+    },
+    {
+      "concept": "eastern",
+      "properties": [
+        {"property": "eastern"},
+        {"property": "airlines"}
+      ]
+    },
+    {
+      "concept": "us air",
+      "properties": [
+        {"property": "us"},
+        {"property": "air"}
+      ]
+    },
+    {
+      "concept": "united",
+      "properties": [
+        {"property": "united"},
+        {"property": "airline"}
+      ]
+    },
+    {
+      "concept": "lufthansa",
+      "properties": [
+        {"property": "lufthansa"},
+        {"property": "airlines"}
+      ]
+    },
+    {
+      "concept": "usa air",
+      "properties": [
+        {"property": "usa"},
+        {"property": "air"}
+      ]
+    },
+    {
+      "concept": "midway",
+      "properties": [
+        {"property": "midway"},
+        {"property": "airlines"}
+      ]
+    },
+    {
+      "concept": "southwest",
+      "properties": [
+        {"property": "southwest"},
+        {"property": "airlines"}
+      ]
+    },
+    {
+      "concept": "tower air",
+      "properties": [
+        {"property": "tower"},
+        {"property": "air"}
+      ]
+    },
+    {
+      "concept": "air canada",
+      "properties": [
+        {"property": "air"},
+        {"property": "canada"}
+      ]
+    },
+    {
+      "concept": "alaska",
+      "properties": [
+        {"property": "alaska"},
+        {"property": "airlines"}
+      ]
+    },
+    {
+      "concept": "northwest",
+      "properties": [
+        {"property": "northwest"},
+        {"property": "airlines"}
+      ]
+    },
+    {
+      "concept": "america west",
+      "properties": [
+        {"property": "america"},
+        {"property": "west"}
+      ]
+    },
+    {
+      "concept": "trans world",
+      "properties": [
+        {"property": "trans"},
+        {"property": "world"},
+        {"property": "airline"}
+      ]
+    },
+    {
+      "concept": "canadian",
+      "properties": [
+        {"property": "canadian"},
+        {"property": "airlines"},
+        {"property": "international"}
+      ]
+    }
+    
+  ],
+  "examples": [
+    {
+      "concept": "continental",
+      "example": "continental"
+    }
+    ],
+   "intent": "airline"
+}

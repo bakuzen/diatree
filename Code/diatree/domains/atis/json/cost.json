@@ -1,0 +1,139 @@
+{
+  "concepts": [
+    {
+      "concept": "cheapest",
+      "properties": [
+       {"property": "least"},
+       {"property": "cheapest"},
+       {"property": "lowest"}
+      ]
+    },
+    {
+      "concept": "most expensive",
+      "properties": [
+        {"property": "most"},
+        {"property": "highest"},
+        {"property": "expensive"}
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "lowest",
+      "example": "lowest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "lowest",
+      "example": "lowest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+    {
+      "concept": "cheapest",
+      "example": "cheapest"
+    },
+  ],
+  "intent": "cost"
+}

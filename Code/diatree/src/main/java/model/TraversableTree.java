@@ -37,7 +37,6 @@ public class TraversableTree {
 			}
 		}
 		else {
-			System.out.println("current: " + this.getCurrent().getName());
 			for (Node child : getCurrent().getChildren()) {
 				if (child.getName().equals(word)) {
 					child.toggleHasBeenTraversed();

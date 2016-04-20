@@ -1,0 +1,1264 @@
+{
+  "concepts": [
+    {
+      "concept": "return",
+      "properties": [{"property": "return"}]
+    },
+    {
+      "concept": "one way",
+      "properties": [
+        {"property": "one"},
+        {"property": "way"}
+      ]
+    },
+    {
+      "concept": "round trip",
+      "properties": [
+        {"property": "round"},
+        {"property": "trip"}
+      ]
+    },
+    {
+      "concept": "round trips",
+      "properties": [
+        {"property": "round"},
+        {"property": "trips"}
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trips",
+      "example": "round trips"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trips",
+      "example": "round trips"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trips",
+      "example": "round trips"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "return",
+      "example": "return"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "round trip",
+      "example": "round trip"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    },
+    {
+      "concept": "one way",
+      "example": "one way"
+    }
+  ],
+  "intent": "trip"
+}

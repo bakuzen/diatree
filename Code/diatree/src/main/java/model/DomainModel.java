@@ -105,7 +105,8 @@ public class DomainModel {
 		if (ling.hasKey("w1"))
 			ling.addEvidence("w2", ling.getValue("w1"));
 		ling.addEvidence("w1", word);
-		Distribution<String> groundedResult = mapping.applyEvidenceToContext(ling);
+		Distribution<String> groundedResult = new Distribution<String>();
+//		Distribution<String> groundedResult = mapping.applyEvidenceToContext(ling);
 //		did someone say a word that is the same spelling as a property? Give that property some credit. 
 		if (getContext().getPropertiesSet().contains(word)) { 
 			groundedResult.setProbabilityForItem(word, 1.0);

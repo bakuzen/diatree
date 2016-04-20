@@ -81,8 +81,6 @@ public class INLUModule extends IUModule {
 
 	private void update() {
 		
-		
-		
 		try {
 			
 //			for (String intent : model.getPredictedFrame().getIntents()) {
@@ -95,6 +93,7 @@ public class INLUModule extends IUModule {
 				
 				FrameIU frameIU = new FrameIU(predictedFrame);
 				SlotIU slotIU = frameIU.getSlotIUForIntent(intent);
+				
 				if (slotIU == null || slotIU.getDistribution() == null || slotIU.getDistribution().isEmpty()) continue; // this sometimes happens when newUtterance() is called
 				edits.add(new EditMessage<SlotIU>(EditType.ADD, slotIU));
 			}

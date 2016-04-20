@@ -80,9 +80,7 @@
         	<item>printer</item>
         	<item>inlu</item>
 		</propertylist>
-
     </component>
-
     
     <component name="kaldiASR" type="inpro.incremental.source.KaldiASR">
         <property name="server" value="localhost"/>

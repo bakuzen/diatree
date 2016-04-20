@@ -1,0 +1,8365 @@
+{
+  "concepts": [
+    {
+      "concept": "wednesday",
+      "properties": [{"property": "wednesday"}]
+    },
+    {
+      "concept": "next",
+      "properties": [{"property": "next"}]
+    },
+    {
+      "concept": "thursday",
+      "properties": [{"property": "thursday"}]
+    },
+    {
+      "concept": "monday",
+      "properties": [{"property": "monday"}]
+    },
+    {
+      "concept": "tuesday",
+      "properties": [{"property": "tuesday"}]
+    },
+    {
+      "concept": "september",
+      "properties": [{"property": "september"}]
+    },
+    {
+      "concept": "twentieth",
+      "properties": [{"property": "twentieth"}]
+    },
+    {
+      "concept": "august",
+      "properties": [{"property": "august"}]
+    },
+    {
+      "concept": "nineteenth",
+      "properties": [{"property": "nineteenth"}]
+    },
+    {
+      "concept": "friday",
+      "properties": [{"property": "friday"}]
+    },
+    {
+      "concept": "seventeenth",
+      "properties": [{"property": "seventeenth"}]
+    },
+    {
+      "concept": "twenty first",
+      "properties": [
+        {"property": "twenty"},
+        {"property": "first"}
+      ]
+    },
+    {
+      "concept": "twenty ninth",
+      "properties": [
+        {"property": "twenty"},
+        {"property": "ninth"}
+      ]
+    },
+    {
+      "concept": "november",
+      "properties": [{"property": "november"}]
+    },
+    {
+      "concept": "twenty third",
+      "properties": [
+        {"property": "twenty"},
+        {"property": "third"}
+      ]
+    },
+    {
+      "concept": "july",
+      "properties": [{"property": "july"}]
+    },
+    {
+      "concept": "seventh",
+      "properties": [{"property": "seventh"}]
+    },
+    {
+      "concept": "fifteenth",
+      "properties": [{"property": "fifteenth"}]
+    },
+    {
+      "concept": "thirtieth",
+      "properties": [{"property": "thirtieth"}]
+    },
+    {
+      "concept": "twenty seventh",
+      "properties": [
+        {"property": "twenty"},
+        {"property": "seventh"}
+      ]
+    },
+    {
+      "concept": "third",
+      "properties": [{"property": "third"}]
+    },
+    {
+      "concept": "thirty first",
+      "properties": [
+        {"property": "thirty"},
+        {"property": "first"}
+      ]
+    },
+    {
+      "concept": "fourth",
+      "properties": [{"property": "fourth"}]
+    },
+    {
+      "concept": "fifth",
+      "properties": [{"property": "fifth"}]
+    },
+    {
+      "concept": "twenty eighth",
+      "properties": [
+        {"property": "twenty"},
+        {"property": "eighth"}
+      ]
+    },
+    {
+      "concept": "october",
+      "properties": [{"property": "october"}]
+    },
+    {
+      "concept": "twelfth",
+      "properties": [{"property": "twelfth"}]
+    },
+    {
+      "concept": "april",
+      "properties": [{"property": "april"}]
+    },
+    {
+      "concept": "twenty fifth",
+      "properties": [
+        {"property": "twenty"},
+        {"property": "fifth"}
+      ]
+    },
+    {
+      "concept": "may",
+      "properties": [{"property": "may"}]
+    },
+    {
+      "concept": "sixth",
+      "properties": [{"property": "sixth"}]
+    },
+    {
+      "concept": "sixteen",
+      "properties": [{"property": "sixteen"}]
+    },
+    {
+      "concept": "seventeen",
+      "properties": [{"property": "seventeen"}]
+    },
+    {
+      "concept": "twenty",
+      "properties": [{"property": "twenty"}]
+    },
+    {
+      "concept": "four",
+      "properties": [{"property": "four"}]
+    },
+    {
+      "concept": "twenty one",
+      "properties": [
+        {"property": "twenty"},
+        {"property": "one"}
+      ]
+    },
+    {
+      "concept": "twenty second",
+      "properties": [
+        {"property": "twenty"},
+        {"property": "second"}
+      ]
+    },
+    {
+      "concept": "tenth",
+      "properties": [{"property": "tenth"}]
+    },
+    {
+      "concept": "1991",
+      "properties": [{"property": "1991"}]
+    },
+    {
+      "concept": "eleventh",
+      "properties": [{"property": "eleventh"}]
+    },
+    {
+      "concept": "june",
+      "properties": [{"property": "june"}]
+    },
+    {
+      "concept": "tomorrow",
+      "properties": [{"property": "tomorrow"}]
+    },
+    {
+      "concept": "today",
+      "properties": [{"property": "today"}]
+    },
+    {
+      "concept": "saturday",
+      "properties": [{"property": "saturday"}]
+    },
+    {
+      "concept": "eighth",
+      "properties": [{"property": "eighth"}]
+    },
+    {
+      "concept": "ninth",
+      "properties": [{"property": "ninth"}]
+    },
+    {
+      "concept": "three",
+      "properties": [{"property": "three"}]
+    },
+    {
+      "concept": "twenty sixth",
+      "properties": [
+        {"property": "twenty"},
+        {"property": "sixth"}
+      ]
+    },
+    {
+      "concept": "first",
+      "properties": [{"property": "first"}]
+    },
+    {
+      "concept": "eleven",
+      "properties": [{"property": "eleven"}]
+    },
+    {
+      "concept": "sundays",
+      "properties": [{"property": "sundays"}]
+    },
+    {
+      "concept": "sunday",
+      "properties": [{"property": "sunday"}]
+    },
+    {
+      "concept": "december",
+      "properties": [{"property": "december"}]
+    },
+    {
+      "concept": "tuesdays",
+      "properties": [{"property": "tuesdays"}]
+    },
+    {
+      "concept": "january",
+      "properties": [{"property": "january"}]
+    },
+    {
+      "concept": "one",
+      "properties": [{"property": "one"}]
+    },
+    {
+      "concept": "twelve",
+      "properties": [{"property": "twelve"}]
+    },
+    {
+      "concept": "eight",
+      "properties": [{"property": "eight"}]
+    },
+    {
+      "concept": "second",
+      "properties": [{"property": "second"}]
+    },
+    {
+      "concept": "seven",
+      "properties": [{"property": "seven"}]
+    },
+    {
+      "concept": "saturdays",
+      "properties": [{"property": "saturdays"}]
+    },
+    {
+      "concept": "day after tomorrow",
+      "properties": [
+        {"property": "day"},
+        {"property": "after"},
+        {"property": "tomorrow"}
+      ]
+    },
+    {
+      "concept": "next week",
+      "properties": [
+        {"property": "next"},
+        {"property": "week"}
+      ]
+    },
+    {
+      "concept": "this coming",
+      "properties": [
+        {"property": "this"},
+        {"property": "coming"}
+      ]
+    },
+    {
+      "concept": "wednesdays",
+      "properties": [{"property": "wednesdays"}]
+    },
+    {
+      "concept": "thursdays",
+      "properties": [{"property": "thursdays"}]
+    },
+    {
+      "concept": "fourteenth",
+      "properties": [{"property": "fourteenth"}]
+    },
+    {
+      "concept": "the day after tomorrow",
+      "properties": [
+        {"property": "the"},
+        {"property": "day"},
+        {"property": "after"},
+        {"property": "tomorrow"}
+      ]
+    },
+    {
+      "concept": "monday tuesday wednesday thursday",
+      "properties": [
+        {"property": "monday"},
+        {"property": "tuesday"},
+        {"property": "wednesday"},
+        {"property": "thursday"}
+      ]
+    },
+    {
+      "concept": "fifteen",
+      "properties": [{"property": "fifteen"}]
+    },
+    {
+      "concept": "same day",
+      "properties": [
+        {"property": "same"},
+        {"property": "day"}
+      ]
+    },
+    {
+      "concept": "this",
+      "properties": [{"property": "this"}]
+    },
+    {
+      "concept": "1992",
+      "properties": [{"property": "1992"}]
+    },
+    {
+      "concept": "sixteenth",
+      "properties": [{"property": "sixteenth"}]
+    },
+    {
+      "concept": "twenty fourth",
+      "properties": [
+        {"property": "twenty"},
+        {"property": "fourth"}
+      ]
+    },
+    {
+      "concept": "oclock",
+      "properties": [{"property": "oclock"}]
+    },
+    {
+      "concept": "mondays",
+      "properties": [{"property": "mondays"}]
+    },
+    {
+      "concept": "any day",
+      "properties": [
+        {"property": "any"},
+        {"property": "day"}
+      ]
+    },
+    {
+      "concept": "1993",
+      "properties": [{"property": "1993"}]
+    },
+    {
+      "concept": "thirteenth",
+      "properties": [{"property": "thirteenth"}]
+    },
+    {
+      "concept": "following day",
+      "properties": [
+        {"property": "following"},
+        {"property": "day"}
+      ]
+    },
+    {
+      "concept": "next day",
+      "properties": [
+        {"property": "next"},
+        {"property": "day"}
+      ]
+    },
+    {
+      "concept": "same date",
+      "properties": [
+        {"property": "same"},
+        {"property": "date"}
+      ]
+    },
+    {
+      "concept": "two days",
+      "properties": [
+        {"property": "two"},
+        {"property": "days"}
+      ]
+    },
+    {
+      "concept": "next two days",
+      "properties": [
+        {"property": "next"},
+        {"property": "two"},
+        {"property": "days"}
+      ]
+    },
+    {
+      "concept": "eighteenth",
+      "properties": [{"property": "eighteenth"}]
+    },
+    {
+      "concept": "twenty two",
+      "properties": [
+        {"property": "twenty"},
+        {"property": "two"}
+      ]
+    },
+    {
+      "concept": "six",
+      "properties": [{"property": "six"}]
+    },
+    {
+      "concept": "tonight",
+      "properties": [{"property": "tonight"}]
+    },
+    {
+      "concept": "following",
+      "properties": [{"property": "following"}]
+    },
+    {
+      "concept": "fridays",
+      "properties": [{"property": "fridays"}]
+    },
+    {
+      "concept": "february",
+      "properties": [{"property": "february"}]
+    },
+    {
+      "concept": "march",
+      "properties": [{"property": "march"}]
+    }
+  ],
+  "examples": [
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "nineteenth",
+      "example": "nineteenth"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "seventeenth",
+      "example": "seventeenth"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty first",
+      "example": "twenty first"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty ninth",
+      "example": "twenty ninth"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "thirty first",
+      "example": "thirty first"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "fifth",
+      "example": "fifth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "twenty eighth",
+      "example": "twenty eighth"
+    },
+    {
+      "concept": "october",
+      "example": "october"
+    },
+    {
+      "concept": "fifth",
+      "example": "fifth"
+    },
+    {
+      "concept": "october",
+      "example": "october"
+    },
+    {
+      "concept": "twelfth",
+      "example": "twelfth"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "twenty first",
+      "example": "twenty first"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "twenty fifth",
+      "example": "twenty fifth"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "sixth",
+      "example": "sixth"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "twenty fifth",
+      "example": "twenty fifth"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "sixth",
+      "example": "sixth"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "sixteen",
+      "example": "sixteen"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "seventeen",
+      "example": "seventeen"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "twenty",
+      "example": "twenty"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "four",
+      "example": "four"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "twenty",
+      "example": "twenty"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "four",
+      "example": "four"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "twenty one",
+      "example": "twenty one"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "twenty second",
+      "example": "twenty second"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "eleventh",
+      "example": "eleventh"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fifth",
+      "example": "fifth"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "nineteenth",
+      "example": "nineteenth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "nineteenth",
+      "example": "nineteenth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "nineteenth",
+      "example": "nineteenth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "nineteenth",
+      "example": "nineteenth"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "eighth",
+      "example": "eighth"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "ninth",
+      "example": "ninth"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "ninth",
+      "example": "ninth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "three",
+      "example": "three"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "twenty sixth",
+      "example": "twenty sixth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "ninth",
+      "example": "ninth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty fifth",
+      "example": "twenty fifth"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "fifth",
+      "example": "fifth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "eleven",
+      "example": "eleven"
+    },
+    {
+      "concept": "sundays",
+      "example": "sundays"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "thirty first",
+      "example": "thirty first"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty first",
+      "example": "twenty first"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty second",
+      "example": "twenty second"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty second",
+      "example": "twenty second"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty first",
+      "example": "twenty first"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty second",
+      "example": "twenty second"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty fifth",
+      "example": "twenty fifth"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty fifth",
+      "example": "twenty fifth"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty fifth",
+      "example": "twenty fifth"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty fifth",
+      "example": "twenty fifth"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty fifth",
+      "example": "twenty fifth"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty fifth",
+      "example": "twenty fifth"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "seventeenth",
+      "example": "seventeenth"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "seventeenth",
+      "example": "seventeenth"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "seventeenth",
+      "example": "seventeenth"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "seventeenth",
+      "example": "seventeenth"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "seventeenth",
+      "example": "seventeenth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "tuesdays",
+      "example": "tuesdays"
+    },
+    {
+      "concept": "january",
+      "example": "january"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "january",
+      "example": "january"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "january",
+      "example": "january"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "january",
+      "example": "january"
+    },
+    {
+      "concept": "one",
+      "example": "one"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "sixth",
+      "example": "sixth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "sixth",
+      "example": "sixth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "eighth",
+      "example": "eighth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twelfth",
+      "example": "twelfth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twelve",
+      "example": "twelve"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "eleventh",
+      "example": "eleventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "twelfth",
+      "example": "twelfth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "sixth",
+      "example": "sixth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "ninth",
+      "example": "ninth"
+    },
+    {
+      "concept": "eight",
+      "example": "eight"
+    },
+    {
+      "concept": "sixteen",
+      "example": "sixteen"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty eighth",
+      "example": "twenty eighth"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty ninth",
+      "example": "twenty ninth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty ninth",
+      "example": "twenty ninth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "thirty first",
+      "example": "thirty first"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "thirty first",
+      "example": "thirty first"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "seven",
+      "example": "seven"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "saturdays",
+      "example": "saturdays"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "sundays",
+      "example": "sundays"
+    },
+    {
+      "concept": "sundays",
+      "example": "sundays"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "day after tomorrow",
+      "example": "day after tomorrow"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "this coming",
+      "example": "this coming"
+    },
+    {
+      "concept": "this coming",
+      "example": "this coming"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesdays",
+      "example": "tuesdays"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "thursdays",
+      "example": "thursdays"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "the day after tomorrow",
+      "example": "the day after tomorrow"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "the day after tomorrow",
+      "example": "the day after tomorrow"
+    },
+    {
+      "concept": "the day after tomorrow",
+      "example": "the day after tomorrow"
+    },
+    {
+      "concept": "the day after tomorrow",
+      "example": "the day after tomorrow"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday tuesday wednesday thursday",
+      "example": "monday tuesday wednesday thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "saturdays",
+      "example": "saturdays"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "twenty ninth",
+      "example": "twenty ninth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "eighth",
+      "example": "eighth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "twenty eighth",
+      "example": "twenty eighth"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "nineteenth",
+      "example": "nineteenth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fifth",
+      "example": "fifth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "twenty ninth",
+      "example": "twenty ninth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "twenty ninth",
+      "example": "twenty ninth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "eighth",
+      "example": "eighth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "eighth",
+      "example": "eighth"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "eighth",
+      "example": "eighth"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "eighth",
+      "example": "eighth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty sixth",
+      "example": "twenty sixth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fifteen",
+      "example": "fifteen"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty second",
+      "example": "twenty second"
+    },
+    {
+      "concept": "same day",
+      "example": "same day"
+    },
+    {
+      "concept": "same day",
+      "example": "same day"
+    },
+    {
+      "concept": "same day",
+      "example": "same day"
+    },
+    {
+      "concept": "same day",
+      "example": "same day"
+    },
+    {
+      "concept": "same day",
+      "example": "same day"
+    },
+    {
+      "concept": "same day",
+      "example": "same day"
+    },
+    {
+      "concept": "same day",
+      "example": "same day"
+    },
+    {
+      "concept": "same day",
+      "example": "same day"
+    },
+    {
+      "concept": "same day",
+      "example": "same day"
+    },
+    {
+      "concept": "same day",
+      "example": "same day"
+    },
+    {
+      "concept": "same day",
+      "example": "same day"
+    },
+    {
+      "concept": "same day",
+      "example": "same day"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "thirty first",
+      "example": "thirty first"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "this",
+      "example": "this"
+    },
+    {
+      "concept": "this",
+      "example": "this"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "january",
+      "example": "january"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "1992",
+      "example": "1992"
+    },
+    {
+      "concept": "october",
+      "example": "october"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "october",
+      "example": "october"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "october",
+      "example": "october"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "october",
+      "example": "october"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "october",
+      "example": "october"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "october",
+      "example": "october"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "october",
+      "example": "october"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "sixteenth",
+      "example": "sixteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "sixteenth",
+      "example": "sixteenth"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "one",
+      "example": "one"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty fourth",
+      "example": "twenty fourth"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "thirty first",
+      "example": "thirty first"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "oclock",
+      "example": "oclock"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "oclock",
+      "example": "oclock"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "oclock",
+      "example": "oclock"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "oclock",
+      "example": "oclock"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "oclock",
+      "example": "oclock"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "oclock",
+      "example": "oclock"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "next week",
+      "example": "next week"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "mondays",
+      "example": "mondays"
+    },
+    {
+      "concept": "tuesdays",
+      "example": "tuesdays"
+    },
+    {
+      "concept": "tuesdays",
+      "example": "tuesdays"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "sixteenth",
+      "example": "sixteenth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "sixteenth",
+      "example": "sixteenth"
+    },
+    {
+      "concept": "september",
+      "example": "september"
+    },
+    {
+      "concept": "seventeenth",
+      "example": "seventeenth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "august",
+      "example": "august"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "twenty fourth",
+      "example": "twenty fourth"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "eleventh",
+      "example": "eleventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "eleventh",
+      "example": "eleventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "eleventh",
+      "example": "eleventh"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "twelfth",
+      "example": "twelfth"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "twelfth",
+      "example": "twelfth"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "eleventh",
+      "example": "eleventh"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "eleventh",
+      "example": "eleventh"
+    },
+    {
+      "concept": "1991",
+      "example": "1991"
+    },
+    {
+      "concept": "november",
+      "example": "november"
+    },
+    {
+      "concept": "twenty fourth",
+      "example": "twenty fourth"
+    },
+    {
+      "concept": "twenty fifth",
+      "example": "twenty fifth"
+    },
+    {
+      "concept": "twenty sixth",
+      "example": "twenty sixth"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "thursdays",
+      "example": "thursdays"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "thursdays",
+      "example": "thursdays"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "sixteenth",
+      "example": "sixteenth"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "sixteenth",
+      "example": "sixteenth"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "january",
+      "example": "january"
+    },
+    {
+      "concept": "twenty first",
+      "example": "twenty first"
+    },
+    {
+      "concept": "1992",
+      "example": "1992"
+    },
+    {
+      "concept": "january",
+      "example": "january"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "1992",
+      "example": "1992"
+    },
+    {
+      "concept": "january",
+      "example": "january"
+    },
+    {
+      "concept": "twenty third",
+      "example": "twenty third"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "any day",
+      "example": "any day"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "saturdays",
+      "example": "saturdays"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "1993",
+      "example": "1993"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "thirteenth",
+      "example": "thirteenth"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "eighth",
+      "example": "eighth"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "ninth",
+      "example": "ninth"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "following day",
+      "example": "following day"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "july",
+      "example": "july"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "twenty eighth",
+      "example": "twenty eighth"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "twenty fourth",
+      "example": "twenty fourth"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "twenty ninth",
+      "example": "twenty ninth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "this",
+      "example": "this"
+    },
+    {
+      "concept": "this",
+      "example": "this"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "following day",
+      "example": "following day"
+    },
+    {
+      "concept": "following day",
+      "example": "following day"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "sixteenth",
+      "example": "sixteenth"
+    },
+    {
+      "concept": "next day",
+      "example": "next day"
+    },
+    {
+      "concept": "next day",
+      "example": "next day"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "sixteenth",
+      "example": "sixteenth"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "thirteenth",
+      "example": "thirteenth"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    },
+    {
+      "concept": "same date",
+      "example": "same date"
+    },
+    {
+      "concept": "same date",
+      "example": "same date"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "seventeenth",
+      "example": "seventeenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "eleventh",
+      "example": "eleventh"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "eleventh",
+      "example": "eleventh"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "eleventh",
+      "example": "eleventh"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "two days",
+      "example": "two days"
+    },
+    {
+      "concept": "two days",
+      "example": "two days"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "thirty first",
+      "example": "thirty first"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "next two days",
+      "example": "next two days"
+    },
+    {
+      "concept": "next two days",
+      "example": "next two days"
+    },
+    {
+      "concept": "next two days",
+      "example": "next two days"
+    },
+    {
+      "concept": "next two days",
+      "example": "next two days"
+    },
+    {
+      "concept": "next two days",
+      "example": "next two days"
+    },
+    {
+      "concept": "next two days",
+      "example": "next two days"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "twenty sixth",
+      "example": "twenty sixth"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "twenty sixth",
+      "example": "twenty sixth"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next day",
+      "example": "next day"
+    },
+    {
+      "concept": "next day",
+      "example": "next day"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "eighteenth",
+      "example": "eighteenth"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "eighteenth",
+      "example": "eighteenth"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "nineteenth",
+      "example": "nineteenth"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "eighteenth",
+      "example": "eighteenth"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "nineteenth",
+      "example": "nineteenth"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "twentieth",
+      "example": "twentieth"
+    },
+    {
+      "concept": "eighteenth",
+      "example": "eighteenth"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "twelfth",
+      "example": "twelfth"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "twelfth",
+      "example": "twelfth"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "twelfth",
+      "example": "twelfth"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "twelfth",
+      "example": "twelfth"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "twelfth",
+      "example": "twelfth"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "twenty second",
+      "example": "twenty second"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "twenty two",
+      "example": "twenty two"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "twenty two",
+      "example": "twenty two"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "twenty two",
+      "example": "twenty two"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "twenty two",
+      "example": "twenty two"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "twenty two",
+      "example": "twenty two"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tomorrow",
+      "example": "tomorrow"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "six",
+      "example": "six"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "six",
+      "example": "six"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "six",
+      "example": "six"
+    },
+    {
+      "concept": "tonight",
+      "example": "tonight"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "thirty first",
+      "example": "thirty first"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "thirtieth",
+      "example": "thirtieth"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "following",
+      "example": "following"
+    },
+    {
+      "concept": "following",
+      "example": "following"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "fridays",
+      "example": "fridays"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty eighth",
+      "example": "twenty eighth"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty ninth",
+      "example": "twenty ninth"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "twenty eighth",
+      "example": "twenty eighth"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sundays",
+      "example": "sundays"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "next",
+      "example": "next"
+    },
+    {
+      "concept": "wednesdays",
+      "example": "wednesdays"
+    },
+    {
+      "concept": "fridays",
+      "example": "fridays"
+    },
+    {
+      "concept": "sundays",
+      "example": "sundays"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "twenty eighth",
+      "example": "twenty eighth"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "twenty eighth",
+      "example": "twenty eighth"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "friday",
+      "example": "friday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "thursday",
+      "example": "thursday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "saturday",
+      "example": "saturday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "sunday",
+      "example": "sunday"
+    },
+    {
+      "concept": "february",
+      "example": "february"
+    },
+    {
+      "concept": "twenty second",
+      "example": "twenty second"
+    },
+    {
+      "concept": "february",
+      "example": "february"
+    },
+    {
+      "concept": "twenty fourth",
+      "example": "twenty fourth"
+    },
+    {
+      "concept": "february",
+      "example": "february"
+    },
+    {
+      "concept": "twenty fourth",
+      "example": "twenty fourth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fifth",
+      "example": "fifth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fifth",
+      "example": "fifth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fifth",
+      "example": "fifth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "third",
+      "example": "third"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "fourth",
+      "example": "fourth"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "sixth",
+      "example": "sixth"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "sixth",
+      "example": "sixth"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "sixth",
+      "example": "sixth"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "eighth",
+      "example": "eighth"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "eighth",
+      "example": "eighth"
+    },
+    {
+      "concept": "april",
+      "example": "april"
+    },
+    {
+      "concept": "ninth",
+      "example": "ninth"
+    },
+    {
+      "concept": "february",
+      "example": "february"
+    },
+    {
+      "concept": "twenty eighth",
+      "example": "twenty eighth"
+    },
+    {
+      "concept": "march",
+      "example": "march"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "march",
+      "example": "march"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "march",
+      "example": "march"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "march",
+      "example": "march"
+    },
+    {
+      "concept": "second",
+      "example": "second"
+    },
+    {
+      "concept": "february",
+      "example": "february"
+    },
+    {
+      "concept": "twenty second",
+      "example": "twenty second"
+    },
+    {
+      "concept": "february",
+      "example": "february"
+    },
+    {
+      "concept": "twenty second",
+      "example": "twenty second"
+    },
+    {
+      "concept": "march",
+      "example": "march"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "march",
+      "example": "march"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "march",
+      "example": "march"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "march",
+      "example": "march"
+    },
+    {
+      "concept": "first",
+      "example": "first"
+    },
+    {
+      "concept": "december",
+      "example": "december"
+    },
+    {
+      "concept": "twenty seventh",
+      "example": "twenty seventh"
+    },
+    {
+      "concept": "monday",
+      "example": "monday"
+    },
+    {
+      "concept": "tuesday",
+      "example": "tuesday"
+    },
+    {
+      "concept": "wednesday",
+      "example": "wednesday"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "tenth",
+      "example": "tenth"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "may",
+      "example": "may"
+    },
+    {
+      "concept": "seventh",
+      "example": "seventh"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "today",
+      "example": "today"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fourteenth",
+      "example": "fourteenth"
+    },
+    {
+      "concept": "june",
+      "example": "june"
+    },
+    {
+      "concept": "fifteenth",
+      "example": "fifteenth"
+    }
+  ],
+  "intent": "date"
+}

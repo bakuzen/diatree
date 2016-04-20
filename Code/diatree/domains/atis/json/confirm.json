@@ -1,0 +1,19 @@
+{ "intent": "confirm", 
+    "concepts": [
+	{ "concept":"yes",
+	  "properties": [
+	   {"property":"yes"},
+	   {"property":"right"},
+	   {"property":"correct"},
+	   {"property":"yeah"}
+	  ]
+	},
+	{ "concept":"no",
+	  "properties": [
+	   {"property":"no"},
+	   {"property":"wrong"},
+	   {"property":"not"}
+	  ]
+	}
+     ]
+}
