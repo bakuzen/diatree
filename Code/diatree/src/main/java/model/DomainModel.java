@@ -32,6 +32,7 @@ public class DomainModel {
 	private String domain;
 	private LingEvidence ling;
 	private Grounder<String,String> grounder;
+	private Context<String, String> context;
 	private boolean trainingComplete;
 	
 	public DomainModel(Domain db, String domain) {
@@ -41,8 +42,25 @@ public class DomainModel {
 		mapping = new MaxEntMapping(Constants.BASE_FILE_PATH + domain + "/" + domain + ".txt"); // the thing that maps between language (in this case, ngrams) and high-level concepts
 		this.setDB(db);
 		this.setDomain(domain);
+		loadContext();
 	}
 	
+	private void loadContext() {
+		Context<String,String> context = new Context<String,String>();
+		try {
+			for (String intent: db.getIntents()) {
+				for (String concept : db.getConceptsForIntent(intent)) {
+					Properties<Property<String>> properties = db.getPropertiesForConcept(concept);
+					context.setEntity(concept, properties);
+				}
+			}
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		setContext(context);
+	}
+
 	/*
 	 * This takes information out of the database and trains a maxent model. The class labels are the properties of the concepts. The features
 	 * are a bunch of ngrams. Essentially, we are training propery-level language models. 
@@ -67,25 +85,15 @@ public class DomainModel {
 //		this.addIncrement(Constants.S_TAG);
 	}
 	
+	public void setContext(Context<String,String> c) {
+		this.context = c;
+	}
+	
 	/*
 	 * The Context object is from SIUM. It holds information about what can be predicted. In this case, 
 	 * we want a distribution over all the concepts (from their properties). 
 	 */
 	public Context<String,String> getContext() {
-		
-		Context<String,String> context = new Context<String,String>();
-		try {
-			for (String intent: db.getIntents()) {
-				for (String concept : db.getConceptsForIntent(intent)) {
-					Properties<Property<String>> properties = db.getPropertiesForConcept(concept);
-					context.setEntity(concept, properties);
-				}
-			}
-		} 
-		catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
 		return context;
 	}
 	

@@ -9,6 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 import model.Constants;
 import sium.nlu.context.Properties;
@@ -27,6 +29,14 @@ public class Domain {
 	protected Connection conn;
 	protected Statement stat;
 	
+	private int maxWordID = 0;
+	private TreeMap<String,Integer> cachedWords = new TreeMap<String,Integer>();
+	private TreeSet<String> cachedIntents = new TreeSet<String>();
+	private TreeSet<String> cachedConcepts = new TreeSet<String>();
+	private TreeSet<String> cachedProperties = new TreeSet<String>();
+	private TreeSet<String> cachedConceptIntentAttachments = new TreeSet<String>();
+	private TreeSet<String> cachedPropertyConceptAttachments = new TreeSet<String>();
+	
 	public List<String> getDomains() {
 		
 		ArrayList<String> domains = new ArrayList<String>();
@@ -37,24 +47,28 @@ public class Domain {
 	}
 	
 	public List<String> getIntents() throws SQLException {
+		if (!cachedIntents.isEmpty())
+			return new ArrayList<String>(cachedIntents);
 		Statement stat = createStatement();
 		ResultSet result = stat.executeQuery(String.format("SELECT distinct intent FROM intent"));
 		List<String> intents = new ArrayList<String>();
 		while (result.next()) {
 			intents.add(result.getString("intent"));
 		}
-		
+		cachedIntents.addAll(intents);
 		return intents;
 	}
 	
 	public List<String> getConcepts() throws SQLException {
+		if (!cachedConcepts.isEmpty())
+			return new ArrayList<String>(cachedConcepts);		
 		Statement stat = createStatement();
 		ResultSet result = stat.executeQuery(String.format("SELECT distinct concept FROM concept"));
 		List<String> concepts = new ArrayList<String>();
 		while (result.next()) {
 			concepts.add(result.getString("concept"));
 		}
-		
+		cachedConcepts.addAll(concepts);
 		return concepts;
 	}
 	
@@ -157,10 +171,16 @@ public class Domain {
 	public void addWordPair(String word1, String word2, int cid) throws SQLException {
 		int w1 = offerWord(word1);
 		int w2 = offerWord(word2);
+		cachedWords.put(word1, w1);
+		cachedWords.put(word2, w2);
 		addSequence(w1, w2, cid);
 	}
 
 	public int offerWord(String word) throws SQLException {
+		if (!cachedWords.isEmpty()) {
+			if (cachedWords.containsKey(word))
+				return cachedWords.get(word);
+		}
 		Statement stat = createStatement();
 		ResultSet result = stat.executeQuery(String.format("SELECT wid FROM word WHERE word='%s'", word));
 		if (result.isAfterLast()) {
@@ -177,6 +197,7 @@ public class Domain {
 		Statement stat = createStatement();
 		ResultSet result = stat.executeQuery(String.format("SELECT max(wid) w FROM word"));
 		return result.getInt("w");
+//		return maxWordID++;
 	}	
 
 	private void addSequence(int w1, int w2, int cid) throws SQLException {
@@ -244,22 +265,27 @@ public class Domain {
 	public void offerNewConcept(String slotValue) throws SQLException {
 		List<String> concepts = this.getConcepts();
 		if (concepts.contains(slotValue)) return;
+		cachedConcepts.add(slotValue);
 		this.addNewConcept(slotValue);
 	}
 	
 	public void offerNewIntent(String intent) throws SQLException {
 		List<String> intents = this.getIntents();
 		if (intents.contains(intent)) return;
+		cachedIntents.add(intent);
 		this.addNewIntent(intent);
 	}
 	
 	public void offerNewConceptIntentAttachment(String concept, String intent) throws SQLException {
 		if (!checkConceptIntentAttacmentExistence(concept, intent)) {
+			cachedConceptIntentAttachments.add(concept + "_" + intent);
 			attachConceptToIntent(concept, intent);
 		}
 	}
 
 	private boolean checkConceptIntentAttacmentExistence(String concept, String intent) throws SQLException {
+		if (!cachedConceptIntentAttachments.isEmpty())
+			return cachedConceptIntentAttachments.contains(concept +"_" + intent);
 		int cid = getConceptID(concept);
 		int iid = getIntentID(intent);
 		Statement stat = createStatement();
@@ -269,6 +295,9 @@ public class Domain {
 	}
 	
 	private boolean checkPropertyConceptAttacmentExistence(String property, String concept) throws SQLException {
+		if (!cachedPropertyConceptAttachments.isEmpty()) {
+			return cachedPropertyConceptAttachments.contains(property + "_" + concept);
+		}
 		int pid = getPropertyID(property);
 		int cid = getConceptID(concept);
 		Statement stat = createStatement();
@@ -280,6 +309,7 @@ public class Domain {
 	public void offerNewProperty(String property) throws SQLException {
 		List<String> properties = this.getProperties();
 		if (properties.contains(property)) return;
+		cachedProperties.add(property);
 		this.addNewProperty(property);
 	}
 
@@ -290,11 +320,15 @@ public class Domain {
 	}
 
 	private List<String> getProperties() throws SQLException {
+		if (!cachedProperties.isEmpty())
+			return new ArrayList<String>(cachedProperties);	
 		Statement stat = createStatement();
 		ResultSet result = stat.executeQuery(String.format("SELECT distinct property FROM property"));
 		List<String> properties = new ArrayList<String>();
 		while (result.next()) {
-			properties.add(result.getString("property"));
+			String prop = result.getString("property");
+			properties.add(prop);
+			cachedProperties.add(prop);
 		}
 		return properties;
 	}
@@ -315,6 +349,7 @@ public class Domain {
 
 	public void offerNewPropertyConceptAttachment(String p, String c) throws SQLException {
 		if (!checkPropertyConceptAttacmentExistence(p, c)) {
+			cachedPropertyConceptAttachments.add(p + "_" + c);
 			attachPropertyToConcept(p, c);
 		}
 	}

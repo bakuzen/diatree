@@ -6,7 +6,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 import java.util.TreeSet;
 
@@ -84,17 +86,19 @@ public class convertATIStoJSON {
 
 	private void convertToJSON() throws SQLException, JSONException {
 		
+//		offerIntent("goal");
+		offerIntent("intent");
 		
 		for (Instance in : data) {
 //			deal with goal
-			offerIntent("goal");
-			offerConcept("goal", in.goal);
 			
+//			offerConcept("goal", in.goal);
+			offerConcept("intent", in.goal);
+			offerProperty("intent", in.goal, in.goal);
 //			deal with everything else
 			for (Integer n : in.getIndeces()) {
 				String word = in.getWordsMap().get(n).replace("'", "");
 				String slot = in.getSlotsMap().get(n);
-				System.out.println(slot + " " + word);
 				if ("oslot".equals(slot)) continue;
 				
 				String[] Res = slot.split("[\\p{Punct}\\s]+");
@@ -137,7 +141,6 @@ public class convertATIStoJSON {
 		JSONArray concepts = (JSONArray) jsonIntents.get(intent).get("concepts");
 		for (int i=0; i<concepts.length(); i++) {
 			JSONObject c = (JSONObject) concepts.get(i);
-			System.out.println(c.toString());
 			if (c.getString("concept").equals(concept)) return;
 		}
 		JSONObject jsonConcept = new JSONObject();		
@@ -154,11 +157,13 @@ public class convertATIStoJSON {
 				JSONArray props = (JSONArray) jsonConcept.get("properties");
 				for (int j=0; j<props.length(); j++) {
 					JSONObject p = (JSONObject) props.get(j);
-					if (p.getString("property").equals(property)) return;
+					if (property.contains(p.getString("property"))) return;
 				}
-				JSONObject p = new JSONObject();
-				p.put("property", property);
-				props.put(props.length(), p);
+				for (String s : Arrays.asList(property.split("\\s+"))) {
+					JSONObject p = new JSONObject();
+					p.put("property", s);
+					props.put(props.length(), p);
+				}
 			}
 		}
 	}

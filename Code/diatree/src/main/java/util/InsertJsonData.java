@@ -16,7 +16,7 @@ import model.db.Domain;
 public class InsertJsonData {
 	
 	private Domain db;
-	private String domain = "sigdial";
+	private String domain = "atis";
 	private String filePath = "domains/"+domain+"/json/";
 	
 //	private FileWriter writer; 
@@ -90,7 +90,10 @@ public class InsertJsonData {
 			
 			String intent = json.getString("intent");
 			JSONArray concepts = json.getJSONArray("concepts");
-			if (concepts.length() < 2) return;
+			if (concepts.length() < 2) {
+				System.out.println("You need more than 1 concept for an intent or there will be trouble: " + intent);
+				return;
+			}
 			db.offerNewIntent(intent);
 			
 			for (int i=0; i<concepts.length(); i++) {

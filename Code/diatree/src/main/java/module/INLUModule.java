@@ -58,7 +58,8 @@ public class INLUModule extends IUModule {
 			
 			case ADD:
 				
-				if (word.equals("rücksetzen")) {
+//				if (word.equals("rücksetzen")) {
+				if (word.equals("reset")) {
 					model.newUtterance();
 					tree.initDisplay(true, true);
 					continue;
@@ -88,15 +89,17 @@ public class INLUModule extends IUModule {
 //				System.out.println(intent + " " + model.getPredictedFrame().getEntropyForIntent(intent));
 //			}
 			
-			for (String intent : model.getPredictedFrame().getIntents()) {
-				List<EditMessage<? extends IU>> edits = new ArrayList<EditMessage<? extends IU>>();
-				FrameIU frameIU = new FrameIU(model.getPredictedFrame());
+			List<EditMessage<? extends IU>> edits = new ArrayList<EditMessage<? extends IU>>();
+			Frame predictedFrame = model.getPredictedFrame();
+			for (String intent : predictedFrame.getIntents()) {
+				
+				FrameIU frameIU = new FrameIU(predictedFrame);
 				SlotIU slotIU = frameIU.getSlotIUForIntent(intent);
 				if (slotIU == null || slotIU.getDistribution() == null || slotIU.getDistribution().isEmpty()) continue; // this sometimes happens when newUtterance() is called
 				edits.add(new EditMessage<SlotIU>(EditType.ADD, slotIU));
-				super.rightBuffer.setBuffer(edits);
-				super.notifyListeners();
 			}
+			super.rightBuffer.setBuffer(edits);
+			super.notifyListeners();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
