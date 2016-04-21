@@ -111,6 +111,11 @@ public class TraversableTree {
 					child.put("level", "red");
 				}
 				childrenJSON.put(i++, child);
+				if (i >= Constants.NODE_DISPLAY_LIMIT) {
+					child.put("name", "...");
+					break;
+				}
+				
 				jsonHelp(c, child);
 			}
 		}

@@ -87,8 +87,8 @@ public class Main {
 		
 //		String[] uwords = {"i", "want", "some", "cheap", "thai", "yes", "food", "around", "downtown"};
 //		String[] uwords = {"food", "indian", "no", "thai", "yes", "cheap", "downtown"};
-		String[] uwords = {"essen", "typ", "franzözisch","ja", "günstig", "wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
-				"rücksetzen","nachricht", "jana"};
+		String[] uwords = {"essen",  "günstig", "wo", "stadtmitte","typ", "franzözisch","ja", "rücksetzen", "anruf", "name", "michael",
+				"rücksetzen","nachricht", "jana", "rücksetzen"};
 		List<String> words = Arrays.asList(uwords);
 		
 		WordIU prev = WordIU.FIRST_WORD_IU;

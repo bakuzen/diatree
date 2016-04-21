@@ -14,4 +14,6 @@ public class Constants {
 
 	public static final String CONFIRM = "confirm";
 
+	public static final int NODE_DISPLAY_LIMIT = 5;
+
 }

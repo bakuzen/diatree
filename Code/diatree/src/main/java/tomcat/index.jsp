@@ -24,7 +24,7 @@
     <script type="text/javascript">
     function start() {
         var width = 700; 
-        var height = 1000; 
+        var height = 500; 
         var cluster = d3.layout.cluster()    
            .size([height, width-400]); 
         var diagonal = d3.svg.diagonal()    
