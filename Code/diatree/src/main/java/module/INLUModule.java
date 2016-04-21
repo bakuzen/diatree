@@ -18,7 +18,6 @@ import model.Constants;
 import model.DomainModel;
 import model.Frame;
 import model.db.Domain;
-import model.iu.ConfidenceIU;
 import model.iu.FrameIU;
 
 public class INLUModule extends IUModule {
@@ -58,8 +57,7 @@ public class INLUModule extends IUModule {
 			switch(edit.getType()) {
 			
 			case ADD:
-				if (word.equals("rücksetzen")) {
-//				if (word.equals("reset")) {
+				if (word.equals(Constants.RESET_KEYWORD)) {
 					model.newUtterance();
 					tree.initDisplay(true, true);
 					continue;

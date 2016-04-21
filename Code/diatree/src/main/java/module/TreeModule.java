@@ -78,41 +78,43 @@ public class TreeModule extends IUModule {
 			
 			System.out.println("decision:" + decision + " intent:" + intent + " concept:" + concept + " confidence:" + confidence );
 			
-			if ("verified".equals(decision)){
+//			when handling the result of a clarification request
+			if (Constants.VERIFIED.equals(decision)){
 				if (!checkConfirmStackIsEmpty()) {
+//					when we are handling a CR, we have a stack of "QUD" of sorts 
 					SlotIU sIU = popConfirmStack();
 					String c = sIU.getDistribution().getArgMax().getEntity();
 					String i = sIU.getName();
-	
-					if ("yes".equals(concept)) {
+					
+					if (Constants.YES.equals(concept)) {
 						expandIntent(i, c);
 					}
-					if ("no".equals(concept)) {
+					if (Constants.NO.equals(concept)) {
 						abortConfirmation(i, c);
 					}
 					resetUtterance();
 				}
 				else {
-					if ("no".equals(concept))
+					if (Constants.NO.equals(concept))
 						abort();
 				}
 			}
-			else if ("confirm".equals(decision)) {
+//			when we want to invoke a clarification request
+			else if (Constants.CONFIRM.equals(decision)) {
 				pushToConfirmStack(slotIU);
 				offerConfirmation(intent, concept);
 			}
-			else if ("select".equals(decision)) {
+//			when an intent has a concept with a high enough probability 
+			else if (Constants.SELECT.equals(decision)) {
 				if (!checkConfirmStackIsEmpty()) {
-//					throw new RuntimeException("Cannot select until the stack has been handled!");
-					logString("select!", "don't do this!", "");
+					logString("select!", "don't do this!", "confirmation stack isn't empty!");
 					return;
 				}
 				expandIntent(intent, concept);
-				
-
 				resetUtterance();
 			}
-			else if ("wait".equals(decision)) {
+//			in all other cases, just wait for more input
+			else if (Constants.WAIT.equals(decision)) {
 				// waiting....
 			}
 			update();
@@ -132,7 +134,6 @@ public class TreeModule extends IUModule {
 
 	private String logString(String method, String intent, String concept) {
 		String tolog = method + "(" + intent + "," + concept +")";
-//		System.out.println(tolog);
 		return tolog;
 				
 	}
@@ -149,11 +150,11 @@ public class TreeModule extends IUModule {
 	
 	private void expandIntent(String intent, String concept) {
 		log.info(logString("expandIntent", intent, concept));
-		if ("confirm".equals(intent)) {
-			if ("yes".equals(concept)) {
+		if (Constants.CONFIRM.equals(intent)) {
+			if (Constants.YES.equals(concept)) {
 				return; // ignore this
 			}
-			if ("no".equals(concept)) {
+			if (Constants.NO.equals(concept)) {
 				abort();
 			}
 		}
@@ -163,7 +164,7 @@ public class TreeModule extends IUModule {
 		}
 //		another case is if someone is referring to an intent (not a concept of an intent)
 //		when that happens, show the expansion of that intent
-		if ("intent".equals(intent) && hasConcepts(concept)) {
+		if (Constants.INTENT.equals(intent) && hasConcepts(concept)) {
 			offerExpansion(concept);
 			return;
 		}
@@ -176,7 +177,7 @@ public class TreeModule extends IUModule {
 //		Node child = top.getChildNode(intent);
 //		child.clearChildren();
 //		Node n = new Node(intent +":" + concept);
-		if ("intent".equals(intent)) {
+		if (Constants.INTENT.equals(intent)) {
 			Node n = new Node(concept);
 			this.setCurrentIntent(concept);
 			remainingIntents = getPossibleIntents();

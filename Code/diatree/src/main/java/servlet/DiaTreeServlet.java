@@ -86,11 +86,10 @@ public class DiaTreeServlet  extends HttpServlet implements Configurable {
 					ClientUtils.openNewClient();
 				}
 				catch (BufferOverflowException e) {
-					e.printStackTrace();
-					
+//					e.printStackTrace();
 					Log.warn("Buffer overflow detected in socket to client.");
+					ClientUtils.openNewClient();
 				}
-			
 	    	}
 		}.start();
     }

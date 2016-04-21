@@ -16,4 +16,19 @@ public class Constants {
 
 	public static final int NODE_DISPLAY_LIMIT = 5;
 
+	public static final String YES = "yes";
+
+	public static final String NO = "no";
+
+	public static final String SELECT = "select";
+
+	public static final String WAIT = "wait";
+
+	public static final String INTENT = "intent";
+
+	public static final Object RESET_KEYWORD = "rücksetzen";
+//	public static final Object RESET_KEYWORD = "reset";
+
+	public static final String VERIFIED = "verified";
+
 }

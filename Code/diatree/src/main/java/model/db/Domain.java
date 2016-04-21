@@ -29,7 +29,6 @@ public class Domain {
 	protected Connection conn;
 	protected Statement stat;
 	
-	private int maxWordID = 0;
 	private TreeMap<String,Integer> cachedWords = new TreeMap<String,Integer>();
 	private TreeSet<String> cachedIntents = new TreeSet<String>();
 	private TreeSet<String> cachedConcepts = new TreeSet<String>();
@@ -213,7 +212,6 @@ public class Domain {
 	}
 
 	public List<LingEvidence> getUtterancesForConcept(int cid) throws SQLException {
-//		TODO: FIX THIS TO WORK VIA PROPERTIES
 		ArrayList<LingEvidence> ling = new ArrayList<LingEvidence>();
 		Statement stat = createStatement();
 		String query = "SELECT w1.word as word1, w2.word as word2 FROM sequence, word w1, word w2 WHERE w1.wid = sequence.left AND w2.wid = sequence.right AND cid = %d";
