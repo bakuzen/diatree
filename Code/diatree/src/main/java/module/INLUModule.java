@@ -14,6 +14,7 @@ import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.EditType;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.SlotIU;
+import model.Constants;
 import model.DomainModel;
 import model.Frame;
 import model.db.Domain;
@@ -31,11 +32,13 @@ public class INLUModule extends IUModule {
 	
 	public static DomainModel model;
 	
+	private String currentIntent;
+	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
 		super.newProperties(ps);
 		tree = (TreeModule) ps.getComponent(TREE_MODULE);
-		
+		currentIntent = Constants.ROOT_NAME;
 		Domain db = new Domain();
 		try {
 			db.setDomain(ps.getString(DOMAIN));
@@ -44,8 +47,6 @@ public class INLUModule extends IUModule {
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
 	
 	@Override
@@ -57,13 +58,13 @@ public class INLUModule extends IUModule {
 			switch(edit.getType()) {
 			
 			case ADD:
-				
-//				if (word.equals("rücksetzen")) {
-				if (word.equals("reset")) {
+				if (word.equals("rücksetzen")) {
+//				if (word.equals("reset")) {
 					model.newUtterance();
 					tree.initDisplay(true, true);
 					continue;
 				}
+				checkContext();
 				model.addIncrement(word);
 				update();
 				break;
@@ -76,6 +77,13 @@ public class INLUModule extends IUModule {
 			default:
 				break;
 			}
+		}
+	}
+
+	private void checkContext() {
+		if (!this.currentIntent.equals(tree.getCurrentIntent())) {
+			this.currentIntent = tree.getCurrentIntent();
+			model.updateContext(this.currentIntent);
 		}
 	}
 

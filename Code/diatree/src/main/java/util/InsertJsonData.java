@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
@@ -16,7 +17,7 @@ import model.db.Domain;
 public class InsertJsonData {
 	
 	private Domain db;
-	private String domain = "atis";
+	private String domain = "sigdial";
 	private String filePath = "domains/"+domain+"/json/";
 	
 	
@@ -45,6 +46,8 @@ public class InsertJsonData {
 		
 //		String testFile = Constants.BASE_FILE_PATH + domain + "/test";
 //		writer = new FileWriter(testFile);
+		
+		destroy(); //remove files if they already exist
 		
 		db = new Domain();
 		
@@ -83,14 +86,19 @@ public class InsertJsonData {
 
 	private void handleJSONFile(String absolutePath) throws Exception {
 			System.out.println("Inserting " + absolutePath);
+			
 			JSONTokener tok = new JSONTokener(new FileReader(absolutePath));
 			JSONObject json = new JSONObject(tok);
+			
+			if (absolutePath.endsWith("intent.json")) {
+				handleSequences(json);
+				return;
+			}
 			
 			String intent = json.getString("intent");
 			JSONArray concepts = json.getJSONArray("concepts");
 			if (concepts.length() < 2) {
-				System.out.println("You need more than 1 concept for an intent or there will be trouble: " + intent);
-				return;
+				System.out.println("Warning! intent " + intent + " only has one concept.");
 			}
 			db.offerNewIntent(intent);
 			
@@ -114,9 +122,55 @@ public class InsertJsonData {
 					String conceptName = example.getString("concept");
 					String exampleString = example.getString("example");
 					db.addExampleForConcept(conceptName, exampleString);
-					break;
+//					break;
 				}
 			}
+	}
+
+	private void handleSequences(JSONObject json) throws JSONException, SQLException {
+		
+		JSONArray rootChildren = json.getJSONArray("intents");
+		
+		db.offerNewIntent("intent");
+//		db.offerNewConcept("intent");
+//		db.offerNewConceptIntentAttachment("intent", "intent");
+		
+		for (int i=0; i<rootChildren.length(); i++) {
+			JSONObject intent = new JSONObject(new JSONTokener(rootChildren.get(i).toString()));
+			JSONArray children = intent.getJSONArray("children");
+			String name = intent.getString("name");
+			db.offerNewConcept(name);
+			db.offerNewIntent(name);
+			db.offerNewConceptIntentAttachment(name, "intent");
+			for (int j=0; j<children.length(); j++) {
+				
+				db.offerNewConcept(name);
+				db.offerNewIntent(name);
+				db.offerNewConceptIntentAttachment(name, "intent");
+				JSONObject childJSON = new JSONObject(children.get(j).toString());
+				
+//				TODO: need to handle the filled case
+				if (childJSON.has("filled")) {
+					String filled= childJSON.getString("filled");
+//					db.offerNewIntent(filled);
+					continue;
+				}
+				
+				String childName = childJSON.getString("child");
+				
+				db.offerNewConcept(childName);
+				db.offerNewIntent(childName);
+				db.offerNewConceptIntentAttachment(childName, "intent");
+				
+				db.offerNewIntent(childName);
+				db.offerNewIntentSequence(name, childName);
+			}
+
+		}
+		
+		
+		
+		
 	}
 	
 

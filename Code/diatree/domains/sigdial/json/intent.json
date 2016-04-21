@@ -1,29 +1,36 @@
-{ "intent": "intent", 
-    "concepts": [
-	{ "concept":"essen",
-	  "properties": [
-	   {"property":"malzeit"},
-	   {"property":"essen"},
-	   {"property":"hunger"}
+{ 
+    "intents": [
+	{ "name":"root",
+	  "children": [
+	   {"child":"anruf"},
+	   {"child":"nachricht"},
+	   {"child":"essen"}
 	  ]
 	},
-	{ "concept":"preis",
-	  "properties": [
-	   {"property":"preis"},
-	   {"property":"kostet"}
+	{ "name":"essen",
+	  "children": [
+	   {"child":"preis"},
+	   {"child":"wo"},
+	   {"child":"typ"},
+	   {"filled":"booking"}
 	  ]
 	},	
-	{ "concept":"wer",
-	  "properties": [
-	   {"property":"wer"},
-	   {"property":"name"}
+	{ "name":"anruf",
+	  "children": [
+	   {"child":"name"}
 	  ]
-	},		
-	{ "concept":"wo",
-	  "properties": [
-	   {"property":"wo"},
-	   {"property":"platz"}
+	},	
+	{ "name":"nachricht",
+	  "children": [
+	   {"child":"name"},
+	   {"child":"message"}
 	  ]
-	}
+	},	
+	{ "name":"booking",
+	  "children": [
+	   {"child":"date-time"}
+	  ]
+	}	
+	
     ]
 }

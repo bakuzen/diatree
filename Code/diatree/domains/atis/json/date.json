@@ -1,17 +1,9 @@
 {
   "concepts": [
     {
-      "concept": "wednesday",
-      "properties": [{"property": "wednesday"}]
-    },
-    {
-      "concept": "next",
-      "properties": [{"property": "next"}]
-    },
-    {
-      "concept": "thursday",
-      "properties": [{"property": "thursday"}]
-    },
+      "concept": "sunday",
+      "properties": [{"property": "sunday"}]
+    },  
     {
       "concept": "monday",
       "properties": [{"property": "monday"}]
@@ -19,27 +11,49 @@
     {
       "concept": "tuesday",
       "properties": [{"property": "tuesday"}]
+    },  
+    {
+      "concept": "wednesday",
+      "properties": [{"property": "wednesday"}]
     },
     {
-      "concept": "september",
-      "properties": [{"property": "september"}]
-    },
-    {
-      "concept": "twentieth",
-      "properties": [{"property": "twentieth"}]
-    },
-    {
-      "concept": "august",
-      "properties": [{"property": "august"}]
-    },
-    {
-      "concept": "nineteenth",
-      "properties": [{"property": "nineteenth"}]
+      "concept": "thursday",
+      "properties": [{"property": "thursday"}]
     },
     {
       "concept": "friday",
       "properties": [{"property": "friday"}]
     },
+    {
+      "concept": "saturday",
+      "properties": [{"property": "saturday"}]
+    },
+    
+    {
+      "concept": "tomorrow",
+      "properties": [{"property": "tomorrow"}]
+    },
+    {
+      "concept": "today",
+      "properties": [{"property": "today"}]
+    },    
+    {
+      "concept": "day after tomorrow",
+      "properties": [
+        {"property": "day"},
+        {"property": "after"},
+        {"property": "tomorrow"}
+      ]
+    },    
+    
+    {
+      "concept": "twentieth",
+      "properties": [{"property": "twentieth"}]
+    },
+      "concept": "nineteenth",
+      "properties": [{"property": "nineteenth"}]
+    },
+
     {
       "concept": "seventeenth",
       "properties": [{"property": "seventeenth"}]
@@ -118,18 +132,12 @@
         {"property": "eighth"}
       ]
     },
-    {
-      "concept": "october",
-      "properties": [{"property": "october"}]
-    },
+
     {
       "concept": "twelfth",
       "properties": [{"property": "twelfth"}]
     },
-    {
-      "concept": "april",
-      "properties": [{"property": "april"}]
-    },
+ 
     {
       "concept": "twenty fifth",
       "properties": [
@@ -137,10 +145,7 @@
         {"property": "fifth"}
       ]
     },
-    {
-      "concept": "may",
-      "properties": [{"property": "may"}]
-    },
+
     {
       "concept": "sixth",
       "properties": [{"property": "sixth"}]
@@ -191,18 +196,7 @@
       "concept": "june",
       "properties": [{"property": "june"}]
     },
-    {
-      "concept": "tomorrow",
-      "properties": [{"property": "tomorrow"}]
-    },
-    {
-      "concept": "today",
-      "properties": [{"property": "today"}]
-    },
-    {
-      "concept": "saturday",
-      "properties": [{"property": "saturday"}]
-    },
+
     {
       "concept": "eighth",
       "properties": [{"property": "eighth"}]
@@ -270,18 +264,7 @@
       "concept": "seven",
       "properties": [{"property": "seven"}]
     },
-    {
-      "concept": "saturdays",
-      "properties": [{"property": "saturdays"}]
-    },
-    {
-      "concept": "day after tomorrow",
-      "properties": [
-        {"property": "day"},
-        {"property": "after"},
-        {"property": "tomorrow"}
-      ]
-    },
+
     {
       "concept": "next week",
       "properties": [
@@ -437,10 +420,6 @@
     {
       "concept": "following",
       "properties": [{"property": "following"}]
-    },
-    {
-      "concept": "fridays",
-      "properties": [{"property": "fridays"}]
     },
     {
       "concept": "february",

@@ -1,4 +1,4 @@
-{ "intent": "essen", 
+{ "intent": "typ", 
     "concepts": [
 	{ "concept":"thai",
 	  "properties": [

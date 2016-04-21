@@ -1,5 +1,7 @@
 package module;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
@@ -13,6 +15,7 @@ import inpro.incremental.IUModule;
 import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.SlotIU;
+import model.Constants;
 import model.Node;
 import model.TraversableTree;
 import servlet.DiaTreeServlet;
@@ -31,7 +34,8 @@ public class TreeModule extends IUModule {
 	private TraversableTree tree;
 	private LinkedList<SlotIU> confirmStack;
 	private LinkedList<Node> expandedNodes;
-	private LinkedList<String> remainingIntents;
+	private List<String> remainingIntents;
+	private String currentIntent;
 	private boolean firstDisplay;
 	
 	
@@ -43,6 +47,7 @@ public class TreeModule extends IUModule {
 	}
 	
 	public void reset() {
+		setCurrentIntent(Constants.ROOT_NAME);
 		confirmStack = new LinkedList<SlotIU>();
 		expandedNodes = new LinkedList<Node>();
 		remainingIntents = new LinkedList<String>();
@@ -80,7 +85,7 @@ public class TreeModule extends IUModule {
 					String i = sIU.getName();
 	
 					if ("yes".equals(concept)) {
-						expand(i, c);
+						expandIntent(i, c);
 					}
 					if ("no".equals(concept)) {
 						abortConfirmation(i, c);
@@ -102,7 +107,8 @@ public class TreeModule extends IUModule {
 					logString("select!", "don't do this!", "");
 					return;
 				}
-				expand(intent, concept);
+				expandIntent(intent, concept);
+				
 
 				resetUtterance();
 			}
@@ -140,9 +146,9 @@ public class TreeModule extends IUModule {
 		getTopNode().clearChildren();
 		popExpandedNode();
 	}
-
-	private void expand(String intent, String concept) {
-		log.info(logString("expand", intent, concept));
+	
+	private void expandIntent(String intent, String concept) {
+		log.info(logString("expandIntent", intent, concept));
 		if ("confirm".equals(intent)) {
 			if ("yes".equals(concept)) {
 				return; // ignore this
@@ -157,25 +163,48 @@ public class TreeModule extends IUModule {
 		}
 //		another case is if someone is referring to an intent (not a concept of an intent)
 //		when that happens, show the expansion of that intent
-		if ("intent".equals(intent)) {
+		if ("intent".equals(intent) && hasConcepts(concept)) {
 			offerExpansion(concept);
 			return;
 		}
 		
 		Node top = getTopNode();
-		if (!top.hasChild(intent))  // this could happen when someone says the same word more than once
-			return;
+//		if (!top.hasChild(intent))  // this could happen when someone says the same word more than once
+//			return;
 		
-		
+	
 //		Node child = top.getChildNode(intent);
 //		child.clearChildren();
-		Node n = new Node(intent +":" + concept);
-		top.clearChildren();
-		top.addChild(n);
-		this.pushExpandedNode(n);
-		this.removeRemainingIntent(intent);
+//		Node n = new Node(intent +":" + concept);
+		if ("intent".equals(intent)) {
+			Node n = new Node(concept);
+			this.setCurrentIntent(concept);
+			remainingIntents = getPossibleIntents();
+			top.clearChildren();
+			top.addChild(n);
+			this.pushExpandedNode(n);
+
+		}
+		else {
+			Node n = new Node(intent + ":"+ concept);
+			this.removeRemainingIntent(intent);
+			top.clearChildren();
+			top.addChild(n);
+			this.pushExpandedNode(n);
+			
+		}
+		
 		this.clearConfirmStack();
-		this.addRemainingIntents();
+		this.branchIntents();
+	}
+
+	private boolean hasConcepts(String concept) {
+		try {
+			return !INLUModule.model.getDB().getConceptsForIntent(concept).isEmpty();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 	private void clearConfirmStack() {
@@ -221,6 +250,10 @@ public class TreeModule extends IUModule {
 			forExpansion.addChild(new Node(concept));
 		}
 		forExpansion.setHasBeenTraversed(true);
+//		this.setCurrentIntent(intent);
+//		remainingIntents = getPossibleConceptsForIntent(intent);
+//		System.out.println("remainingIntents: " + remainingIntents);
+		this.branchIntents();
 		return true;
 	}
 
@@ -254,7 +287,12 @@ public class TreeModule extends IUModule {
 	}
 	
 	private List<String> getPossibleIntents() {
-		return INLUModule.model.getPossibleIntents();
+		try {
+			return INLUModule.model.getDB().getChildIntentsForIntent(this.getCurrentIntent());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return new LinkedList<String>();
 	}
 	
 	private List<String> getPossibleConceptsForIntent(String intent) {
@@ -272,7 +310,6 @@ public class TreeModule extends IUModule {
 	}
 	
 	private Node getTopNode() {
-		System.out.println("top node:"+expandedNodes.peek());
 		return expandedNodes.peek();
 	}
 	
@@ -299,18 +336,18 @@ public class TreeModule extends IUModule {
 		 
 		if (reset) 
 			reset();
-		remainingIntents = new LinkedList<String>(getPossibleIntents());
+		remainingIntents = getPossibleIntents();
 		remainingIntents.remove("intent"); // keyword, but used in a similar way--shouldn't be displayed
 		
 		Node root = new Node("");
 		this.pushExpandedNode(root);
-		this.addRemainingIntents();
+		this.branchIntents();
 		this.setFirstDisplay(false);
 		if (update)
 			update();
 	}
 
-	private void addRemainingIntents() {
+	private void branchIntents() {
 		Node top = getTopNode();
 		for (String intent : remainingIntents) {
 			Node i = new Node(intent);
@@ -324,5 +361,15 @@ public class TreeModule extends IUModule {
 
 	public void setFirstDisplay(boolean fd) {
 		firstDisplay = fd;
+	}
+
+	public String getCurrentIntent() {
+		return currentIntent;
+	}
+
+	public void setCurrentIntent(String currentIntent) {
+		System.out.println("setting new intent: " + currentIntent);
+		this.currentIntent = currentIntent;
+
 	}
 }

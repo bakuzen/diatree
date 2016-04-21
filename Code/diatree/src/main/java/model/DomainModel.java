@@ -42,14 +42,23 @@ public class DomainModel {
 		mapping = new MaxEntMapping(Constants.BASE_FILE_PATH + domain + "/" + domain + ".txt"); // the thing that maps between language (in this case, ngrams) and high-level concepts
 		this.setDB(db);
 		this.setDomain(domain);
-		loadContext();
+		updateContext(Constants.ROOT_NAME);
 	}
 	
-	private void loadContext() {
+	public void updateContext(String intent) {
 		Context<String,String> context = new Context<String,String>();
+		System.out.println("CURRENT INTENT " + intent);
 		try {
-			for (String intent: db.getIntents()) {
-				for (String concept : db.getConceptsForIntent(intent)) {
+			
+			for (String concept : db.getConceptsForIntent(Constants.CONFIRM)) {
+				Properties<Property<String>> properties = db.getPropertiesForConcept(concept);
+				context.setEntity(concept, properties);
+			}			
+				
+			for (String childIntent: db.getChildIntentsForIntent(intent)) {
+				context.addPropertyToEntity(childIntent, childIntent);
+				for (String concept : db.getConceptsForIntent(childIntent)) {
+					
 					Properties<Property<String>> properties = db.getPropertiesForConcept(concept);
 					context.setEntity(concept, properties);
 				}
@@ -105,14 +114,15 @@ public class DomainModel {
 		if (ling.hasKey("w1"))
 			ling.addEvidence("w2", ling.getValue("w1"));
 		ling.addEvidence("w1", word);
-		Distribution<String> groundedResult = new Distribution<String>();
-//		Distribution<String> groundedResult = mapping.applyEvidenceToContext(ling);
+//		Distribution<String> groundedResult = new Distribution<String>();
+		Distribution<String> groundedResult = mapping.applyEvidenceToContext(ling);
+		
 //		did someone say a word that is the same spelling as a property? Give that property some credit. 
 		if (getContext().getPropertiesSet().contains(word)) { 
 			groundedResult.setProbabilityForItem(word, 1.0);
 		}
 		else {
-//			try a probability derived from the Lev distance. Takes a long time to step through, though. 
+//			try a probability derived from the Lev distance. This has to step through each of the properties, though. 
 			for (String concept : getContext().getPropertiesSet()) {
 				double lprob = LevenshteinDistance.getProbability(word, concept);
 				if (lprob > Constants.WORD_DISTANCE_THRESHOLD) {
@@ -120,7 +130,6 @@ public class DomainModel {
 				}
 			}
 		}
-//		TODO: handle word spelling distance?
 		grounder.groundIncrement(getContext(), groundedResult);
 		return grounder.getPosterior();
 		

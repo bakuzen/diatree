@@ -20,7 +20,7 @@
     </component>
     
      <component name="inlu" type="module.INLUModule">
-    	<property name="domain" value="atis"/>
+    	<property name="domain" value="sigdial"/>
     	<property name="module" value="tree"/>
     	<propertylist name="hypChangeListeners">
     	 	<item>dm</item>

@@ -1,0 +1,15 @@
+{ "intent": "date-time", 
+    "concepts": [
+	{ "concept":"heute",
+	  "properties": [
+	   {"property":"heute"},
+	   {"property":"gleich"}
+	  ]
+	},
+	{ "concept":"morgen",
+	  "properties": [
+	   {"property":"morgen"}
+	  ]
+	}
+     ]
+}

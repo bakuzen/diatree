@@ -10,4 +10,8 @@ public class Constants {
 
 	public static final double WORD_DISTANCE_THRESHOLD = 0.6;
 
+	public static final String ROOT_NAME = "root";
+
+	public static final String CONFIRM = "confirm";
+
 }

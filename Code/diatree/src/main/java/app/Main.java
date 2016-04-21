@@ -1,11 +1,8 @@
 package app;
 
-import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,7 +19,6 @@ import edu.cmu.sphinx.util.props.S4ComponentList;
 import inpro.apps.SimpleReco;
 import inpro.apps.util.RecoCommandLineParser;
 import inpro.incremental.PushBuffer;
-import inpro.incremental.sink.FrameAwarePushBuffer;
 import inpro.incremental.source.GoogleASR;
 import inpro.incremental.source.SphinxASR;
 import inpro.incremental.unit.EditMessage;
@@ -70,37 +66,40 @@ public class Main {
 
 		ClientUtils.openNewClient();
 		
-		new Thread(){ 
-			public void run() {
-				
-				try {
-					SimpleReco simpleReco = new SimpleReco(cm, rclp);
-					simpleReco.recognizeInfinitely();
-				} 
-				catch (PropertyException e) {
-					e.printStackTrace();
-				} 
-				catch (IOException e) {
-					e.printStackTrace();
-				} 
-				catch (UnsupportedAudioFileException e) {
-					e.printStackTrace();
-				}
-			}
-		}.start();
+//		new Thread(){ 
+//			public void run() {
+//				
+//				try {
+//					SimpleReco simpleReco = new SimpleReco(cm, rclp);
+//					simpleReco.recognizeInfinitely();
+//				} 
+//				catch (PropertyException e) {
+//					e.printStackTrace();
+//				} 
+//				catch (IOException e) {
+//					e.printStackTrace();
+//				} 
+//				catch (UnsupportedAudioFileException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		}.start();
 		
 //		String[] uwords = {"i", "want", "some", "cheap", "thai", "yes", "food", "around", "downtown"};
 //		String[] uwords = {"food", "indian", "no", "thai", "yes", "cheap", "downtown"};
-//		List<String> words = Arrays.asList(uwords);
-//		
-//		WordIU prev = WordIU.FIRST_WORD_IU;
-//		for (String word : words) {
-//			WordIU wiu = new WordIU(word, prev, null);
-//			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-//			notifyListeners(hypListeners);
-//			Thread.sleep(500);
-//			prev = wiu;
-//		}
+		String[] uwords = {"essen", "typ", "franzözisch","ja", "günstig", "wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
+				"rücksetzen","nachricht", "jana"};
+		List<String> words = Arrays.asList(uwords);
+		
+		WordIU prev = WordIU.FIRST_WORD_IU;
+		for (String word : words) {
+			WordIU wiu = new WordIU(word, prev, null);
+			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+			Thread.sleep(1000);
+			notifyListeners(hypListeners);
+
+			prev = wiu;
+		}
 		
 	}
 	

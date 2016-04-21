@@ -1,4 +1,4 @@
-{ "intent": "wer", 
+{ "intent": "name", 
     "concepts": [
 	{ "concept":"Alexander",
 	  "properties": [

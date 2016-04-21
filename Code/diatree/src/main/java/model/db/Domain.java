@@ -36,6 +36,7 @@ public class Domain {
 	private TreeSet<String> cachedProperties = new TreeSet<String>();
 	private TreeSet<String> cachedConceptIntentAttachments = new TreeSet<String>();
 	private TreeSet<String> cachedPropertyConceptAttachments = new TreeSet<String>();
+	private TreeSet<String> cachedIntentSequences = new TreeSet<String>();
 	
 	public List<String> getDomains() {
 		
@@ -363,12 +364,49 @@ public class Domain {
 		}
 		return properties;
 	}
+	
+	public List<String> getChildIntentsForIntent(String intent) throws SQLException{ 
+		Statement stat = createStatement();
+		ResultSet result = stat.executeQuery(String.format("SELECT distinct r.intent as intent FROM intent l, "
+				+ "intent r,  intent_seuqence s where l.iid = s.left AND r.iid = s.right AND l.intent = '%s'", intent));
+		ArrayList<String> intents = new ArrayList<String>();
+		while (result.next()) {
+			intents.add(result.getString("intent"));
+		}
+		return intents;
+	}
 
 	public String getIntentForConcept(String concept) throws SQLException {
 		Statement stat = createStatement();
 		ResultSet result = stat.executeQuery(String.format("SELECT intent FROM intent i, concept c, concept_intent ci where c.cid = ci.cid AND i.iid = ci.iid and c.concept = '%s'", concept));
 		return result.getString("intent");
 		
+	}
+
+	public void offerNewIntentSequence(String left, String right) throws SQLException {
+		if (!checkIntentSequenceExistence(left, right)) {
+			cachedIntentSequences.add(left + "_" + right);
+			addNewIntentSequence(left, right);
+		}
+	}
+
+	private void addNewIntentSequence(String left, String right) throws SQLException {
+		int lid = getIntentID(left);
+		int rid = getIntentID(right);
+		Statement stat = createStatement();
+		stat.execute(String.format("INSERT INTO intent_seuqence (left, right) VALUES (%d, %d)", lid, rid));
+	}
+
+	private boolean checkIntentSequenceExistence(String left, String right) throws SQLException {
+		if (!cachedIntentSequences.isEmpty()) {
+			return cachedIntentSequences.contains(left + "_" + right);
+		}
+		int lid = getIntentID(left);
+		int rid = getIntentID(right);
+		Statement stat = createStatement();
+		ResultSet res = stat.executeQuery(String.format("SELECT * FROM intent_seuqence WHERE left=%d AND right=%d", lid, rid));
+		if (res.isAfterLast()) return false;
+		return true;
 	}
 
 }

@@ -1,0 +1,9 @@
+{ "intent": "booking", 
+    "concepts": [
+	{ "concept":"reservierung",
+	  "properties": [
+	   {"property":"reservierung"}
+	   ]
+	}
+   ]
+}
