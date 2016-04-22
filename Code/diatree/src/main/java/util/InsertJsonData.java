@@ -158,18 +158,23 @@ public class InsertJsonData {
 				
 				String childName = childJSON.getString("child");
 				
+				boolean isCustomFunction = false;
+				if (childName.startsWith("[") && childName.endsWith("]")) {
+					childName = childName.replace("[", "").replace("]", "");
+					isCustomFunction = true;
+				}
+				
 				db.offerNewConcept(childName);
 				db.offerNewIntent(childName);
 				db.offerNewConceptIntentAttachment(childName, "intent");
 				
 				db.offerNewIntent(childName);
 				db.offerNewIntentSequence(name, childName);
+				
+				if (isCustomFunction)
+					db.offerNewCustomFunction(childName);				
 			}
-
 		}
-		
-		
-		
 		
 	}
 	

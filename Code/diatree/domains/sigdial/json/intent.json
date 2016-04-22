@@ -23,7 +23,7 @@
 	{ "name":"nachricht",
 	  "children": [
 	   {"child":"name"},
-	   {"child":"message"}
+	   {"child":"[message]"}
 	  ]
 	},	
 	{ "name":"booking",

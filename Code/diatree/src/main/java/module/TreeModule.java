@@ -16,6 +16,8 @@ import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.SlotIU;
 import model.Constants;
+import model.CustomFunction;
+import model.CustomFunctionRegistry;
 import model.Node;
 import model.TraversableTree;
 import servlet.DiaTreeServlet;
@@ -28,7 +30,6 @@ public class TreeModule extends IUModule {
 	
 	@S4Component(type = DiaTreeServlet.class)
 	public final static String DIATREE_SERVLET = "servlet";
-	
 
 	private DiaTreeServlet servlet;
 	private TraversableTree tree;
@@ -37,7 +38,6 @@ public class TreeModule extends IUModule {
 	private List<String> remainingIntents;
 	private String currentIntent;
 	private boolean firstDisplay;
-	
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
@@ -135,7 +135,6 @@ public class TreeModule extends IUModule {
 	private String logString(String method, String intent, String concept) {
 		String tolog = method + "(" + intent + "," + concept +")";
 		return tolog;
-				
 	}
 
 	private void abort() {
@@ -162,6 +161,13 @@ public class TreeModule extends IUModule {
 //			been here, done that
 			return;
 		}
+		
+		if (isCustomFunction(concept)) {
+			performCustomFunction(concept);
+			return;
+		}
+		
+		
 //		another case is if someone is referring to an intent (not a concept of an intent)
 //		when that happens, show the expansion of that intent
 		if (Constants.INTENT.equals(intent) && hasConcepts(concept)) {
@@ -184,7 +190,6 @@ public class TreeModule extends IUModule {
 			top.clearChildren();
 			top.addChild(n);
 			this.pushExpandedNode(n);
-
 		}
 		else {
 			Node n = new Node(intent + ":"+ concept);
@@ -192,12 +197,35 @@ public class TreeModule extends IUModule {
 			top.clearChildren();
 			top.addChild(n);
 			this.pushExpandedNode(n);
-			
 		}
 		
 		this.clearConfirmStack();
 		this.branchIntents();
 	}
+	
+	private void performCustomFunction(String intent) {
+		try {
+			CustomFunction function  = CustomFunctionRegistry.getNewFunction(intent);
+			if (function == null) return;
+			function.run();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	private boolean isCustomFunction(String intent) {
+		try {
+			return INLUModule.model.getDB().isCustomFunction(intent);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+
 
 	private boolean hasConcepts(String concept) {
 		try {

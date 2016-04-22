@@ -113,8 +113,10 @@ public class Domain {
 
 	private void createEmptyTables(String s) throws SQLException {
 		Statement stat = createStatement();
+		
 		stat.execute(String.format("CREATE TABLE intent (iid INTEGER PRIMARY KEY AUTOINCREMENT, intent TEXT)")); // an intent is an abstraction over concepts
 		stat.execute(String.format("CREATE TABLE intent_seuqence (left INTEGER, right INTEGER)")); // intents that go together (e.g., food+time+place)
+		stat.execute(String.format("CREATE TABLE custom_function (iid INTEGER)")); // custom function intents that call third-party functions intsead of using SIUM
 		stat.execute(String.format("CREATE TABLE concept (cid INTEGER PRIMARY KEY AUTOINCREMENT, concept TEXT)")); // concepts abstract over chunks of utterances
 		stat.execute(String.format("CREATE TABLE concept_intent (cid INTEGER, iid INTEGER)")); // concepts group to make intents
 		stat.execute(String.format("CREATE TABLE property (pid INTEGER PRIMARY KEY AUTOINCREMENT, property TEXT)")); // concepts abstract over chunks of utterances
@@ -405,6 +407,19 @@ public class Domain {
 		ResultSet res = stat.executeQuery(String.format("SELECT * FROM intent_seuqence WHERE left=%d AND right=%d", lid, rid));
 		if (res.isAfterLast()) return false;
 		return true;
+	}
+
+	public boolean isCustomFunction(String intent) throws SQLException {
+		Statement stat = createStatement();
+		ResultSet result = stat.executeQuery(String.format("SELECT intent FROM intent i, custom_function cf WHERE cf.iid = i.iid AND i.intent = '%s'", intent));
+		if (result.isAfterLast()) return false;
+		return true;
+	}
+
+	public void offerNewCustomFunction(String intent) throws SQLException {
+		int lid = getIntentID(intent);
+		Statement stat = createStatement();
+		stat.execute(String.format("INSERT INTO custom_function (iid) VALUES (%d)", lid));
 	}
 
 }
