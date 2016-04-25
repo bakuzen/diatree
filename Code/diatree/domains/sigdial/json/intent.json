@@ -4,6 +4,7 @@
 	  "children": [
 	   {"child":"anruf"},
 	   {"child":"nachricht"},
+	   {"child":"erinnerung"},
 	   {"child":"essen"}
 	  ]
 	},
@@ -23,6 +24,11 @@
 	{ "name":"nachricht",
 	  "children": [
 	   {"child":"name"},
+	   {"child":"[message]"}
+	  ]
+	},		
+	{ "name":"erinnerung",
+	  "children": [
 	   {"child":"[message]"}
 	  ]
 	},	
