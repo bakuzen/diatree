@@ -29,6 +29,7 @@
     
     <component name="asrMessage" type="model.functions.MessageFunction">
         <property name="asr" value="googleASR"/>
+        <property name="keyword" value="ferkel"/>
         <propertylist name="hypChangeListeners">
 	</propertylist>
     </component>  
@@ -92,7 +93,7 @@
     	<property name="lang" value="${language}"/>
         <property name="frontend" value="${frontend}"/>
         <propertylist name="hypChangeListeners">
-        	<item>printer</item>
+<!--         	<item>printer</item> -->
         	<item>inlu</item>
 		</propertylist>
     </component>

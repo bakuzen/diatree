@@ -149,6 +149,11 @@ public class TreeModule extends IUModule {
 		popExpandedNode();
 	}
 	
+	public void returnFromCustomFunction() {
+		this.clearConfirmStack();
+		this.branchIntents();
+	}
+	
 	private void expandIntent(String intent, String concept) {
 		log.info(logString("expandIntent", intent, concept));
 		if (Constants.CONFIRM.equals(intent)) {
@@ -165,6 +170,13 @@ public class TreeModule extends IUModule {
 		}
 		
 		if (isCustomFunction(concept)) {
+			Node top = getTopNode();
+			Node n = new Node(concept);
+			n.setHasBeenTraversed(true);
+			this.removeRemainingIntent(concept);
+			top.clearChildren();
+			top.addChild(n);
+			this.pushExpandedNode(n);
 			performCustomFunction(concept);
 			return;
 		}
@@ -340,7 +352,7 @@ public class TreeModule extends IUModule {
 		return expandedNodes.pop();
 	}
 	
-	private Node getTopNode() {
+	public Node getTopNode() {
 		return expandedNodes.peek();
 	}
 	
@@ -348,7 +360,7 @@ public class TreeModule extends IUModule {
 		return expandedNodes.peekLast();
 	}
 	
-	private void update() {
+	public void update() {
 		tree = new TraversableTree(this.getRootNode());
 		tree.setDepth(getNodeDepth());
 		String json = tree.getJsonString();
