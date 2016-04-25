@@ -46,7 +46,7 @@ public class Main {
 //	private List<PushBuffer> hypListeners;
 	List<EditMessage<IU>> edits = new ArrayList<EditMessage<IU>>();
 	
-	private void run() throws LifecycleException, InterruptedException, PropertyException, MalformedURLException {
+	private void run() throws LifecycleException, InterruptedException, PropertyException, IOException, UnsupportedAudioFileException {
 		
 		EmbeddedTomcat tomcat = new EmbeddedTomcat();
 		
@@ -59,34 +59,64 @@ public class Main {
 		CustomFunctionRegistry cfr = (CustomFunctionRegistry) cm.lookup("registry");
 		
 
-//		for Google ASR
-		webSpeech = (GoogleASR) cm.lookup("googleASR");
-		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"});
+
 		
 //		for Sphinx ASR
 //		SphinxASR webSpeech = (SphinxASR) cm.lookup(PROP_CURRENT_HYPOTHESIS);
-//		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M"});	
+//		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M"});
+		
+		
+//		for Google ASR
+		
+		webSpeech = (GoogleASR) cm.lookup("googleASR");
+		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"});
 
 		ClientUtils.openNewClient();
 		
-		new Thread(){ 
+		new Thread() {
 			public void run() {
 				
 				try {
 					SimpleReco simpleReco = new SimpleReco(cm, rclp);
-					simpleReco.recognizeInfinitely();
-				} 
-				catch (PropertyException e) {
-					e.printStackTrace();
-				} 
-				catch (IOException e) {
-					e.printStackTrace();
-				} 
-				catch (UnsupportedAudioFileException e) {
-					e.printStackTrace();
+				while (true) {
+					try {
+						
+
+						new Thread(){ 
+							public void run() {
+								try {
+									simpleReco.recognizeOnce();
+								} 
+								catch (PropertyException e) {
+									e.printStackTrace();
+								} 
+								
+							}
+						}.start();
+						
+						Thread.sleep(10000);
+						webSpeech.shutdown();
+//						simpleReco.shutdownMic();
+					}
+						
+					catch (InterruptedException e) {
+						e.printStackTrace();
+					}
 				}
+				
+				
+			} catch (PropertyException e1) {
+				e1.printStackTrace();
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			} catch (UnsupportedAudioFileException e1) {
+				e1.printStackTrace();
 			}
+		}
 		}.start();
+		
+		
+
 		
 //		String[] uwords = {"i", "want", "some", "cheap", "thai", "yes", "food", "around", "downtown"};
 //		String[] uwords = {"food", "indian", "no", "thai", "yes", "cheap", "downtown"};
@@ -121,6 +151,10 @@ public class Main {
 			e.printStackTrace();
 		} 
 		catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (UnsupportedAudioFileException e) {
 			e.printStackTrace();
 		} 
 	}

@@ -67,7 +67,7 @@ dependencies {
     // The production code uses the SLF4J logging API at compile time
     compile 'de.dsg:sium:0.74'
     compile 'de.dsg:wac:0.2'
-    compile 'de.dsg:inprotk:1.33'
+    compile 'de.dsg:inprotk:1.36'
     compile 'de.dsg:sium-inpro:1.2'
     compile 'de.dsg:dm:0.33'
     compile 'de.dsg:opendial:1.43'
