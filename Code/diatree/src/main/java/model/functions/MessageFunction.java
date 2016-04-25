@@ -15,6 +15,7 @@ import inpro.incremental.source.SphinxASR;
 import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.EditType;
 import inpro.incremental.unit.IU;
+import model.Constants;
 import model.CustomFunction;
 import model.Node;
 import module.TreeModule;
@@ -31,6 +32,7 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 	private String message;
 	private TreeModule treeModule;
 	ArrayList<PushBuffer> listeners;
+	private int numWords = 0;
 
 	private String keyword;
 	
@@ -43,7 +45,7 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 
 	@Override
 	public void run(TreeModule treeModule) {
-			message = "message:";
+			message = "message:_";
 			this.treeModule = treeModule;
 			listeners = new ArrayList<PushBuffer>(recognizer.iulisteners);
 			recognizer.iulisteners.clear();
@@ -65,12 +67,20 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 					treeModule.update();
 					return;
 				}
-				message += word + " ";
+				numWords++;
+				String delim = " ";
+				if (numWords >= Constants.MAX_NUM_WORDS){
+					numWords = 0;
+					delim = Constants.DELIMITER;
+				}
+				message += word + delim;
+				
 			}
 
 		}
 		Node top = treeModule.getTopNode();
-		System.out.println("TOP NODE: " + top);
+//		top.addChild(new Node(""));
+		System.out.println(message);
 		top.setName(message);
 
 		treeModule.update();

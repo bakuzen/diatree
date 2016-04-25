@@ -23,7 +23,7 @@
 <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>     
     <script type="text/javascript">
     function start() {
-        var width = 700; 
+        var width = 200; 
         var height = 500; 
         var cluster = d3.layout.cluster()    
            .size([height, width-400]); 
@@ -31,6 +31,7 @@
            .projection (function(d) { return [d.y, d.x];}); 
 
         var svg; 
+
  
         var eventSource = new EventSource("diatree");
          
@@ -72,16 +73,28 @@
               node.append("circle")       
                  .attr("r", 4.5)
                  .style("stroke", function(d) { return d.type; })
-     			 .style("fill", function(d) { return d.level; });  ;    
-              node.append("text")       
-                 .attr("dx", function(d) { return d.children ? -8 : 8; })       
-                 .attr("dy", 3)       
-                 .style("text-anchor", function(d) { return d.children ? "end" : "start"; })      
-                 .text( function(d){ return d.name;}); 
-         
+     			 .style("fill", function(d) { return d.level; }); 			 
+              node.append("text")
+                 .attr("dx", function(d) { return d.children ? -8 : 8; })
+//                  .attr("dy", 3)
+                 .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
+//                  .html( function(d){ return d.name;});
+              		.each(function (d) {
+            	    var arr = d.name.split("_");
+            	    for (i = 0; i < arr.length; i++) {
+            	        d3.select(this).append("tspan")
+            	            .text(arr[i])
+            	            .attr("dy", i ? "1.2em" : 0)
+            	            .attr("x", 0)
+            	            .attr("class", "tspan" + i);
+            	    }});
+            	    
         };
          
     }
+    
+    
+
     </script>
 </body>
 </html>

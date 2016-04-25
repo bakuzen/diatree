@@ -31,4 +31,8 @@ public class Constants {
 
 	public static final String VERIFIED = "verified";
 
+	public static final int MAX_NUM_WORDS = 2;
+	
+	public static final String DELIMITER = "_";
+
 }

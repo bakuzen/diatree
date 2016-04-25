@@ -150,6 +150,7 @@ public class TreeModule extends IUModule {
 	}
 	
 	public void returnFromCustomFunction() {
+		getTopNode().setHasBeenTraversed(false);
 		this.clearConfirmStack();
 		this.branchIntents();
 	}
@@ -164,23 +165,23 @@ public class TreeModule extends IUModule {
 				abort();
 			}
 		}
-		if (this.intentSettled(intent)) {
+		if (this.intentSettled(intent) || this.intentSettled(concept)) {
 //			been here, done that
 			return;
 		}
 		
 		if (isCustomFunction(concept)) {
+			
 			Node top = getTopNode();
 			Node n = new Node(concept);
+			this.pushExpandedNode(n);
 			n.setHasBeenTraversed(true);
 			this.removeRemainingIntent(concept);
 			top.clearChildren();
 			top.addChild(n);
-			this.pushExpandedNode(n);
 			performCustomFunction(concept);
 			return;
 		}
-		
 		
 //		another case is if someone is referring to an intent (not a concept of an intent)
 //		when that happens, show the expansion of that intent
