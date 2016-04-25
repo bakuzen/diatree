@@ -55,7 +55,6 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 
 	@Override
 	protected void leftBufferUpdate(Collection<? extends IU> ius, List<? extends EditMessage<? extends IU>> edits) {
-		System.out.println("EDITS: " +edits);
 		for (EditMessage<? extends IU> edit : edits){
 			switch (edit.getType()) {
 			case ADD:
@@ -95,7 +94,6 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 		
 		Node top = treeModule.getTopNode();
 //		top.addChild(new Node(""));
-		System.out.println(message);
 		top.setName(message);
 
 		treeModule.update();
