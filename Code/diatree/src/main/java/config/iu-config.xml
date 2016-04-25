@@ -26,6 +26,21 @@
     	 	<item>dm</item>
 		</propertylist>
     </component> 
+    
+    <component name="asrMessage" type="model.functions.MessageFunction">
+        <property name="asr" value="googleASR"/>
+        <propertylist name="hypChangeListeners">
+	</propertylist>
+    </component>  
+    
+    <component name="registry" type="model.CustomFunctionRegistry">
+    <propertylist name="customFunctionNames">
+       <item>message</item>
+    </propertylist> 
+    <propertylist name="customFunctionComponents">
+       <item>asrMessage</item>
+    </propertylist>       
+   </component>  
 
     <component name="dm" type="module.DialogueManager">
        <property name="domainFile" value="domains/sigdial/opendial/sigdial.xml"/>
@@ -81,6 +96,8 @@
         	<item>inlu</item>
 		</propertylist>
     </component>
+    
+ 
     
     <component name="kaldiASR" type="inpro.incremental.source.KaldiASR">
         <property name="server" value="localhost"/>

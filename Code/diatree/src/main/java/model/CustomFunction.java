@@ -1,7 +1,10 @@
 package model;
 
-public interface CustomFunction {
+import edu.cmu.sphinx.util.props.Configurable;
+import module.TreeModule;
+
+public interface CustomFunction extends Configurable {
 	
-	public void run();
+	public void run(TreeModule treeModule);
 
 }

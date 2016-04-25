@@ -38,10 +38,12 @@ public class TreeModule extends IUModule {
 	private List<String> remainingIntents;
 	private String currentIntent;
 	private boolean firstDisplay;
+	private PropertySheet propertySheet;
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
 		super.newProperties(ps);
+		this.setPropertySheet(ps);
 		servlet = (DiaTreeServlet) ps.getComponent(DIATREE_SERVLET);
 		reset();
 	}
@@ -205,9 +207,9 @@ public class TreeModule extends IUModule {
 	
 	private void performCustomFunction(String intent) {
 		try {
-			CustomFunction function  = CustomFunctionRegistry.getNewFunction(intent);
+			CustomFunction function  = CustomFunctionRegistry.getFunction(intent);
 			if (function == null) return;
-			function.run();
+			function.run(this);
 		} catch (InstantiationException e) {
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
@@ -400,5 +402,13 @@ public class TreeModule extends IUModule {
 		System.out.println("setting new intent: " + currentIntent);
 		this.currentIntent = currentIntent;
 
+	}
+
+	public PropertySheet getPropertySheet() {
+		return propertySheet;
+	}
+
+	public void setPropertySheet(PropertySheet propertySheet) {
+		this.propertySheet = propertySheet;
 	}
 }

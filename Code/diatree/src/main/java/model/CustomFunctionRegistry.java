@@ -1,22 +1,41 @@
 package model;
 
 import java.util.HashMap;
+import java.util.List;
 
+import edu.cmu.sphinx.util.props.Configurable;
+import edu.cmu.sphinx.util.props.PropertyException;
+import edu.cmu.sphinx.util.props.PropertySheet;
+import edu.cmu.sphinx.util.props.S4ComponentList;
+import edu.cmu.sphinx.util.props.S4StringList;
 import model.functions.MessageFunction;
+import module.opendial.ConfigurableModule;
 
-public class CustomFunctionRegistry {
+public class CustomFunctionRegistry implements Configurable {
 	
-	private static HashMap<String,Class<?>> functions;
+	@S4ComponentList(type = CustomFunction.class)
+	public final static String FUNCTION_COMPONENTS = "customFunctionComponents";
 	
-	private static void init() {
-//		TODO be able to load functions in some other way, like from a file
-		functions = new HashMap<String,Class<?>>();
-		functions.put("message", MessageFunction.class);
+	@S4StringList()
+	public final static String FUNCTION_STRINGS = "customFunctionNames";
+	
+	private static HashMap<String,CustomFunction> functions;
+	
+
+	@Override
+	public void newProperties(PropertySheet ps) throws PropertyException {
+		List<String> names = ps.getStringList(FUNCTION_STRINGS);
+		List<CustomFunction> f = ps.getComponentList(FUNCTION_COMPONENTS, CustomFunction.class);
+		functions = new HashMap<String,CustomFunction>();
+		for (int i=0; i<names.size(); i++) {
+			functions.put(names.get(i), f.get(i));
+		}
+		
 	}
 	
-	public static CustomFunction getNewFunction(String function) throws InstantiationException, IllegalAccessException {
-		if (functions == null) init();
-		return (CustomFunction) functions.get(function).newInstance();
+	public static CustomFunction getFunction(String function) throws InstantiationException, IllegalAccessException {
+		return (CustomFunction) functions.get(function);
 	}
+
 
 }

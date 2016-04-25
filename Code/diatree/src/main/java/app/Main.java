@@ -25,6 +25,7 @@ import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.EditType;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.WordIU;
+import model.CustomFunctionRegistry;
 import servlet.DiaTreeServlet;
 import tomcat.EmbeddedTomcat;
 import util.ClientUtils;
@@ -54,6 +55,8 @@ public class Main {
 		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
 		tomcat.addServlet("diatree", (DiaTreeServlet) cm.lookup(DIATREE_SERVLET));
 		tomcat.start();
+		
+		CustomFunctionRegistry cfr = (CustomFunctionRegistry) cm.lookup("registry");
 		
 
 //		for Google ASR
