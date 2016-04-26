@@ -8,8 +8,8 @@ public class AdvancedDiaTreeCreator  implements WebSocketCreator{
 
     private DiaTreeSocket diatree;
     
-    public AdvancedDiaTreeCreator() {
-        this.diatree = new DiaTreeSocket();
+    public AdvancedDiaTreeCreator(DiaTreeSocket socket) {
+        this.diatree = socket;
     }
  
     @Override

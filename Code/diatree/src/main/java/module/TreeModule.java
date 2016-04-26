@@ -28,7 +28,10 @@ public class TreeModule extends IUModule {
 	
 	static Logger log = Logger.getLogger(Distribution.class.getName());
 
-	
+	@S4Component(type = DiaTreeSocket.class)
+	public final static String DIATREE_SOCKET = "socket";
+
+	private DiaTreeSocket socket;
 	private TraversableTree tree;
 	private LinkedList<SlotIU> confirmStack;
 	private LinkedList<Node> expandedNodes;
@@ -41,6 +44,7 @@ public class TreeModule extends IUModule {
 	public void newProperties(PropertySheet ps) throws PropertyException {
 		super.newProperties(ps);
 		this.setPropertySheet(ps);
+		socket = (DiaTreeSocket) ps.getComponent(DIATREE_SOCKET);
 		reset();
 	}
 	
@@ -54,7 +58,7 @@ public class TreeModule extends IUModule {
 
 	private void send(String data) {
 		if (data == null) return;
-		DiaTreeSocket.send(data);
+		socket.send(data);
 	}
 
 	@Override

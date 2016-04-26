@@ -25,10 +25,10 @@ import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.EditType;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.WordIU;
+import jetty.AdvancedDiaTreeCreator;
+import jetty.DiaTreeSocket;
 import jetty.JettyServer;
 import model.CustomFunctionRegistry;
-import servlet.DiaTreeServlet;
-import tomcat.EmbeddedTomcat;
 import util.ClientUtils;
 
 public class Main {
@@ -39,8 +39,8 @@ public class Main {
 //	@S4ComponentList(type = PushBuffer.class)
 //	public final static String PROP_HYP_CHANGE_LISTENERS = SphinxASR.PROP_HYP_CHANGE_LISTENERS;
 	
-	@S4Component(type = DiaTreeServlet.class)
-	public final static String DIATREE_SERVLET = "diatree";
+	@S4Component(type = DiaTreeSocket.class)
+	public final static String DIATREE_SOCKET = "diatree";
 	
 	GoogleASR webSpeech;
 	private static PropertySheet ps;
@@ -50,7 +50,7 @@ public class Main {
 	private void run() throws LifecycleException, InterruptedException, PropertyException, IOException, UnsupportedAudioFileException {
 		
 //		EmbeddedTomcat tomcat = new EmbeddedTomcat();
-		JettyServer jetty = new JettyServer();
+		
 		
 		ConfigurationManager cm = new ConfigurationManager(new File("src/main/java/config/config.xml").toURI().toURL());
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
@@ -58,6 +58,8 @@ public class Main {
 		
 //		tomcat.addServlet("diatree", (DiaTreeServlet) cm.lookup(DIATREE_SERVLET));
 //		tomcat.start();
+		AdvancedDiaTreeCreator creator = new AdvancedDiaTreeCreator((DiaTreeSocket) cm.lookup(DIATREE_SOCKET));
+		JettyServer jetty = new JettyServer(creator);
 		
 		CustomFunctionRegistry cfr = (CustomFunctionRegistry) cm.lookup("registry");
 		
@@ -71,7 +73,7 @@ public class Main {
 		
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
 		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"});
-//		startGoogleASR(cm, rclp);
+		startGoogleASR(cm, rclp);
 		
 		ClientUtils.openNewClient();
 		
@@ -80,18 +82,18 @@ public class Main {
 //		String[] uwords = {"food", "indian", "no", "thai", "yes", "cheap", "downtown"};
 //		String[] uwords = {"essen",  "günstig", "wo", "stadtmitte","typ", "franzözisch","ja", "rücksetzen", "anruf", "name", "michael",
 //				"rücksetzen","nachricht", "jana", "rücksetzen"};
-		String[] uwords = {"nachricht",  "message", "nimm", "das", "rote", "kreuz","neben","dem","blauen","t", "ferkel", "name", "jana"};
-		List<String> words = Arrays.asList(uwords);
-		
-		WordIU prev = WordIU.FIRST_WORD_IU;
-		for (String word : words) {
-			WordIU wiu = new WordIU(word, prev, null);
-			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-			Thread.sleep(1000);
-			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
-
-			prev = wiu;
-		}
+//		String[] uwords = {"nachricht",  "message", "nimm", "das", "rote", "kreuz","neben","dem","blauen","t", "ferkel", "name", "jana"};
+//		List<String> words = Arrays.asList(uwords);
+//		
+//		WordIU prev = WordIU.FIRST_WORD_IU;
+//		for (String word : words) {
+//			WordIU wiu = new WordIU(word, prev, null);
+//			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+//			Thread.sleep(1000);
+//			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
+//
+//			prev = wiu;
+//		}
 		
 	}
 	

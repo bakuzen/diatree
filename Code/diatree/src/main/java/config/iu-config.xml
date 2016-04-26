@@ -61,6 +61,7 @@
     </component>     
     
     <component name="tree" type="module.TreeModule">
+    	<property name="socket" value="diatree"/>
     	<propertylist name="hypChangeListeners">
 		</propertylist>
     </component>    
@@ -71,9 +72,9 @@
 		</propertylist>
     </component>    
     
-<!--     <component name="diatree" type="servlet.DiaTreeServlet"> -->
-<!--      <property name="module" value="tree"/> -->
-<!--     </component> -->
+    <component name="diatree" type="jetty.DiaTreeSocket">
+     <property name="module" value="tree"/>
+    </component>
     
     <component name="vad" type="inpro.incremental.source.VoiceActivityDetector">
         <propertylist name="hypChangeListeners">
