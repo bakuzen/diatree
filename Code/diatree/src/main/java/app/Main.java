@@ -25,6 +25,7 @@ import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.EditType;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.WordIU;
+import jetty.JettyServer;
 import model.CustomFunctionRegistry;
 import servlet.DiaTreeServlet;
 import tomcat.EmbeddedTomcat;
@@ -48,13 +49,15 @@ public class Main {
 	
 	private void run() throws LifecycleException, InterruptedException, PropertyException, IOException, UnsupportedAudioFileException {
 		
-		EmbeddedTomcat tomcat = new EmbeddedTomcat();
+//		EmbeddedTomcat tomcat = new EmbeddedTomcat();
+		JettyServer jetty = new JettyServer();
 		
 		ConfigurationManager cm = new ConfigurationManager(new File("src/main/java/config/config.xml").toURI().toURL());
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
-		tomcat.addServlet("diatree", (DiaTreeServlet) cm.lookup(DIATREE_SERVLET));
-		tomcat.start();
+		
+//		tomcat.addServlet("diatree", (DiaTreeServlet) cm.lookup(DIATREE_SERVLET));
+//		tomcat.start();
 		
 		CustomFunctionRegistry cfr = (CustomFunctionRegistry) cm.lookup("registry");
 		

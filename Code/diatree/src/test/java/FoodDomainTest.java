@@ -27,7 +27,7 @@ public class FoodDomainTest {
 		try {
 			create(db, d);
 			train(db, d);
-			eval();
+//			eval();
 		} 
 		catch (SQLException e) {
 			e.printStackTrace();
