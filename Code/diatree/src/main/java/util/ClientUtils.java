@@ -25,7 +25,6 @@ public class ClientUtils {
 	
 		clientStartThread.start();
 		
-		
 		new Thread(){ 
 				public void run() {
 			

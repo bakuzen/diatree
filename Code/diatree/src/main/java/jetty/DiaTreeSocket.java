@@ -2,12 +2,6 @@ package jetty;
 
 import java.io.IOException;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.eclipse.jetty.server.Request;
-import org.eclipse.jetty.server.handler.AbstractHandler;
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose;
 import org.eclipse.jetty.websocket.api.annotations.OnWebSocketConnect;
@@ -17,7 +11,17 @@ import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 
 
 @WebSocket
-public class DiaTreeHandler extends AbstractHandler {
+public class DiaTreeSocket  {
+	
+	private static Session session;
+	
+	public static void send(String data) {
+        try {
+            session.getRemote().sendString(data);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+	}
 
 	@OnWebSocketClose
     public void onClose(int statusCode, String reason) {
@@ -30,13 +34,8 @@ public class DiaTreeHandler extends AbstractHandler {
     }
 
     @OnWebSocketConnect
-    public void onConnect(Session session) {
-        System.out.println("Connect: " + session.getRemoteAddress().getAddress());
-        try {
-            session.getRemote().sendString("Hello Webbrowser");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void onConnect(Session s) {
+    	session = s;
     }
 
     @OnWebSocketMessage
@@ -44,10 +43,9 @@ public class DiaTreeHandler extends AbstractHandler {
         System.out.println("Message: " + message);
     }
 
-	@Override
-	public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException {
-		 System.out.println("Target: " + target);
-	}
+//	public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response)
+//			throws IOException, ServletException {
+//		 System.out.println("Target: " + target);
+//	}
 	
 }

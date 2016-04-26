@@ -15,6 +15,7 @@ import inpro.incremental.IUModule;
 import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.SlotIU;
+import jetty.DiaTreeSocket;
 import model.Constants;
 import model.CustomFunction;
 import model.CustomFunctionRegistry;
@@ -28,10 +29,6 @@ public class TreeModule extends IUModule {
 	static Logger log = Logger.getLogger(Distribution.class.getName());
 
 	
-	@S4Component(type = DiaTreeServlet.class)
-	public final static String DIATREE_SERVLET = "servlet";
-
-	private DiaTreeServlet servlet;
 	private TraversableTree tree;
 	private LinkedList<SlotIU> confirmStack;
 	private LinkedList<Node> expandedNodes;
@@ -44,7 +41,6 @@ public class TreeModule extends IUModule {
 	public void newProperties(PropertySheet ps) throws PropertyException {
 		super.newProperties(ps);
 		this.setPropertySheet(ps);
-		servlet = (DiaTreeServlet) ps.getComponent(DIATREE_SERVLET);
 		reset();
 	}
 	
@@ -58,7 +54,7 @@ public class TreeModule extends IUModule {
 
 	private void send(String data) {
 		if (data == null) return;
-		servlet.send(data);
+		DiaTreeSocket.send(data);
 	}
 
 	@Override

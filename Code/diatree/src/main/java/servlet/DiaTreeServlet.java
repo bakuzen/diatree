@@ -22,7 +22,6 @@ import util.ClientUtils;
 
 @WebServlet(urlPatterns = {"/diatree"}, asyncSupported=true)
 public class DiaTreeServlet  extends HttpServlet implements Configurable {
-
 	
 	/**
 	 * 
