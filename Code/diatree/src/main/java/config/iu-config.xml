@@ -66,11 +66,6 @@
 		</propertylist>
     </component>    
     
-    <component name="traverse" type="module.TraverseModule">
-    	<property name="servlet" value="diatree"/>
-    	<propertylist name="hypChangeListeners">
-		</propertylist>
-    </component>    
     
     <component name="diatree" type="jetty.DiaTreeSocket">
      <property name="module" value="tree"/>

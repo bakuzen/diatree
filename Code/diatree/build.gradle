@@ -97,12 +97,12 @@ dependencies {
     
     
     //embedded tomcat
-    compile 'org.apache.tomcat.embed:tomcat-embed-core:8.5.0'
-    compile 'org.apache.tomcat.embed:tomcat-embed-logging-juli:8.5.0'
-    compile 'org.apache.tomcat.embed:tomcat-embed-jasper:8.5.0'
-    compile 'org.apache.tomcat:tomcat-jasper:8.5.0'
-    compile 'org.apache.tomcat:tomcat-jasper-el:8.5.0'
-    compile 'org.apache.tomcat:tomcat-jsp-api:8.5.0'
+//    compile 'org.apache.tomcat.embed:tomcat-embed-core:8.5.0'
+//    compile 'org.apache.tomcat.embed:tomcat-embed-logging-juli:8.5.0'
+//    compile 'org.apache.tomcat.embed:tomcat-embed-jasper:8.5.0'
+//    compile 'org.apache.tomcat:tomcat-jasper:8.5.0'
+//    compile 'org.apache.tomcat:tomcat-jasper-el:8.5.0'
+//    compile 'org.apache.tomcat:tomcat-jsp-api:8.5.0'
     
     compile 'com.googlecode.json-simple:json-simple:1.1'
 //    compile 'org.json:json:20151123'

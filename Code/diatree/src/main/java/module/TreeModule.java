@@ -21,7 +21,6 @@ import model.CustomFunction;
 import model.CustomFunctionRegistry;
 import model.Node;
 import model.TraversableTree;
-import servlet.DiaTreeServlet;
 import sium.nlu.stat.Distribution;
 
 public class TreeModule extends IUModule {

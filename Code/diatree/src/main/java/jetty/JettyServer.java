@@ -4,8 +4,6 @@ package jetty;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
-import org.eclipse.jetty.servlet.DefaultServlet;
-import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.websocket.server.WebSocketHandler;
 import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 
@@ -13,7 +11,6 @@ public class JettyServer {
 	
 	private HandlerList handlers;
 	private Server server;
-	final ServletHolder servletHolder = new ServletHolder( new DefaultServlet() );
 	
 	public JettyServer(AdvancedDiaTreeCreator creator) {
 

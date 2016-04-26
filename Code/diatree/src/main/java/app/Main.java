@@ -4,18 +4,15 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-import org.apache.catalina.LifecycleException;
 
 import edu.cmu.sphinx.util.props.ConfigurationManager;
 import edu.cmu.sphinx.util.props.PropertyException;
 import edu.cmu.sphinx.util.props.PropertySheet;
 import edu.cmu.sphinx.util.props.S4Component;
-import edu.cmu.sphinx.util.props.S4ComponentList;
 import inpro.apps.SimpleReco;
 import inpro.apps.util.RecoCommandLineParser;
 import inpro.incremental.PushBuffer;
@@ -47,7 +44,7 @@ public class Main {
 //	private List<PushBuffer> hypListeners;
 	List<EditMessage<IU>> edits = new ArrayList<EditMessage<IU>>();
 	
-	private void run() throws LifecycleException, InterruptedException, PropertyException, IOException, UnsupportedAudioFileException {
+	private void run() throws InterruptedException, PropertyException, IOException, UnsupportedAudioFileException {
 		
 //		EmbeddedTomcat tomcat = new EmbeddedTomcat();
 		
@@ -145,9 +142,6 @@ public class Main {
 	public static void main (String[] args) {
 		try {
 			new Main().run();
-		} 
-		catch (LifecycleException e) {
-			e.printStackTrace();
 		} 
 		catch (InterruptedException e) {
 			e.printStackTrace();
