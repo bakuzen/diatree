@@ -1,96 +1,175 @@
-<!DOCTYPE HTML> <meta charset="utf-8">
+<!DOCTYPE HTML> 
 
 <html>
-<body onload="start()">
-<!-- <span id="foo"></span> -->
+<meta charset="utf-8">
 
 <style>
-.node circle {     
-  fill: #fff;    
-  stroke: steelblue;    
-  stroke-width: 1.5px; 
-} 
-.node {    
-  font: 20px sans-serif; 
-} 
-.link {    
-  fill: none;    
-  stroke: #ccc;    
-  stroke-width: 1.5px; 
+
+
+.node {
+  cursor: pointer;
 }
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+
 </style> 
+<body onload="start()">
+
+<!-- <span id="foo"></span><br> -->
 <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>     
     <script type="text/javascript">
 
+    var margin = {top: 20, right: 200, bottom: 20, left: 120},
+    width = 960;
+    height = 800;
+
+	var i = 0,
+	    duration = 750,
+	    root;
+	
+	var tree = d3.layout.tree()
+	    .size([height, width]);
+	
+	var diagonal = d3.svg.diagonal()
+	    .projection(function(d) { return [d.y, d.x]; });
+	
+	var svg = d3.select("body").append("svg")
+	    .attr("width", width + margin.right + margin.left)
+	    .attr("height", height + margin.top + margin.bottom)
+	    .append("g")
+	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	
     function start() {
-        var width = 200; 
-        var height = 500; 
-        var cluster = d3.layout.cluster()    
-           .size([height, width-400]); 
-        var diagonal = d3.svg.diagonal()    
-           .projection (function(d) { return [d.y, d.x];}); 
-
-        var svg; 
-
+ 
         var ws = new WebSocket("ws://localhost:8080/");
-         
+
         ws.onmessage = function (event) {
+           
+        	root =  JSON.parse(event.data);
+        	root.x0 = height / 2;
+            root.y0 = 0;
+            update(root);
 
-
-//             document.getElementById('foo').innerHTML = event.data;
-            var myJson = event.data;
-
-            root = JSON.parse(myJson);
-
-            width = 200 * root.depth;
-            cluster = d3.layout.cluster().size([height, width-400]); 
-            
-            if (svg) {
-                d3.select("body").selectAll("svg").remove();
-            }
-
-            svg = d3.select("body").append("svg")    
-            .attr("width",width)    
-            .attr("height",height)    
-            .append("g")    
-            .attr("transform","translate(100,0)");             
-            
-
-              
-              var nodes = cluster.nodes(root);    
-              var links = cluster.links(nodes);    
-              var link = svg.selectAll(".link")       
-                 .data(links)       
-                 .enter().append("path")       
-                 .attr("class","link")       
-                 .attr("d", diagonal);     
-              var node = svg.selectAll(".node")       
-                 .data(nodes)       
-                 .enter().append("g")       
-                 .attr("class","node")       
-                 .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });    
-              node.append("circle")       
-                 .attr("r", 4.5)
-                 .style("stroke", function(d) { return d.type; })
-     			 .style("fill", function(d) { return d.level; }); 			 
-              node.append("text")
-                 .attr("dx", function(d) { return d.children ? -8 : 8; })
-//                  .attr("dy", 3)
-                 .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
-//                  .html( function(d){ return d.name;});
-              		.each(function (d) {
-            	    var arr = d.name.split("_");
-            	    for (i = 0; i < arr.length; i++) {
-            	        d3.select(this).append("tspan")
-            	            .text(arr[i])
-            	            .attr("dy", i ? "1.2em" : 0)
-            	            .attr("x", 0)
-            	            .attr("class", "tspan" + i);
-            	    }});
-            	    
-        };
-         
+    	}
     }
+
+    function update(source) {
+
+      	  // Compute the new tree layout.
+      	  var nodes = tree.nodes(root).reverse(),
+      	  links = tree.links(nodes);
+
+      	  // Normalize for fixed-depth.
+      	  nodes.forEach(function(d) { d.y = d.depth * 200; });
+
+      	  // Update the nodes…
+      	  var node = svg.selectAll("g.node")
+      	      .data(nodes, function(d) { return d.name; });
+
+      	  // Enter any new nodes at the parent's previous position.
+      	  var nodeEnter = node.enter().append("g")
+      	      .attr("class", "node")
+      	      .attr("transform", function(d) {
+          	  if (d.parent) {
+          	  	return "translate(" + d.parent.y + "," + d.parent.x + ")"; 
+          	  }
+          	  else {
+          		return "translate(" + source.y0 + "," + source.x0 + ")"; 
+              }
+      	      });
+
+      	  nodeEnter.append("circle")
+               .attr("r", 4.5)
+               .style("stroke", function(d) { return d.type; })
+   			   .style("fill", function(d) { return d.level; }); 	
+
+      	  nodeEnter.append("text")
+      	      .attr("x", function(d) { return d.children || d._children ? -12 : 4; })
+      	      .attr("dy", ".35em")
+      	      .style("font-size","24px")
+      	      .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
+			  .each(function (d) {
+          	    var arr = d.name.split("_");
+          	    for (i = 0; i < arr.length; i++) {
+          	        d3.select(this).append("tspan")
+          	            .text(arr[i])
+          	            .attr("dy", i ? "1.2em" : 0)
+          	            .attr("x",  function(d) { return d.children || d._children ? -12 : 4; })
+          	            .attr("class", "tspan" + i);
+          	    }});        	      
+
+      	  // Transition nodes to their new position.
+      	  var nodeUpdate = node.transition()
+      	      .duration(duration)
+      	      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+      	  nodeUpdate.select("circle")
+      	      .attr("r", 4.5)
+	          .style("stroke", function(d) { return d.type; })
+	  		  .style("fill", function(d) { return d.level; }); 
+
+      	  nodeUpdate.select("text")
+      	      .style("fill-opacity", 3)
+      	      .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
+      	      .attr("dy", 3)
+	          .attr("dx", function(d) { return d.children || d._children ? -12 : 4; }); 
+
+      	  
+      	  // Transition exiting nodes to the parent's new position.
+      	  var nodeExit = node.exit().transition()
+//       	      .duration(duration)
+      	      .remove();
+
+      	  // Update the links…
+			 var link = svg.selectAll("path.link")
+			      .data(links, function(d) { return d.target.id; });
+			
+			  // Enter any new links at the parent's previous position.
+			  link.enter().insert("path", "g")
+			      .attr("class", "link")
+			      .attr("d", function(d) {
+			        var o = {x: source.x0, y: source.y0};
+			        return diagonal({source: o, target: o});
+			      });
+			
+			  // Transition links to their new position.
+			  link.transition()
+			      .duration(duration)
+			      .attr("d", diagonal);
+			
+			  // Transition exiting nodes to the parent's new position.
+			  link.exit().transition()
+			      .duration(duration)
+			      .attr("d", function(d) {
+			        var o = {x: source.x, y: source.y};
+			        return diagonal({source: o, target: o});
+			      })
+			      .remove();
+		      
+      	  // Stash the old positions for transition.
+      	  nodes.forEach(function(d) {
+      	    d.x0 = d.x;
+      	    d.y0 = d.y;
+      	  });
+
+
+        }
+        
 
     </script>
 </body>
