@@ -76,6 +76,7 @@ public class TraversableTree {
 			if (getRoot() == null) return null;
 			JSONObject rootJSON = new JSONObject();
 			rootJSON.put("name", getRoot().getName());
+			rootJSON.put("iden", getRoot().getIden());
 			rootJSON.put("depth", getDepth());
 			if (getRoot().hasBeenTraversed()) {
 				rootJSON.put("type", "red");
@@ -106,6 +107,7 @@ public class TraversableTree {
 			for (Node c : n.getChildren()) {
 				JSONObject child = new JSONObject();
 				child.put("name", c.getName());
+				child.put("iden", c.getIden());
 				if (c.hasBeenTraversed()) {
 					child.put("type", "red");
 					child.put("level", "red");
@@ -113,6 +115,7 @@ public class TraversableTree {
 				childrenJSON.put(i++, child);
 				if (i >= Constants.NODE_DISPLAY_LIMIT) {
 					child.put("name", "...");
+					child.put("iden", "...");
 					break;
 				}
 				

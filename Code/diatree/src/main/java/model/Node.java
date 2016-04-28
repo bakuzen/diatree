@@ -5,6 +5,7 @@ import java.util.TreeSet;
 
 public class Node implements Comparable<Node> {
 	
+	private String iden;
 	private String name;
 	private TreeSet<Node> children;
 	private boolean hasBeenTraversed;
@@ -64,5 +65,12 @@ public class Node implements Comparable<Node> {
 	}
 	public void setExpanded(boolean isExpanded) {
 		this.isExpanded = isExpanded;
+	}
+	public String getIden() {
+		if (iden == null) return this.getName();
+		return iden;
+	}
+	public void setIden(String iden) {
+		this.iden = iden;
 	}
 }

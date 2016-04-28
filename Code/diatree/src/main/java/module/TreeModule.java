@@ -25,7 +25,7 @@ import sium.nlu.stat.Distribution;
 
 public class TreeModule extends IUModule {
 	
-	static Logger log = Logger.getLogger(Distribution.class.getName());
+	static Logger log = Logger.getLogger(TreeModule.class.getName());
 
 	@S4Component(type = DiaTreeSocket.class)
 	public final static String DIATREE_SOCKET = "socket";
@@ -118,10 +118,11 @@ public class TreeModule extends IUModule {
 			else if (Constants.WAIT.equals(decision)) {
 				// waiting....
 			}
-			update();
 		}
+		update();
 	}
 	
+
 	private void abortConfirmation(String intent, String concept) {
 		log.info(logString("abortConfirmation", intent, concept));
 		if (!getTopNode().hasChild(intent)){
@@ -256,13 +257,14 @@ public class TreeModule extends IUModule {
 
 	private void offerConfirmation(String intent, String concept) {
 		log.info(logString("offerConfirmation", intent, concept));
-		if (this.intentSettled(intent)) {
-//			no need to confirm something that has been expanded already
+		if (this.intentSettled(intent) || this.intentSettled(concept)) {
+//			been here, done that
+			this.clearConfirmStack();
 			return;
 		}
-		if (!getTopNode().getChildNode(intent).hasChild(concept)) {
-			return;
-		}
+//		if (!getTopNode().getChildNode(intent).hasChild(concept)) {
+//			return;
+//		}
 		if (offerExpansion(intent)) {
 			Node childToConfirm = getTopNode().getChildNode(intent).getChildNode(concept);
 			childToConfirm.setName(concept + "?");
@@ -301,6 +303,7 @@ public class TreeModule extends IUModule {
 	}
 
 	private boolean intentSettled(String intent) {
+//		if (intent.equals(Constants.INTENT)) return false;
 		for (Node i : expandedNodes) {
 			if (i.getName().startsWith(intent)) return true;
 		}
