@@ -11,7 +11,7 @@
 	},
 	{ "concept":"indisch",
 	  "properties": [
-	   {"property":"indian"},
+	   {"property":"indisch"},
 	   {"property":"curry"},
 	   {"property":"scharf"},
 	   {"property":"reis"},
@@ -27,6 +27,7 @@
 	{ "concept":"mexicanisch",
 	  "properties": [
 	   {"property":"mexican"},
+	   {"property":"mexicanisch"},
 	   {"property":"scharf"},
 	   {"property":"tortilla"}
 	  ]
@@ -40,7 +41,7 @@
       "example": "ich möchte thai"
     },
     {
-      "concept": "indian",
+      "concept": "indisch",
       "example": "ich möchte indian"
     },
     {

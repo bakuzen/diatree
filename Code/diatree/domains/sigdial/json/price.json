@@ -9,7 +9,8 @@
 	{ "concept":"günstig",
 	  "properties": [
 	   {"property":"schnell"},
-	   {"property":"günstig"}
+	   {"property":"günstig"},
+	   {"property":"preisgünstig"}
 	  ]
 	}
      ]
