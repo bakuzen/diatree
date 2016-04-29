@@ -111,8 +111,6 @@ public class DomainModel {
 	 */
 	public Distribution<String> addIncrement(String word) {
 		
-		if (ling.hasKey("w1"))
-			ling.addEvidence("w2", ling.getValue("w1"));
 		ling.addEvidence("w1", word);
 //		Distribution<String> groundedResult = new Distribution<String>();
 		Distribution<String> groundedResult = mapping.applyEvidenceToContext(ling);

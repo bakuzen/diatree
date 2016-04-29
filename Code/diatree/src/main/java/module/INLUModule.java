@@ -19,6 +19,7 @@ import model.DomainModel;
 import model.Frame;
 import model.db.Domain;
 import model.iu.FrameIU;
+import sium.nlu.stat.Distribution;
 
 public class INLUModule extends IUModule {
 	
@@ -91,14 +92,10 @@ public class INLUModule extends IUModule {
 		
 		try {
 			
-//			for (String intent : model.getPredictedFrame().getIntents()) {
-//				System.out.println(intent + " " + model.getPredictedFrame().getEntropyForIntent(intent));
-//			}
-			
 			List<EditMessage<? extends IU>> edits = new ArrayList<EditMessage<? extends IU>>();
 			Frame predictedFrame = model.getPredictedFrame();
+			System.out.println(predictedFrame);
 			for (String intent : predictedFrame.getIntents()) {
-				
 				FrameIU frameIU = new FrameIU(predictedFrame);
 				SlotIU slotIU = frameIU.getSlotIUForIntent(intent);
 				

@@ -136,6 +136,7 @@ public class TreeModule extends IUModule {
 		if (childToConfirm == null) return;
 		childToConfirm.setName(concept);
 		childToConfirm.setHasBeenTraversed(false);
+		this.resetUtterance();
 	}
 
 	private String logString(String method, String intent, String concept) {
@@ -159,12 +160,15 @@ public class TreeModule extends IUModule {
 				foundExpanded = true;
 			}
 		}
-		if (foundExpanded) return;
+		if (foundExpanded) {
+			resetUtterance();
+			return;
+		}
 		
 		getTopNode().clearChildren();
 		Node abortedNode = popExpandedNode();
-		System.out.println(getTopNode());
-		this.setCurrentIntent(getTopNode().getName());
+		getTopNode().clearChildren();
+//		setCurrentIntent(getTopNode().getName());
 		addRemainingIntent(abortedNode.getName().split(":")[0]);
 		branchIntents();
 		resetUtterance();
