@@ -90,26 +90,28 @@ public class TreeModule extends IUModule {
 					if (Constants.YES.equals(concept)) {
 						expandIntent(i, c);
 					}
-					if (Constants.NO.equals(concept)) {
+					else if (Constants.NO.equals(concept)) {
 						abortConfirmation(i, c);
 					}
 					resetUtterance();
 				}
 				else {
 					if (Constants.NO.equals(concept))
-						abort();
+						abort(intent);
 				}
+				break; //this means we don't step through any more of the possible intents
 			}
 //			when we want to invoke a clarification request
 			else if (Constants.CONFIRM.equals(decision)) {
 				pushToConfirmStack(slotIU);
 				offerConfirmation(intent, concept);
+				resetUtterance();
 			}
 //			when an intent has a concept with a high enough probability 
 			else if (Constants.SELECT.equals(decision)) {
 				if (!checkConfirmStackIsEmpty()) {
 					logString("select!", "don't do this!", "confirmation stack isn't empty!");
-					return;
+					break;
 				}
 				expandIntent(intent, concept);
 				resetUtterance();
@@ -139,16 +141,22 @@ public class TreeModule extends IUModule {
 		return tolog;
 	}
 
-	private void abort() {
-		log.info(logString("abort()", "", ""));
+	private void abort(String intent) {
+		log.info(logString("abort()", intent, ""));
 		if (getTopNode() == getRootNode() || getTopNode() == null) {
 			initDisplay(false, true);
 			return;
 		}
 		getTopNode().clearChildren();
+//		todo: pop the expanded stack and add that to the remaining intent
+		this.addRemainingIntent(intent);
 		popExpandedNode();
 	}
 	
+	private void addRemainingIntent(String intent) {
+		remainingIntents.add(intent);
+	}
+
 	public void returnFromCustomFunction() {
 		getTopNode().setHasBeenTraversed(false);
 		this.clearConfirmStack();
@@ -162,7 +170,7 @@ public class TreeModule extends IUModule {
 				return; // ignore this
 			}
 			if (Constants.NO.equals(concept)) {
-				abort();
+				abort(concept);
 			}
 		}
 		if (this.intentSettled(intent) || this.intentSettled(concept)) {
@@ -267,8 +275,10 @@ public class TreeModule extends IUModule {
 //		}
 		if (offerExpansion(intent)) {
 			Node childToConfirm = getTopNode().getChildNode(intent).getChildNode(concept);
-			childToConfirm.setName(concept + "?");
-			childToConfirm.setHasBeenTraversed(true);
+			if (childToConfirm != null) {
+				childToConfirm.setName(concept + "?");
+				childToConfirm.setHasBeenTraversed(true);
+			}
 		}
 	}
 

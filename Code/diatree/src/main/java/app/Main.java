@@ -27,6 +27,7 @@ import jetty.AdvancedDiaTreeCreator;
 import jetty.DiaTreeSocket;
 import jetty.JettyServer;
 import model.CustomFunctionRegistry;
+import module.INLUModule;
 import util.ClientUtils;
 
 public class Main {
@@ -54,6 +55,7 @@ public class Main {
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
 		
+//		INLUModule nlu = (INLUModule) cm.lookup("inlu");
 //		tomcat.addServlet("diatree", (DiaTreeServlet) cm.lookup(DIATREE_SERVLET));
 //		tomcat.start();
 		AdvancedDiaTreeCreator creator = new AdvancedDiaTreeCreator((DiaTreeSocket) cm.lookup(DIATREE_SOCKET));
@@ -70,7 +72,7 @@ public class Main {
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
 		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"});
-		startGoogleASR(cm, rclp);
+//		startGoogleASR(cm, rclp);
 		
 		ClientUtils.openNewClient();
 		
@@ -80,17 +82,17 @@ public class Main {
 //		String[] uwords = {"essen", "typ", "franzözisch","ja","preis", "günstig", "wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
 //				"rücksetzen","nachricht", "jana", "rücksetzen"};
 ////		String[] uwords = {"nachricht",  "message", "nimm", "das", "rote", "kreuz","neben","dem","blauen","t", "ferkel", "name", "jana"};
-//////		String[] uwords = {"nachricht"};
-//		List<String> words = Arrays.asList(uwords);
-//		
-//		WordIU prev = WordIU.FIRST_WORD_IU;
-//		for (String word : words) {
-//			WordIU wiu = new WordIU(word, prev, null);
-//			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-//			Thread.sleep(1500);
-//			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
-//			prev = wiu;
-//		}
+		String[] uwords = {"essen", "typ", "franzözisch", "nein", "mexicanisch", "nein", "nein"};
+		List<String> words = Arrays.asList(uwords);
+		
+		WordIU prev = WordIU.FIRST_WORD_IU;
+		for (String word : words) {
+			WordIU wiu = new WordIU(word, prev, null);
+			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+			Thread.sleep(1500);
+			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
+			prev = wiu;
+		}
 		
 	}
 	
@@ -159,6 +161,7 @@ public class Main {
 	}
 	
 	public void notifyListeners(List<PushBuffer> listeners) {
+		System.out.println(listeners);
 		if (edits != null && !edits.isEmpty()) {
 			//logger.debug("notifying about" + edits);
 			for (PushBuffer listener : listeners) {

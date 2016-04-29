@@ -53,10 +53,11 @@ public class INLUModule extends IUModule {
 		for (EditMessage<? extends IU> edit : edits) {
 			
 			String word = edit.getIU().toPayLoad().toLowerCase();
-			System.out.println("CURRENT WORD: " + word);
+			
 			switch(edit.getType()) {
 			
 			case ADD:
+				System.out.println("CURRENT WORD ADD: " + word);
 				if (word.equals(Constants.RESET_KEYWORD)) {
 					model.newUtterance();
 					tree.initDisplay(true, true);
@@ -71,6 +72,7 @@ public class INLUModule extends IUModule {
 			case REVOKE:
 //				TODO we need to be able to revoke, but only when the graph seems to deem it necessary
 //				model.revokeIncrement(word);
+//				update();
 				break;
 			default:
 				break;
@@ -104,7 +106,7 @@ public class INLUModule extends IUModule {
 				edits.add(new EditMessage<SlotIU>(EditType.ADD, slotIU));
 			}
 			super.rightBuffer.setBuffer(edits);
-			super.notifyListeners();
+//			super.notifyListeners();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
