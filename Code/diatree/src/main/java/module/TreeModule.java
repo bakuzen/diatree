@@ -96,8 +96,9 @@ public class TreeModule extends IUModule {
 					resetUtterance();
 				}
 				else {
-					if (Constants.NO.equals(concept))
-						abort(intent);
+					if (Constants.NO.equals(concept)) {
+						abort();
+					}
 				}
 				break; //this means we don't step through any more of the possible intents
 			}
@@ -106,6 +107,7 @@ public class TreeModule extends IUModule {
 				pushToConfirmStack(slotIU);
 				offerConfirmation(intent, concept);
 				resetUtterance();
+				break;
 			}
 //			when an intent has a concept with a high enough probability 
 			else if (Constants.SELECT.equals(decision)) {
@@ -141,16 +143,31 @@ public class TreeModule extends IUModule {
 		return tolog;
 	}
 
-	private void abort(String intent) {
-		log.info(logString("abort()", intent, ""));
+	private void abort() {
+		log.info(logString("abort()", "", ""));
 		if (getTopNode() == getRootNode() || getTopNode() == null) {
 			initDisplay(false, true);
 			return;
 		}
+		Node top = getTopNode();
+		boolean foundExpanded = false;
+		for (Node child : top.getChildren()) {
+			if (child.isExpanded()) {
+				child.clearChildren();
+				child.setExpanded(false);
+				child.setHasBeenTraversed(false);
+				foundExpanded = true;
+			}
+		}
+		if (foundExpanded) return;
+		
 		getTopNode().clearChildren();
-//		todo: pop the expanded stack and add that to the remaining intent
-		this.addRemainingIntent(intent);
-		popExpandedNode();
+		Node abortedNode = popExpandedNode();
+		System.out.println(getTopNode());
+		this.setCurrentIntent(getTopNode().getName());
+		addRemainingIntent(abortedNode.getName().split(":")[0]);
+		branchIntents();
+		resetUtterance();
 	}
 	
 	private void addRemainingIntent(String intent) {
@@ -170,7 +187,7 @@ public class TreeModule extends IUModule {
 				return; // ignore this
 			}
 			if (Constants.NO.equals(concept)) {
-				abort(concept);
+				abort();
 			}
 		}
 		if (this.intentSettled(intent) || this.intentSettled(concept)) {
@@ -425,6 +442,7 @@ public class TreeModule extends IUModule {
 
 	public void setCurrentIntent(String currentIntent) {
 		System.out.println("setting new intent: " + currentIntent);
+		if (currentIntent == null || currentIntent.equals("")) currentIntent = Constants.ROOT_NAME;
 		this.currentIntent = currentIntent;
 
 	}
