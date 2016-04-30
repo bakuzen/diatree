@@ -57,8 +57,9 @@ public class DomainModel {
 				
 			for (String childIntent: db.getChildIntentsForIntent(intent)) {
 				context.addPropertyToEntity(childIntent, childIntent);
+				for (Property<String> prop : db.getPropertiesForConcept(childIntent))
+					context.addPropertyToEntity(childIntent, prop.getProperty());
 				for (String concept : db.getConceptsForIntent(childIntent)) {
-					
 					Properties<Property<String>> properties = db.getPropertiesForConcept(concept);
 					context.setEntity(concept, properties);
 				}
@@ -114,7 +115,6 @@ public class DomainModel {
 		ling.addEvidence("w1", word);
 //		Distribution<String> groundedResult = new Distribution<String>();
 		Distribution<String> groundedResult = mapping.applyEvidenceToContext(ling);
-		
 //		did someone say a word that is the same spelling as a property? Give that property some credit. 
 		if (getContext().getPropertiesSet().contains(word)) { 
 			groundedResult.setProbabilityForItem(word, 1.0);

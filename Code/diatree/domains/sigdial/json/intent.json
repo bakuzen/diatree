@@ -14,17 +14,30 @@
 	   {"child":"wo"},
 	   {"child":"typ"},
 	   {"filled":"booking"}
+	  ],
+	  "properties": [
+	   {"property":"hunger"},
+	   {"property":"speise"}
 	  ]
 	},	
 	{ "name":"anruf",
 	  "children": [
 	   {"child":"name"}
+	  ],
+	  "properties": [
+	   {"property":"fon"},
+	   {"property":"telefon"},
+	   {"property":"handy"},
+	   {"property":"melden"}
 	  ]
 	},	
 	{ "name":"nachricht",
 	  "children": [
 	   {"child":"name"},
 	   {"child":"[message]"}
+	  ],
+	   "properties": [
+	   {"property":"message"}
 	  ]
 	},		
 	{ "name":"erinnerung",

@@ -172,7 +172,17 @@ public class InsertJsonData {
 				db.offerNewIntentSequence(name, childName);
 				
 				if (isCustomFunction)
-					db.offerNewCustomFunction(childName);				
+					db.offerNewCustomFunction(childName);	
+			}
+			
+			if (intent.has("properties")) {
+				JSONArray properties = intent.getJSONArray("properties");
+				for (int j=0; j<properties.length(); j++) {
+					JSONObject property = new JSONObject(properties.get(j).toString());
+					String pname = property.getString("property");
+					db.offerNewProperty(pname);
+					db.offerNewPropertyConceptAttachment(pname, name);
+				}
 			}
 		}
 		

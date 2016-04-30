@@ -147,6 +147,7 @@ public class TreeModule extends IUModule {
 	private void abort() {
 		log.info(logString("abort()", "", ""));
 		if (getTopNode() == getRootNode() || getTopNode() == null) {
+			setCurrentIntent(getRootNode().getName());
 			initDisplay(false, true);
 			return;
 		}
@@ -168,10 +169,16 @@ public class TreeModule extends IUModule {
 		getTopNode().clearChildren();
 		Node abortedNode = popExpandedNode();
 		getTopNode().clearChildren();
+		
+		
 //		setCurrentIntent(getTopNode().getName());
 		addRemainingIntent(abortedNode.getName().split(":")[0]);
 		branchIntents();
 		resetUtterance();
+		
+		if (getTopNode() == getRootNode() || getTopNode() == null) {
+			initDisplay(false, true);
+		}
 	}
 	
 	private void addRemainingIntent(String intent) {
@@ -417,11 +424,18 @@ public class TreeModule extends IUModule {
 		remainingIntents.remove("intent"); // keyword, but used in a similar way--shouldn't be displayed
 		
 		Node root = new Node("");
+		this.clearConfirmStack();
+		this.clearExpandedStack();
 		this.pushExpandedNode(root);
 		this.branchIntents();
+		this.setCurrentIntent(Constants.ROOT_NAME);
 		this.setFirstDisplay(false);
 		if (update)
 			update();
+	}
+
+	private void clearExpandedStack() {
+		expandedNodes.clear();
 	}
 
 	private void branchIntents() {
