@@ -8,6 +8,7 @@ import java.util.List;
 import edu.cmu.sphinx.util.props.PropertyException;
 import edu.cmu.sphinx.util.props.PropertySheet;
 import edu.cmu.sphinx.util.props.S4Component;
+import edu.cmu.sphinx.util.props.S4Integer;
 import edu.cmu.sphinx.util.props.S4String;
 import inpro.incremental.IUModule;
 import inpro.incremental.PushBuffer;
@@ -20,6 +21,7 @@ import model.Constants;
 import model.CustomFunction;
 import model.Node;
 import module.TreeModule;
+import util.SessionTimeout;
 
 public class MessageFunction extends IUModule  implements CustomFunction {
 	
@@ -29,19 +31,44 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 	@S4String(defaultValue = "complete")
 	public final static String KEYWORD = "keyword";
 	
+	@S4Integer (defaultValue = 2000)
+	public final static String TIMEOUT = "timeout";
+	
 	private GoogleASR recognizer;
 	private TreeModule treeModule;
 	ArrayList<PushBuffer> listeners;
 	LinkedList<String> wordStack;
+	private MessageTimeout timeoutThread;
+	private int timeoutDuration;
 
 	private String keyword;
+	
+	
+	private class MessageTimeout extends Thread {
+
+		@Override
+		public void run() {
+			try {
+				Thread.sleep(timeoutDuration);
+				recognizer.iulisteners.clear();
+				recognizer.iulisteners.addAll(listeners);
+				treeModule.returnFromCustomFunction();
+				treeModule.update();
+			} 
+			catch (InterruptedException e) {
+			}
+		}
+		
+	}
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
 		super.newProperties(ps);
+		timeoutDuration = ps.getInt(TIMEOUT);
 		recognizer = (GoogleASR) ps.getComponent(ASR);
 		keyword = ps.getString(KEYWORD);
 		wordStack = new LinkedList<String>();
+		timeoutThread = new MessageTimeout();
 	}
 
 	@Override
@@ -55,6 +82,16 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 
 	@Override
 	protected void leftBufferUpdate(Collection<? extends IU> ius, List<? extends EditMessage<? extends IU>> edits) {
+		
+		SessionTimeout.getInstance().reset();
+		
+		if (timeoutThread != null) {
+			timeoutThread.interrupt();
+			timeoutThread = new MessageTimeout();
+			timeoutThread.start();
+		}
+			
+		
 		for (EditMessage<? extends IU> edit : edits){
 			switch (edit.getType()) {
 			case ADD:
@@ -77,7 +114,6 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 			default:
 				break;
 			}
-
 		}
 		
 		String message = "message:" + Constants.DELIMITER;

@@ -8,6 +8,7 @@ import java.util.List;
 import edu.cmu.sphinx.util.props.PropertyException;
 import edu.cmu.sphinx.util.props.PropertySheet;
 import edu.cmu.sphinx.util.props.S4Component;
+import edu.cmu.sphinx.util.props.S4Integer;
 import edu.cmu.sphinx.util.props.S4String;
 import inpro.incremental.IUModule;
 import inpro.incremental.unit.EditMessage;
@@ -19,7 +20,7 @@ import model.DomainModel;
 import model.Frame;
 import model.db.Domain;
 import model.iu.FrameIU;
-import sium.nlu.stat.Distribution;
+import util.SessionTimeout;
 
 public class INLUModule extends IUModule {
 	
@@ -29,6 +30,9 @@ public class INLUModule extends IUModule {
 
 	@S4String(defaultValue = "test")
 	public final static String DOMAIN = "domain";
+	
+	@S4Integer (defaultValue = 10000)
+	public final static String TIMEOUT = "timeout";
 	
 	public static DomainModel model;
 	
@@ -47,10 +51,16 @@ public class INLUModule extends IUModule {
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
+		SessionTimeout.setVariables(this,  ps.getInt(TIMEOUT));
 	}
+	
 	
 	@Override
 	protected void leftBufferUpdate(Collection<? extends IU> ius, List<? extends EditMessage<? extends IU>> edits) {
+		
+		
+		SessionTimeout.getInstance().reset();
+		
 		for (EditMessage<? extends IU> edit : edits) {
 			
 			String word = edit.getIU().toPayLoad().toLowerCase();
@@ -60,8 +70,7 @@ public class INLUModule extends IUModule {
 			case ADD:
 				System.out.println("CURRENT WORD ADD: " + word);
 				if (word.equals(Constants.RESET_KEYWORD)) {
-					model.newUtterance();
-					tree.initDisplay(true, true);
+					resetSession();
 					continue;
 				}
 				checkContext();
@@ -80,6 +89,12 @@ public class INLUModule extends IUModule {
 			}
 		}
 	}
+
+	public void resetSession() {
+		model.newUtterance();
+		tree.initDisplay(true, true);		
+	}
+
 
 	private void checkContext() {
 		if (!this.currentIntent.equals(tree.getCurrentIntent())) {
