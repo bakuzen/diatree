@@ -1,26 +1,8 @@
 { "intent": "name", 
     "concepts": [
-	{ "concept":"Alexander",
-	  "properties": [
-	   {"property":"Alexander"},
-	   {"property":"male"}
-	  ]
-	},
 	{ "concept":"Andreas",
 	  "properties": [
 	   {"property":"Andreas"},
-	   {"property":"male"}
-	  ]
-	},
-	{ "concept":"Benjamin",
-	  "properties": [
-	   {"property":"Benjamin"},
-	   {"property":"male"}
-	  ]
-	},
-	{ "concept":"Christian",
-	  "properties": [
-	   {"property":"Christian"},
 	   {"property":"male"}
 	  ]
 	},
@@ -36,18 +18,6 @@
 	   {"property":"male"}
 	  ]
 	},
-	{ "concept":"Dennis",
-	  "properties": [
-	   {"property":"Dennis"},
-	   {"property":"male"}
-	  ]
-	},
-	{ "concept":"Dieter",
-	  "properties": [
-	   {"property":"Dieter"},
-	   {"property":"male"}
-	  ]
-	},	
 	{ "concept":"Florian",
 	  "properties": [
 	   {"property":"Florian"},
@@ -100,12 +70,6 @@
 	{ "concept":"Anne",
 	  "properties": [
 	   {"property":"Anne"},
-	   {"property":"female"}
-	  ]
-	},
-	{ "concept":"Birgit",
-	  "properties": [
-	   {"property":"Birgit"},
 	   {"property":"female"}
 	  ]
 	},
@@ -163,11 +127,11 @@
 	   {"property":"female"}
 	  ]
 	},
-	{ "concept":"Tanja",
+	{ "concept":"Peter",
 	  "properties": [
-	   {"property":"Tanja"},
-	   {"property":"female"}
+	   {"property":"Peter"},
+	   {"property":"male"}
 	  ]
-	}				
+	},	
     ]
 }
