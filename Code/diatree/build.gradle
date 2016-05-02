@@ -12,7 +12,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 
 apply from: 'https://raw.githubusercontent.com/plison/opendial/master/build.gradle'
-apply from: 'https://bitbucket.org/dsgbielefeld/inprotk/raw/gradle/build.gradle'
+apply from: 'https://bitbucket.org/dsgbielefeld/inprotk/raw/master/build.gradle'
 
 configurations {
     compile.exclude module: 'inlg'
