@@ -72,7 +72,7 @@ public class Main {
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
 		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"});
-//		startGoogleASR(cm, rclp);
+		startGoogleASR(cm, rclp);
 		
 		ClientUtils.openNewClient();
 		
@@ -82,19 +82,19 @@ public class Main {
 //		String[] uwords = {"essen", "typ", "franzözisch","ja","preis", "günstig", "wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
 //				"rücksetzen","nachricht", "jana", "rücksetzen"};
 ////		String[] uwords = {"nachricht",  "message", "nimm", "das", "rote", "kreuz","neben","dem","blauen","t", "ferkel", "name", "jana"};
-		String[] uwords = {"hunger", "nein", "essen", "stadtmitte", "teuer", "nein", 
-				           "teuer", "nein", "preis", "teuer","typ", "thai", 
-				           "nein", "nein", "nein", "nein", "nein", "handy", "nein"};
-		List<String> words = Arrays.asList(uwords);
-//		
-		WordIU prev = WordIU.FIRST_WORD_IU;
-		for (String word : words) {
-			WordIU wiu = new WordIU(word, prev, null);
-			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-			Thread.sleep(1500);
-			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
-			prev = wiu;
-		}
+//		String[] uwords = {"hunger", "nein", "essen", "stadtmitte", "teuer", "nein", 
+//				           "teuer", "nein", "preis", "teuer","typ", "thai", 
+//				           "nein", "nein", "nein", "nein", "nein", "handy", "nein"};
+//		List<String> words = Arrays.asList(uwords);
+////		
+//		WordIU prev = WordIU.FIRST_WORD_IU;
+//		for (String word : words) {
+//			WordIU wiu = new WordIU(word, prev, null);
+//			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+//			Thread.sleep(1500);
+//			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
+//			prev = wiu;
+//		}
 		
 	}
 	
