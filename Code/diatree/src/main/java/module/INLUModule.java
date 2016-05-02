@@ -109,7 +109,6 @@ public class INLUModule extends IUModule {
 			
 			List<EditMessage<? extends IU>> edits = new ArrayList<EditMessage<? extends IU>>();
 			Frame predictedFrame = model.getPredictedFrame();
-			System.out.println(predictedFrame);
 			for (String intent : predictedFrame.getIntents()) {
 				FrameIU frameIU = new FrameIU(predictedFrame);
 				SlotIU slotIU = frameIU.getSlotIUForIntent(intent);

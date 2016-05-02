@@ -163,8 +163,8 @@ public class DomainModel {
 	public List<String> getPossibleIntents() {
 		try {
 			List<String> intents = this.db.getIntents();
-			if (intents.contains("confirm")) {
-				intents.remove("confirm");
+			if (intents.contains(Constants.CONFIRM)) {
+				intents.remove(Constants.CONFIRM);
 			}
 			return intents;
 		} catch (SQLException e) {

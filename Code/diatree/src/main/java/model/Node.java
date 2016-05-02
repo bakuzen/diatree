@@ -10,8 +10,10 @@ public class Node implements Comparable<Node> {
 	private TreeSet<Node> children;
 	private boolean hasBeenTraversed;
 	private boolean isExpanded;
+	private double probability;
 	
 	public Node(String n) {
+		this.setProbability(0.0);
 		this.setName(n);
 		this.children = new TreeSet<Node>();
 	}
@@ -44,7 +46,9 @@ public class Node implements Comparable<Node> {
 	}
 	@Override
 	public int compareTo(Node o) {
-		return this.getName().compareTo(o.getName());
+		if (this.getProbability() == o.getProbability())
+			return this.getName().compareTo(o.getName());
+		return Double.compare(o.getProbability(), this.getProbability());
 	}
 	public Node getChildNode(String intent) {
 		for (Node child : getChildren())
@@ -53,7 +57,7 @@ public class Node implements Comparable<Node> {
 		return null;
 	}
 	public String toString() {
-		return "node:"+this.getName() + " children:" + this.getChildren();
+		return "node:"+this.getName() + " prob: " + this.getProbability() + " children:" + this.getChildren();
 	}
 	public boolean hasChild(String intent) {
 		Node n = getChildNode(intent);
@@ -72,5 +76,11 @@ public class Node implements Comparable<Node> {
 	}
 	public void setIden(String iden) {
 		this.iden = iden;
+	}
+	public double getProbability() {
+		return probability;
+	}
+	public void setProbability(double probability) {
+		this.probability = probability;
 	}
 }

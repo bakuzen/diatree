@@ -75,6 +75,7 @@ public class TreeModule extends IUModule {
 			String concept = slotIU.getDistribution().getArgMax().getEntity();
 			String intent = slotIU.getName();
 			Double confidence = slotIU.getConfidence();
+			Distribution<String> dist = slotIU.getDistribution();
 			String decision = decisionIU.getDistribution().getArgMax().getEntity();
 			
 			System.out.println("decision:" + decision + " intent:" + intent + " concept:" + concept + " confidence:" + confidence );
@@ -85,10 +86,12 @@ public class TreeModule extends IUModule {
 //					when we are handling a CR, we have a stack of "QUD" of sorts 
 					SlotIU sIU = popConfirmStack();
 					String c = sIU.getDistribution().getArgMax().getEntity();
+					double p = sIU.getDistribution().getArgMax().getProbability();
+					Distribution<String> d = sIU.getDistribution();
 					String i = sIU.getName();
 					
 					if (Constants.YES.equals(concept)) {
-						expandIntent(i, c);
+						expandIntent(i, c, d);
 					}
 					else if (Constants.NO.equals(concept)) {
 						abortConfirmation(i, c);
@@ -105,7 +108,7 @@ public class TreeModule extends IUModule {
 //			when we want to invoke a clarification request
 			else if (Constants.CONFIRM.equals(decision)) {
 				pushToConfirmStack(slotIU);
-				offerConfirmation(intent, concept);
+				offerConfirmation(intent, concept, dist);
 				resetUtterance();
 				break;
 			}
@@ -115,7 +118,7 @@ public class TreeModule extends IUModule {
 					logString("select!", "don't do this!", "confirmation stack isn't empty!");
 					break;
 				}
-				expandIntent(intent, concept);
+				expandIntent(intent, concept, dist);
 				resetUtterance();
 			}
 //			in all other cases, just wait for more input
@@ -191,7 +194,7 @@ public class TreeModule extends IUModule {
 		this.branchIntents();
 	}
 	
-	private void expandIntent(String intent, String concept) {
+	private void expandIntent(String intent, String concept, Distribution<String> dist) {
 		log.info(logString("expandIntent", intent, concept));
 		if (Constants.CONFIRM.equals(intent)) {
 			if (Constants.YES.equals(concept)) {
@@ -210,6 +213,7 @@ public class TreeModule extends IUModule {
 			
 			Node top = getTopNode();
 			Node n = new Node(concept);
+			n.setProbability(dist.getProbabilityForItem(concept));
 			this.pushExpandedNode(n);
 			n.setHasBeenTraversed(true);
 			this.removeRemainingIntent(concept);
@@ -222,7 +226,7 @@ public class TreeModule extends IUModule {
 //		another case is if someone is referring to an intent (not a concept of an intent)
 //		when that happens, show the expansion of that intent
 		if (Constants.INTENT.equals(intent) && hasConcepts(concept)) {
-			offerExpansion(concept);
+			offerExpansion(concept, dist);
 			return;
 		}
 		
@@ -236,6 +240,7 @@ public class TreeModule extends IUModule {
 //		Node n = new Node(intent +":" + concept);
 		if (Constants.INTENT.equals(intent)) {
 			Node n = new Node(concept);
+			n.setProbability(dist.getProbabilityForItem(concept));
 			this.setCurrentIntent(concept);
 			remainingIntents = getPossibleIntents();
 			top.clearChildren();
@@ -244,6 +249,7 @@ public class TreeModule extends IUModule {
 		}
 		else {
 			Node n = new Node(intent + ":"+ concept);
+			n.setProbability(dist.getProbabilityForItem(concept));
 			this.removeRemainingIntent(intent);
 			top.clearChildren();
 			top.addChild(n);
@@ -291,7 +297,7 @@ public class TreeModule extends IUModule {
 		this.confirmStack.clear();
 	}
 
-	private void offerConfirmation(String intent, String concept) {
+	private void offerConfirmation(String intent, String concept, Distribution<String> dist) {
 		log.info(logString("offerConfirmation", intent, concept));
 		if (this.intentSettled(intent) || this.intentSettled(concept)) {
 //			been here, done that
@@ -301,7 +307,7 @@ public class TreeModule extends IUModule {
 //		if (!getTopNode().getChildNode(intent).hasChild(concept)) {
 //			return;
 //		}
-		if (offerExpansion(intent)) {
+		if (offerExpansion(intent, dist)) {
 			Node childToConfirm = getTopNode().getChildNode(intent).getChildNode(concept);
 			if (childToConfirm != null) {
 				childToConfirm.setName(concept + "?");
@@ -310,7 +316,7 @@ public class TreeModule extends IUModule {
 		}
 	}
 
-	private boolean offerExpansion(String intent) {
+	private boolean offerExpansion(String intent, Distribution<String> dist) {
 		log.info(logString("offerExpansion", intent, ""));
 
 		if (this.intentSettled(intent)) {
@@ -330,7 +336,9 @@ public class TreeModule extends IUModule {
 		
 		forExpansion.setExpanded(true);
 		for (String concept : getPossibleConceptsForIntent(intent)) {
-			forExpansion.addChild(new Node(concept));
+			Node n = new Node(concept);
+			n.setProbability(dist.getProbabilityForItem(concept));
+			forExpansion.addChild(n);
 		}
 		forExpansion.setHasBeenTraversed(true);
 //		this.setCurrentIntent(intent);

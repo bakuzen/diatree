@@ -15,6 +15,7 @@ public class SessionTimeout extends Thread {
 		inlu = m;
 	}
 	
+//	singleton
 	public static SessionTimeout getInstance() {
 		
 		if (timeoutThread == null) {
