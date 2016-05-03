@@ -6,7 +6,8 @@
 	   {"property":"curry"},
 	   {"property":"scharf"},
 	   {"property":"reis"},
-	   {"property":"vegetarisch"}
+	   {"property":"vegetarisch"},
+	   {"property":"nudeln"}
 	  ]
 	},
 	{ "concept":"indisch",
@@ -18,6 +19,13 @@
 	   {"property":"vegetarisch"}
 	  ]
 	},
+	{ "concept":"italienisch",
+	  "properties": [
+	   {"property":"italienisch"},
+	   {"property":"nudeln"},
+	   {"property":"pasta"}
+	  ]
+	},	
 	{ "concept":"franzözisch",
 	  "properties": [
 	   {"property":"franzözisch"},

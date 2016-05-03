@@ -5,14 +5,20 @@
 	   {"property":"stadtmitte"}
 	  ]
 	},
+    { "concept":"altstadt",
+	  "properties": [
+	   {"property":"altstadt"}
+	  ]
+	},
 	{ "concept":"universität",
 	  "properties": [
 	   {"property":"universität"},
 	   {"property":"uni"}
 	  ]
 	},
-	{ "concept":"park",
+	{ "concept":"bürger park",
 	  "properties": [
+	   {"property":"bürger"},
 	   {"property":"park"}
 	  ]
 	},
@@ -21,17 +27,7 @@
 	   {"property":"hierum"},
 	   {"property":"hier"}
 	  ]
-	},
-    { "concept":"bielefeld",
-	  "properties": [
-	   {"property":"bielefeld"}
-	  ]
-	},
-	{ "concept":"herford",
-	  "properties": [
-	   {"property":"herford"}
-	  ]
-	}		
+	}
 
     ]
     
