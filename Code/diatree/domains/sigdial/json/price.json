@@ -6,6 +6,13 @@
 	   {"property":"hoch"}
 	  ]
 	},
+	{ "concept":"mittig",
+	  "properties": [
+	   {"property":"mit"},
+	   {"property":"mittig"},
+	   {"property":"normal"}
+	  ]
+	},	
 	{ "concept":"günstig",
 	  "properties": [
 	   {"property":"schnell"},

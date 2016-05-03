@@ -29,6 +29,8 @@
 	{ "concept":"franzözisch",
 	  "properties": [
 	   {"property":"franzözisch"},
+	   {"property":"fleisch"},
+	   {"property":"fisch"},
 	   {"property":"käse"}
 	  ]
 	},
@@ -37,6 +39,7 @@
 	   {"property":"mexican"},
 	   {"property":"mexicanisch"},
 	   {"property":"scharf"},
+	   {"property":"fleisch"},
 	   {"property":"tortilla"}
 	  ]
 	}
@@ -59,7 +62,11 @@
     {
       "concept": "franzözisch",
       "example": "ich möchte franzözisch"
-    },   
+    },
+    {
+      "concept": "italienisch",
+      "example": "ich möchte italienisch"
+    }, 
     {
       "concept": "mexicanisch",
       "example": "ich möchte mexicanisch"
