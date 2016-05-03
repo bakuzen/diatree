@@ -1,0 +1,118 @@
+\documentclass[a4paper,11pt]{article}
+
+% \issue{1}{1}{2014}
+\usepackage[margin=25mm]{geometry}
+\usepackage{times}
+\usepackage[round]{natbib}
+\usepackage{latexsym}
+\usepackage[utf8]{inputenc}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{appendix}
+\usepackage{url}
+\usepackage{tikz}
+% \usepackage{avm}
+% \avmfont{\sc}
+% \avmoptions{sorted}
+% \avmvalfont{\rm}
+% \avmsortfont{\scriptsize\it}
+\usepackage{remreset}
+\usepackage{pifont}
+% \newcommand{\cmark}{\ding{53}}%
+\usepackage{graphicx}
+\usepackage{verbatim} 
+\usepackage{linguex}
+\usepackage{qtree}
+%\usepackage{algorithm}% http://ctan.org/pkg/algorithms
+%\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+\usepackage{amsmath,amsfonts,amssymb}
+
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+
+
+\newcommand{\das}[1]{\emph{//das: #1//}}
+\newcommand{\crk}[1]{\emph{//crk: #1//}}
+\newcommand{\todo}[1]{\textcolor{green}{\emph{//todo: #1//}}}
+
+
+\newcommand{\sds}[0]{\textsc{sds}}
+\newcommand{\nlu}[0]{\textsc{nlu}}
+\newcommand{\rmrs}[0]{\textsc{rmrs}}
+\newcommand{\ep}[0]{\texttt{EP}}
+\newcommand{\inprotk}[0]{\textsc{InproTK}}
+\newcommand{\sium}[0]{\textsc{sium}}
+\newcommand{\rr}[0]{\textsc{rr}}
+
+%Document Head
+% \dochead{CLV2 Class File Manual}
+
+\title{}
+
+\author{Casey Kennington \and David Schlangen}
+% \affil{CITEC, Bielefeld University}
+
+% \author{David Schlangen}
+% \affil{Bielefeld University}
+
+\begin{document}
+
+% \author{And Yet Another}
+% \affil{Publishing / SPi}
+
+\maketitle
+
+% abstract should be 150-250 words
+\begin{abstract}
+
+\end{abstract}
+
+\section{Introduction}
+\label{section:intro}
+
+
+
+* ASR is getting better all the time, but just being able to accurately recognize speech doesn't mean intent is understood. We have a way of showing intent understanding. 
+* PAs come in a continuum of predictability, from very little "you say everything in one go" to fully "the system knows what you want before you even speak". We explore to what degree users want predictability in their systems.
+* PAs either fully act out a command or they fully misunderstand and start over.  We offer something that works incrementally and signals understanding by verifying more fine-grained aspects of intent as it unfolds, allowing the user to observe the "internal state" of the intent understanding so corrections can be made quickly and easily
+* Who really knows what a PA can do? The only way to find out is to attempt to give it a command and see if it works (if not, then Google, for example, runs a web search). We show the user what the PA could potentially do
+* Dialogue systems are notoriously bad at signalling affordances
+
+
+\section{Related Work}
+\label{section:related_work}
+
+
+\section{System Description: DiaTree}
+\label{section:system_def}
+
+\subsection{Language Understanding}
+
+\todo{explain SIUM}
+
+\subsection{Dialogue Manager}
+
+\todo{explain opendial and how it handles four states and CRs}
+
+\subsection{User Display}
+
+\todo{show examples of the tree and how it portrays the current state}
+
+\section{Experiments}
+\label{section:experiments}
+
+\subsection{Experiment 1: Non-Incremental vs. Incremental}
+\label{section:exp1}
+
+\subsection{Results}
+
+\subsection{Experiment 2: Incremental vs. Incremental-Adaptive}
+\label{section:exp2}
+
+\subsection{Results}
+
+% \bibliographystyle{plainnat}
+% \bibliography{refs}
+
+\end{document}
+
