@@ -5,15 +5,7 @@
 	   {"child":"anruf"},
 	   {"child":"nachricht"},
 	   {"child":"erinnerung"},
-	   {"child":"essen"},
-	   {"child":"nach dem weg"}
-	  ]
-	},
-	{ "name":"nach dem weg",
-	   "children": [
-	   {"child":"von"},
-	   {"child":"nach"}
-	   ]
+	   {"child":"essen"}	  ]
 	},
 	{ "name":"essen",
 	  "children": [
