@@ -227,6 +227,11 @@ public class DomainModel {
 		return null;
 	}
 
+	public void getChildIntentsForIntent(String rootName) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 
 }

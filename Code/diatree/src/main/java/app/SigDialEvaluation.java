@@ -56,8 +56,7 @@ public class SigDialEvaluation {
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
 		
 //		INLUModule nlu = (INLUModule) cm.lookup("inlu");
-//		tomcat.addServlet("diatree", (DiaTreeServlet) cm.lookup(DIATREE_SERVLET));
-//		tomcat.start();
+		
 		AdvancedDiaTreeCreator creator = new AdvancedDiaTreeCreator((DiaTreeSocket) cm.lookup(DIATREE_SOCKET));
 		JettyServer jetty = new JettyServer(creator);
 		
