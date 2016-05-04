@@ -53,7 +53,7 @@ public class TreeModule extends IUModule {
 		socket = (DiaTreeSocket) ps.getComponent(DIATREE_SOCKET);
 		this.setIncremental(ps.getBoolean(IS_INCREMENTAL));
 		if (!this.isIncremental())
-			EndpointTimeout.setVariables(this, 700);
+			EndpointTimeout.setVariables(this, 1500);
 		reset();
 	}
 	
