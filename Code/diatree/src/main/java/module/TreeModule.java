@@ -168,6 +168,7 @@ public class TreeModule extends IUModule {
 			return;
 		}
 		Node top = getTopNode();
+		top.setHasBeenTraversed(true);
 		boolean foundExpanded = false;
 		for (Node child : top.getChildren()) {
 			if (child.isExpanded()) {
@@ -229,7 +230,6 @@ public class TreeModule extends IUModule {
 		}
 		
 		if (isCustomFunction(concept)) {
-			
 			Node top = getTopNode();
 			Node n = new Node(concept);
 			n.setProbability(dist.getProbabilityForItem(concept));
@@ -242,6 +242,9 @@ public class TreeModule extends IUModule {
 			return;
 		}
 		
+		Node top = getTopNode();
+		top.setHasBeenTraversed(false);
+		
 //		another case is if someone is referring to an intent (not a concept of an intent)
 //		when that happens, show the expansion of that intent
 		if (Constants.INTENT.equals(intent) && hasConcepts(concept)) {
@@ -249,16 +252,9 @@ public class TreeModule extends IUModule {
 			return;
 		}
 		
-		Node top = getTopNode();
-//		if (!top.hasChild(intent))  // this could happen when someone says the same word more than once
-//			return;
-		
-	
-//		Node child = top.getChildNode(intent);
-//		child.clearChildren();
-//		Node n = new Node(intent +":" + concept);
 		if (Constants.INTENT.equals(intent)) {
 			Node n = new Node(concept);
+			n.setHasBeenTraversed(true);
 			n.setProbability(dist.getProbabilityForItem(concept));
 			this.setCurrentIntent(concept);
 			remainingIntents = getPossibleIntents();
@@ -275,6 +271,7 @@ public class TreeModule extends IUModule {
 			this.pushExpandedNode(n);
 		}
 		
+		this.getRootNode().setHasBeenTraversed(false);
 		this.clearConfirmStack();
 		this.branchIntents();
 	}
@@ -346,6 +343,8 @@ public class TreeModule extends IUModule {
 		}
 
 		Node top = getTopNode();
+		top.setHasBeenTraversed(false);
+		
 		if (!top.hasChild(intent)) {
 			return false; // this avoids problems with repetitions
 		}
@@ -418,6 +417,7 @@ public class TreeModule extends IUModule {
 	}
 	
 	private void pushExpandedNode(Node n) {
+		n.setToConsider(false);
 		expandedNodes.push(n);
 	}
 	
@@ -458,6 +458,7 @@ public class TreeModule extends IUModule {
 		remainingIntents.remove("intent"); // keyword, but used in a similar way--shouldn't be displayed
 		
 		Node root = new Node("");
+		root.setHasBeenTraversed(true);
 		this.clearConfirmStack();
 		this.clearExpandedStack();
 		this.pushExpandedNode(root);
@@ -474,8 +475,10 @@ public class TreeModule extends IUModule {
 
 	private void branchIntents() {
 		Node top = getTopNode();
+		boolean traversed = remainingIntents.size() == 1 ? true : false;
 		for (String intent : remainingIntents) {
 			Node i = new Node(intent);
+			i.setHasBeenTraversed(traversed);
 			top.addChild(i);
 		}
 	}

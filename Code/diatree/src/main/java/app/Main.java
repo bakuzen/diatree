@@ -71,13 +71,13 @@ public class Main {
 		
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
-		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyAjfMedK3iDhXWA5_vlnX8YQGoFoxvy07g"});
+		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyC_qnRfLWOiASjw6EGw826hrcOlokMukWU"});
 //		startGoogleASR(cm, rclp);
 		
 		ClientUtils.openNewClient();
 		
 //		Or, one can send words individually with a 500 ms pause between them
-		String[] uwords = {"route", "von", "bielefeld", "nach", "trier"};
+		String[] uwords = {"route", "nein", "route", "von", "bielefeld", "nein", "von", "dortmund", "nach", "trier"};
 //		String[] uwords = {"essen", "typ", "franzözisch","ja","preis", "günstig", "wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
 //				"rücksetzen","nachricht", "jana", "rücksetzen"};
 //		String[] uwords = {"nachricht",  "message", "nimm", "das", "rote", "kreuz","neben","dem","blauen","t", "ferkel", "name", "jana"};
@@ -91,7 +91,7 @@ public class Main {
 		for (String word : words) {
 			WordIU wiu = new WordIU(word, prev, null);
 			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-			Thread.sleep(400);
+			Thread.sleep(1000);
 			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
 			prev = wiu;
 		}

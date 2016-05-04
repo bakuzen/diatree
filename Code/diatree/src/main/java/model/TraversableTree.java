@@ -115,6 +115,10 @@ public class TraversableTree {
 					child.put("type", "red");
 					child.put("level", "red");
 				}
+				else if (c.isToConsider()) {
+					child.put("type", "steelblue");
+					child.put("level", "steelblue");
+				}
 				childrenJSON.put(i++, child);
 				if (i >= Constants.NODE_DISPLAY_LIMIT) {
 					child.put("name", "...");
