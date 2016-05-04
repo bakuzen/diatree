@@ -21,6 +21,7 @@ import model.Constants;
 import model.CustomFunction;
 import model.Node;
 import module.TreeModule;
+import util.EndpointTimeout;
 import util.SessionTimeout;
 
 public class MessageFunction extends IUModule  implements CustomFunction {
@@ -84,6 +85,7 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 	protected void leftBufferUpdate(Collection<? extends IU> ius, List<? extends EditMessage<? extends IU>> edits) {
 		
 		SessionTimeout.getInstance().reset();
+		if (!treeModule.isIncremental()) EndpointTimeout.getInstance().reset();
 		
 		if (timeoutThread != null) {
 			timeoutThread.interrupt();
@@ -99,6 +101,7 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 				if (word.equals(keyword)) {
 					recognizer.iulisteners.remove(this);
 					recognizer.iulisteners.addAll(listeners);
+					if (treeModule == null) return;
 					treeModule.returnFromCustomFunction();
 					treeModule.update();
 					return;
@@ -133,7 +136,8 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 //		top.addChild(new Node(""));
 		top.setName(message);
 
-		treeModule.update();
+		if (!EndpointTimeout.getInstance().isAlive() && treeModule.isIncremental())
+			treeModule.update();
 	}
 
 }

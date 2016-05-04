@@ -65,7 +65,6 @@ public class DomainModel {
 					context.setEntity(concept, properties);
 				}
 			}
-			System.out.println(context.getEntities());
 		} 
 		catch (SQLException e) {
 			e.printStackTrace();

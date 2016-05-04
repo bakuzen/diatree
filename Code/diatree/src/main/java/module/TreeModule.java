@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 
 import edu.cmu.sphinx.util.props.PropertyException;
 import edu.cmu.sphinx.util.props.PropertySheet;
+import edu.cmu.sphinx.util.props.S4Boolean;
 import edu.cmu.sphinx.util.props.S4Component;
 import inpro.incremental.IUModule;
 import inpro.incremental.unit.EditMessage;
@@ -22,6 +23,7 @@ import model.CustomFunctionRegistry;
 import model.Node;
 import model.TraversableTree;
 import sium.nlu.stat.Distribution;
+import util.EndpointTimeout;
 
 public class TreeModule extends IUModule {
 	
@@ -29,6 +31,9 @@ public class TreeModule extends IUModule {
 
 	@S4Component(type = DiaTreeSocket.class)
 	public final static String DIATREE_SOCKET = "socket";
+	
+	@S4Boolean(defaultValue = true)
+	public final static String IS_INCREMENTAL = "isIncremental";
 
 	private DiaTreeSocket socket;
 	private TraversableTree tree;
@@ -39,12 +44,16 @@ public class TreeModule extends IUModule {
 	private boolean firstDisplay;
 	private PropertySheet propertySheet;
 	private LinkedList<String> expectedStack;
+	private boolean isIncremental;
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
 		super.newProperties(ps);
 		this.setPropertySheet(ps);
 		socket = (DiaTreeSocket) ps.getComponent(DIATREE_SOCKET);
+		this.setIncremental(ps.getBoolean(IS_INCREMENTAL));
+		if (!this.isIncremental())
+			EndpointTimeout.setVariables(this, 700);
 		reset();
 	}
 	
@@ -64,6 +73,8 @@ public class TreeModule extends IUModule {
 
 	@Override
 	protected void leftBufferUpdate(Collection<? extends IU> ius, List<? extends EditMessage<? extends IU>> edits) {
+		
+		if (!this.isIncremental()) EndpointTimeout.getInstance().reset();
 		
 		if (isFirstDisplay())
 			initDisplay(false, true);
@@ -127,7 +138,8 @@ public class TreeModule extends IUModule {
 				// waiting....
 			}
 		}
-		update();
+		if (this.isIncremental())
+			update();
 	}
 	
 
@@ -500,5 +512,13 @@ public class TreeModule extends IUModule {
 
 	public void setPropertySheet(PropertySheet propertySheet) {
 		this.propertySheet = propertySheet;
+	}
+
+	public boolean isIncremental() {
+		return isIncremental;
+	}
+
+	public void setIncremental(boolean isIncremental) {
+		this.isIncremental = isIncremental;
 	}
 }

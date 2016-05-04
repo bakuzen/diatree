@@ -26,7 +26,7 @@ public class INLUModule extends IUModule {
 	
 	@S4Component(type = TreeModule.class)
 	public final static String TREE_MODULE = "module";
-	private TreeModule tree;
+	protected TreeModule tree;
 
 	@S4String(defaultValue = "test")
 	public final static String DOMAIN = "domain";
@@ -96,15 +96,15 @@ public class INLUModule extends IUModule {
 	}
 
 
-	private void checkContext() {
+	protected void checkContext() {
 		if (!this.currentIntent.equals(tree.getCurrentIntent())) {
 			this.currentIntent = tree.getCurrentIntent();
 			model.updateContext(this.currentIntent);
 		}
 	}
 
-	private void update() {
-		
+	public void update() {
+		System.out.println("update");
 		try {
 			
 			List<EditMessage<? extends IU>> edits = new ArrayList<EditMessage<? extends IU>>();

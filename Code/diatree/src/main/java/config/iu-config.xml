@@ -19,6 +19,19 @@
         </propertylist>
     </component>
     
+    
+    <component name="googleASR" type="inpro.incremental.source.GoogleASR">
+        <property name="apiKey" value="AIzaSyBOnqyblkzEprtUkDrjctec5wJSiJI1i0k"/>
+    	<property name="samplingRate" value="16000"/>
+    	<property name="lang" value="${language}"/>
+        <property name="frontend" value="${frontend}"/>
+        <propertylist name="hypChangeListeners">
+<!--         	<item>printer</item> -->
+        	<item>inlu</item>
+		</propertylist>
+    </component>
+    
+    
      <component name="inlu" type="module.INLUModule">
     	<property name="domain" value="sigdial"/>
     	<property name="module" value="tree"/>
@@ -26,6 +39,13 @@
     	 	<item>dm</item>
 		</propertylist>
     </component> 
+    
+     <component name="tree" type="module.TreeModule">
+    	<property name="socket" value="diatree"/>
+    	<property name="isIncremental" value="true"/>
+    	<propertylist name="hypChangeListeners">
+		</propertylist>
+    </component>   
     
     <component name="asrMessage" type="model.functions.MessageFunction">
         <property name="asr" value="googleASR"/>
@@ -60,12 +80,8 @@
 	    </propertylist>
     </component>     
     
-    <component name="tree" type="module.TreeModule">
-    	<property name="socket" value="diatree"/>
-    	<propertylist name="hypChangeListeners">
-		</propertylist>
-    </component>    
-    
+ 
+
     
     <component name="diatree" type="jetty.DiaTreeSocket">
      <property name="module" value="tree"/>
@@ -73,7 +89,7 @@
     
     <component name="vad" type="inpro.incremental.source.VoiceActivityDetector">
         <propertylist name="hypChangeListeners">
-<!--          <item>printer</item> -->
+<!--          	<item>noninc</item> -->
 		</propertylist>
 	</component>
 	
@@ -82,16 +98,7 @@
 		</propertylist>
 	</component>
     
-    <component name="googleASR" type="inpro.incremental.source.GoogleASR">
-        <property name="apiKey" value="AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"/>
-    	<property name="samplingRate" value="16000"/>
-    	<property name="lang" value="${language}"/>
-        <property name="frontend" value="${frontend}"/>
-        <propertylist name="hypChangeListeners">
-<!--         	<item>printer</item> -->
-        	<item>inlu</item>
-		</propertylist>
-    </component>
+
     
  
     
