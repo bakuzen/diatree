@@ -1,0 +1,403 @@
+{
+  "concepts": [
+    {
+      "concept": "hamburg",
+      "properties": [{"property": "hamburg"}]
+    },
+    {
+      "concept": "münchen",
+      "properties": [{"property": "münchen"}]
+    },
+    {
+      "concept": "köln",
+      "properties": [{"property": "köln"}]
+    },
+    {
+      "concept": "frankfurt",
+      "properties": [{"property": "frankfurt"}]
+    },
+    {
+      "concept": "dortmund",
+      "properties": [{"property": "dortmund"}]
+    },
+    {
+      "concept": "stuttgart",
+      "properties": [{"property": "stuttgart"}]
+    },
+    {
+      "concept": "düsseldorf",
+      "properties": [{"property": "düsseldorf"}]
+    },
+    {
+      "concept": "bremen",
+      "properties": [{"property": "bremen"}]
+    },
+    {
+      "concept": "hannover",
+      "properties": [{"property": "hannover"}]
+    },
+    {
+      "concept": "duisburg",
+      "properties": [{"property": "duisburg"}]
+    },
+    {
+      "concept": "nürnberg",
+      "properties": [{"property": "nürnberg"}]
+    },
+    {
+      "concept": "leipzig",
+      "properties": [{"property": "leipzig"}]
+    },
+    {
+      "concept": "dresden",
+      "properties": [{"property": "dresden"}]
+    },
+    {
+      "concept": "bochum",
+      "properties": [{"property": "bochum"}]
+    },
+    {
+      "concept": "wuppertal",
+      "properties": [{"property": "wuppertal"}]
+    },
+    {
+      "concept": "bielefeld",
+      "properties": [{"property": "bielefeld"}]
+    },
+    {
+      "concept": "bonn",
+      "properties": [{"property": "bonn"}]
+    },
+    {
+      "concept": "mannheim",
+      "properties": [{"property": "mannheim"}]
+    },
+    {
+      "concept": "karlsruhe",
+      "properties": [{"property": "karlsruhe"}]
+    },
+    {
+      "concept": "gelsenkirchen",
+      "properties": [{"property": "gelsenkirchen"}]
+    },
+    {
+      "concept": "wiesbaden",
+      "properties": [{"property": "wiesbaden"}]
+    },
+    {
+      "concept": "münster",
+      "properties": [{"property": "münster"}]
+    },
+    {
+      "concept": "mönchengladbach",
+      "properties": [{"property": "mönchengladbach"}]
+    },
+    {
+      "concept": "chemnitz",
+      "properties": [{"property": "chemnitz"}]
+    },
+    {
+      "concept": "augsburg",
+      "properties": [{"property": "augsburg"}]
+    },
+    {
+      "concept": "braunschweig",
+      "properties": [{"property": "braunschweig"}]
+    },
+    {
+      "concept": "aachen",
+      "properties": [{"property": "aachen"}]
+    },
+    {
+      "concept": "krefeld",
+      "properties": [{"property": "krefeld"}]
+    },
+    {
+      "concept": "halle",
+      "properties": [{"property": "halle"}]
+    },
+    {
+      "concept": "kiel",
+      "properties": [{"property": "kiel"}]
+    },
+    {
+      "concept": "magdeburg",
+      "properties": [{"property": "magdeburg"}]
+    },
+    {
+      "concept": "oberhausen",
+      "properties": [{"property": "oberhausen"}]
+    },
+    {
+      "concept": "lübeck",
+      "properties": [{"property": "lübeck"}]
+    },
+    {
+      "concept": "freiburg",
+      "properties": [{"property": "freiburg"}]
+    },
+    {
+      "concept": "hagen",
+      "properties": [{"property": "hagen"}]
+    },
+    {
+      "concept": "erfurt",
+      "properties": [{"property": "erfurt"}]
+    },
+    {
+      "concept": "kassel",
+      "properties": [{"property": "kassel"}]
+    },
+    {
+      "concept": "rostock",
+      "properties": [{"property": "rostock"}]
+    },
+    {
+      "concept": "mainz",
+      "properties": [{"property": "mainz"}]
+    },
+    {
+      "concept": "hamm",
+      "properties": [{"property": "hamm"}]
+    },
+    {
+      "concept": "saarbrücken",
+      "properties": [{"property": "saarbrücken"}]
+    },
+    {
+      "concept": "herne",
+      "properties": [{"property": "herne"}]
+    },
+    {
+      "concept": "mülheim",
+      "properties": [{"property": "mülheim"}]
+    },
+    {
+      "concept": "solingen",
+      "properties": [{"property": "solingen"}]
+    },
+    {
+      "concept": "osnabrück",
+      "properties": [{"property": "osnabrück"}]
+    },
+    {
+      "concept": "ludwigshafen",
+      "properties": [{"property": "ludwigshafen"}]
+    },
+    {
+      "concept": "leverkusen",
+      "properties": [{"property": "leverkusen"}]
+    },
+    {
+      "concept": "oldenburg",
+      "properties": [{"property": "oldenburg"}]
+    },
+    {
+      "concept": "neuss",
+      "properties": [{"property": "neuss"}]
+    },
+    {
+      "concept": "paderborn",
+      "properties": [{"property": "paderborn"}]
+    },
+    {
+      "concept": "heidelberg",
+      "properties": [{"property": "heidelberg"}]
+    },
+    {
+      "concept": "darmstadt",
+      "properties": [{"property": "darmstadt"}]
+    },
+    {
+      "concept": "potsdam",
+      "properties": [{"property": "potsdam"}]
+    },
+    {
+      "concept": "würzburg",
+      "properties": [{"property": "würzburg"}]
+    },
+    {
+      "concept": "göttingen",
+      "properties": [{"property": "göttingen"}]
+    },
+    {
+      "concept": "regensburg",
+      "properties": [{"property": "regensburg"}]
+    },
+    {
+      "concept": "recklinghausen",
+      "properties": [{"property": "recklinghausen"}]
+    },
+    {
+      "concept": "bottrop",
+      "properties": [{"property": "bottrop"}]
+    },
+    {
+      "concept": "wolfsburg",
+      "properties": [{"property": "wolfsburg"}]
+    },
+    {
+      "concept": "heilbronn",
+      "properties": [{"property": "heilbronn"}]
+    },
+    {
+      "concept": "ingolstadt",
+      "properties": [{"property": "ingolstadt"}]
+    },
+    {
+      "concept": "ulm",
+      "properties": [{"property": "ulm"}]
+    },
+    {
+      "concept": "remscheid",
+      "properties": [{"property": "remscheid"}]
+    },
+    {
+      "concept": "pforzheim",
+      "properties": [{"property": "pforzheim"}]
+    },
+    {
+      "concept": "bremerhaven",
+      "properties": [{"property": "bremerhaven"}]
+    },
+    {
+      "concept": "offenbach",
+      "properties": [{"property": "offenbach"}]
+    },
+    {
+      "concept": "fürth",
+      "properties": [{"property": "fürth"}]
+    },
+    {
+      "concept": "reutlingen",
+      "properties": [{"property": "reutlingen"}]
+    },
+    {
+      "concept": "salzgitter",
+      "properties": [{"property": "salzgitter"}]
+    },
+    {
+      "concept": "siegen",
+      "properties": [{"property": "siegen"}]
+    },
+    {
+      "concept": "gera",
+      "properties": [{"property": "gera"}]
+    },
+    {
+      "concept": "koblenz",
+      "properties": [{"property": "koblenz"}]
+    },
+    {
+      "concept": "moers",
+      "properties": [{"property": "moers"}]
+    },
+    {
+      "concept": "bergisch gladbach",
+      "properties": [
+        {"property": "bergisch"},
+        {"property": "gladbach"}
+      ]
+    },
+    {
+      "concept": "cottbus",
+      "properties": [{"property": "cottbus"}]
+    },
+    {
+      "concept": "hildesheim",
+      "properties": [{"property": "hildesheim"}]
+    },
+    {
+      "concept": "witten",
+      "properties": [{"property": "witten"}]
+    },
+    {
+      "concept": "zwickau",
+      "properties": [{"property": "zwickau"}]
+    },
+    {
+      "concept": "erlangen",
+      "properties": [{"property": "erlangen"}]
+    },
+    {
+      "concept": "iserlohn",
+      "properties": [{"property": "iserlohn"}]
+    },
+    {
+      "concept": "trier",
+      "properties": [{"property": "trier"}]
+    },
+    {
+      "concept": "kaiserslautern",
+      "properties": [{"property": "kaiserslautern"}]
+    },
+    {
+      "concept": "jena",
+      "properties": [{"property": "jena"}]
+    },
+    {
+      "concept": "schwerin",
+      "properties": [{"property": "schwerin"}]
+    },
+    {
+      "concept": "gütersloh",
+      "properties": [{"property": "gütersloh"}]
+    },
+    {
+      "concept": "marl",
+      "properties": [{"property": "marl"}]
+    },
+    {
+      "concept": "lünen",
+      "properties": [{"property": "lünen"}]
+    },
+    {
+      "concept": "esslingen",
+      "properties": [{"property": "esslingen"}]
+    },
+    {
+      "concept": "velbert",
+      "properties": [{"property": "velbert"}]
+    },
+    {
+      "concept": "ratingen",
+      "properties": [{"property": "ratingen"}]
+    },
+    {
+      "concept": "düren",
+      "properties": [{"property": "düren"}]
+    },
+    {
+      "concept": "ludwigsburg",
+      "properties": [{"property": "ludwigsburg"}]
+    },
+    {
+      "concept": "wilhelmshaven",
+      "properties": [{"property": "wilhelmshaven"}]
+    },
+    {
+      "concept": "hanau",
+      "properties": [{"property": "hanau"}]
+    },
+    {
+      "concept": "minden",
+      "properties": [{"property": "minden"}]
+    },
+    {
+      "concept": "flensburg",
+      "properties": [{"property": "flensburg"}]
+    },
+    {
+      "concept": "dessau",
+      "properties": [{"property": "dessau"}]
+    },
+    {
+      "concept": "villingen-schwenningen",
+      "properties": [
+        {"property": "villingen"},
+        {"property": "schwenningen"}
+      ]
+    }
+  ],
+  "intent": "nach"
+}

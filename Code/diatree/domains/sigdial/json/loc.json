@@ -10,6 +10,11 @@
 	   {"property":"altstadt"}
 	  ]
 	},
+	{ "concept":"siegfriedplatz",
+	  "properties": [
+	   {"property":"siegfried"}
+	  ]
+	},	
 	{ "concept":"universität",
 	  "properties": [
 	   {"property":"universität"},

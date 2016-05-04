@@ -249,6 +249,7 @@ public class Domain {
 
 	public int getIntentID(String intent) throws SQLException {
 		Statement stat = createStatement();
+		intent = intent.replace(" ", "_");
 		ResultSet result = stat.executeQuery(String.format("SELECT iid FROM intent WHERE intent='%s'", intent));
 		return result.getInt("iid");
 	}
@@ -376,10 +377,14 @@ public class Domain {
 		return intents;
 	}
 
-	public String getIntentForConcept(String concept) throws SQLException {
+	public List<String> getIntentsForConcept(String concept) throws SQLException {
 		Statement stat = createStatement();
 		ResultSet result = stat.executeQuery(String.format("SELECT intent FROM intent i, concept c, concept_intent ci where c.cid = ci.cid AND i.iid = ci.iid and c.concept = '%s'", concept));
-		return result.getString("intent");
+		ArrayList<String> intents = new ArrayList<String>();
+		while (result.next()) {
+			intents.add(result.getString("intent"));
+		}
+		return intents;
 		
 	}
 
@@ -404,6 +409,7 @@ public class Domain {
 		int lid = getIntentID(left);
 		int rid = getIntentID(right);
 		Statement stat = createStatement();
+		System.out.println(lid + " " + rid);
 		ResultSet res = stat.executeQuery(String.format("SELECT * FROM intent_seuqence WHERE left=%d AND right=%d", lid, rid));
 		if (res.isAfterLast()) return false;
 		return true;

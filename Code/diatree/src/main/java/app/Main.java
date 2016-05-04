@@ -78,7 +78,7 @@ public class Main {
 		
 //		Or, one can send words individually with a 500 ms pause between them
 //		String[] uwords = {"i", "want", "some", "cheap", "thai", "yes", "food", "around", "downtown"};
-//		String[] uwords = {"hunger"};
+//		String[] uwords = {"route", "von", "bielefeld", "nach", "trier"};
 //		String[] uwords = {"essen", "typ", "franzözisch","ja","preis", "günstig", "wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
 //				"rücksetzen","nachricht", "jana", "rücksetzen"};
 ////		String[] uwords = {"nachricht",  "message", "nimm", "das", "rote", "kreuz","neben","dem","blauen","t", "ferkel", "name", "jana"};

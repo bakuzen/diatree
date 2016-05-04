@@ -106,6 +106,7 @@ public class InsertJsonData {
 				JSONObject concept = new JSONObject(new JSONTokener(concepts.get(i).toString()));
 				JSONArray properties = concept.getJSONArray("properties");
 				String conceptName = concept.getString("concept");
+				System.out.println(conceptName);
 				db.offerNewConcept(conceptName);
 				db.offerNewConceptIntentAttachment(conceptName, intent);
 				for (int j=0; j<properties.length(); j++) {

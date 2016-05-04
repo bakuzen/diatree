@@ -17,7 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class convertATIStoJSON {
+public class ConvertATIStoJSON {
 	
 	ArrayList<Instance> data;
 	Instance current;
@@ -222,7 +222,7 @@ public class convertATIStoJSON {
 	
 	public static void main(String[] args) {
 		try {
-			new convertATIStoJSON().run();
+			new ConvertATIStoJSON().run();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

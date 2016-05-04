@@ -50,6 +50,7 @@ public class DomainModel {
 		System.out.println("CURRENT INTENT " + intent);
 		try {
 			
+//			intent for confirmations or aborts should always be there
 			for (String concept : db.getConceptsForIntent(Constants.CONFIRM)) {
 				Properties<Property<String>> properties = db.getPropertiesForConcept(concept);
 				context.setEntity(concept, properties);
@@ -64,6 +65,7 @@ public class DomainModel {
 					context.setEntity(concept, properties);
 				}
 			}
+			System.out.println(context.getEntities());
 		} 
 		catch (SQLException e) {
 			e.printStackTrace();
@@ -150,8 +152,9 @@ public class DomainModel {
 		Frame frame = new Frame();
 		
 		for (DistRow<String> row : frameDist.getDistribution()) {
-			String intent = db.getIntentForConcept(row.getEntity());
-			frame.add(intent, row.getEntity(), row.getProbability());
+			List<String> intents = db.getIntentsForConcept(row.getEntity());
+			for (String intent : intents)
+				frame.add(intent, row.getEntity(), row.getProbability());
 		}
 		
 		frame.normalizeAll();

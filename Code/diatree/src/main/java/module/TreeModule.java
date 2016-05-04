@@ -38,6 +38,7 @@ public class TreeModule extends IUModule {
 	private String currentIntent;
 	private boolean firstDisplay;
 	private PropertySheet propertySheet;
+	private LinkedList<String> expectedStack;
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
@@ -52,6 +53,7 @@ public class TreeModule extends IUModule {
 		confirmStack = new LinkedList<SlotIU>();
 		expandedNodes = new LinkedList<Node>();
 		remainingIntents = new LinkedList<String>();
+		expectedStack = new LinkedList<String>();
 		setFirstDisplay(true);
 	}
 
@@ -86,7 +88,6 @@ public class TreeModule extends IUModule {
 //					when we are handling a CR, we have a stack of "QUD" of sorts 
 					SlotIU sIU = popConfirmStack();
 					String c = sIU.getDistribution().getArgMax().getEntity();
-					double p = sIU.getDistribution().getArgMax().getProbability();
 					Distribution<String> d = sIU.getDistribution();
 					String i = sIU.getName();
 					
@@ -208,6 +209,12 @@ public class TreeModule extends IUModule {
 //			been here, done that
 			return;
 		}
+		if (!expectedStack.isEmpty()) {
+			if (!expected(intent)) {
+				expectedStack.clear();
+				return;
+			}
+		}
 		
 		if (isCustomFunction(concept)) {
 			
@@ -260,6 +267,10 @@ public class TreeModule extends IUModule {
 		this.branchIntents();
 	}
 	
+	private boolean expected(String intent) {
+		return expectedStack.contains(intent);
+	}
+
 	private void performCustomFunction(String intent) {
 		try {
 			CustomFunction function  = CustomFunctionRegistry.getFunction(intent);
@@ -281,8 +292,6 @@ public class TreeModule extends IUModule {
 		}
 		return false;
 	}
-
-
 
 	private boolean hasConcepts(String concept) {
 		try {
@@ -341,11 +350,15 @@ public class TreeModule extends IUModule {
 			forExpansion.addChild(n);
 		}
 		forExpansion.setHasBeenTraversed(true);
-//		this.setCurrentIntent(intent);
+		addExpected(intent);
 //		remainingIntents = getPossibleConceptsForIntent(intent);
 //		System.out.println("remainingIntents: " + remainingIntents);
 		this.branchIntents();
 		return true;
+	}
+
+	private void addExpected(String intent) {
+		expectedStack.push(intent);
 	}
 
 	private boolean intentSettled(String intent) {
@@ -381,7 +394,8 @@ public class TreeModule extends IUModule {
 	private List<String> getPossibleIntents() {
 		try {
 			return INLUModule.model.getDB().getChildIntentsForIntent(this.getCurrentIntent());
-		} catch (SQLException e) {
+		} 
+		catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return new LinkedList<String>();
@@ -467,10 +481,17 @@ public class TreeModule extends IUModule {
 	}
 
 	public void setCurrentIntent(String currentIntent) {
+		clearExpectedStack();
+		
 		System.out.println("setting new intent: " + currentIntent);
 		if (currentIntent == null || currentIntent.equals("")) currentIntent = Constants.ROOT_NAME;
 		this.currentIntent = currentIntent;
 
+	}
+
+	private void clearExpectedStack() {
+		if (expectedStack != null) 
+			this.expectedStack.clear();
 	}
 
 	public PropertySheet getPropertySheet() {
