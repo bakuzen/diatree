@@ -20,6 +20,11 @@
       "concept": "dortmund",
       "properties": [{"property": "dortmund"}]
     },
+    
+    {
+      "concept": "berlin",
+      "properties": [{"property": "berlin"}]
+    },     
     {
       "concept": "stuttgart",
       "properties": [{"property": "stuttgart"}]
@@ -62,7 +67,7 @@
     },
     {
       "concept": "bielefeld",
-      "properties": [{"property": "bielefeld"}]
+      "properties": [{"property": "bielefeld"},{"property": "hier"}]
     },
     {
       "concept": "bonn",

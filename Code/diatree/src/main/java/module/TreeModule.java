@@ -135,13 +135,25 @@ public class TreeModule extends IUModule {
 			}
 //			in all other cases, just wait for more input
 			else if (Constants.WAIT.equals(decision)) {
-				// waiting....
+				indicateWaiting();
 			}
 		}
 		if (this.isIncremental())
 			update();
 	}
 	
+
+	private void indicateWaiting() {
+		Node n = tree.getCurrentActiveNode();
+		if (n == null) return;
+		boolean isConsidered = n.isToConsider();
+		System.out.println("found node: " + n);
+		n.setHasBeenTraversed(false);
+		n.setToConsider(false);
+		if (this.isIncremental()) update();
+		n.setHasBeenTraversed(true);
+		n.setToConsider(isConsidered);
+	}
 
 	private void abortConfirmation(String intent, String concept) {
 		log.info(logString("abortConfirmation", intent, concept));

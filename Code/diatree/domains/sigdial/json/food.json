@@ -29,11 +29,17 @@
 	{ "concept":"franzözisch",
 	  "properties": [
 	   {"property":"franzözisch"},
-	   {"property":"fleisch"},
 	   {"property":"fisch"},
 	   {"property":"käse"}
 	  ]
 	},
+	{ "concept":"deutsch",
+	  "properties": [
+	   {"property":"deutsch"},
+	   {"property":"fleisch"},
+	   {"property":"kartoffeln"},
+	  ]
+	},	
 	{ "concept":"mexicanisch",
 	  "properties": [
 	   {"property":"mexican"},

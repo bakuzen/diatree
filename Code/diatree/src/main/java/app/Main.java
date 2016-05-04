@@ -77,8 +77,8 @@ public class Main {
 		ClientUtils.openNewClient();
 		
 //		Or, one can send words individually with a 500 ms pause between them
-		String[] uwords = {"route", "nein", "route", "von", "bielefeld", "nein", "von", "dortmund", "nach", "trier"};
-//		String[] uwords = {"essen", "typ", "franzözisch","ja","preis", "günstig", "wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
+		String[] uwords = {"route", "nein", "ehm", "ich", "route", "ehm", "ich",  "von", "ehm", "ich", "bielefeld", "ehm", "ich", "nein", "von", "hier", "ehm", "ich",  "nach", "berlin"};
+//		String[] uwords = {"essen", "typ", "franzözisch","ja","wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
 //				"rücksetzen","nachricht", "jana", "rücksetzen"};
 //		String[] uwords = {"nachricht",  "message", "nimm", "das", "rote", "kreuz","neben","dem","blauen","t", "ferkel", "name", "jana"};
 //		String[] uwords = {"hunger", "nein", "essen", "stadtmitte", "teuer", "nein", 

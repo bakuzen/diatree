@@ -14,6 +14,7 @@ public class TraversableTree {
 	private Node root;
 	private LinkedList<Node> trail;
 	private int depth;
+	private Node currentActiveNode;
 	
 	public TraversableTree() {
 		this.setRoot(null);
@@ -82,6 +83,7 @@ public class TraversableTree {
 			if (getRoot().hasBeenTraversed()) {
 				rootJSON.put("type", "red");
 				rootJSON.put("level", "red");
+				setCurrentActiveNode(getRoot());
 			}
 			jsonHelp(root, rootJSON);
 			
@@ -114,6 +116,7 @@ public class TraversableTree {
 				if (c.hasBeenTraversed()) {
 					child.put("type", "red");
 					child.put("level", "red");
+					setCurrentActiveNode(c);
 				}
 				else if (c.isToConsider()) {
 					child.put("type", "steelblue");
@@ -189,6 +192,14 @@ public class TraversableTree {
 	public void setDepth(int nodeDepth) {
 		this.depth = nodeDepth;
 		
+	}
+
+	public Node getCurrentActiveNode() {
+		return currentActiveNode;
+	}
+
+	public void setCurrentActiveNode(Node currentActiveNode) {
+		this.currentActiveNode = currentActiveNode;
 	}
 	
 	
