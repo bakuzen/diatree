@@ -53,7 +53,7 @@ public class TreeModule extends IUModule {
 		socket = (DiaTreeSocket) ps.getComponent(DIATREE_SOCKET);
 		this.setIncremental(ps.getBoolean(IS_INCREMENTAL));
 		if (!this.isIncremental())
-			EndpointTimeout.setVariables(this, 700);
+			EndpointTimeout.setVariables(this, 2000);
 		reset();
 	}
 	
@@ -138,19 +138,19 @@ public class TreeModule extends IUModule {
 				indicateWaiting();
 			}
 		}
-		if (this.isIncremental())
-			update();
+		update();
 	}
 	
 
 	private void indicateWaiting() {
+		if (tree == null) return;
 		Node n = tree.getCurrentActiveNode();
 		if (n == null) return;
 		boolean isConsidered = n.isToConsider();
 		System.out.println("found node: " + n);
 		n.setHasBeenTraversed(false);
 		n.setToConsider(false);
-		if (this.isIncremental()) update();
+		update();
 		n.setHasBeenTraversed(true);
 		n.setToConsider(isConsidered);
 	}
@@ -448,10 +448,11 @@ public class TreeModule extends IUModule {
 	}
 	
 	public void update() {
-		tree = new TraversableTree(this.getRootNode());
-		tree.setDepth(getNodeDepth());
-		String json = tree.getJsonString();
-		send(json);
+			tree = new TraversableTree(this.getRootNode());
+			tree.setDepth(getNodeDepth());
+			String json = tree.getJsonString();
+			if (this.isIncremental()) 			
+				send(json);
 	}
 	
 	private int getNodeDepth() {

@@ -72,7 +72,7 @@ public class Main {
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
 		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyCDOkjKVuIKkMM_oic5gty7t91CWw8Y6ws"});
-		startGoogleASR(cm, rclp);
+//		startGoogleASR(cm, rclp);
 		ClientUtils.openNewClient();
 		
 		String[] uwords = {"route", "nein", "ehm", "ich", "route", "ehm", "ich",  "von", "ehm", "ich", "bielefeld", "ehm", "ich", "nein", "von", "hier", "ehm", "ich",  "nach", "berlin"};
@@ -91,7 +91,7 @@ public class Main {
 		for (String word : words) {
 			WordIU wiu = new WordIU(word, prev, null);
 			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-			Thread.sleep(1000);
+			Thread.sleep(900);
 			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
 			prev = wiu;
 		}
