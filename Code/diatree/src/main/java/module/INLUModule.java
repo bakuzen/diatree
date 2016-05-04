@@ -104,7 +104,6 @@ public class INLUModule extends IUModule {
 	}
 
 	public void update() {
-		System.out.println("update");
 		try {
 			
 			List<EditMessage<? extends IU>> edits = new ArrayList<EditMessage<? extends IU>>();

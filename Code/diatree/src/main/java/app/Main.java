@@ -75,9 +75,9 @@ public class Main {
 //		startGoogleASR(cm, rclp);
 		ClientUtils.openNewClient();
 		
-		String[] uwords = {"route", "nein", "ehm", "ich", "route", "ehm", "ich",  "von", "ehm", "ich", "bielefeld", "ehm", "ich", "nein", "von", "hier", "ehm", "ich",  "nach", "berlin"};
+//		String[] uwords = {"route", "nein", "ehm", "ich", "route", "ehm", "ich",  "von", "ehm", "ich", "bielefeld", "ehm", "ich", "nein", "von", "hier", "ehm", "ich",  "nach", "berlin", "rücksetzen"};
 //		String[] uwords = {"essen", "typ", "franzözisch","ja","wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
-//		String[] uwords = {"route", "von", "bielefeld", "nach", "trier"};
+		String[] uwords = {"essen", "und"};
 //		String[] uwords = {"essen", "typ", "franzözisch","ja","preis", "günstig", "wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
 //				"rücksetzen","nachricht", "jana", "rücksetzen"};
 //		String[] uwords = {"nachricht",  "message", "nimm", "das", "rote", "kreuz","neben","dem","blauen","t", "ferkel", "name", "jana"};
