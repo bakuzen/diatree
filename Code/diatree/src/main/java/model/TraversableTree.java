@@ -71,6 +71,19 @@ public class TraversableTree {
 			}
 		return false;
 	}
+	
+	public String getJsonStringForWords(LinkedList<String> words) {
+		JSONObject root = new JSONObject();
+		String out = "";
+		for (String word : words) out = word + " " + out;
+		try {
+			root.put("words", out.trim());
+		} 
+		catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return root.toString();
+	}
 
 	public String getJsonString() {
 		

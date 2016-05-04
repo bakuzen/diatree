@@ -16,6 +16,7 @@ import inpro.incremental.IUModule;
 import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.SlotIU;
+import inpro.incremental.unit.WordIU;
 import jetty.DiaTreeSocket;
 import model.Constants;
 import model.CustomFunction;
@@ -44,6 +45,7 @@ public class TreeModule extends IUModule {
 	private boolean firstDisplay;
 	private PropertySheet propertySheet;
 	private LinkedList<String> expectedStack;
+	private LinkedList<String> wordStack;
 	private boolean isIncremental;
 	
 	@Override
@@ -59,6 +61,7 @@ public class TreeModule extends IUModule {
 	
 	public void reset() {
 		setCurrentIntent(Constants.ROOT_NAME);
+		wordStack = new LinkedList<String>();
 		confirmStack = new LinkedList<SlotIU>();
 		expandedNodes = new LinkedList<Node>();
 		remainingIntents = new LinkedList<String>();
@@ -80,6 +83,11 @@ public class TreeModule extends IUModule {
 			initDisplay(false, true);
 		
 		for (EditMessage<? extends IU> edit : edits) {
+			
+			if (edit.getIU() instanceof WordIU) {
+				handleWordIU(edit);
+				continue;
+			}
 			
 			SlotIU decisionIU = (SlotIU) edit.getIU();
 			if (edit.getIU().groundedIn().isEmpty()) continue; // simple check in case something gets through that shouldn't
@@ -141,6 +149,20 @@ public class TreeModule extends IUModule {
 		update();
 	}
 	
+	private void handleWordIU(EditMessage<? extends IU> edit) {
+		switch (edit.getType()) {
+		case ADD:
+			wordStack.push(edit.getIU().toPayLoad());
+			break;
+		case COMMIT:
+			break;
+		case REVOKE:
+			wordStack.pop();
+			break;
+		default:
+			break;
+		}
+	}
 
 	private void indicateWaiting() {
 		if (tree == null) return;
@@ -453,6 +475,10 @@ public class TreeModule extends IUModule {
 			String json = tree.getJsonString();
 			if (this.isIncremental()) 			
 				send(json);
+			else {
+				String json2 = tree.getJsonStringForWords(wordStack);
+				send(json2);
+			}
 	}
 	
 	private int getNodeDepth() {
