@@ -16,6 +16,7 @@ import inpro.incremental.IUModule;
 import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.SlotIU;
+import inpro.incremental.unit.WordIU;
 import jetty.DiaTreeSocket;
 import model.Constants;
 import model.CustomFunction;
@@ -44,6 +45,7 @@ public class TreeModule extends IUModule {
 	private boolean firstDisplay;
 	private PropertySheet propertySheet;
 	private LinkedList<String> expectedStack;
+	private LinkedList<String> wordStack;
 	private boolean isIncremental;
 	
 	@Override
@@ -53,12 +55,13 @@ public class TreeModule extends IUModule {
 		socket = (DiaTreeSocket) ps.getComponent(DIATREE_SOCKET);
 		this.setIncremental(ps.getBoolean(IS_INCREMENTAL));
 		if (!this.isIncremental())
-			EndpointTimeout.setVariables(this, 1500);
+			EndpointTimeout.setVariables(this, 2000);
 		reset();
 	}
 	
 	public void reset() {
 		setCurrentIntent(Constants.ROOT_NAME);
+		wordStack = new LinkedList<String>();
 		confirmStack = new LinkedList<SlotIU>();
 		expandedNodes = new LinkedList<Node>();
 		remainingIntents = new LinkedList<String>();
@@ -80,6 +83,11 @@ public class TreeModule extends IUModule {
 			initDisplay(false, true);
 		
 		for (EditMessage<? extends IU> edit : edits) {
+			
+			if (edit.getIU() instanceof WordIU) {
+				handleWordIU(edit);
+				continue;
+			}
 			
 			SlotIU decisionIU = (SlotIU) edit.getIU();
 			if (edit.getIU().groundedIn().isEmpty()) continue; // simple check in case something gets through that shouldn't
@@ -135,13 +143,39 @@ public class TreeModule extends IUModule {
 			}
 //			in all other cases, just wait for more input
 			else if (Constants.WAIT.equals(decision)) {
-				// waiting....
+				indicateWaiting();
 			}
 		}
-		if (this.isIncremental())
-			update();
+		update();
 	}
 	
+	private void handleWordIU(EditMessage<? extends IU> edit) {
+		switch (edit.getType()) {
+		case ADD:
+			wordStack.push(edit.getIU().toPayLoad());
+			break;
+		case COMMIT:
+			break;
+		case REVOKE:
+			wordStack.pop();
+			break;
+		default:
+			break;
+		}
+	}
+
+	private void indicateWaiting() {
+		if (tree == null) return;
+		Node n = tree.getCurrentActiveNode();
+		if (n == null) return;
+		boolean isConsidered = n.isToConsider();
+		System.out.println("found node: " + n);
+		n.setHasBeenTraversed(false);
+		n.setToConsider(false);
+		update();
+		n.setHasBeenTraversed(true);
+		n.setToConsider(isConsidered);
+	}
 
 	private void abortConfirmation(String intent, String concept) {
 		log.info(logString("abortConfirmation", intent, concept));
@@ -168,6 +202,7 @@ public class TreeModule extends IUModule {
 			return;
 		}
 		Node top = getTopNode();
+		top.setHasBeenTraversed(true);
 		boolean foundExpanded = false;
 		for (Node child : top.getChildren()) {
 			if (child.isExpanded()) {
@@ -229,7 +264,6 @@ public class TreeModule extends IUModule {
 		}
 		
 		if (isCustomFunction(concept)) {
-			
 			Node top = getTopNode();
 			Node n = new Node(concept);
 			n.setProbability(dist.getProbabilityForItem(concept));
@@ -242,6 +276,9 @@ public class TreeModule extends IUModule {
 			return;
 		}
 		
+		Node top = getTopNode();
+		top.setHasBeenTraversed(false);
+		
 //		another case is if someone is referring to an intent (not a concept of an intent)
 //		when that happens, show the expansion of that intent
 		if (Constants.INTENT.equals(intent) && hasConcepts(concept)) {
@@ -249,16 +286,9 @@ public class TreeModule extends IUModule {
 			return;
 		}
 		
-		Node top = getTopNode();
-//		if (!top.hasChild(intent))  // this could happen when someone says the same word more than once
-//			return;
-		
-	
-//		Node child = top.getChildNode(intent);
-//		child.clearChildren();
-//		Node n = new Node(intent +":" + concept);
 		if (Constants.INTENT.equals(intent)) {
 			Node n = new Node(concept);
+			n.setHasBeenTraversed(true);
 			n.setProbability(dist.getProbabilityForItem(concept));
 			this.setCurrentIntent(concept);
 			remainingIntents = getPossibleIntents();
@@ -275,6 +305,7 @@ public class TreeModule extends IUModule {
 			this.pushExpandedNode(n);
 		}
 		
+		this.getRootNode().setHasBeenTraversed(false);
 		this.clearConfirmStack();
 		this.branchIntents();
 	}
@@ -346,6 +377,8 @@ public class TreeModule extends IUModule {
 		}
 
 		Node top = getTopNode();
+		top.setHasBeenTraversed(false);
+		
 		if (!top.hasChild(intent)) {
 			return false; // this avoids problems with repetitions
 		}
@@ -418,6 +451,7 @@ public class TreeModule extends IUModule {
 	}
 	
 	private void pushExpandedNode(Node n) {
+		n.setToConsider(false);
 		expandedNodes.push(n);
 	}
 	
@@ -436,10 +470,15 @@ public class TreeModule extends IUModule {
 	}
 	
 	public void update() {
-		tree = new TraversableTree(this.getRootNode());
-		tree.setDepth(getNodeDepth());
-		String json = tree.getJsonString();
-		send(json);
+			tree = new TraversableTree(this.getRootNode());
+			tree.setDepth(getNodeDepth());
+			String json = tree.getJsonString();
+			if (this.isIncremental()) 			
+				send(json);
+			else {
+				String json2 = tree.getJsonStringForWords(wordStack);
+				send(json2);
+			}
 	}
 	
 	private int getNodeDepth() {
@@ -458,6 +497,7 @@ public class TreeModule extends IUModule {
 		remainingIntents.remove("intent"); // keyword, but used in a similar way--shouldn't be displayed
 		
 		Node root = new Node("");
+		root.setHasBeenTraversed(true);
 		this.clearConfirmStack();
 		this.clearExpandedStack();
 		this.pushExpandedNode(root);
@@ -474,8 +514,10 @@ public class TreeModule extends IUModule {
 
 	private void branchIntents() {
 		Node top = getTopNode();
+		boolean traversed = remainingIntents.size() == 1 ? true : false;
 		for (String intent : remainingIntents) {
 			Node i = new Node(intent);
+			i.setHasBeenTraversed(traversed);
 			top.addChild(i);
 		}
 	}

@@ -19,7 +19,6 @@
         </propertylist>
     </component>
     
-    
     <component name="googleASR" type="inpro.incremental.source.GoogleASR">
         <property name="apiKey" value="AIzaSyBOnqyblkzEprtUkDrjctec5wJSiJI1i0k"/>
     	<property name="samplingRate" value="16000"/>
@@ -27,10 +26,10 @@
         <property name="frontend" value="${frontend}"/>
         <propertylist name="hypChangeListeners">
 <!--         	<item>printer</item> -->
+			<item>tree</item>
         	<item>inlu</item>
 		</propertylist>
     </component>
-    
     
      <component name="inlu" type="module.INLUModule">
     	<property name="domain" value="sigdial"/>
@@ -52,7 +51,7 @@
         <property name="keyword" value="ferkel"/>
         <propertylist name="hypChangeListeners">
 	</propertylist>
-    </component>  
+    </component>
     
     <component name="registry" type="model.CustomFunctionRegistry">
     <propertylist name="customFunctionNames">
@@ -81,8 +80,6 @@
     </component>     
     
  
-
-    
     <component name="diatree" type="jetty.DiaTreeSocket">
      <property name="module" value="tree"/>
     </component>
@@ -99,9 +96,6 @@
 	</component>
     
 
-    
- 
-    
     <component name="kaldiASR" type="inpro.incremental.source.KaldiASR">
         <property name="server" value="localhost"/>
         <property name="port" value="5010"/>

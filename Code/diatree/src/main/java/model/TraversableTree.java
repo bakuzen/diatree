@@ -14,6 +14,7 @@ public class TraversableTree {
 	private Node root;
 	private LinkedList<Node> trail;
 	private int depth;
+	private Node currentActiveNode;
 	
 	public TraversableTree() {
 		this.setRoot(null);
@@ -70,6 +71,19 @@ public class TraversableTree {
 			}
 		return false;
 	}
+	
+	public String getJsonStringForWords(LinkedList<String> words) {
+		JSONObject root = new JSONObject();
+		String out = "";
+		for (String word : words) out = word + " " + out;
+		try {
+			root.put("words", out.trim());
+		} 
+		catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return root.toString();
+	}
 
 	public String getJsonString() {
 		
@@ -82,6 +96,7 @@ public class TraversableTree {
 			if (getRoot().hasBeenTraversed()) {
 				rootJSON.put("type", "red");
 				rootJSON.put("level", "red");
+				setCurrentActiveNode(getRoot());
 			}
 			jsonHelp(root, rootJSON);
 			
@@ -114,6 +129,11 @@ public class TraversableTree {
 				if (c.hasBeenTraversed()) {
 					child.put("type", "red");
 					child.put("level", "red");
+					setCurrentActiveNode(c);
+				}
+				else if (c.isToConsider()) {
+					child.put("type", "steelblue");
+					child.put("level", "steelblue");
 				}
 				childrenJSON.put(i++, child);
 				if (i >= Constants.NODE_DISPLAY_LIMIT) {
@@ -185,6 +205,14 @@ public class TraversableTree {
 	public void setDepth(int nodeDepth) {
 		this.depth = nodeDepth;
 		
+	}
+
+	public Node getCurrentActiveNode() {
+		return currentActiveNode;
+	}
+
+	public void setCurrentActiveNode(Node currentActiveNode) {
+		this.currentActiveNode = currentActiveNode;
 	}
 	
 	

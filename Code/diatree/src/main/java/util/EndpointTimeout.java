@@ -36,7 +36,9 @@ public class EndpointTimeout extends Thread {
 		try {
 			Thread.sleep(duration);
 			if (tree != null)
+				tree.setIncremental(true);
 				tree.update();
+				tree.setIncremental(false);
 		} 
 		catch (InterruptedException e) {
 		}

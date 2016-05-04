@@ -33,6 +33,10 @@
       "properties": [{"property": "bremen"}]
     },
     {
+      "concept": "berlin",
+      "properties": [{"property": "berlin"}]
+    },    
+    {
       "concept": "hannover",
       "properties": [{"property": "hannover"}]
     },
@@ -62,7 +66,7 @@
     },
     {
       "concept": "bielefeld",
-      "properties": [{"property": "bielefeld"}]
+      "properties": [{"property": "bielefeld"},{"property": "hier"}]
     },
     {
       "concept": "bonn",

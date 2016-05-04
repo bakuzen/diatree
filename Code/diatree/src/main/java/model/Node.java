@@ -11,10 +11,12 @@ public class Node implements Comparable<Node> {
 	private boolean hasBeenTraversed;
 	private boolean isExpanded;
 	private double probability;
+	private boolean toConsider;
 	
 	public Node(String n) {
 		this.setProbability(0.0);
 		this.setName(n);
+		this.setToConsider(true);
 		this.children = new TreeSet<Node>();
 	}
 	public void clearChildren() {
@@ -82,5 +84,11 @@ public class Node implements Comparable<Node> {
 	}
 	public void setProbability(double probability) {
 		this.probability = probability;
+	}
+	public boolean isToConsider() {
+		return toConsider;
+	}
+	public void setToConsider(boolean toConsider) {
+		this.toConsider = toConsider;
 	}
 }

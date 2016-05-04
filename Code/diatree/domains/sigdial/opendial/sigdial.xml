@@ -27,7 +27,7 @@
 		<rule id="ruleConfirm">
 			<case>
 				<condition>
-					<if var="SlotIU" relation="&gt;" value="0.6"/>
+					<if var="SlotIU" relation="&gt;" value="0.5"/>
 					<if var="SlotIU" relation="&lt;" value="0.75"/>
 				</condition>
 				<effect>
@@ -51,7 +51,7 @@
 		<rule id="ruleWait">
 			<case>
 				<condition>
- 					<if var="SlotIU" relation="&lt;" value="0.6"/>
+ 					<if var="SlotIU" relation="&lt;" value="0.5"/>
 				</condition>
 				<effect>
 					<set var="decision" value="wait"/>
