@@ -1,9 +1,7 @@
-\documentclass[a4paper,11pt]{article}
-
-% \issue{1}{1}{2014}
-\usepackage[margin=25mm]{geometry}
+\documentclass[11pt]{article}
+\usepackage{acl2016}
 \usepackage{times}
-\usepackage[round]{natbib}
+% \usepackage[round]{natbib}
 \usepackage{latexsym}
 \usepackage[utf8]{inputenc}
 \usepackage[font=small,labelfont=bf]{caption}
@@ -42,6 +40,10 @@
 \newcommand{\ep}[0]{\texttt{EP}}
 \newcommand{\inprotk}[0]{\textsc{InproTK}}
 \newcommand{\sium}[0]{\textsc{sium}}
+\newcommand{\asr}[0]{\textsc{asr}}
+\newcommand{\dm}[0]{\textsc{dm}}
+\newcommand{\ui}[0]{\textsc{ui}}
+\newcommand{\iu}[0]{\textsc{iu}}
 \newcommand{\rr}[0]{\textsc{rr}}
 
 %Document Head
@@ -86,9 +88,38 @@
 \section{System Description: DiaTree}
 \label{section:system_def}
 
+This section introduces and describes our \sds. Our \sds\ is modularised into four main components: automatic speech recognition (\asr), natural langauge understanding (\nlu), dialogue management (\dm), and the user interface (\ui) which, as explained below, is visualised as a right-branching tree. For the remainder of this section, each module is exlpained in turn. First, however, we explain what is meant by incremental processing and the role that plays in the work presented here. 
+
+\todo{figure of system modules}
+
+\subsection{Incremental Dialogue}
+
+Of prime importance in our \sds--the aspect of our \sds\ that sets it apart from others--is the requirement that it processes \emph{incrementally}. An often-cited concern with incremental processing is regarding informativeness: why act so soon when waiting (even just for a moment) would allow additional information, resutling in more-informed decisions? The trade-off here is all-important: \emph{naturalness} as perceived by the end user who is interacting with the \sds. Indeed, it has been shown that humans perceive incremental systems as being more natural than traditional, turn-based systems \cite{Aist2006,Skantze2009,skantze2010sigdial,Asri2014}, offer a more human-like experience for the human users \cite{Edlund2008b} and are more satisfying to interact with than non-incremental systems \cite{Aistetal:incrunder-short}. Psycholinguistic research has also shown that humans process (i.e., comprehend) utterances as they unfold and do not wait until the end of an utterance to begin the comprehension process \cite{Tanenhaus1995,Spivey_2002tw}. 
+
+The trade-off between informativeness and naturalness can be reconciled when mechanisms are in place where earlier desicions can be repaired. Such mechanisms were introduced in the incremental unit (\iu) framework for \sds\ \cite{Schlangen2009,Schlangen2011}. Following \cite{kennington-kousidis-schlangen:2014:W14-43}, \sds s based on the \iu-network approach consist of a network of processing \emph{modules}. A typical module takes input from its \emph{left buffer}, performs some kind of processing on that data, and places the processed result onto its \emph{right buffer}. The data are packaged as the payload of \emph{incremental units} (\textsc{iu}s) which are passed between modules. The \textsc{iu}s themselves are also interconnected via  \emph{same level links} (\textsc{sll}) and \emph{grounded-in links} (\textsc{grin}), the former allowing the linking of \textsc{iu}s as a growing sequence, the latter allowing that sequence to convey what \textsc{iu}s directly affect it.  A complication particular to incremental processing is that modules can ``change their mind'' about what the best hypothesis is, in light of later information, thus \textsc{iu}s can be \emph{added}, \emph{revoked}, or \emph{committed} to a network of \textsc{iu}s.
+
+The modules exlpained in the remained of this section are implemented as \iu-modules and process incrementally. Each will now be explained. 
+
+\subsection{Speech Recognition}
+
+Incremental processing begins with modules that take in input; in the case of our \sds, that is the \asr\ component. Incremental \asr\ must transcribe uttered speech into words and words must be forthcoming from the \asr\ as early as possible (i.e., the \asr\ must not wait for endponiting in order to act). Each module that follows must also process incrementally, acting in lock-step upon input as it is received. Incremental \asr\ is not new \cite{baumannetal2009:naacl} and many of the current freely-accessible \asr\ systems can produce output (semi-) incrementally. 
+
+In our \sds, we opt for Google \asr\ because of its wide vocbaulary coverage of the language we are interested in (German). We are able to package \asr\ output from the Google service into \iu s as explained above. Those word \iu s are passed to the \nlu\ module, which will now be explained. 
+
 \subsection{Language Understanding}
 
-\todo{explain SIUM}
+We approach the task of \nlu\ as a slot-filling task (a very common approach; see \cite{Tur2012}) where the system can fill the task when all slots of a frame are filled. The main driver of the \nlu\ in our \sds\ is the \sium\ model of \nlu\ introduced in \cite{Kennington2013a}. Though originally a model of reference resolution, the authors hinted that it could be used for general \nlu, which we do here. The model is formalised as follows:
+
+\begin{center}
+\begin{equation}
+   P(I|U) = \frac{1}{P(U)} P(I)\sum_{r\in R} P(U|R)P(R|I) 
+\label{eq:disc1}
+\end{equation}
+\end{center}
+
+That is, $P(I|U)$ is the probability of the intent $I$ (i.e., a frame slot) behind the speaker's (ongoing) utterance $U$. This is recovered using the mediating variable $R$, a set of \emph{properties} which map between aspects of $U$ and aspects of $I$. These properties could be visual properties of visible objects, or they could be more abstract properties that intents might have, which we opt for here (e.g., the intent of a \texttt{destination} might be filled by \texttt{new york} which has (among others) properties like \texttt{new york}, \texttt{biggest-us-city}, \texttt{has-statue-of-libery}, etc.). Properties are pre-defined by a system designer and can match words that might be uttered to describe the intent in question. The mapping betwen properties and aspects of $U$ can be learned from data. During application, $P(U|R)$ can produce a distribution over words (or properties, see below) which are summed over and the probability mass for each property is accumulated for each intent, resulting in a distribution over possible intents. This occurs at each word increment, where the distribution from the previous increment is combined via $P(I)$, keeping track of the distribution over time. 
+
+In our \sds, we apply an instantion of \sium\ for each slot (explained in Section~\ref{section:experiments}), all of which update at each word increment. At each word increment, the updated slots (and their corresponding) distributions are given to the \dm, which will now be explained. 
 
 \subsection{Dialogue Manager}
 
@@ -111,8 +142,8 @@
 
 \subsection{Results}
 
-% \bibliographystyle{plainnat}
-% \bibliography{refs}
+\bibliographystyle{acl_natbib}
+\bibliography{refs}
 
 \end{document}
 
