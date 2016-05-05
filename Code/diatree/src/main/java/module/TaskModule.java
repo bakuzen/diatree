@@ -1,6 +1,7 @@
 package module;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 
 import edu.cmu.sphinx.util.props.PropertyException;
@@ -35,6 +36,11 @@ public class TaskModule extends IUModule {
 	public void taskComplete() {
 		inlu.resetSession();
 		tasks.nextTask();
+	}
+
+	public void logResponses(HashMap<String, String> responses) {
+		System.out.println("RESPONSES:" + responses);
+		
 	}
 
 }

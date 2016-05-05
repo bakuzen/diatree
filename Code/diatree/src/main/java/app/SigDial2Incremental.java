@@ -28,7 +28,9 @@ import jetty.DiaTreeSocket;
 import jetty.JettyServer;
 import model.CustomFunctionRegistry;
 import module.INLUModule;
+import module.TaskModule;
 import util.ClientUtils;
+import util.SigDial2IncrementalTimeout;
 
 public class SigDial2Incremental {
 	
@@ -55,7 +57,9 @@ public class SigDial2Incremental {
 		cm.setGlobalProperty("isIncremental", "true");
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
-		
+		TaskModule task = (TaskModule) cm.lookup("task");
+		SigDial2IncrementalTimeout.setVariables(task, 0 * (60 * 1000));
+		SigDial2IncrementalTimeout.getInstance().reset(); // start the timer
 //		INLUModule nlu = (INLUModule) cm.lookup("inlu");
 		
 		AdvancedDiaTreeCreator creator = new AdvancedDiaTreeCreator((DiaTreeSocket) cm.lookup(DIATREE_SOCKET));
@@ -72,23 +76,24 @@ public class SigDial2Incremental {
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
 		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"});
-		startGoogleASR(cm, rclp);
+//		startGoogleASR(cm, rclp);
 		
 		ClientUtils.openNewClient();
 		
 //		Or, one can send words individually with a 500 ms pause between them
 //		String[] uwords = {"route", "von", "ich", "ehm", "bielefeld", "nein", "hier", "nach", "trier"};
-//		List<String> words = Arrays.asList(uwords);
-//		Thread.sleep(2000);
-//		
-//		WordIU prev = WordIU.FIRST_WORD_IU;
-//		for (String word : words) {
-//			WordIU wiu = new WordIU(word, prev, null);
-//			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-//			Thread.sleep(400);
-//			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
-//			prev = wiu;
-//		}
+		String[] uwords = {"route", "von"};
+		List<String> words = Arrays.asList(uwords);
+		Thread.sleep(2000);
+		
+		WordIU prev = WordIU.FIRST_WORD_IU;
+		for (String word : words) {
+			WordIU wiu = new WordIU(word, prev, null);
+			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+			Thread.sleep(400);
+			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
+			prev = wiu;
+		}
 	}
 	
 	

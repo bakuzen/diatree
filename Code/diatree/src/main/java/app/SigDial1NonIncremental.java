@@ -55,7 +55,7 @@ public class SigDial1NonIncremental {
 		ConfigurationManager cm = new ConfigurationManager(new File("src/main/java/config/config.xml").toURI().toURL());
 		cm.setGlobalProperty("isIncremental", "false");
 		
-		SigDial1NonIncrementalTimeout.setVariables(1 * (60 * 1000));
+		SigDial1NonIncrementalTimeout.setVariables(5 * (60 * 1000));
 		SigDial1NonIncrementalTimeout.getInstance().reset(); // start the timer for the phase
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
