@@ -29,6 +29,7 @@ import jetty.JettyServer;
 import model.CustomFunctionRegistry;
 import module.INLUModule;
 import util.ClientUtils;
+import util.SigDial1NonIncrementalTimeout;
 
 public class SigDial1NonIncremental {
 	
@@ -53,6 +54,9 @@ public class SigDial1NonIncremental {
 		
 		ConfigurationManager cm = new ConfigurationManager(new File("src/main/java/config/config.xml").toURI().toURL());
 		cm.setGlobalProperty("isIncremental", "false");
+		
+		SigDial1NonIncrementalTimeout.setVariables(1 * (60 * 1000));
+		SigDial1NonIncrementalTimeout.getInstance().reset(); // start the timer for the phase
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
 		
@@ -72,22 +76,22 @@ public class SigDial1NonIncremental {
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
 		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"});
-		startGoogleASR(cm, rclp);
+//		startGoogleASR(cm, rclp);
 		
 		ClientUtils.openNewClient();
 		
 //		Or, one can send words individually with a 500 ms pause between them
-//		String[] uwords = {"anruf", "name", "claudia", "claudia"};
-//		List<String> words = Arrays.asList(uwords);
-//		Thread.sleep(2000);
-//		WordIU prev = WordIU.FIRST_WORD_IU;
-//		for (String word : words) {
-//			WordIU wiu = new WordIU(word, prev, null);
-//			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-//			Thread.sleep(400);
-//			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
-//			prev = wiu;
-//		}
+		String[] uwords = {"anruf", "name", "claudia", "claudia"};
+		List<String> words = Arrays.asList(uwords);
+		Thread.sleep(2000);
+		WordIU prev = WordIU.FIRST_WORD_IU;
+		for (String word : words) {
+			WordIU wiu = new WordIU(word, prev, null);
+			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+			Thread.sleep(400);
+			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
+			prev = wiu;
+		}
 	}
 	
 	
