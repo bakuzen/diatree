@@ -29,7 +29,7 @@
 
 </style> 
 <body onload="start()">
-<span id="asr"></span><br>
+<font size="14"><span id="asr"></span><font><br>
 
 <!-- <span id="foo"></span><br> -->
 <script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>     
@@ -59,13 +59,12 @@
         var ws = new WebSocket("ws://localhost:8080/");
 
         ws.onmessage = function (event) {
-
-
         	
         	root =  JSON.parse(event.data);
         	
 			if (root.hasOwnProperty("words")) {
 				document.getElementById("asr").textContent=root.words;
+				svg.selectAll("*").remove();
 				return;
 			}
         	

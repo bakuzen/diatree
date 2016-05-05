@@ -1,4 +1,6 @@
 
+    <property name="isIncremental" value="true"/>
+    
     <property name="deltifier" value="none"/>
     <property name="deltifierParam" value="0"/>
     <property name="baseData" value="baseData"/>
@@ -31,17 +33,25 @@
 		</propertylist>
     </component>
     
+     <component name="task" type="module.TaskModule">
+    	<property name="inlu" value="inlu"/>
+    	<propertylist name="hypChangeListeners">
+<!--     	 	<item>dm</item> -->
+		</propertylist>
+    </component>
+    
      <component name="inlu" type="module.INLUModule">
     	<property name="domain" value="sigdial"/>
     	<property name="module" value="tree"/>
     	<propertylist name="hypChangeListeners">
+    	    <item>task</item>
     	 	<item>dm</item>
 		</propertylist>
     </component> 
     
      <component name="tree" type="module.TreeModule">
     	<property name="socket" value="diatree"/>
-    	<property name="isIncremental" value="true"/>
+    	<property name="isIncremental" value="{isIncremental}"/>
     	<propertylist name="hypChangeListeners">
 		</propertylist>
     </component>   

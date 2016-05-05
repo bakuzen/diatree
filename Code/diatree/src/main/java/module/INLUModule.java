@@ -20,6 +20,7 @@ import model.DomainModel;
 import model.Frame;
 import model.db.Domain;
 import model.iu.FrameIU;
+import util.EndpointTimeout;
 import util.SessionTimeout;
 
 public class INLUModule extends IUModule {
@@ -31,7 +32,7 @@ public class INLUModule extends IUModule {
 	@S4String(defaultValue = "test")
 	public final static String DOMAIN = "domain";
 	
-	@S4Integer (defaultValue = 10000)
+	@S4Integer (defaultValue = 60000)
 	public final static String TIMEOUT = "timeout";
 	
 	public static DomainModel model;
@@ -92,7 +93,11 @@ public class INLUModule extends IUModule {
 
 	public void resetSession() {
 		model.newUtterance();
+//		boolean isIncremental = tree.isIncremental();
+//		tree.setIncremental(true);
 		tree.initDisplay(true, true);		
+//		tree.setIncremental(isIncremental);
+//		tree.initDisplay(true, true);
 	}
 
 

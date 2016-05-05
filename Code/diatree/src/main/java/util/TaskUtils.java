@@ -17,10 +17,12 @@ import model.Constants;
 import model.DomainModel;
 import model.db.Domain;
 import module.INLUModule;
+import module.TaskModule;
 
 public class TaskUtils {
 	
 	LinkedList<Task> taskStack;
+	TaskModule module;
 	
 	String[] messages = {
 			"essen in der Mensa",
@@ -33,6 +35,12 @@ public class TaskUtils {
 	}
 	
 	
+	public TaskUtils(TaskModule taskModule) {
+		this();
+		this.module = taskModule;
+	}
+
+
 	private class Task implements Comparable<Task> {
 		
 		
@@ -144,7 +152,7 @@ public class TaskUtils {
 							if (e.getID() == 400) {
 		                    	frame.setVisible(false);
 		                    	frame.dispose();
-		                    	nextTask();
+		                    	module.taskComplete();
 							}
 						}
 
