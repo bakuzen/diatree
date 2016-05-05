@@ -1,13 +1,10 @@
 package util;
 
 import java.awt.EventQueue;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.util.HashMap;
 
 import javax.swing.ButtonGroup;
@@ -86,8 +83,6 @@ public class SigDial2IncrementalTimeout extends Thread {
 	        		q2.setText("was it everything you hoped for?");
 	        		frame.getContentPane().add(q2);
 	        		getButtonGroup(".p1q2", frame);
-	        		
-	        		
 	        		
 	        		JButton done = new JButton("Fertig!");
 	        		done.addActionListener(new ActionListener() {

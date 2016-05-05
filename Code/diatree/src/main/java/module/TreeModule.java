@@ -21,6 +21,7 @@ import jetty.DiaTreeSocket;
 import model.Constants;
 import model.CustomFunction;
 import model.CustomFunctionRegistry;
+import model.Frame;
 import model.Node;
 import model.TraversableTree;
 import sium.nlu.stat.Distribution;
@@ -53,7 +54,6 @@ public class TreeModule extends IUModule {
 		super.newProperties(ps);
 		this.setPropertySheet(ps);
 		socket = (DiaTreeSocket) ps.getComponent(DIATREE_SOCKET);
-		System.out.println(ps.getBoolean(IS_INCREMENTAL));
 		this.setIncremental(ps.getBoolean(IS_INCREMENTAL));
 		if (!this.isIncremental())
 			EndpointTimeout.setVariables(this, 4000);
@@ -79,6 +79,8 @@ public class TreeModule extends IUModule {
 	protected void leftBufferUpdate(Collection<? extends IU> ius, List<? extends EditMessage<? extends IU>> edits) {
 		
 		if (!this.isIncremental()) EndpointTimeout.getInstance().reset();
+		
+		System.out.println(edits);
 		
 		if (isFirstDisplay())
 			initDisplay(false, true);
@@ -124,20 +126,18 @@ public class TreeModule extends IUModule {
 						abort();
 					}
 				}
-				break; //this means we don't step through any more of the possible intents
+//				break; //this means we don't step through any more of the possible intents
 			}
 //			when we want to invoke a clarification request
 			else if (Constants.CONFIRM.equals(decision)) {
 				pushToConfirmStack(slotIU);
 				offerConfirmation(intent, concept, dist);
 				resetUtterance();
-				break;
 			}
 //			when an intent has a concept with a high enough probability 
 			else if (Constants.SELECT.equals(decision)) {
 				if (!checkConfirmStackIsEmpty()) {
 					logString("select!", "don't do this!", "confirmation stack isn't empty!");
-					break;
 				}
 				expandIntent(intent, concept, dist);
 				resetUtterance();
@@ -158,6 +158,7 @@ public class TreeModule extends IUModule {
 		case COMMIT:
 			break;
 		case REVOKE:
+			if (wordStack.isEmpty()) return;
 			wordStack.pop();
 			break;
 		default:
@@ -564,5 +565,25 @@ public class TreeModule extends IUModule {
 
 	public void setIncremental(boolean isIncremental) {
 		this.isIncremental = isIncremental;
+	}
+
+	public Frame getFilledFrame() {
+		Frame frame = new Frame();
+		Node n = getRootNode();
+		do {
+			String name = n.getName();
+			if (name.contains(":")) {
+				String[] c = name.split(":");
+				frame.add(c[0], c[1], n.getProbability());
+			}
+			else {
+				frame.add(Constants.INTENT, name, n.getProbability());
+			}
+			if (n.hasChildren())
+				n = n.getChildren().first();
+			else n = null;
+		} while (n != null);
+		System.out.println(frame);
+		return frame;
 	}
 }

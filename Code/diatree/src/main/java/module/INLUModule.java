@@ -128,4 +128,9 @@ public class INLUModule extends IUModule {
 		
 	}
 
+
+	public Frame getFilledFrame() {
+		return tree.getFilledFrame();
+	}
+
 }

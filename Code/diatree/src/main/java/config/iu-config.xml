@@ -36,7 +36,7 @@
      <component name="task" type="module.TaskModule">
     	<property name="inlu" value="inlu"/>
     	<propertylist name="hypChangeListeners">
-<!--     	 	<item>dm</item> -->
+			<item>tree</item>
 		</propertylist>
     </component>
     
@@ -44,7 +44,6 @@
     	<property name="domain" value="sigdial"/>
     	<property name="module" value="tree"/>
     	<propertylist name="hypChangeListeners">
-    	    <item>task</item>
     	 	<item>dm</item>
 		</propertylist>
     </component> 
@@ -85,7 +84,8 @@
     <component name="decision" type="module.opendial.ConfigurableModule">
         <property name="effectVariable" value="decision"/>
 	    <propertylist name="hypChangeListeners">
- 	   	 	<item>tree</item> 
+	    	<item>tree</item> 
+	        <item>task</item>
 	    </propertylist>
     </component>     
     

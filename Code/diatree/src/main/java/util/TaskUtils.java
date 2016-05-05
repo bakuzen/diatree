@@ -14,15 +14,16 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import model.Constants;
-import model.DomainModel;
+import model.Frame;
 import model.db.Domain;
-import module.INLUModule;
 import module.TaskModule;
 
 public class TaskUtils {
 	
 	LinkedList<Task> taskStack;
 	TaskModule module;
+	Task task = null;
+	AdaptiveTask adaptive;
 	
 	String[] messages = {
 			"essen in der Mensa",
@@ -32,6 +33,7 @@ public class TaskUtils {
 	
 	public TaskUtils() {
 		taskStack = new LinkedList<Task>();
+		adaptive = new AdaptiveTask();
 	}
 	
 	
@@ -40,8 +42,7 @@ public class TaskUtils {
 		this.module = taskModule;
 	}
 
-
-	private class Task implements Comparable<Task> {
+	public class Task implements Comparable<Task> {
 		
 		
 		public String domain;
@@ -61,7 +62,6 @@ public class TaskUtils {
 		public int compareTo(Task o) {
 			return this.toString().compareTo(o.toString()); 
 		}
-	
 		
 	}
 	
@@ -112,8 +112,6 @@ public class TaskUtils {
 	
 	public void nextTask() {
 		
-		Task task = null;
-		
 		if (taskStack.isEmpty()) {
 			task = generateNewTask();
 			taskStack.push(task);
@@ -133,7 +131,6 @@ public class TaskUtils {
 		}
 		
 		display(task);
-		
 	}
 
 
@@ -203,6 +200,20 @@ public class TaskUtils {
 				}
 	        });
 		
+	}
+
+
+	public Task getCurrentTask() {
+		return task;
+	}
+
+	public void registerFrame(Frame frame) {
+		adaptive.registerFrame(frame);
+	}
+
+
+	public  HashMap<String, LinkedList<String>> predictProgression(String concept) {
+		return adaptive.predictProgression(concept);
 	}
 	
 	

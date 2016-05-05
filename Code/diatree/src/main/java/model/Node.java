@@ -28,6 +28,9 @@ public class Node implements Comparable<Node> {
 	public TreeSet<Node> getChildren() {
 		return children;
 	}
+	public boolean hasChildren() {
+		return !children.isEmpty();
+	}
 	public boolean hasBeenTraversed() {
 		return hasBeenTraversed;
 	}
