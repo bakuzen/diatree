@@ -120,15 +120,15 @@ public class DomainModel {
 		if (getContext().getPropertiesSet().contains(word)) { 
 			groundedResult.setProbabilityForItem(word, 1.0);
 		}
-//		else {
-////			try a probability derived from the Lev distance. This has to step through each of the properties, though. 
-//			for (String concept : getContext().getPropertiesSet()) {
-//				double lprob = LevenshteinDistance.getProbability(word, concept);
-//				if (lprob > Constants.WORD_DISTANCE_THRESHOLD) {
-//					groundedResult.setProbabilityForItem(concept, lprob);
-//				}
-//			}
-//		}
+		else {
+//			try a probability derived from the Lev distance. This has to step through each of the properties, though. 
+			for (String concept : getContext().getPropertiesSet()) {
+				double lprob = LevenshteinDistance.getProbability(word, concept);
+				if (lprob > Constants.WORD_DISTANCE_THRESHOLD) {
+					groundedResult.setProbabilityForItem(concept, lprob);
+				}
+			}
+		}
 		grounder.groundIncrement(getContext(), groundedResult);
 		return grounder.getPosterior();
 		

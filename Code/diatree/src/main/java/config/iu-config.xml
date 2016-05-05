@@ -51,7 +51,7 @@
     
      <component name="tree" type="module.TreeModule">
     	<property name="socket" value="diatree"/>
-    	<property name="isIncremental" value="{isIncremental}"/>
+    	<property name="isIncremental" value="${isIncremental}"/>
     	<propertylist name="hypChangeListeners">
 		</propertylist>
     </component>   

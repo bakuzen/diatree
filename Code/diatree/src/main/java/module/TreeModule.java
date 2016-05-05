@@ -53,6 +53,7 @@ public class TreeModule extends IUModule {
 		super.newProperties(ps);
 		this.setPropertySheet(ps);
 		socket = (DiaTreeSocket) ps.getComponent(DIATREE_SOCKET);
+		System.out.println(ps.getBoolean(IS_INCREMENTAL));
 		this.setIncremental(ps.getBoolean(IS_INCREMENTAL));
 		if (!this.isIncremental())
 			EndpointTimeout.setVariables(this, 4000);
@@ -472,13 +473,14 @@ public class TreeModule extends IUModule {
 	public void update() {
 			tree = new TraversableTree(this.getRootNode());
 			tree.setDepth(getNodeDepth());
-			String json = tree.getJsonString();
+			String json = null;
+			
 			if (this.isIncremental()) 			
-				send(json);
-			else {
-				String json2 = tree.getJsonStringForWords(wordStack);
-				send(json2);
-			}
+				json = tree.getJsonString();	
+			else 
+				json = tree.getJsonStringForWords(wordStack);
+			
+			send(json);
 	}
 	
 	private int getNodeDepth() {

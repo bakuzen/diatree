@@ -61,7 +61,7 @@
         ws.onmessage = function (event) {
         	
         	root =  JSON.parse(event.data);
-        	
+        	console.log(event.data);
 			if (root.hasOwnProperty("words")) {
 				document.getElementById("asr").textContent=root.words;
 				svg.selectAll("*").remove();

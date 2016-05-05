@@ -52,6 +52,7 @@ public class SigDial2Incremental {
 		
 		
 		ConfigurationManager cm = new ConfigurationManager(new File("src/main/java/config/config.xml").toURI().toURL());
+		cm.setGlobalProperty("isIncremental", "true");
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
 		
@@ -70,19 +71,13 @@ public class SigDial2Incremental {
 		
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
-		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyCDOkjKVuIKkMM_oic5gty7t91CWw8Y6ws"});
+		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"});
 		startGoogleASR(cm, rclp);
 		
 		ClientUtils.openNewClient();
 		
 //		Or, one can send words individually with a 500 ms pause between them
 //		String[] uwords = {"route", "von", "ich", "ehm", "bielefeld", "nein", "hier", "nach", "trier"};
-//		String[] uwords = {"essen", "typ", "franzözisch","ja","preis", "günstig", "wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
-//				"rücksetzen","nachricht", "jana", "rücksetzen"};
-//		String[] uwords = {"nachricht",  "message", "nimm", "das", "rote", "kreuz","neben","dem","blauen","t", "ferkel", "name", "jana"};
-//		String[] uwords = {"hunger", "nein", "essen", "stadtmitte", "teuer", "nein", 
-//				           "teuer", "nein", "preis", "teuer","typ", "thai", 
-//				           "nein", "nein", "nein", "nein", "nein", "handy", "nein"};
 //		List<String> words = Arrays.asList(uwords);
 //		Thread.sleep(2000);
 //		

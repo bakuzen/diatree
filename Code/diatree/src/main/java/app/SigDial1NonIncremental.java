@@ -77,10 +77,10 @@ public class SigDial1NonIncremental {
 		ClientUtils.openNewClient();
 		
 //		Or, one can send words individually with a 500 ms pause between them
-		String[] uwords = {"anruf", "name", "claudia", "claudia"};
-		List<String> words = Arrays.asList(uwords);
-		Thread.sleep(2000);
-		WordIU prev = WordIU.FIRST_WORD_IU;
+//		String[] uwords = {"anruf", "name", "claudia", "claudia"};
+//		List<String> words = Arrays.asList(uwords);
+//		Thread.sleep(2000);
+//		WordIU prev = WordIU.FIRST_WORD_IU;
 //		for (String word : words) {
 //			WordIU wiu = new WordIU(word, prev, null);
 //			edits.add(new EditMessage<IU>(EditType.ADD, wiu));

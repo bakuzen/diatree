@@ -35,6 +35,7 @@ public class EndpointTimeout extends Thread {
 	public void run() {
 		try {
 			Thread.sleep(duration);
+			System.out.println("Endpoint reached.");
 			if (tree != null)
 				tree.setIncremental(true);
 				tree.update();
