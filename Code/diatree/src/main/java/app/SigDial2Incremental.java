@@ -68,10 +68,9 @@ public class SigDial2Incremental {
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
 		TaskModule task = (TaskModule) cm.lookup("task");
-		SigDial2IncrementalTimeout.setVariables(task, 5 * (60 * 1000));
+		SigDial2IncrementalTimeout.setVariables(task, 1 * (60 * 1000));
 		SigDial2IncrementalTimeout.getInstance().reset(); // start the timer
 //		INLUModule nlu = (INLUModule) cm.lookup("inlu");
-		
 		
 		AdvancedDiaTreeCreator creator = new AdvancedDiaTreeCreator((DiaTreeSocket) cm.lookup(DIATREE_SOCKET));
 		JettyServer jetty = new JettyServer(creator);

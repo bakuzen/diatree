@@ -89,7 +89,7 @@ public class SigDial3Adaptive {
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
 		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyCPOrPwttjs9OMBrYX6M6lFR5g5yk2Vw1Q"});
-		GoogleASRUtil.setVars(cm, rclp, webSpeech);
+		GoogleASRUtil.setVars(cm, rclp, webSpeech); 
 		GoogleASRUtil.startGoogleASR();
 		
 		

@@ -48,7 +48,7 @@ public class SigDial1NonIncremental {
 //	private List<PushBuffer> hypListeners;
 	List<EditMessage<IU>> edits = new ArrayList<EditMessage<IU>>();
 	
-	private void run() throws InterruptedException, PropertyException, IOException, UnsupportedAudioFileException {
+	public void run() throws InterruptedException, PropertyException, IOException, UnsupportedAudioFileException {
 		
 //		EmbeddedTomcat tomcat = new EmbeddedTomcat();
 		
@@ -56,7 +56,7 @@ public class SigDial1NonIncremental {
 		ConfigurationManager cm = new ConfigurationManager(new File("src/main/java/config/config.xml").toURI().toURL());
 		cm.setGlobalProperty("isIncremental", "false");
 		
-		SigDial1NonIncrementalTimeout.setVariables(5 * (60 * 1000));
+		SigDial1NonIncrementalTimeout.setVariables(1 * (60 * 1000));
 		SigDial1NonIncrementalTimeout.getInstance().reset(); // start the timer for the phase
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
@@ -80,7 +80,7 @@ public class SigDial1NonIncremental {
 		GoogleASRUtil.setVars(cm, rclp, webSpeech);
 		GoogleASRUtil.startGoogleASR();
 		
-//		ClientUtils.openNewClient();
+		ClientUtils.openNewClient();
 		
 //		Or, one can send words individually with a 500 ms pause between them
 //		String[] uwords = {"anruf", "name", "claudia", "claudia"};

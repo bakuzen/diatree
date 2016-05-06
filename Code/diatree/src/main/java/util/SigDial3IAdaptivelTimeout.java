@@ -99,6 +99,7 @@ public class SigDial3IAdaptivelTimeout extends Thread {
 	        		frame.pack();
 	        		frame.setLocationRelativeTo(null);
 	        		frame.setVisible(true);
+	        		frame.requestFocus();
 	            }
 
 				private ButtonGroup getButtonGroup(String string, JFrame frame) {

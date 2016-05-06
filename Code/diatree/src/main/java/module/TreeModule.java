@@ -60,7 +60,7 @@ public class TreeModule extends IUModule {
 		socket = (DiaTreeSocket) ps.getComponent(DIATREE_SOCKET);
 		this.setIncremental(ps.getBoolean(IS_INCREMENTAL));
 		if (!this.isIncremental())
-			EndpointTimeout.setVariables(this, 4000);
+			EndpointTimeout.setVariables(this, 1500);
 		reset();
 	}
 	
@@ -119,7 +119,7 @@ public class TreeModule extends IUModule {
 					String c = sIU.getDistribution().getArgMax().getEntity().toLowerCase();
 					Distribution<String> d = sIU.getDistribution();
 					String i = sIU.getName();
-					
+	
 					if (Constants.YES.equals(concept)) {
 						expandIntent(i, c, d);
 					}
@@ -133,12 +133,14 @@ public class TreeModule extends IUModule {
 						abort();
 					}
 				}
+				checkNumChildren();
 			}
 //			when we want to invoke a clarification request
 			else if (Constants.CONFIRM.equals(decision)) {
 				pushToConfirmStack(slotIU);
 				offerConfirmation(intent, concept, dist);
 				resetUtterance();
+				checkNumChildren();
 			}
 //			when an intent has a concept with a high enough probability 
 			else if (Constants.SELECT.equals(decision)) {
@@ -147,6 +149,7 @@ public class TreeModule extends IUModule {
 				}
 				expandIntent(intent, concept, dist);
 				resetUtterance();
+				checkNumChildren();
 			}
 //			in all other cases, just wait for more input
 			else if (Constants.WAIT.equals(decision)) {
@@ -154,7 +157,7 @@ public class TreeModule extends IUModule {
 			}
 			
 		}
-		checkNumChildren();
+		
 		update();
 		justAborted = false;
 	}
@@ -251,7 +254,7 @@ public class TreeModule extends IUModule {
 		if (remainingIntents.size() == 1) {
 			
 			if (justAborted /*&& toExpand.isExpanded()*/) {
-				abort();
+//				abort();
 				return;
 			}
 			
@@ -295,8 +298,6 @@ public class TreeModule extends IUModule {
 			}
 		}
 		
-		
-		
 		if (isCustomFunction(concept)) {
 			Node top = getTopNode();
 			Node n = new Node(concept);
@@ -313,8 +314,6 @@ public class TreeModule extends IUModule {
 		Node top = getTopNode();
 		top.setHasBeenTraversed(false);
 		
-		
-		
 //		another case is if someone is referring to an intent (not a concept of an intent)
 //		when that happens, show the expansion of that intent
 		if (Constants.INTENT.equals(intent) && hasConcepts(concept)) {
@@ -322,7 +321,7 @@ public class TreeModule extends IUModule {
 			return;
 		}
 		
-		if (Constants.INTENT.equals(intent)) {
+		if (Constants.INTENT.equals(intent) ) {
 			if (!top.hasChild(concept)) return;
 			Node n = new Node(concept);
 			n.setHasBeenTraversed(true);
@@ -346,6 +345,7 @@ public class TreeModule extends IUModule {
 		this.getRootNode().setHasBeenTraversed(false);
 		this.clearConfirmStack();
 		this.branchIntents();
+		inFunction = false;
 	}
 	
 	private boolean expected(String intent) {
@@ -429,9 +429,8 @@ public class TreeModule extends IUModule {
 			return true; // another case of repetition
 		}
 		
-		forExpansion.setExpanded(true);
-		
-		if (isCustomFunction(intent)) {
+		if (isCustomFunction(intent) ) {
+			top.setHasBeenTraversed(false);
 			Node n = new Node(intent);
 			if (dist != null)
 				n.setProbability(dist.getProbabilityForItem(intent));
@@ -444,6 +443,8 @@ public class TreeModule extends IUModule {
 			return true;
 		}
 		
+		forExpansion.setExpanded(true);
+			
 		for (String concept : getPossibleConceptsForIntent(intent)) {
 			Node n = new Node(concept);
 			if (dist != null)

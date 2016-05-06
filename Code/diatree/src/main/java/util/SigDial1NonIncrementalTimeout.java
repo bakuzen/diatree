@@ -2,11 +2,17 @@ package util;
 
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import model.SigDialException;
 
 
 public class SigDial1NonIncrementalTimeout extends Thread {
@@ -53,7 +59,7 @@ public class SigDial1NonIncrementalTimeout extends Thread {
 	            public void run() {
 	        		JFrame frame = new JFrame();
 	        		frame.setSize(1000, 1000);
-	        		
+	        		frame.setLayout( new GridLayout(0,1));
 	        		frame.addKeyListener(new KeyListener() {
 
 						@Override
@@ -61,7 +67,7 @@ public class SigDial1NonIncrementalTimeout extends Thread {
 							if (e.getID() == 400) {
 		                    	frame.setVisible(false);
 		                    	frame.dispose();
-		                    	System.exit(0);
+		                    	
 							}
 						}
 
@@ -80,11 +86,23 @@ public class SigDial1NonIncrementalTimeout extends Thread {
 	        		
 	        		JLabel text = new JLabel(utt);
 	        		
+	        		JButton done = new JButton("OK");
+	        		done.addActionListener(new ActionListener() {
+	                    @Override
+	                    public void actionPerformed(ActionEvent e) {
+	                    	frame.setVisible(false);
+	                    	frame.dispose();
+	                    	System.exit(0);
+	                    }
+	                });
+	        		
 	        		text.setFont(new Font(text.getFont().getName(), Font.PLAIN, 36));
 	        		frame.getContentPane().add(text);
+	        		frame.getContentPane().add(done);
 	        		frame.pack();
 	        		frame.setLocationRelativeTo(null);
 	        		frame.setVisible(true);
+	        		frame.requestFocus();
 	            }
 
 	        });

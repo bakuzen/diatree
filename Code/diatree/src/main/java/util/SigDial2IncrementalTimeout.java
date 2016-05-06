@@ -91,6 +91,7 @@ public class SigDial2IncrementalTimeout extends Thread {
 	                    	frame.setVisible(false);
 	                    	frame.dispose();
 	                    	taskModule.logResponses(responses);
+	                    	System.exit(0);
 	                    }
 	                });
 	        		frame.getContentPane().add(done);
@@ -99,6 +100,7 @@ public class SigDial2IncrementalTimeout extends Thread {
 	        		frame.pack();
 	        		frame.setLocationRelativeTo(null);
 	        		frame.setVisible(true);
+	        		frame.requestFocus();
 	            }
 
 				private ButtonGroup getButtonGroup(String string, JFrame frame) {

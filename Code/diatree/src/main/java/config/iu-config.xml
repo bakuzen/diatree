@@ -46,6 +46,7 @@
     	<property name="domain" value="sigdial"/>
     	<property name="module" value="tree"/>
     	<propertylist name="hypChangeListeners">
+    	    <item>inluInformer</item>
     	 	<item>dm</item>
 		</propertylist>
     </component> 
@@ -54,6 +55,7 @@
     	<property name="socket" value="diatree"/>
     	<property name="isIncremental" value="${isIncremental}"/>
     	<propertylist name="hypChangeListeners">
+    		<item>treeInformer</item>
 		</propertylist>
     </component>   
     
@@ -86,6 +88,7 @@
     <component name="decision" type="module.opendial.ConfigurableModule">
         <property name="effectVariable" value="decision"/>
 	    <propertylist name="hypChangeListeners">
+	        <item>dmInformer</item>
 	    	<item>tree</item> 
 	        <item>task</item>
 	    </propertylist>
@@ -95,6 +98,27 @@
     <component name="diatree" type="jetty.DiaTreeSocket">
      <property name="module" value="tree"/>
     </component>
+    
+    <component name="dmInformer" type="inpro.io.instantio.InstantIOInformerModule">
+        <property name="outslot" value="DM"/>
+        <property name="namespace" value="/InproTK/"/>
+	    <propertylist name="hypChangeListeners">
+	    </propertylist>
+    </component> 
+    
+   <component name="inluInformer" type="inpro.io.instantio.InstantIOInformerModule">
+        <property name="outslot" value="INLU"/>
+        <property name="namespace" value="/InproTK/"/>
+	    <propertylist name="hypChangeListeners">
+	    </propertylist>
+    </component>     
+    
+  <component name="treeInformer" type="inpro.io.instantio.InstantIOInformerModule">
+        <property name="outslot" value="TREE"/>
+        <property name="namespace" value="/InproTK/"/>
+	    <propertylist name="hypChangeListeners">
+	    </propertylist>
+    </component>     
     
     <component name="vad" type="inpro.incremental.source.VoiceActivityDetector">
         <propertylist name="hypChangeListeners">
