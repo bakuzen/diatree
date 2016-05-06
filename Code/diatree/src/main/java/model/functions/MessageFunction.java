@@ -132,7 +132,7 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 		}
 		
 		Node top = treeModule.getTopNode();
-		top.setIden("message");
+		top.setIden(Constants.MESSAGE);
 //		top.addChild(new Node(""));
 		top.setName(message);
 

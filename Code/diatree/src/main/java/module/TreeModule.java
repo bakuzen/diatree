@@ -147,8 +147,9 @@ public class TreeModule extends IUModule {
 			else if (Constants.WAIT.equals(decision)) {
 				indicateWaiting();
 			}
+			checkNumChildren(intent);
 		}
-		checkNumChildren();
+		
 		update();
 		justAborted = false;
 	}
@@ -240,18 +241,20 @@ public class TreeModule extends IUModule {
 		}
 	}
 	
-	private void checkNumChildren() {
+	private void checkNumChildren(String intent) {
 //		when there is one child left, go ahead and offer it up 
 		if (remainingIntents.size() == 1) {
 			
-			
-			String intent = remainingIntents.get(0);
-			Node toExpand = getTopNode().getChildNode(intent);
 			if (justAborted /*&& toExpand.isExpanded()*/) {
 				abort();
 				return;
 			}
-			offerExpansion(intent, null);
+			
+			if (!expectedStack.isEmpty()) {
+				return;
+			}	
+			
+			offerExpansion(remainingIntents.get(0), null);
 		}
 	}
 	
@@ -281,7 +284,7 @@ public class TreeModule extends IUModule {
 		}
 		if (!expectedStack.isEmpty()) {
 			if (!expected(intent)) {
-				expectedStack.clear();
+				clearExpectedStack();
 				return;
 			}
 		}
@@ -448,7 +451,7 @@ public class TreeModule extends IUModule {
 	private boolean intentSettled(String intent) {
 //		if (intent.equals(Constants.INTENT)) return false;
 		for (Node i : expandedNodes) {
-			if (i.getName().startsWith(intent)) return true;
+			if (i.getName().startsWith(intent) || i.getName().endsWith(intent)) return true;
 		}
 		return false;
 	}
@@ -584,6 +587,7 @@ public class TreeModule extends IUModule {
 	}
 
 	private void clearExpectedStack() {
+		System.out.println("clearExpectedStack()");
 		if (expectedStack != null) 
 			this.expectedStack.clear();
 	}
