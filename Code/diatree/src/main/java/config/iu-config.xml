@@ -16,9 +16,10 @@
         <property name="baseData" value="${baseData}"/>
         <!--property name="brutalPruner" value="trivialPruner"/-->
         <propertylist name="hypChangeListeners">
+        <item>printer</item>
           <item>tree</item>
           <item>inlu</item>
-<!--         	<item>printer</item> -->
+        	
         </propertylist>
     </component>
     
@@ -28,7 +29,7 @@
     	<property name="lang" value="${language}"/>
         <property name="frontend" value="${frontend}"/>
         <propertylist name="hypChangeListeners">
-<!--         	<item>printer</item> -->
+        	<item>printer</item>
 			<item>tree</item>
         	<item>inlu</item>
 		</propertylist>

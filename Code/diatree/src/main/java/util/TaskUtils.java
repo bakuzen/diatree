@@ -33,6 +33,7 @@ public class TaskUtils {
 			"hotel buchen",
 			"die katze füttern"
 	};
+	private boolean inFunction;
 	
 	public TaskUtils() {
 		taskStack = new LinkedList<Task>();
@@ -121,8 +122,8 @@ public class TaskUtils {
 		}
 		else {
 			Random rand = new Random();
-			if (rand.nextInt(100) > 75) {
-//				25% of the time, grab an already-seen task
+			if (rand.nextInt(100) > 50) {
+//				50% of the time, grab an already-seen task
 				task = taskStack.get(rand.nextInt(taskStack.size()));
 				task.used++;
 			}
@@ -134,6 +135,10 @@ public class TaskUtils {
 		}
 		
 		display(task);
+	}
+	
+	private boolean isInFunction() {
+		return module.isInFunction();
 	}
 
 
@@ -149,12 +154,15 @@ public class TaskUtils {
 
 						@Override
 						public void keyTyped(KeyEvent e) {
+							if (isInFunction()) return;
 							if (e.getID() == 400) {
 		                    	frame.setVisible(false);
 		                    	frame.dispose();
 		                    	module.taskComplete();
 							}
 						}
+
+						
 
 						@Override
 						public void keyPressed(KeyEvent e) {

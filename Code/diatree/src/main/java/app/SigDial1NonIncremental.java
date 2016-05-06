@@ -29,6 +29,7 @@ import jetty.JettyServer;
 import model.CustomFunctionRegistry;
 import module.INLUModule;
 import util.ClientUtils;
+import util.GoogleASRUtil;
 import util.SigDial1NonIncrementalTimeout;
 
 public class SigDial1NonIncremental {
@@ -76,9 +77,10 @@ public class SigDial1NonIncremental {
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
 		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyCoqyxVlYyZ1HZUn9T-f5b5LRJM9pAymb8"});
-		startGoogleASR(cm, rclp);
+		GoogleASRUtil.setVars(cm, rclp, webSpeech);
+		GoogleASRUtil.startGoogleASR();
 		
-		ClientUtils.openNewClient();
+//		ClientUtils.openNewClient();
 		
 //		Or, one can send words individually with a 500 ms pause between them
 //		String[] uwords = {"anruf", "name", "claudia", "claudia"};
@@ -94,51 +96,6 @@ public class SigDial1NonIncremental {
 //		}
 	}
 	
-	
-	private void startGoogleASR(ConfigurationManager cm, RecoCommandLineParser rclp) {
-		new Thread() {
-		public void run() {
-			
-			try {
-				SimpleReco simpleReco = new SimpleReco(cm, rclp);
-			while (true) {
-				try {
-					
-
-					new Thread(){ 
-						public void run() {
-							try {
-								simpleReco.recognizeOnce();
-							} 
-							catch (PropertyException e) {
-								e.printStackTrace();
-							} 
-							
-						}
-					}.start();
-					
-					Thread.sleep(10000);
-					webSpeech.shutdown();
-//					simpleReco.shutdownMic();
-				}
-					
-				catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}
-			
-			
-		} catch (PropertyException e1) {
-			e1.printStackTrace();
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		} catch (UnsupportedAudioFileException e1) {
-			e1.printStackTrace();
-		}
-	}
-	}.start();
-	
-	}
 
 	public static void main (String[] args) {
 		try {

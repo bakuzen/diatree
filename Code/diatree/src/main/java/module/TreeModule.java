@@ -50,6 +50,8 @@ public class TreeModule extends IUModule {
 	private boolean isIncremental;
 
 	private boolean justAborted;
+
+	private boolean inFunction;
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
@@ -60,6 +62,10 @@ public class TreeModule extends IUModule {
 		if (!this.isIncremental())
 			EndpointTimeout.setVariables(this, 4000);
 		reset();
+	}
+	
+	public boolean isInFunction() {
+		return inFunction;
 	}
 	
 	public void reset() {
@@ -263,6 +269,7 @@ public class TreeModule extends IUModule {
 
 	public void returnFromCustomFunction() {
 		getTopNode().setHasBeenTraversed(false);
+		inFunction = false;
 		this.clearConfirmStack();
 		this.branchIntents();
 	}
@@ -288,6 +295,8 @@ public class TreeModule extends IUModule {
 			}
 		}
 		
+		
+		
 		if (isCustomFunction(concept)) {
 			Node top = getTopNode();
 			Node n = new Node(concept);
@@ -304,6 +313,8 @@ public class TreeModule extends IUModule {
 		Node top = getTopNode();
 		top.setHasBeenTraversed(false);
 		
+		
+		
 //		another case is if someone is referring to an intent (not a concept of an intent)
 //		when that happens, show the expansion of that intent
 		if (Constants.INTENT.equals(intent) && hasConcepts(concept)) {
@@ -312,6 +323,7 @@ public class TreeModule extends IUModule {
 		}
 		
 		if (Constants.INTENT.equals(intent)) {
+			if (!top.hasChild(concept)) return;
 			Node n = new Node(concept);
 			n.setHasBeenTraversed(true);
 			n.setProbability(dist.getProbabilityForItem(concept));
@@ -322,6 +334,7 @@ public class TreeModule extends IUModule {
 			this.pushExpandedNode(n);
 		}
 		else {
+			if (!top.hasChild(intent)) return;
 			Node n = new Node(intent + ":"+ concept);
 			n.setProbability(dist.getProbabilityForItem(concept));
 			this.removeRemainingIntent(intent);
@@ -343,6 +356,7 @@ public class TreeModule extends IUModule {
 		try {
 			CustomFunction function  = CustomFunctionRegistry.getFunction(intent);
 			if (function == null) return;
+			inFunction = true;
 			function.run(this);
 		} catch (InstantiationException e) {
 			e.printStackTrace();

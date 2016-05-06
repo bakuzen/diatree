@@ -133,4 +133,9 @@ public class INLUModule extends IUModule {
 		return tree.getFilledFrame();
 	}
 
+
+	public boolean isInFunction() {
+		return tree.isInFunction();
+	}
+
 }

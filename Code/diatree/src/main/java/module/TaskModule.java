@@ -134,4 +134,8 @@ public class TaskModule extends IUModule {
 		this.isAdaptive = isAdaptive;
 	}
 
+	public boolean isInFunction() {
+		return inlu.isInFunction();
+	}
+	
 }

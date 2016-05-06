@@ -22,6 +22,7 @@ import model.CustomFunction;
 import model.Node;
 import module.TreeModule;
 import util.EndpointTimeout;
+import util.GoogleASRUtil;
 import util.SessionTimeout;
 
 public class MessageFunction extends IUModule  implements CustomFunction {
@@ -74,18 +75,22 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 
 	@Override
 	public void run(TreeModule treeModule) {
+		
 			wordStack.clear();
 			this.treeModule = treeModule;
 			listeners = new ArrayList<PushBuffer>(recognizer.iulisteners);
 			recognizer.iulisteners.clear();
 			recognizer.iulisteners.add(this);
+			update();
+			GoogleASRUtil.startGoogleASR();
 	}
 
 	@Override
 	protected void leftBufferUpdate(Collection<? extends IU> ius, List<? extends EditMessage<? extends IU>> edits) {
-		
+
 		SessionTimeout.getInstance().reset();
 		if (!treeModule.isIncremental()) EndpointTimeout.getInstance().reset();
+		
 		
 		if (timeoutThread != null) {
 			timeoutThread.interrupt();
@@ -118,8 +123,11 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 				break;
 			}
 		}
-		
-		String message = Constants.MESSAGE + ":" + Constants.DELIMITER;
+		update();
+	}
+	
+	private void update() {
+		String message = Constants.MESSAGE + ":" ;
 		int numWords = 0;
 		for (String word : wordStack) {
 			String delim = " ";
