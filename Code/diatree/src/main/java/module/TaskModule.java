@@ -26,6 +26,8 @@ public class TaskModule extends IUModule {
 	protected INLUModule inlu;
 	private boolean isAdaptive;
 	private TaskUtils tasks;
+	private LinkedList<String> toConfirm;
+	
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
@@ -59,14 +61,33 @@ public class TaskModule extends IUModule {
 				for (String tofill : progression.get("fill")) {
 					addEdit(tofill, "select", newEdits);
 				}
-				for (String tofill : progression.get("confirm")) {
+				toConfirm = progression.get("confirm");
+				if (toConfirm != null && !toConfirm.isEmpty()) {
+					String tofill = toConfirm.pop();
 					addEdit(tofill, "confirm", newEdits);
-					break; // to hack this, only show one expansion at a time 
 				}
 			}
+			
+			if (intent.equals(Constants.CONFIRM)) {
+				if (toConfirm != null && !toConfirm.isEmpty()) {
+					String tofill = toConfirm.pop();
+					addEdit(tofill, "confirm", newEdits);
+				}
+			}
+			
+			
+			break; // to hack this, only show one expansion at a time 
 		}
+		
+		if (!newEdits.isEmpty()) {
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		rightBuffer.setBuffer(newEdits);
-//		rightBuffer.notify(super.iulisteners);
 		
 	}
 

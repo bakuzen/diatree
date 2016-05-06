@@ -127,7 +127,6 @@ public class TreeModule extends IUModule {
 						abort();
 					}
 				}
-//				break; //this means we don't step through any more of the possible intents
 			}
 //			when we want to invoke a clarification request
 			else if (Constants.CONFIRM.equals(decision)) {
@@ -147,9 +146,9 @@ public class TreeModule extends IUModule {
 			else if (Constants.WAIT.equals(decision)) {
 				indicateWaiting();
 			}
-			checkNumChildren(intent);
+			
 		}
-		
+		checkNumChildren();
 		update();
 		justAborted = false;
 	}
@@ -241,7 +240,7 @@ public class TreeModule extends IUModule {
 		}
 	}
 	
-	private void checkNumChildren(String intent) {
+	private void checkNumChildren() {
 //		when there is one child left, go ahead and offer it up 
 		if (remainingIntents.size() == 1) {
 			
@@ -250,9 +249,9 @@ public class TreeModule extends IUModule {
 				return;
 			}
 			
-			if (!expectedStack.isEmpty()) {
-				return;
-			}	
+//			if (!expectedStack.isEmpty()) {
+//				return;
+//			}	
 			
 			offerExpansion(remainingIntents.get(0), null);
 		}

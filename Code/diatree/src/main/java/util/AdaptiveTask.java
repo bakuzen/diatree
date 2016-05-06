@@ -10,23 +10,50 @@ import java.util.HashMap;
 
 public class AdaptiveTask {
 	
-	HashMap<String,HashMap<String,LinkedList<String>>> completed;
+	HashMap<String,HashMap<String,LinkedList<ConceptCount>>> completed;
+	private int n = 2;
+	
+	private class ConceptCount implements Comparable<ConceptCount>{
+		public ConceptCount(String c) {
+			concept = c;
+			count = 1;
+		}
+		public String concept;
+		public int count;
+		
+		public boolean equals(Object o) {
+			return o.toString().equals(this.toString());
+		}
+		public String toString() {
+			return this.concept;
+		}
+		public int compareTo(ConceptCount c ) {
+			return c.toString().compareTo(this.toString());
+		}
+		
+	}
 	
 	public AdaptiveTask() {
-		completed = new HashMap<String,HashMap<String,LinkedList<String>>>();
+		completed = new HashMap<String,HashMap<String,LinkedList<ConceptCount>>>();
 	}
 	
 	public void registerFrame(Frame frame) {
 		String domain = frame.getValueForIntent(Constants.INTENT);
 		if (!completed.containsKey(domain)) 
-			completed.put(domain, new HashMap<String,LinkedList<String>>());
-		HashMap<String,LinkedList<String>> current = completed.get(domain);
+			completed.put(domain, new HashMap<String,LinkedList<ConceptCount>>());
+		HashMap<String,LinkedList<ConceptCount>> current = completed.get(domain);
 		for (String intent : frame.getIntents()) {
 			if (intent.equals(Constants.INTENT)) continue; // we've dealt with this
-			if (!current.containsKey(intent)) current.put(intent, new LinkedList<String>());
+			if (!current.containsKey(intent)) current.put(intent, new LinkedList<ConceptCount>());
 			
-			String concept = frame.getValueForIntent(intent);
-			if (!current.get(intent).contains(concept))
+			ConceptCount concept = new ConceptCount(frame.getValueForIntent(intent));
+			if (current.get(intent).contains(concept)) {
+				ConceptCount con = current.get(intent).get(current.get(intent).indexOf(concept));
+				current.get(intent).remove(con);
+				con.count++;
+				current.get(intent).push(con);
+			}
+			else
 				current.get(intent).push(concept);
 		}
 	}
@@ -38,15 +65,19 @@ public class AdaptiveTask {
 		prediction.put("fill", new LinkedList<String>());
 		prediction.put("confirm", new LinkedList<String>());
 		
-		HashMap<String,LinkedList<String>> current = completed.get(domain);
+		HashMap<String,LinkedList<ConceptCount>> current = completed.get(domain);
 		
 		for (String intent : current.keySet()) {
-			if (current.get(intent).size() == 1)
-				prediction.get("fill").add(intent+":"+current.get(intent).peek());
+			if (current.get(intent).size() == 1) {
+				if (current.get(intent).peek().count > n)
+					prediction.get("fill").add(intent+":"+current.get(intent).peek().toString());
+				else {
+					prediction.get("confirm").add(intent+":"+current.get(intent).peek().toString());
+				}
+			}
 			else if (current.get(intent).size() > 1)
-				prediction.get("confirm").add(intent+":"+current.get(intent).peek());
+				prediction.get("confirm").add(intent+":"+current.get(intent).peek().toString());
 		}
-		
 		return prediction;
 	}
 	
