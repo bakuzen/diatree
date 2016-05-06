@@ -68,7 +68,7 @@ public class TaskModule extends IUModule {
 				}
 			}
 			
-			if (intent.equals(Constants.CONFIRM)) {
+			if (intent.equals(Constants.CONFIRM) && concept.equals(Constants.YES)) {
 				if (toConfirm != null && !toConfirm.isEmpty()) {
 					String tofill = toConfirm.pop();
 					addEdit(tofill, "confirm", newEdits);
