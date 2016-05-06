@@ -41,6 +41,10 @@
 
 	var duration = 350,
 	    root;
+
+	var isFirst = true;
+
+	var noninctext = "Du kannst sagen z.B.:\n\nroute von Bielefeld nach Berlin,\n\nessen Thai in der Stadtmitte,\n\nanruf an Peter,\n\nnachricht an Peter 'hallo',\n\nerinnerung 'die Katze füttern'";
 	
 	var tree = d3.layout.tree()
 	    .size([height, width]);
@@ -63,8 +67,12 @@
         	root =  JSON.parse(event.data);
         	console.log(event.data);
 			if (root.hasOwnProperty("words")) {
+				if (isFirst) 
+					alert(noninctext);
+				isFirst = false;
 				document.getElementById("asr").textContent=root.words;
 				svg.selectAll("*").remove();
+				
 				return;
 			}
         	

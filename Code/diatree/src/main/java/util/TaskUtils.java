@@ -30,7 +30,8 @@ public class TaskUtils {
 			"joggen gehen",
 			"oma besuchen",
 			"zeitung holen",
-			"hotel buchen"
+			"hotel buchen",
+			"die katze füttern"
 	};
 	
 	public TaskUtils() {

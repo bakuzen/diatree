@@ -34,6 +34,7 @@ import module.INLUModule;
 import module.TaskModule;
 import util.ClientUtils;
 import util.SigDial2IncrementalTimeout;
+import util.SigDial3IAdaptivelTimeout;
 
 public class SigDial3Adaptive {
 	
@@ -68,6 +69,9 @@ public class SigDial3Adaptive {
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
 		TaskModule task = (TaskModule) cm.lookup("task");
 		task.setAdaptive(true);
+		
+		SigDial3IAdaptivelTimeout.setVariables(task, 5 * (60 * 1000));
+		SigDial3IAdaptivelTimeout.getInstance().reset();
 //		INLUModule nlu = (INLUModule) cm.lookup("inlu");
 		
 		AdvancedDiaTreeCreator creator = new AdvancedDiaTreeCreator((DiaTreeSocket) cm.lookup(DIATREE_SOCKET));
