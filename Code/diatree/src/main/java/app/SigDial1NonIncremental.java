@@ -56,7 +56,7 @@ public class SigDial1NonIncremental {
 		ConfigurationManager cm = new ConfigurationManager(new File("src/main/java/config/config.xml").toURI().toURL());
 		cm.setGlobalProperty("isIncremental", "false");
 		
-		SigDial1NonIncrementalTimeout.setVariables(1 * (60 * 1000));
+		SigDial1NonIncrementalTimeout.setVariables(5 * (60 * 1000));
 		SigDial1NonIncrementalTimeout.getInstance().reset(); // start the timer for the phase
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
@@ -80,7 +80,10 @@ public class SigDial1NonIncremental {
 		GoogleASRUtil.setVars(cm, rclp, webSpeech);
 		GoogleASRUtil.startGoogleASR();
 		
-		ClientUtils.openNewClient();
+//		ClientUtils.openNewClient();
+		WordIU wiu = new WordIU("phase:nonincr", null, null);
+		edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+		notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
 		
 //		Or, one can send words individually with a 500 ms pause between them
 //		String[] uwords = {"anruf", "name", "claudia", "claudia"};

@@ -91,13 +91,14 @@ public class SigDial3IAdaptivelTimeout extends Thread {
 	                    	frame.setVisible(false);
 	                    	frame.dispose();
 	                    	taskModule.logResponses(responses);
+	                    	System.exit(0);
 	                    }
 	                });
 	        		frame.getContentPane().add(done);
 	        		
 	        		
 	        		frame.pack();
-	        		frame.setLocationRelativeTo(null);
+//	        		frame.setLocationRelativeTo(null);
 	        		frame.setVisible(true);
 	        		frame.requestFocus();
 	            }

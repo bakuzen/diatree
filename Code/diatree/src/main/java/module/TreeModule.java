@@ -14,6 +14,7 @@ import edu.cmu.sphinx.util.props.S4Boolean;
 import edu.cmu.sphinx.util.props.S4Component;
 import inpro.incremental.IUModule;
 import inpro.incremental.unit.EditMessage;
+import inpro.incremental.unit.EditType;
 import inpro.incremental.unit.IU;
 import inpro.incremental.unit.SlotIU;
 import inpro.incremental.unit.WordIU;
@@ -537,8 +538,18 @@ public class TreeModule extends IUModule {
 				json = tree.getJsonStringForWords(wordStack);
 			
 			send(json);
+			logTreeInfo(getNodeDepth());
 	}
 	
+	private void logTreeInfo(int nodeDepth) {
+		List<EditMessage<? extends IU>> newEdits = new ArrayList<EditMessage<? extends IU>>();
+		
+		newEdits.add(new EditMessage<SlotIU>(EditType.ADD, new SlotIU("depth:"+nodeDepth, null)));
+		
+		rightBuffer.setBuffer(newEdits);
+		notifyListeners();
+	}
+
 	private int getNodeDepth() {
 		return expandedNodes.size() + 2;
 	}
@@ -641,5 +652,14 @@ public class TreeModule extends IUModule {
 		} while (n != null);
 		System.out.println(frame);
 		return frame;
+	}
+
+	public void logReset() {
+		List<EditMessage<? extends IU>> newEdits = new ArrayList<EditMessage<? extends IU>>();
+		
+		newEdits.add(new EditMessage<SlotIU>(EditType.ADD, new SlotIU("hard_reset", null)));
+		
+		rightBuffer.setBuffer(newEdits);
+		notifyListeners();
 	}
 }

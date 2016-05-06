@@ -100,7 +100,7 @@ public class SigDial1NonIncrementalTimeout extends Thread {
 	        		frame.getContentPane().add(text);
 	        		frame.getContentPane().add(done);
 	        		frame.pack();
-	        		frame.setLocationRelativeTo(null);
+//	        		frame.setLocationRelativeTo();
 	        		frame.setVisible(true);
 	        		frame.requestFocus();
 	            }

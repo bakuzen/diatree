@@ -92,14 +92,16 @@ public class SigDial3Adaptive {
 		GoogleASRUtil.setVars(cm, rclp, webSpeech); 
 		GoogleASRUtil.startGoogleASR();
 		
-		
+		WordIU wiu = new WordIU("phase:adapt", null, null);
+		edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+		notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
 		
 //		TextBasedFloorTracker textBasedFloorTracker = (TextBasedFloorTracker) cm.lookup(PROP_FLOOR_MANAGER);
 //		iuDocument = new IUDocument();
 //		iuDocument.setListeners(webSpeech.iulisteners);
 //		SimpleText.createAndShowGUI(webSpeech.iulisteners, textBasedFloorTracker);
 		
-		ClientUtils.openNewClient();
+//		ClientUtils.openNewClient();
 		
 //		Or, one can send words individually with a 500 ms pause between them
 //		String[] uwords = {"route", "von", "ich", "ehm", "bielefeld", "nein", "hier", "nach", "trier"};

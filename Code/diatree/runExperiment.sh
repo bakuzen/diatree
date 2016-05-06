@@ -7,7 +7,7 @@ java -Djava.net.preferIPv4Stack=true -jar VeniceHub.jar -f ../experiment/$1_$DIR
 echo "Backgroung job number for venice: $venice"
 cd ..
 echo "running gradle..."
-gradle runNon runInc
+gradle runNon runInc runAdapt
 fg $venice
 echo $venice
 #echo "q" > /proc/$venice/fd/0

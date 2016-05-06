@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.eclipse.jetty.server.Response;
+
 import edu.cmu.sphinx.util.props.PropertyException;
 import edu.cmu.sphinx.util.props.PropertySheet;
 import edu.cmu.sphinx.util.props.S4Component;
@@ -18,6 +20,7 @@ import model.Constants;
 import model.Frame;
 import sium.nlu.stat.Distribution;
 import util.TaskUtils;
+import util.TaskUtils.Task;
 
 public class TaskModule extends IUModule {
 	
@@ -115,15 +118,44 @@ public class TaskModule extends IUModule {
 	public void taskComplete() {
 //		need to get the final slots that were filled
 		Frame frame = inlu.getFilledFrame();
+		logFrame(frame);
 		tasks.registerFrame(frame);
 //		TODO: need to log the task, the updates to the tree, and the final filled slots
 		inlu.resetSession();
-		tasks.nextTask();
+		Task task = tasks.nextTask();
+		logTask(task);
+	}
+	
+	private void logTask(Task task) {
+		List<EditMessage<? extends IU>> newEdits = new ArrayList<EditMessage<? extends IU>>();
+		
+		newEdits.add(new EditMessage<SlotIU>(EditType.ADD, new SlotIU("domain:"+ task.domain, null)));
+		for (String r : task.intentsConcepts.keySet()) {
+			newEdits.add(new EditMessage<SlotIU>(EditType.ADD, new SlotIU("task:"+ r + ":" + task.intentsConcepts.get(r), null)));
+		}
+		rightBuffer.setBuffer(newEdits);
+		notifyListeners();
+	}
+
+	private void logFrame(Frame frame) {
+		List<EditMessage<? extends IU>> newEdits = new ArrayList<EditMessage<? extends IU>>();
+		
+		for (String r : frame.getIntents()) {
+			newEdits.add(new EditMessage<SlotIU>(EditType.ADD, new SlotIU("frame:"+ r + ":" + frame.getValueForIntent(r), null)));
+		}
+		rightBuffer.setBuffer(newEdits);
+		notifyListeners();
 	}
 
 	public void logResponses(HashMap<String, String> responses) {
-		System.out.println("RESPONSES:" + responses);
+		List<EditMessage<? extends IU>> newEdits = new ArrayList<EditMessage<? extends IU>>();
 		
+		for (String r : responses.keySet()) {
+			newEdits.add(new EditMessage<SlotIU>(EditType.ADD, new SlotIU("response:" + r + ":" + responses.get(r), null)));
+		}
+		
+		rightBuffer.setBuffer(newEdits);
+		notifyListeners();
 	}
 
 	public boolean isAdaptive() {

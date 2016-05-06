@@ -95,7 +95,8 @@ public class INLUModule extends IUModule {
 		model.newUtterance();
 //		boolean isIncremental = tree.isIncremental();
 //		tree.setIncremental(true);
-		tree.initDisplay(true, true);		
+		tree.initDisplay(true, true);
+		tree.logReset();
 //		tree.setIncremental(isIncremental);
 //		tree.initDisplay(true, true);
 	}

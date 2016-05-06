@@ -16,10 +16,9 @@
         <property name="baseData" value="${baseData}"/>
         <!--property name="brutalPruner" value="trivialPruner"/-->
         <propertylist name="hypChangeListeners">
-        <item>printer</item>
           <item>tree</item>
           <item>inlu</item>
-        	
+        <item>phaseInformer</item>
         </propertylist>
     </component>
     
@@ -29,7 +28,7 @@
     	<property name="lang" value="${language}"/>
         <property name="frontend" value="${frontend}"/>
         <propertylist name="hypChangeListeners">
-        	<item>printer</item>
+         	<item>phaseInformer</item>
 			<item>tree</item>
         	<item>inlu</item>
 		</propertylist>
@@ -38,6 +37,7 @@
      <component name="task" type="module.TaskModule">
     	<property name="inlu" value="inlu"/>
     	<propertylist name="hypChangeListeners">
+    	    <item>taskInformer</item>
 			<item>tree</item>
 		</propertylist>
     </component>
@@ -55,7 +55,7 @@
     	<property name="socket" value="diatree"/>
     	<property name="isIncremental" value="${isIncremental}"/>
     	<propertylist name="hypChangeListeners">
-    		<item>treeInformer</item>
+			<item>treeInformer</item>
 		</propertylist>
     </component>   
     
@@ -113,12 +113,26 @@
 	    </propertylist>
     </component>     
     
-  <component name="treeInformer" type="inpro.io.instantio.InstantIOInformerModule">
+  <component name="taskInformer" type="inpro.io.instantio.InstantIOInformerModule">
+        <property name="outslot" value="TASK"/>
+        <property name="namespace" value="/InproTK/"/>
+	    <propertylist name="hypChangeListeners">
+	    </propertylist>
+    </component>    
+    
+    <component name="treeInformer" type="inpro.io.instantio.InstantIOInformerModule">
         <property name="outslot" value="TREE"/>
         <property name="namespace" value="/InproTK/"/>
 	    <propertylist name="hypChangeListeners">
 	    </propertylist>
-    </component>     
+    </component>
+
+    <component name="phaseInformer" type="inpro.io.instantio.InstantIOInformerModule">
+        <property name="outslot" value="PHASE"/>
+        <property name="namespace" value="/InproTK/"/>
+	    <propertylist name="hypChangeListeners">
+	    </propertylist>
+    </component>    
     
     <component name="vad" type="inpro.incremental.source.VoiceActivityDetector">
         <propertylist name="hypChangeListeners">

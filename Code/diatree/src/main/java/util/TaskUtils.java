@@ -114,7 +114,7 @@ public class TaskUtils {
 	}
 	
 	
-	public void nextTask() {
+	public Task nextTask() {
 		
 		if (taskStack.isEmpty()) {
 			task = generateNewTask();
@@ -135,6 +135,7 @@ public class TaskUtils {
 		}
 		
 		display(task);
+		return task;
 	}
 	
 	private boolean isInFunction() {

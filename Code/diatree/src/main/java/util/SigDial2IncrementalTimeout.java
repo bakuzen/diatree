@@ -98,7 +98,7 @@ public class SigDial2IncrementalTimeout extends Thread {
 	        		
 	        		
 	        		frame.pack();
-	        		frame.setLocationRelativeTo(null);
+//	        		frame.setLocationRelativeTo(null);
 	        		frame.setVisible(true);
 	        		frame.requestFocus();
 	            }

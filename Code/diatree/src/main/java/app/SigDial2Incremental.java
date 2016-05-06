@@ -68,7 +68,7 @@ public class SigDial2Incremental {
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
 		TaskModule task = (TaskModule) cm.lookup("task");
-		SigDial2IncrementalTimeout.setVariables(task, 1 * (60 * 1000));
+		SigDial2IncrementalTimeout.setVariables(task, 5 * (60 * 1000));
 		SigDial2IncrementalTimeout.getInstance().reset(); // start the timer
 //		INLUModule nlu = (INLUModule) cm.lookup("inlu");
 		
@@ -95,7 +95,11 @@ public class SigDial2Incremental {
 		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyAXvd3G0qj8oyeeliwctKX0EY24cQtdYvE"});
 		GoogleASRUtil.setVars(cm, rclp, webSpeech);
 		GoogleASRUtil.startGoogleASR();		
-		ClientUtils.openNewClient();
+//		ClientUtils.openNewClient();
+		
+		WordIU wiu = new WordIU("phase:incr", null, null);
+		edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+		notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
 		
 //		Or, one can send words individually with a 500 ms pause between them
 //		String[] uwords = {"message", "peter", "nimm", "das", "kreuz"};
