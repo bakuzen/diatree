@@ -400,8 +400,9 @@ public class TreeModule extends IUModule {
 //		}
 		if (offerExpansion(intent, dist)) {
 			Node childToConfirm = getTopNode().getChildNode(intent).getChildNode(concept);
-			System.out.println(getTopNode());
+			if (childToConfirm == null) childToConfirm = getTopNode().getChildNode(concept);
 			if (childToConfirm != null) {
+				childToConfirm.setProbability(dist.getProbabilityForItem(concept));
 				childToConfirm.setName(concept + "?");
 				childToConfirm.setHasBeenTraversed(true);
 			}

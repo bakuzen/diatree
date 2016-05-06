@@ -121,7 +121,7 @@ public class TraversableTree {
 			
 			int i=0;
 			TreeSet<Node> children = new TreeSet<Node>(); //the order might be off, so we can reorder things this way
-			children.addAll(n.getChildren());
+			for (Node child : n.getChildren()) children.add(child);
 			for (Node c : children) {
 				JSONObject child = new JSONObject();
 				child.put("name", c.getName());

@@ -45,6 +45,7 @@
 	var isFirst = true;
 
 	var noninctext = "Du kannst sagen z.B.:\n\nroute von Bielefeld nach Berlin,\n\nessen Thai in der Stadtmitte,\n\nanruf an Peter,\n\nnachricht an Peter 'hallo',\n\nerinnerung 'die Katze füttern'";
+	var neustarttext = "Du kannst immer sagen 'neustart' um neu zu starten.";
 	
 	var tree = d3.layout.tree()
 	    .size([height, width]);
@@ -60,15 +61,17 @@
 	
     function start() {
  
-        var ws = new WebSocket("ws://localhost:8080/");
+        var ws = new WebSocket("ws://129.70.105.153:8080/");
 
         ws.onmessage = function (event) {
         	
         	root =  JSON.parse(event.data);
         	console.log(event.data);
 			if (root.hasOwnProperty("words")) {
-				if (isFirst) 
+				if (isFirst) {
 					alert(noninctext);
+					alert(neustarttext);
+				}
 				isFirst = false;
 				document.getElementById("asr").textContent=root.words;
 				svg.selectAll("*").remove();
