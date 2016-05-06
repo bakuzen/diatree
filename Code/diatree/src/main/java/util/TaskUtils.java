@@ -26,9 +26,11 @@ public class TaskUtils {
 	AdaptiveTask adaptive;
 	
 	String[] messages = {
-			"essen in der Mensa",
+			"ins kino gehen",
 			"joggen gehen",
-			"Lehrer ist krank"
+			"oma besuchen",
+			"zeitung holen",
+			"hotel buchen"
 	};
 	
 	public TaskUtils() {

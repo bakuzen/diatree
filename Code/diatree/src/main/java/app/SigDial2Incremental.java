@@ -15,9 +15,12 @@ import edu.cmu.sphinx.util.props.PropertyException;
 import edu.cmu.sphinx.util.props.PropertySheet;
 import edu.cmu.sphinx.util.props.S4Component;
 import inpro.apps.SimpleReco;
+import inpro.apps.SimpleText;
 import inpro.apps.util.RecoCommandLineParser;
 import inpro.incremental.PushBuffer;
+import inpro.incremental.processor.TextBasedFloorTracker;
 import inpro.incremental.source.GoogleASR;
+import inpro.incremental.source.IUDocument;
 import inpro.incremental.source.SphinxASR;
 import inpro.incremental.unit.EditMessage;
 import inpro.incremental.unit.EditType;
@@ -43,10 +46,16 @@ public class SigDial2Incremental {
 	@S4Component(type = DiaTreeSocket.class)
 	public final static String DIATREE_SOCKET = "diatree";
 	
+	@S4Component(type = TextBasedFloorTracker.class)
+	public final static String PROP_FLOOR_MANAGER = "textBasedFloorTracker";
+	
 	GoogleASR webSpeech;
 	private static PropertySheet ps;
 //	private List<PushBuffer> hypListeners;
 	List<EditMessage<IU>> edits = new ArrayList<EditMessage<IU>>();
+	
+	private static IUDocument iuDocument;
+	private List<PushBuffer> hypListeners;
 	
 	private void run() throws InterruptedException, PropertyException, IOException, UnsupportedAudioFileException {
 		
@@ -58,9 +67,10 @@ public class SigDial2Incremental {
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
 		TaskModule task = (TaskModule) cm.lookup("task");
-		SigDial2IncrementalTimeout.setVariables(task, 0 * (60 * 1000));
+		SigDial2IncrementalTimeout.setVariables(task, 5 * (60 * 1000));
 		SigDial2IncrementalTimeout.getInstance().reset(); // start the timer
 //		INLUModule nlu = (INLUModule) cm.lookup("inlu");
+		
 		
 		AdvancedDiaTreeCreator creator = new AdvancedDiaTreeCreator((DiaTreeSocket) cm.lookup(DIATREE_SOCKET));
 		JettyServer jetty = new JettyServer(creator);
@@ -75,25 +85,31 @@ public class SigDial2Incremental {
 		
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
-		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"});
-//		startGoogleASR(cm, rclp);
+		
+
+//		TextBasedFloorTracker textBasedFloorTracker = (TextBasedFloorTracker) cm.lookup(PROP_FLOOR_MANAGER);
+//		iuDocument = new IUDocument();
+//		iuDocument.setListeners(webSpeech.iulisteners);
+//		SimpleText.createAndShowGUI(webSpeech.iulisteners, textBasedFloorTracker);
+		
+		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyAXvd3G0qj8oyeeliwctKX0EY24cQtdYvE"});
+		startGoogleASR(cm, rclp);
 		
 		ClientUtils.openNewClient();
 		
 //		Or, one can send words individually with a 500 ms pause between them
-//		String[] uwords = {"route", "von", "ich", "ehm", "bielefeld", "nein", "hier", "nach", "trier"};
-		String[] uwords = {"route", "von"};
-		List<String> words = Arrays.asList(uwords);
-		Thread.sleep(2000);
-		
-		WordIU prev = WordIU.FIRST_WORD_IU;
-		for (String word : words) {
-			WordIU wiu = new WordIU(word, prev, null);
-			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-			Thread.sleep(400);
-			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
-			prev = wiu;
-		}
+//		String[] uwords = {"message", "peter", "nimm", "das", "kreuz"};
+//		List<String> words = Arrays.asList(uwords);
+//		Thread.sleep(2000);
+//		
+//		WordIU prev = WordIU.FIRST_WORD_IU;
+//		for (String word : words) {
+//			WordIU wiu = new WordIU(word, prev, null);
+//			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+//			Thread.sleep(400);
+//			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
+//			prev = wiu;
+//		}
 	}
 	
 	
@@ -119,7 +135,7 @@ public class SigDial2Incremental {
 						}
 					}.start();
 					
-					Thread.sleep(1000);
+					Thread.sleep(10000);
 					webSpeech.shutdown();
 //					simpleReco.shutdownMic();
 				}

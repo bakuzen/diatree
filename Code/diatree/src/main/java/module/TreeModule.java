@@ -48,6 +48,8 @@ public class TreeModule extends IUModule {
 	private LinkedList<String> expectedStack;
 	private LinkedList<String> wordStack;
 	private boolean isIncremental;
+
+	private boolean justAborted;
 	
 	@Override
 	public void newProperties(PropertySheet ps) throws PropertyException {
@@ -67,6 +69,7 @@ public class TreeModule extends IUModule {
 		expandedNodes = new LinkedList<Node>();
 		remainingIntents = new LinkedList<String>();
 		expectedStack = new LinkedList<String>();
+		justAborted = false;
 		setFirstDisplay(true);
 	}
 
@@ -79,8 +82,6 @@ public class TreeModule extends IUModule {
 	protected void leftBufferUpdate(Collection<? extends IU> ius, List<? extends EditMessage<? extends IU>> edits) {
 		
 		if (!this.isIncremental()) EndpointTimeout.getInstance().reset();
-		
-		System.out.println(edits);
 		
 		if (isFirstDisplay())
 			initDisplay(false, true);
@@ -96,7 +97,7 @@ public class TreeModule extends IUModule {
 			if (edit.getIU().groundedIn().isEmpty()) continue; // simple check in case something gets through that shouldn't
 			
 			SlotIU slotIU = (SlotIU) edit.getIU().groundedIn().get(0);
-			String concept = slotIU.getDistribution().getArgMax().getEntity();
+			String concept = slotIU.getDistribution().getArgMax().getEntity().toLowerCase();
 			String intent = slotIU.getName();
 			Double confidence = slotIU.getConfidence();
 			Distribution<String> dist = slotIU.getDistribution();
@@ -109,7 +110,7 @@ public class TreeModule extends IUModule {
 				if (!checkConfirmStackIsEmpty()) {
 //					when we are handling a CR, we have a stack of "QUD" of sorts 
 					SlotIU sIU = popConfirmStack();
-					String c = sIU.getDistribution().getArgMax().getEntity();
+					String c = sIU.getDistribution().getArgMax().getEntity().toLowerCase();
 					Distribution<String> d = sIU.getDistribution();
 					String i = sIU.getName();
 					
@@ -147,9 +148,13 @@ public class TreeModule extends IUModule {
 				indicateWaiting();
 			}
 		}
+		checkNumChildren();
 		update();
+		justAborted = false;
 	}
 	
+
+
 	private void handleWordIU(EditMessage<? extends IU> edit) {
 		switch (edit.getType()) {
 		case ADD:
@@ -198,6 +203,7 @@ public class TreeModule extends IUModule {
 
 	private void abort() {
 		log.info(logString("abort()", "", ""));
+		this.justAborted = true;
 		if (getTopNode() == getRootNode() || getTopNode() == null) {
 			setCurrentIntent(getRootNode().getName());
 			initDisplay(false, true);
@@ -231,6 +237,21 @@ public class TreeModule extends IUModule {
 		
 		if (getTopNode() == getRootNode() || getTopNode() == null) {
 			initDisplay(false, true);
+		}
+	}
+	
+	private void checkNumChildren() {
+//		when there is one child left, go ahead and offer it up 
+		if (remainingIntents.size() == 1) {
+			
+			
+			String intent = remainingIntents.get(0);
+			Node toExpand = getTopNode().getChildNode(intent);
+			if (justAborted /*&& toExpand.isExpanded()*/) {
+				abort();
+				return;
+			}
+			offerExpansion(intent, null);
 		}
 	}
 	
@@ -363,6 +384,7 @@ public class TreeModule extends IUModule {
 //		}
 		if (offerExpansion(intent, dist)) {
 			Node childToConfirm = getTopNode().getChildNode(intent).getChildNode(concept);
+			System.out.println(getTopNode());
 			if (childToConfirm != null) {
 				childToConfirm.setName(concept + "?");
 				childToConfirm.setHasBeenTraversed(true);
@@ -391,9 +413,24 @@ public class TreeModule extends IUModule {
 		}
 		
 		forExpansion.setExpanded(true);
+		
+		if (isCustomFunction(intent)) {
+			Node n = new Node(intent);
+			if (dist != null)
+				n.setProbability(dist.getProbabilityForItem(intent));
+			this.pushExpandedNode(n);
+			n.setHasBeenTraversed(true);
+			this.removeRemainingIntent(intent);
+			top.clearChildren();
+			top.addChild(n);
+			performCustomFunction(intent);
+			return true;
+		}
+		
 		for (String concept : getPossibleConceptsForIntent(intent)) {
 			Node n = new Node(concept);
-			n.setProbability(dist.getProbabilityForItem(concept));
+			if (dist != null)
+				n.setProbability(dist.getProbabilityForItem(concept));
 			forExpansion.addChild(n);
 		}
 		forExpansion.setHasBeenTraversed(true);

@@ -61,6 +61,7 @@ public class TaskModule extends IUModule {
 				}
 				for (String tofill : progression.get("confirm")) {
 					addEdit(tofill, "confirm", newEdits);
+					break; // to hack this, only show one expansion at a time 
 				}
 			}
 		}

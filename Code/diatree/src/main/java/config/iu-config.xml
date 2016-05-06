@@ -16,13 +16,14 @@
         <property name="baseData" value="${baseData}"/>
         <!--property name="brutalPruner" value="trivialPruner"/-->
         <propertylist name="hypChangeListeners">
+          <item>tree</item>
           <item>inlu</item>
 <!--         	<item>printer</item> -->
         </propertylist>
     </component>
     
     <component name="googleASR" type="inpro.incremental.source.GoogleASR">
-        <property name="apiKey" value="AIzaSyBOnqyblkzEprtUkDrjctec5wJSiJI1i0k"/>
+        <property name="apiKey" value="AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"/>
     	<property name="samplingRate" value="16000"/>
     	<property name="lang" value="${language}"/>
         <property name="frontend" value="${frontend}"/>

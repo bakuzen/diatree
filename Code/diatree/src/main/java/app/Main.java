@@ -71,8 +71,8 @@ public class Main {
 		
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
-		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyCDOkjKVuIKkMM_oic5gty7t91CWw8Y6ws"});
-//		startGoogleASR(cm, rclp);
+		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyCPOrPwttjs9OMBrYX6M6lFR5g5yk2Vw1Q"});
+		startGoogleASR(cm, rclp);
 		ClientUtils.openNewClient();
 		
 		String[] uwords = {"route", "nein", "ehm", "ich", "route", "ehm", "ich",  "von", "ehm", "ich", "bielefeld", "ehm", "ich", "nein", "von", "hier", "ehm", "ich",  "nach", "berlin"};
@@ -84,17 +84,17 @@ public class Main {
 //		String[] uwords = {"hunger", "nein", "essen", "stadtmitte", "teuer", "nein", 
 //				           "teuer", "nein", "preis", "teuer","typ", "thai", 
 //				           "nein", "nein", "nein", "nein", "nein", "handy", "nein"};
-		List<String> words = Arrays.asList(uwords);
-		Thread.sleep(2000);
-//		
-		WordIU prev = WordIU.FIRST_WORD_IU;
-		for (String word : words) {
-			WordIU wiu = new WordIU(word, prev, null);
-			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-			Thread.sleep(900);
-			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
-			prev = wiu;
-		}
+//		List<String> words = Arrays.asList(uwords);
+//		Thread.sleep(2000);
+////		
+//		WordIU prev = WordIU.FIRST_WORD_IU;
+//		for (String word : words) {
+//			WordIU wiu = new WordIU(word, prev, null);
+//			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+//			Thread.sleep(900);
+//			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
+//			prev = wiu;
+//		}
 //		List<String> words = Arrays.asList(uwords);
 //		Thread.sleep(2000);
 ////		
@@ -131,7 +131,7 @@ public class Main {
 						}
 					}.start();
 					
-					Thread.sleep(1000);
+					Thread.sleep(10000);
 					webSpeech.shutdown();
 //					simpleReco.shutdownMic();
 				}

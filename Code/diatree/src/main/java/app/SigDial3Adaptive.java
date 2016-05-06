@@ -83,12 +83,14 @@ public class SigDial3Adaptive {
 		
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
-		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"});
-//		startGoogleASR(cm, rclp);
-		TextBasedFloorTracker textBasedFloorTracker = (TextBasedFloorTracker) cm.lookup(PROP_FLOOR_MANAGER);
-		iuDocument = new IUDocument();
-		iuDocument.setListeners(webSpeech.iulisteners);
-		SimpleText.createAndShowGUI(webSpeech.iulisteners, textBasedFloorTracker);
+		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyCPOrPwttjs9OMBrYX6M6lFR5g5yk2Vw1Q"});
+		startGoogleASR(cm, rclp);
+		
+		
+//		TextBasedFloorTracker textBasedFloorTracker = (TextBasedFloorTracker) cm.lookup(PROP_FLOOR_MANAGER);
+//		iuDocument = new IUDocument();
+//		iuDocument.setListeners(webSpeech.iulisteners);
+//		SimpleText.createAndShowGUI(webSpeech.iulisteners, textBasedFloorTracker);
 		
 		ClientUtils.openNewClient();
 		
@@ -131,7 +133,7 @@ public class SigDial3Adaptive {
 						}
 					}.start();
 					
-					Thread.sleep(1000);
+					Thread.sleep(10000);
 					webSpeech.shutdown();
 //					simpleReco.shutdownMic();
 				}

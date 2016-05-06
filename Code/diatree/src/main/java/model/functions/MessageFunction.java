@@ -32,7 +32,7 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 	@S4String(defaultValue = "complete")
 	public final static String KEYWORD = "keyword";
 	
-	@S4Integer (defaultValue = 2000)
+	@S4Integer (defaultValue = 1200)
 	public final static String TIMEOUT = "timeout";
 	
 	private GoogleASR recognizer;

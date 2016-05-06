@@ -55,7 +55,7 @@ public class SigDial1NonIncremental {
 		ConfigurationManager cm = new ConfigurationManager(new File("src/main/java/config/config.xml").toURI().toURL());
 		cm.setGlobalProperty("isIncremental", "false");
 		
-		SigDial1NonIncrementalTimeout.setVariables(5 * (60 * 1000));
+		SigDial1NonIncrementalTimeout.setVariables(2 * (60 * 1000));
 		SigDial1NonIncrementalTimeout.getInstance().reset(); // start the timer for the phase
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
@@ -75,23 +75,23 @@ public class SigDial1NonIncremental {
 		
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
-		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyDXOjOCiM7v0mznDF1AWXXoR1ehqLeIB18"});
-//		startGoogleASR(cm, rclp);
+		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyCoqyxVlYyZ1HZUn9T-f5b5LRJM9pAymb8"});
+		startGoogleASR(cm, rclp);
 		
 		ClientUtils.openNewClient();
 		
 //		Or, one can send words individually with a 500 ms pause between them
-		String[] uwords = {"anruf", "name", "claudia", "claudia"};
-		List<String> words = Arrays.asList(uwords);
-		Thread.sleep(2000);
-		WordIU prev = WordIU.FIRST_WORD_IU;
-		for (String word : words) {
-			WordIU wiu = new WordIU(word, prev, null);
-			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-			Thread.sleep(400);
-			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
-			prev = wiu;
-		}
+//		String[] uwords = {"anruf", "name", "claudia", "claudia"};
+//		List<String> words = Arrays.asList(uwords);
+//		Thread.sleep(2000);
+//		WordIU prev = WordIU.FIRST_WORD_IU;
+//		for (String word : words) {
+//			WordIU wiu = new WordIU(word, prev, null);
+//			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+//			Thread.sleep(400);
+//			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
+//			prev = wiu;
+//		}
 	}
 	
 	
@@ -117,7 +117,7 @@ public class SigDial1NonIncremental {
 						}
 					}.start();
 					
-					Thread.sleep(1000);
+					Thread.sleep(10000);
 					webSpeech.shutdown();
 //					simpleReco.shutdownMic();
 				}

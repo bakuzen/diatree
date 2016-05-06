@@ -15,7 +15,8 @@
 	   {"child":"nach"}
 	  ],
 	  "properties": [
-	   {"property":"weg"}
+	   {"property":"weg"},
+	   {"property":"reise"}
 	  ]
 	},	
 	{ "name":"essen",

@@ -26,7 +26,7 @@ public class Constants {
 
 	public static final String INTENT = "intent";
 
-	public static final Object RESET_KEYWORD = "rücksetzen";
+	public static final Object RESET_KEYWORD = "neustart";
 //	public static final Object RESET_KEYWORD = "reset";
 
 	public static final String VERIFIED = "verified";
