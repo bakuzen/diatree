@@ -127,7 +127,7 @@ public class MessageFunction extends IUModule  implements CustomFunction {
 	}
 	
 	private void update() {
-		String message = Constants.MESSAGE + ":" ;
+		String message = Constants.MESSAGE + ":>>" ;
 		int numWords = 0;
 		for (String word : wordStack) {
 			String delim = " ";

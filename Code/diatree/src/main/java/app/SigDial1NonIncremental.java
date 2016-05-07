@@ -81,9 +81,9 @@ public class SigDial1NonIncremental {
 		GoogleASRUtil.startGoogleASR();
 		
 //		ClientUtils.openNewClient();
-		WordIU wiu = new WordIU("phase:nonincr", null, null);
-		edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-		notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
+//		WordIU wiu = new WordIU("phase:nonincr", null, null);
+//		edits.add(new EditMessage<IU>(EditType.ADD, wiu));
+//		notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
 		
 //		Or, one can send words individually with a 500 ms pause between them
 //		String[] uwords = {"anruf", "name", "claudia", "claudia"};
