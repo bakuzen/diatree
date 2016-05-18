@@ -52,7 +52,7 @@
 %Document Head
 % \dochead{CLV2 Class File Manual}
 
-\title{An Incremental System that Graphically Signals Speech Understanding}
+\title{An Adaptive, Incremental Personal Assistant that Graphically Signals Speech Understanding}
 
 \author{Casey Kennington \and David Schlangen}
 %\affil{CITEC, Bielefeld University}
@@ -156,17 +156,17 @@ The goal of the display is to inform the user about the internal state of the on
 
 \begin{wrapfigure}{r}{0.25\textwidth}
   \centering
-      \includegraphics[width=0.25\textwidth]{figures/diatree-affordances.png}	
+      \includegraphics[width=0.25\textwidth]{figures/diatree-affordances.pdf}	
       \caption{Example tree as branching from the root; each branch represents a system affordance (i.e., making a phone call, reminder, finding a restaurant, leaving a message, and finding a route). \label{fig:afforances}}
 \end{wrapfigure}
 
 The display is a right-branching tree, where the branches directly off the root node display the afforances of the system (i.e., what domains of things it can understand and do something about). When the first tree is displayed, it represents a state of the \nlu\ where none of the slots are filled, an example of which is shown in Figure~\ref{fig:afforances}. 
 
-When a user selects a domain to ask about, the tree is adjusted to make that domain the only one displayed and the slots that are required for that domain are shown as branches. The user can then fill those slots (i.e., branches) by uttering the name of the slot, or, alternatively, by uttering the item to fill the slot directly. For example, at a minimum, the user could utter the name of the domain then an item for each slot (e.g.,  \emph{food French downtown}) or the speech could be more natural (e.g., \emph{I'm quite hungry, I am looking for some French food maybe in the downtown area}). When something is uttered that falls into the \texttt{request} state of the \dm\ as explained above, the display expands the subtree under question (\todo{bring QUD into this?}) and marks the item with a question mark. And example of this is shown in Figure~\ref{fig:confirm} where \emph{franzözisch} (French) is requested to be confirmed. At this point, the user can utter any kind of confirmation. A positive confirmation would fill the slot with the item in question, collapsing that particular branch of the tree. A negative confirmation would retract the question, but leave the branch expanded. The expanded branches are displayed according to their rank as given by the \nlu's probability distribution.
+When a user selects a domain to ask about, the tree is adjusted to make that domain the only one displayed and the slots that are required for that domain are shown as branches. The user can then fill those slots (i.e., branches) by uttering the name of the slot, or, alternatively, by uttering the item to fill the slot directly. For example, at a minimum, the user could utter the name of the domain then an item for each slot (e.g.,  \emph{food French downtown}) or the speech could be more natural (e.g., \emph{I'm quite hungry, I am looking for some French food maybe in the downtown area}). When something is uttered that falls into the \texttt{request} state of the \dm\ as explained above, the display expands the subtree under question (\todo{bring QUD into this?}) and marks the item with a question mark. And example of this is shown in Figure~\ref{fig:confirm} where \emph{französisch} (French) is requested to be confirmed. At this point, the user can utter any kind of confirmation. A positive confirmation would fill the slot with the item in question, collapsing that particular branch of the tree. A negative confirmation would retract the question, but leave the branch expanded. The expanded branches are displayed according to their rank as given by the \nlu's probability distribution. Though a branch in the display can theoretically display an unlimited number of children, we opted to only show as many as 7 children; if a branch had more than 7 children, the final (bottom-most) child was an ellipsis. 
 
 \begin{figure}[ht]
   \centering
-      \includegraphics[width=0.5\textwidth]{figures/diatree-confirmation.png}	
+      \includegraphics[width=0.5\textwidth]{figures/diatree-confirmation.pdf}	
       \caption{Example tree asking for confirmation on a specific node (in red with a question mark).\label{fig:confirm}}
 \end{figure}
 
@@ -174,7 +174,7 @@ A filled  branch is collapsed, visually marking its corresponding slot as filled
 
 \begin{figure}[ht]
   \centering
-      \includegraphics[width=0.5\textwidth]{figures/diatree-filled.png}	
+      \includegraphics[width=0.5\textwidth]{figures/diatree-filled.pdf}	
       \caption{Example tree where all of the slots are filled. (i.e., \texttt{domain:food}, \texttt{location:nearby}, \texttt{type:french}) \label{fig:filled}}
 \end{figure}
 
@@ -229,15 +229,31 @@ We recruited 14 participants to participate in the evaluation. We used the Mint 
 \subsection{Experiment 1: Non-Incremental vs. Incremental}
 \label{section:exp1}
 
-We report the subjective results of the participant questionnaire that compared Phase 1 and Phase 2. We only report those items that were statistically significant (see Appendix for a list of the questions). 
+We report the subjective results of the participant questionnaire that compared Phase 1 and Phase 2. We only report those items that were statistically significant (see Appendix for a list of the questions). We further report objective measures for each system variant: total tasks, fully correct frames, average frame fscore, and average time elapsed (averages are taken over all participants for each variant; we only used the 10 participants who fully interacted with all three phases). Discussion of the two experiments is left to the end of this section.
 
 \subsection{Results}
 
 \paragraph{Subjective Evaluation} The questionnaire comparing Phase 1 and Phase 2 contained 10 questions, each with a choice of \emph{Phase 1}, \emph{Phase 2}, \emph{Both}, and \emph{Neither}. We applied a multinomial test of significance to the results, treating all four possible answers as equally likely (with Bonferroni correction of 10). The question \emph{The interface useful and easy to understand} with the answer of \emph{Both} was significant ($ \chi^2 $ (4, N = 12) = 9.0, p $<$ .005), as was \emph{The assistant was easy and intuitive to use} also with the answer \emph{Both} ($ \chi^2 $ (4, N = 12) = 9.0, p $<$ .005). The question \emph{I always understood what the system wanted from me} was also answered \emph{Both} significanly more times than other answers ($ \chi^2 $ (4, N = 14) = 9.0, p $<$ .005), similarly for the item \emph{It was sometimes unclear to me if the assistant understood me} with the answer of \emph{Both} ($ \chi^2 $ (4, N = 12) = 10.0, p $<$ .005). 
 
-These responses tell us that though the participants did not report preference for either system variant, they reported a general positive impression of the interface (in both variants). This is a nice result; the \ui\ could be used in a traditional, non-incremental way or in an incremental way and could be beneficial. 
+These responses tell us that though the participants did not report preference for either system variant, they reported a general positive impression of the interface (in both variants). This is a nice result; the \ui\ could be used in a traditional, non-incremental way or in an incremental way and could be useful to users. 
+
+\paragraph{Objective Evaluation}  The \emph{endpointed} (Phase 1) and \emph{incremental} (Phase 2) columns in Table~\ref{tab:objscores} show the results of the objective evaluation. Though the average time per task and fscore for the endpointed variant are better than those of the incremental version, the total number of tasks for the incremental variant was higher, as was the number of fully correct frames (though only by a count of 2). 
 
 
+\begin{table}
+ \begin{tabular}{|r|c|c|c|}
+\hline
+                     & \textbf{endpointed} & \textbf{incremental} & \textbf{adaptive} \\
+\hline
+\textbf{tasks} & 105 & 122 & 124  \\
+\textbf{frames} & 46 & 46 & 59 \\
+\textbf{fscore} & 0.81 & 0.74 & 0.80 \\
+\textbf{time} & 19.1 & 19.6 & 19.5 \\
+ \hline
+\end{tabular}
+\caption{Objective measures for Experiments 1 \& 2: count of completed tasks, number of fully correct frames, average fscore (over all participants), and average elapsed time per task (over all participants).}
+\label{tab:objscores}
+\end{table}
 
 \subsection{Experiment 2: Incremental vs. Incremental-Adaptive}
 \label{section:exp2}
@@ -245,17 +261,24 @@ These responses tell us that though the participants did not report preference f
 
 \subsection{Results}
 
-\paragraph{Subjective Evaluation} The questionnaire comparing Phase 2 and Phase 3 contained 12 questions, each with a choice of \emph{Phase 2}, \emph{Phase 3}, \emph{Both}, and \emph{Neither}.  We applied a multinomial test of significance to the results, treating all four possible answers as equally likely (with Bonferroni correction of 12). The question \emph{The interface useful and easy to understand} was answered \emph{Both} significantly more than other answers  ($ \chi^2 $ (4, N = 14) = 10.0, p $<$ .0042), The item \emph{I had the feeling that the assistant attempted to learn about me} was answered significantly with \emph{Neither} ($ \chi^2 $ (4, N = 14) = 8.0, p $<$ .0042), though the only other marked answer was \emph{Phase 3} (6 times), showing that either the participants didn't notice that either phase was attempting to apply a user model at all, but if they did notice, only Phase 3 was marked. All other questions were not significant.
+\paragraph{Subjective Evaluation} The questionnaire comparing Phase 2 (incremental) and Phase 3 (incremental-adaptive) contained 12 questions, each with a choice of \emph{Phase 2}, \emph{Phase 3}, \emph{Both}, and \emph{Neither}.  We applied a multinomial test of significance to the results, treating all four possible answers as equally likely (with Bonferroni correction of 12). The question \emph{The interface useful and easy to understand} was answered \emph{Both} significantly more than other answers  ($ \chi^2 $ (4, N = 14) = 10.0, p $<$ .0042), The item \emph{I had the feeling that the assistant attempted to learn about me} was answered significantly with \emph{Neither} ($ \chi^2 $ (4, N = 14) = 8.0, p $<$ .0042), though the only other marked answer was \emph{Phase 3} (6 times), showing that either the participants didn't notice that either phase was attempting to apply a user model at all, but if they did notice, only Phase 3 was marked. All other questions were not significant.
 
 Here again we see that there is a general positive impression of the \ui\ under all conditions. If anyone noticed that a system variant was attempting to learn a user model at all, they noticed that it was in Phase 3, as expected. 
 
+\paragraph{Objective Evaluation} The \emph{incremental} (Phase 2) and \emph{adaptive} (Phase 3) columns in Table~\ref{tab:objscores} show the results for the object evaluation for this experiment. Here, there is a clear difference between the two variants, with the adaptive showing more completed tasks, more fully correct frames, a higher fscore (all three possibly due to the fact that frames were potentially pre-filled), though the elapsed amount of time for each task was overall slightly higher. 
+
 \subsection{Discussion}
 
-While the object questionnaires don't express any preference for a particular system variant, the overall impression of the \ui\ was positive. 
+While the questionnaires don't express any preference for a particular system variant, the overall impression of the \ui\ was positive. The objective measures show that there are gains to be made when the system signals understanding at a more fine-grained interval than at the utterance level, due to the higher number of completed tasks. There are further gains to be made when the system applies even simple notions of user modeling (i.e., adaptivity) by attempting to predict what the user might want to do given a chosen domain; allowing the system to fill the frames decreases the possibility of user error, allowing the system to successfully complete more tasks in a shorter amount of time. 
 
-The final open-ended questionnaire sheds additional light on participants' experiences with our system. Most of the complaints (i.e., suggestions for improvement) revolved around problems with \asr, not the system itself (e.g., in Phase 1 the \asr\ was displayed and the wrong words were recognised; the \asr\ reponses were too slow). Two participants suggested an alternative ability to add ``free input'' as to override the \asr\ with hand-typed input (or select alternatives from the list with a scroll and touch interface in addition to the speech interface). Two participants suggested that the system be more responsive (i.e., show that the system was working even if the \ui\ did not change) and give more feedback (i.e., backchannels). For those participants that expressed preference to the non-incremental system (Phase 1), none of them had used a speech-based \pa\ before, whereas those that expressed preference to the incremental versions (Phases 2 and 3) have used speech-based \pa s before, and use them regularly. We conjecture that people without experience like to know how well the \asr\ is working and equate understanding with good \asr, whereas those that are more familiar with \pa s know that perfect \asr\ doesn't necessarily translate to perfect understanding--hence the need for an interface like the one presented here. 
+The final open-ended questionnaire sheds additional light on participants' experiences with our system(s). Most of the complaints (i.e., suggestions for improvement) revolved around problems with \asr, not the system itself (e.g., in Phase 1 the \asr\ was displayed and the wrong words were recognised; also that the \asr\ reponses were too slow). Two participants suggested an alternative ability to add ``free input'' as to override the \asr\ with hand-typed input (or select alternatives from the list with a scroll and touch interface in addition to the speech interface). Two participants suggested that the system be more responsive (i.e., more clearly show that the system was working even if the \ui\ did not change) and give more feedback (i.e., backchannels) more often. For those participants that expressed preference to the non-incremental system (Phase 1), none of them had used a speech-based \pa\ before, whereas those that expressed preference to the incremental versions (Phases 2 and 3) have used speech-based \pa s before, and use them regularly. We conjecture that people without experience like to know how well the \asr\ is working and equate understanding with \asr, whereas those that are more familiar with \pa s know that perfect \asr\ doesn't necessarily translate to perfect understanding--hence the need for an interface like the one presented here. 
 
 \section{Conclusion \& Future Work}
+
+Given the subjective and object results and analysis, we conclude that an intuitive presentation that signals a system's ongoing understanding benefits end users who perform simple tasks might be performed by a \pa. The presenteation that we provided, using a right-branching tree, worked well; indeed, the participants who used it found it intiutive and easy to understand. There are gains to be made when the system signals understanding at finer-grained levels than just at the end of a pre-formulated utterance. There are further gains to be made when a \pa\ attempts to learn (even a rudimentary) user model to predict what the user might want to do next. 
+
+For future work, we intend to provide simple authoring tools for the system to make building simple \pa s using our \ui\ easy. We want to improve the \nlu\ and scale to larger domains. We also plan on implementing this as a standalone application that could be run on a mobile device, which could actually perform the tasks.
+
 
 \section*{Appendix}
 
