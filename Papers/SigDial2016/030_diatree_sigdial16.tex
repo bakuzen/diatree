@@ -143,7 +143,7 @@ In our \sds, we apply an instantiation of \sium\ for each slot. The candidate sl
 
 \subsection{Dialogue Manager}
 
-At each word and resulting distribution from \nlu, the \dm\ needs to choose one of the following:
+The \dm\ plays a crucial role in our \sds\ and further sets it apart from other systems in that it is called to decide \emph{when} to act, effectively giving the \dm\ the control over timing of actions rather than relying on \asr\ endpointing, as well as \emph{how} to act. The \dm\ policy is based on a confidence score (\conf) derived from the \nlu\ (in this case, we used the distribution's argmax value) using thresholds for \texttt{wait}, \texttt{confirm} and \texttt{select} set by hand (i.e., trial and error). At each word and resulting distribution from \nlu, the \dm\ needs to choose one of the following:
 \begin{itemize}
  \item \texttt{wait} -- wait for more information (i.e., for the next word) %don't act until more information is forthcoming
  \item \texttt{select} -- as the \nlu\ is confident enough, fill the slot can with the argmax from \nlu %the \nlu\ is confident enough that a slot can be filled with the argmax for this slot from \nlu.
@@ -151,7 +151,9 @@ At each word and resulting distribution from \nlu, the \dm\ needs to choose one 
  \item \texttt{confirm} -- act on the confirmation of the user; in effect, \texttt{select} the confirmed slot value%the user has responded to the clarification request (which acts similar to a \texttt{select})
 \end{itemize}
 
-This is a crucial part to our \sds\ which sets it apart from other systems in that the \dm\ is called upon at each word to decide \emph{when} to act, as well as \emph{how} to act, effectively giving the \dm\ the control over timing of actions rather than relying on \asr\ endpointing. The \dm\ policy is based on a confidence score (\conf) derived from the \nlu\ (in this case, we used the distribution's argmax value) using thresholds for \texttt{wait}, \texttt{confirm} and \texttt{select} set by hand (i.e., trial and error). Though the thresholds were statically set, we applied OpenDial \cite{Lison2015a} as an \iu-module to perform the task of the \dm\ with the future goal that these values could be adjusted through reinforcement learning (which OpenDial could provide). The \dm\ processes and makes a decision for \emph{each slot}, with the assumption that only one slot out of all that are processed will result in an non-\texttt{wait} action (though this is not enforced). 
+Though the thresholds are statically set, we applied OpenDial \cite{Lison2015a} as an \iu-module to perform the task of the \dm\ with the future goal that these values could be adjusted through reinforcement learning (which OpenDial could provide). The \dm\ processes and makes a decision for \emph{each slot}, with the assumption that only one slot out of all that are processed will result in an non-\texttt{wait} action (though this is not enforced). 
+
+
 
 \subsection{Graphical User Interface}
 \label{section:display}
