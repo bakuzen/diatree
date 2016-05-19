@@ -144,6 +144,7 @@ In our \sds, we apply an instantiation of \sium\ for each slot. The candidate sl
 \subsection{Dialogue Manager}
 
 The \dm\ plays a crucial role in our \sds\ and further sets it apart from other systems in that it is called to decide \emph{when} to act, effectively giving the \dm\ the control over timing of actions rather than relying on \asr\ endpointing, as well as \emph{how} to act. The \dm\ policy is based on a confidence score (\conf) derived from the \nlu\ (in this case, we used the distribution's argmax value) using thresholds for \texttt{wait}, \texttt{confirm} and \texttt{select} set by hand (i.e., trial and error). At each word and resulting distribution from \nlu, the \dm\ needs to choose one of the following:
+
 \begin{itemize}
  \item \texttt{wait} -- wait for more information (i.e., for the next word) %don't act until more information is forthcoming
  \item \texttt{select} -- as the \nlu\ is confident enough, fill the slot can with the argmax from \nlu %the \nlu\ is confident enough that a slot can be filled with the argmax for this slot from \nlu.
@@ -195,16 +196,13 @@ In this section, we describe two experiments where we evaluated our system. It i
 
 \subsection{Task \& Procedure} 
 
-
-
-The participants were seated at a desk and given written instructions indicating that they were to use the system to perform as many tasks as possible in the allotted time. Figure~\ref{fig:taskex} shows some example tasks as they would be displayed (one at a time) to the user. A screen, tablet, and keyboard were on the desk in front of the user (see Figure~\ref{fig:dataview}).\footnote{We used a Samsung 8.4 Pro tablet turned to its side to show a larger width for the tree to grow to the right. The tablet only showed the \ui; the \sds\ ran on a separate computer.}  The user was instructed to convey the task presented on the screen to the system such that the \ui\ on the tablet would have a completed tree (e.g., as in Figure~\ref{fig:filled}). When the participant was satisfied that the system understood her intent, she was to press space bar on the keyboard which triggered a new task to be displayed and the screen reset the tree to its start state on the tablet (as in Figure~\ref{fig:affordances}). 
-
 \begin{wrapfigure}{r}{0.25\textwidth}
   \centering
       \includegraphics[width=0.25\textwidth]{figures/taskexample.png}	
       \caption{Examples of tasks, as presented to each participant. Each icon represents a specific task domain (i.e., call, reminder, find a restaurant, leave a message, or directions).\label{fig:taskex}}
 \end{wrapfigure}
 
+The participants were seated at a desk and given written instructions indicating that they were to use the system to perform as many tasks as possible in the allotted time. Figure~\ref{fig:taskex} shows some example tasks as they would be displayed (one at a time) to the user. A screen, tablet, and keyboard were on the desk in front of the user (see Figure~\ref{fig:dataview}).\footnote{We used a Samsung 8.4 Pro tablet turned to its side to show a larger width for the tree to grow to the right. The tablet only showed the \ui; the \sds\ ran on a separate computer.}  The user was instructed to convey the task presented on the screen to the system such that the \ui\ on the tablet would have a completed tree (e.g., as in Figure~\ref{fig:filled}). When the participant was satisfied that the system understood her intent, she was to press space bar on the keyboard which triggered a new task to be displayed and the screen reset the tree to its start state on the tablet (as in Figure~\ref{fig:affordances}). 
 
 The possible tasks were \emph{call}, which had a single slot for \emph{name} to be filled (i.e., one out of the 22 most common German given names); \emph{message} which had a slot for \emph{name} and a slot for the \emph{message} (which, when invoked, would simply fill in directly from the \asr\ until 1 second of silence was detected); \emph{eat} which had slots for \emph{type} (in this case, 6 possible types) and \emph{location} (in this case, 6 locations based around the city of Bielefeld); \emph{route} which had slots for \emph{source} city and the \emph{destination} city (which shared the same list of the top 100 most populous German cities); and \emph{reminder} which had a slot for \emph{message}. 
 
