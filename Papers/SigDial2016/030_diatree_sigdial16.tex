@@ -82,9 +82,9 @@ In this work, we explore adding a graphical user interface (\ui) modality that m
 \section{Related Work}
 \label{section:related_work}
 
-This work builds upon several threads of previous research: \newcite{Chai2014} addressed misalignments in understanding (i.e., common ground) \cite{clarkschaefer:contrdis} between robots and humans by informing the human of the internal system state via speech. We take this idea and apply it to a \pa\ by displaying the internal state of the system to the user via a \ui\ (explained in Section~\ref{section:display}), allowing the user to determine if system understanding has taken place--a way of providing feedback and backchannels to the user. \newcite{Dethlefs2015} provide a good review of work that shows that backchannels facilitate grounding, feedback, and clarifications in human spoken dialogue, and apply an \emph{information density} approach to determining when to backchannel using speech. Because we don't backchannel using speech here, there is no potential overlap between the user and the system; rather, our system can display backchannels and ask clarifications without frustrating the user through inadvertent overlaps.
+This work builds upon several threads of previous research: \newcite{Chai2014} addressed misalignments in understanding (i.e., common ground) \cite{clarkschaefer:contrdis} between robots and humans by informing the human of the internal system state via speech. We take this idea and apply it to a \pa\ by displaying the internal state of the system to the user via a \ui\ (explained in Section~\ref{section:display}), allowing the user to determine if system understanding has taken place--a way of providing feedback and backchannels to the user. \newcite{Dethlefs2015} provide a good review of work that show how backchannels facilitate grounding, feedback, and clarifications in human spoken dialogue, and apply an \emph{information density} approach to determining when to backchannel using speech. Because we don't backchannel using speech here, there is no potential overlap between the user and the system; rather, our system can display backchannels and ask clarifications without frustrating the user through inadvertent overlaps.
 
-Though different in many ways, our work is similar in some regards to \newcite{Larsson2011}, which displays information to the user and allows the user to navigate the display itself (e.g., by saying \emph{up} or \emph{down} in a menu list)--functionality that we intend to apply to our \ui\ in future work. Our work is also comparable to \sds\ toolkits such as IrisTK \cite{Skantze2012a} and OpenDial \cite{Lison2015a} which enable \sds\ designers to visualize the internal state of their systems; but the visualisations aren't designed for end user interpretability. 
+Though different in many ways, our work is similar in some regards to \newcite{Larsson2011}, which displays information to the user and allows the user to navigate the display itself (e.g., by saying \emph{up} or \emph{down} in a menu list)--functionality that we intend to apply to our \ui\ in future work. Our work is also comparable to \sds\ toolkits such as IrisTK \cite{Skantze2012a} and OpenDial \cite{Lison2015a} which enable \sds\ designers to visualize the internal state of their systems, though not for end user interpretability. 
 
 Some of the work here is inspired by the \emph{Microsoft Language Understanding Intelligent Service} (LUIS) project \cite{Williams2015_sigdial}. While our system by no means achieves the scale that LUIS does, we offer here an additional contribution an open source LUIS-like system (with the important addition of the graphical interface) that is authorable (using JSON files; we leave authoring using a web interface like that of LUIS to future work), extensible (affordances can be easily added), incremental (in that respect going beyond LUIS), trainable (i.e., can learn from examples, but can still function well without examples), and can learn through interacting (here we apply a user model that learns during interaction). 
 
@@ -117,7 +117,7 @@ The modules explained in the remainder of this section are implemented as \iu-mo
 
 \subsection{Speech Recognition}
 
-The module that takes speech input from the user in our \sds\ is the \asr\ component. Incremental \asr\ must transcribe uttered speech into words which must be forthcoming from the \asr\ as early as possible (i.e., the \asr\ must not wait for endpointing to produce output). Each module that follows must also process incrementally, acting in lock-step upon input as it is received. Incremental \asr\ is not new \cite{baumannetal2009:naacl} and many of the current freely-accessible \asr\ systems can produce output (semi-) incrementally. We opt for Google \asr\ for its vocabulary coverage of our evaluation language (German). We package output from the Google service into \iu s which are passed to the \nlu\ module, which we now explain. 
+The module that takes speech input from the user in our \sds\ is the \asr\ component. Incremental \asr\ must transcribe uttered speech into words which must be forthcoming from the \asr\ as early as possible (i.e., the \asr\ must not wait for endpointing to produce output). Each module that follows must also process incrementally, acting in lock-step upon input as it is received. Incremental \asr\ is not new \cite{baumannetal2009:naacl} and many of the current freely-accessible \asr\ systems can produce output (semi-) incrementally. We opt for Google \asr\ for its vocabulary coverage of our evaluation language (German). Following, \newcite{Baumann16}, we package output from the Google service into \iu s which are passed to the \nlu\ module, which we now explain. 
 
 \subsection{Language Understanding}
 
@@ -271,19 +271,20 @@ Here again we see that there is a general positive impression of the \ui\ under 
 
 While the responses don't express any preference for a particular system variant, the overall impression of the \ui\ was positive. The objective measures show that there are gains to be made when the system signals understanding at a more fine-grained interval than at the utterance level, due to the higher number of completed tasks and locally-made repairs. There are further gains to be made when the system applies simple user modelling (i.e., adaptivity) by attempting to predict what the user might want to do in a chosen domain decreasing the possibility of user error and allowing the system to accurately and quickly complete more tasks. Participants also didn't just get used to the system over time, as the average time per episode was fairly similar in all three phases. 
 
-The open-ended questionnaire sheds additional light. Most of the suggestions for improvement related to \asr\ misrecognition and speed (i.e., not about the system itself). Two participants suggested an ability to add ``free input'' or select alternatives from the tree. Two participants suggested that the system be more responsive (i.e., in \texttt{wait} states), and give more feedback (i.e., backchannels) more often. For those participants that expressed preference to the non-incremental system (Phase 1), none of them had used a speech-based \pa\ before, whereas those that expressed preference to the incremental versions (Phases 2 and 3) use them regularly. We conjecture that people without \sds\ experience equate understanding with \asr, whereas those that are more familiar with \pa s know that perfect \asr\ doesn't translate to perfect understanding--hence the need for a \ui\. A simple remedy would be to display \asr\ with the tree, signalling understanding despite \asr\ errors.
+The open-ended questionnaire sheds additional light. Most of the suggestions for improvement related to \asr\ misrecognition and speed (i.e., not about the system itself). Two participants suggested an ability to add ``free input'' or select alternatives from the tree. Two participants suggested that the system be more responsive (i.e., in \texttt{wait} states), and give more feedback (i.e., backchannels) more often. For those participants that expressed preference to the non-incremental system (Phase 1), none of them had used a speech-based \pa\ before, whereas those that expressed preference to the incremental versions (Phases 2 and 3) use them regularly. We conjecture that people without \sds\ experience equate understanding with \asr, whereas those that are more familiar with \pa s know that perfect \asr\ doesn't translate to perfect understanding--hence the need for a \ui. A simple remedy would be to display \asr\ with the tree, signalling understanding despite \asr\ errors.
 
 \section{Conclusion \& Future Work}
 
 Given the subjective and object results and analysis, we conclude that an intuitive presentation that signals a system's ongoing understanding benefits end users who perform simple tasks which might be performed by a \pa. The \ui\ that we provided, using a right-branching tree, worked well; indeed, the participants who used it found it intuitive and easy to understand. There are gains to be made when the system signals understanding at finer-grained levels than just at the end of a pre-formulated utterance. There are further gains to be made when a \pa\ attempts to learn (even a rudimentary) user model to predict what the user might want to do next. 
 
-For future work, we intend to provide simple authoring tools for the system to make building simple \pa s using our \ui\ easy. We want to improve the \nlu\ and scale to larger domains.\footnote{\newcite{Kennington2016} showed that our chosen \nlu\ approach can scale fairly well, but the \ui\ has some limits when applied to larger domains with thousands of items. We leave improved scaling to future work.} We also plan on implementing this as a standalone application that could be run on a mobile device, which could actually perform the tasks. Lastly, we  will investigate using touch to select between possible alternatives.
+For future work, we intend to provide simple authoring tools for the system to make building simple \pa s using our \ui\ easy. We want to improve the \nlu\ and scale to larger domains.\footnote{\newcite{Kennington2016} showed that our chosen \nlu\ approach can scale fairly well, but the \ui\ has some limits when applied to larger domains with thousands of items. We leave improved scaling to future work.} We also plan on implementing this as a standalone application that could be run on a mobile device, which could actually perform the tasks. Lastly, we  will investigate using touch as an additional input modality to select between possible alternatives that are offered by the system. 
 
 \section*{Appendix}
 
-{\small
+
 \noindent
 The following questions were asked on both questionnaires following Phase 2 and Phase 3 (comparing the two most latest used system versions; as translated into English):
+{\small
 \begin{itemize}
  \item The interface was useful and easy to understand.
  \item The assistant was easy and intuitive to use.
@@ -296,16 +297,20 @@ The following questions were asked on both questionnaires following Phase 2 and 
  \item The assistant sometimes did things that I did not expect.
  \item When the assistant made mistakes, it was easy for me to correct them. 
 \end{itemize}
+}
 
 \noindent
 In addition to the above 10 questions, the following were also asked on the questionnaire following Phase 3:
+{\small
 \begin{itemize}
  \item I had the feeling that the assistant attempted to learn about me.
  \item I had the feeling that the assistant made incorrect guesses. 
 \end{itemize}
+}
 
 \noindent
 The following questions were used on the general questionnaire:
+{\small
 \begin{itemize}
  \item I regularly use personal assistants such as Siri, Cortana, Google now or Amazon Echo: Yes/No
  \item I have never used a speech-based personal assistant: Yes/No
