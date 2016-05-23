@@ -1,0 +1,81 @@
+{ "intent": "typ", 
+    "concepts": [
+	{ "concept":"thai",
+	  "properties": [
+	   {"property":"thai"},
+	   {"property":"curry"},
+	   {"property":"scharf"},
+	   {"property":"reis"},
+	   {"property":"vegetarisch"},
+	   {"property":"nudeln"}
+	  ]
+	},
+	{ "concept":"indisch",
+	  "properties": [
+	   {"property":"indisch"},
+	   {"property":"curry"},
+	   {"property":"scharf"},
+	   {"property":"reis"},
+	   {"property":"vegetarisch"}
+	  ]
+	},
+	{ "concept":"italienisch",
+	  "properties": [
+	   {"property":"italienisch"},
+	   {"property":"nudeln"},
+	   {"property":"pasta"}
+	  ]
+	},	
+	{ "concept":"franzözisch",
+	  "properties": [
+	   {"property":"franzözisch"},
+	   {"property":"fisch"},
+	   {"property":"käse"}
+	  ]
+	},
+	{ "concept":"deutsch",
+	  "properties": [
+	   {"property":"deutsch"},
+	   {"property":"fleisch"},
+	   {"property":"kartoffeln"},
+	  ]
+	},	
+	{ "concept":"mexicanisch",
+	  "properties": [
+	   {"property":"mexican"},
+	   {"property":"mexicanisch"},
+	   {"property":"scharf"},
+	   {"property":"fleisch"},
+	   {"property":"tortilla"}
+	  ]
+	}
+    
+    ],
+    
+     "examples": [
+    {
+      "concept": "thai",
+      "example": "ich möchte thai"
+    },
+    {
+      "concept": "indisch",
+      "example": "ich möchte indian"
+    },
+    {
+      "concept": "thai",
+      "example": "ich möchte thai"
+    },
+    {
+      "concept": "franzözisch",
+      "example": "ich möchte franzözisch"
+    },
+    {
+      "concept": "italienisch",
+      "example": "ich möchte italienisch"
+    }, 
+    {
+      "concept": "mexicanisch",
+      "example": "ich möchte mexicanisch"
+    }
+    ]
+}
