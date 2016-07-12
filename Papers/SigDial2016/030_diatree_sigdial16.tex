@@ -43,11 +43,7 @@
 \newcommand{\sium}[0]{\textsc{sium}}
 \newcommand{\asr}[0]{\textsc{asr}}
 \newcommand{\dm}[0]{\textsc{dm}}
-<<<<<<< HEAD
 \newcommand{\ui}[0]{\textsc{gui}}
-=======
-\newcommand{\ui}[0]{\textsc{ui}}
->>>>>>> 16fc55985b04ea47ad7bbba62655ed67f5e10eb9
 \newcommand{\iu}[0]{\textsc{iu}}
 \newcommand{\rr}[0]{\textsc{rr}}
 \newcommand{\conf}[0]{\textsc{conf}}
@@ -95,7 +91,6 @@ Some of the work here is inspired by the \emph{Microsoft Language Understanding 
 \section{System Description}
 \label{section:system_def}
 
-<<<<<<< HEAD
 This section introduces and describes our \sds, which is modularised into four main components: \asr, natural language understanding (\nlu), dialogue management (\dm), and the graphical user interface (\ui) which, as explained below, is visualised as a right-branching tree. The overall system is represented in Figure~\ref{fig:overview}. For the remainder of this section, each module is explained in turn. As each module processes input incrementally (i.e., word for word), we first explain our framework for incremental processing.
 
 \begin{figure}[ht]
@@ -126,7 +121,7 @@ The module that takes speech input from the user in our \sds\ is the \asr\ compo
 
 \subsection{Language Understanding}
 
-We approach the task of \nlu\ as a slot-filling task (a very common approach; see \newcite{tur2011spoken}) where an intent is complete when all slots of a \emph{frame} are filled. The main driver of the \nlu\ in our \sds\ is the \sium\ model of \nlu\ introduced in \newcite{Kennington2013a}. \sium\ has been used in several systems which have reported substantial results in various domains, languages, and tasks \cite{Han2015,Kennington2015_naacl,Kennington2016} Though originally a model of reference resolution, it was always intended to be used for general \nlu, which we do here. The model is formalised as follows:
+We approach the task of \nlu\ as a slot-filling task (a very common approach; see \newcite{Tur2012}) where an intent is complete when all slots of a \emph{frame} are filled. The main driver of the \nlu\ in our \sds\ is the \sium\ model of \nlu\ introduced in \newcite{Kennington2013a}. \sium\ has been used in several systems which have reported substantial results in various domains, languages, and tasks \cite{Han2015,Kennington2015_naacl,Kennington2016} Though originally a model of reference resolution, it was always intended to be used for general \nlu, which we do here. The model is formalised as follows:
 
 \vspace{-0.25cm}
 {\small
@@ -143,40 +138,6 @@ That is, $P(I|U)$ is the probability of the intent $I$ (i.e., a frame slot) behi
 All properties in $R$ receive probaibility mass from the learned sub-model $P(U|R)$, but to allow our system to function with minimal amounts of training data, we apply a simple rule: if some $r \in R$ and $w \in U$ are such that $r\doteq w$  (where $\doteq$ is string equality; e.g., an intent has the property of \texttt{pasta} and the word \emph{pasta} is uttered), then $P(U$=$w|R$=r$)$=$1$. To allow for possible \asr\ errors, we also apply an edit distance calculation between the words from \asr\ and the properties using \emph{Levenshtein distance} ($ld$) on the character sequences: $P(U$=$w|R$=$r)$=$1 - ld(w,r) / max(len(w),len(r))$ where the $ld$ is normalised by the length of the longest sequence (but we only apply this if the calculated value is above a threshold of 0.6; i.e., the two strings are mostly similar). Applying these three steps produces a distribution for $P(U|R)$, which is re-normalised to sum to one.
 
 We apply an instantiation of \sium\ for each slot. The candidate slots that are processed depends on the state of the \ui\ (described below); only slots represented by visible nodes are considered, thereby reducing the possible frames that could be predicted. At each word increment, the updated slots (and their corresponding) distributions are given to the \dm, which will now be explained. 
-=======
-This section introduces and describes our \sds. Our \sds\ is modularised into four main components: automatic speech recognition (\asr), natural langauge understanding (\nlu), dialogue management (\dm), and the user interface (\ui) which, as explained below, is visualised as a right-branching tree. For the remainder of this section, each module is exlpained in turn. First, however, we explain what is meant by incremental processing and the role that plays in the work presented here. 
-
-\todo{figure of system modules}
-
-\subsection{Incremental Dialogue}
-
-Of prime importance in our \sds--the aspect of our \sds\ that sets it apart from others--is the requirement that it processes \emph{incrementally}. An often-cited concern with incremental processing is regarding informativeness: why act so soon when waiting (even just for a moment) would allow additional information, resutling in more-informed decisions? The trade-off here is all-important: \emph{naturalness} as perceived by the end user who is interacting with the \sds. Indeed, it has been shown that humans perceive incremental systems as being more natural than traditional, turn-based systems \cite{Aist2006,Skantze2009,skantze2010sigdial,Asri2014}, offer a more human-like experience for the human users \cite{Edlund2008b} and are more satisfying to interact with than non-incremental systems \cite{Aistetal:incrunder-short}. Psycholinguistic research has also shown that humans process (i.e., comprehend) utterances as they unfold and do not wait until the end of an utterance to begin the comprehension process \cite{Tanenhaus1995,Spivey_2002tw}. 
-
-The trade-off between informativeness and naturalness can be reconciled when mechanisms are in place where earlier desicions can be repaired. Such mechanisms were introduced in the incremental unit (\iu) framework for \sds\ \cite{Schlangen2009,Schlangen2011}. Following \cite{kennington-kousidis-schlangen:2014:W14-43}, \sds s based on the \iu-network approach consist of a network of processing \emph{modules}. A typical module takes input from its \emph{left buffer}, performs some kind of processing on that data, and places the processed result onto its \emph{right buffer}. The data are packaged as the payload of \emph{incremental units} (\textsc{iu}s) which are passed between modules. The \textsc{iu}s themselves are also interconnected via  \emph{same level links} (\textsc{sll}) and \emph{grounded-in links} (\textsc{grin}), the former allowing the linking of \textsc{iu}s as a growing sequence, the latter allowing that sequence to convey what \textsc{iu}s directly affect it.  A complication particular to incremental processing is that modules can ``change their mind'' about what the best hypothesis is, in light of later information, thus \textsc{iu}s can be \emph{added}, \emph{revoked}, or \emph{committed} to a network of \textsc{iu}s.
-
-The modules exlpained in the remained of this section are implemented as \iu-modules and process incrementally. Each will now be explained. 
-
-\subsection{Speech Recognition}
-
-Incremental processing begins with modules that take in input; in the case of our \sds, that is the \asr\ component. Incremental \asr\ must transcribe uttered speech into words and words must be forthcoming from the \asr\ as early as possible (i.e., the \asr\ must not wait for endponiting in order to act). Each module that follows must also process incrementally, acting in lock-step upon input as it is received. Incremental \asr\ is not new \cite{baumannetal2009:naacl} and many of the current freely-accessible \asr\ systems can produce output (semi-) incrementally. 
-
-In our \sds, we opt for Google \asr\ because of its wide vocbaulary coverage of the language we are interested in (German). We are able to package \asr\ output from the Google service into \iu s as explained above. Those word \iu s are passed to the \nlu\ module, which will now be explained. 
-
-\subsection{Language Understanding}
-
-We approach the task of \nlu\ as a slot-filling task (a very common approach; see \cite{Tur2012}) where the system can fill the task when all slots of a frame are filled. The main driver of the \nlu\ in our \sds\ is the \sium\ model of \nlu\ introduced in \cite{Kennington2013a}. Though originally a model of reference resolution, the authors hinted that it could be used for general \nlu, which we do here. The model is formalised as follows:
-
-\begin{center}
-\begin{equation}
-   P(I|U) = \frac{1}{P(U)} P(I)\sum_{r\in R} P(U|R)P(R|I) 
-\label{eq:disc1}
-\end{equation}
-\end{center}
-
-That is, $P(I|U)$ is the probability of the intent $I$ (i.e., a frame slot) behind the speaker's (ongoing) utterance $U$. This is recovered using the mediating variable $R$, a set of \emph{properties} which map between aspects of $U$ and aspects of $I$. These properties could be visual properties of visible objects, or they could be more abstract properties that intents might have, which we opt for here (e.g., the intent of a \texttt{destination} might be filled by \texttt{new york} which has (among others) properties like \texttt{new york}, \texttt{biggest-us-city}, \texttt{has-statue-of-libery}, etc.). Properties are pre-defined by a system designer and can match words that might be uttered to describe the intent in question. The mapping betwen properties and aspects of $U$ can be learned from data. During application, $P(U|R)$ can produce a distribution over words (or properties, see below) which are summed over and the probability mass for each property is accumulated for each intent, resulting in a distribution over possible intents. This occurs at each word increment, where the distribution from the previous increment is combined via $P(I)$, keeping track of the distribution over time. 
-
-In our \sds, we apply an instantion of \sium\ for each slot (explained in Section~\ref{section:experiments}), all of which update at each word increment. At each word increment, the updated slots (and their corresponding) distributions are given to the \dm, which will now be explained. 
->>>>>>> 16fc55985b04ea47ad7bbba62655ed67f5e10eb9
 
 \subsection{Dialogue Manager}
 
@@ -220,10 +181,12 @@ A completed branch is collapsed, visually marking its corresponding slot as fill
 \begin{figure}[ht]
   \centering
       \includegraphics[width=0.45\textwidth]{figures/diatree-filled.pdf}	
-      \caption{Example tree where all of the slots are filled. (i.e., \texttt{domain:food}, \texttt{location:nearby}, \texttt{type:french}) \label{fig:filled}}
+      \caption{Example tree where all of the slots are filled. (i.e., \texttt{domain:food}, \texttt{location:university}, \texttt{type:thai}) \label{fig:filled}}
 \end{figure}
 
 Such an interface clearly shows the internal state of the \sds\ and whether or not it has understood the request so far. It is designed to aid the user's attention to the slot in question, and clearly indicates the affordances that the system has. The interface is currently a read-only display that is purely speech-driven, but it could be augmented with additional functionalities, such as tapping a node for expansion or typing input that the system might not yet display. It is currently implemented as a web-based interface (using the JavaScript D3 library), allowing it to be usable as a web application on any machine or mobile device. 
+
+\paragraph{Adaptive Branching} The \ui\ as explained affords an additional straight-forward extension: the \ui\ can be used to signal what the system thinks the user might say next. This is done by expanding a branch and displaying a confirmation on that branch, signalling that the system predicts that the user will choose that particular branch. Alternatively, if the system is confident that a user will fill a slot with a particular value, that particular slot can be filled without confirmation. This is displayed as a collapsed tree branch. A system that perfectly predicts a user's intent would fill an entire tree (i.e., all slots) only requiring the user to confirm once. A more careful system would confirm at each step (such an interaction would only require the user to utter confirmations and nothing else). 
 
 
 \section{Experiments}
@@ -232,6 +195,7 @@ Such an interface clearly shows the internal state of the \sds\ and whether or n
 In this section, we describe two experiments where we evaluated our system. It is our primary goal to show that our \ui\ is useful and signals understanding to the user. We also wish to show that incremental presentation of such a \ui\ is more effective than an endpointed system. We further want to show that an adaptive system is more effective than a non-adaptive system (though both would process incrementally). In order to best evaluate our system, we recruited participants to interact with our system in varied settings to compare endpointed (i.e., non-incremental) and non-adaptive as well as adaptive versions. We describe how the data were collected from the participants, then explain each experiment and give results.
 
 \subsection{Task \& Procedure} 
+\label{section:task_procedure}
 
 \begin{wrapfigure}{r}{0.25\textwidth}
   \centering
@@ -241,7 +205,7 @@ In this section, we describe two experiments where we evaluated our system. It i
 
 The participants were seated at a desk and given written instructions indicating that they were to use the system to perform as many tasks as possible in the allotted time. Figure~\ref{fig:taskex} shows some example tasks as they would be displayed (one at a time) to the user. A screen, tablet, and keyboard were on the desk in front of the user (see Figure~\ref{fig:dataview}).\footnote{We used a Samsung 8.4 Pro tablet turned to its side to show a larger width for the tree to grow to the right. The tablet only showed the \ui; the \sds\ ran on a separate computer.}  The user was instructed to convey the task presented on the screen to the system such that the \ui\ on the tablet would have a completed tree (e.g., as in Figure~\ref{fig:filled}). When the participant was satisfied that the system understood her intent, she was to press space bar on the keyboard which triggered a new task to be displayed on the screen and reset the tree to its start state on the tablet (as in Figure~\ref{fig:affordances}). 
 
-The possible tasks were \emph{call}, which had a single slot for \emph{name} to be filled (i.e., one out of the 22 most common German given names); \emph{message} which had a slot for \emph{name} and a slot for the \emph{message} (which, when invoked, would simply fill in directly from the \asr\ until 1 second of silence was detected); \emph{eat} which had slots for \emph{type} (in this case, 6 possible types) and \emph{location} (in this case, 6 locations based around the city of Bielefeld); \emph{route} which had slots for \emph{source} city and the \emph{destination} city (which shared the same list of the top 100 most populous German cities); and \emph{reminder} which had a slot for \emph{message}. 
+The possible task domains were \emph{call}, which had a single slot for \emph{name} to be filled (i.e., one out of the 22 most common German given names); \emph{message} which had a slot for \emph{name} and a slot for the \emph{message} (which, when invoked, would simply fill in directly from the \asr\ until 1 second of silence was detected); \emph{eat} which had slots for \emph{type} (in this case, 6 possible types) and \emph{location} (in this case, 6 locations based around the city of Bielefeld); \emph{route} which had slots for \emph{source} city and the \emph{destination} city (which shared the same list of the top 100 most populous German cities); and \emph{reminder} which had a slot for \emph{message}. 
 
 %Some of the slot types were shared across domains, such as \emph{message} (across \emph{reminder} and \emph{message}), \emph{name} (across \emph{message} and \emph{call}), as well as \emph{source} and \emph{destination} which shared the same list of German city names (the top 100 most populous cities). 
 
@@ -253,7 +217,7 @@ For each task, the domain was first randomly chosen from the 5 possible domains,
       \caption{Bird's eye view of the experiment: the participant sat at a table with a screen, tablet, and keyboard in front of them. \label{fig:dataview}}
 \end{figure}
 
-The participant was told that she would interact with the system in three different phases, each for 4 minutes, and to accomplish as many tasks as possible in that time allotment. The participant was not told what the different phases were. The experiments described in Sections~\ref{section:exp1} and \ref{section:exp2} respectively describe and report a comparison first between the Phase 1 and 2 (denoted as the \emph{endpointed} and \emph{incremental} variants of the system) and a comparison between Phase 2 and 3 (\emph{incremental} and \emph{incremental-adaptive} phases). Each of these phases are described below. Before the participant began Phase 1, they were able to try it out for up to 4 minutes (in Phase 1 settings) and ask questions about how it worked, allowing them to get used to the interface before the actual experiment began. After this trial phase, the experiment began with Phase 1.
+The participant was told that she would interact with the system in three different phases, each for 4 minutes, and to accomplish as many tasks as possible in that time allotment. The participant was not told what the different phases were. The experiments described in Sections~\ref{section:exp1} and \ref{section:exp2} respectively describe and report a comparison first between the Phase 1 and 2 (denoted as the \emph{endpointed} and \emph{incremental} variants of the system) in order to establish whether or not the incremental variant produced better results than the endpointed variant. We also report a comparison between Phase 2 and 3 (\emph{incremental} and \emph{incremental-adaptive} phases). Each of these phases are described below. Before the participant began Phase 1, they were able to try it out for up to 4 minutes (in Phase 1 settings) and ask questions about how it worked, allowing them to get used to the interface before the actual experiment began. After this trial phase, the experiment began with Phase 1. The phases were presented in the same order to all participants. We opted to not randomise the order or the presentation of the phases 
 
 \paragraph{Phase 1: Non-incremental} In this phase, the system did not appear to work incrementally; i.e., the system displayed tree updates after \asr\ endpointing (of 1.2 seconds--a reasonable amount of time to expect a response from a commercial spoken \pa). The system displayed the ongoing \asr\ on the tablet as it was recognised (as is often done in commercial \pa s). At the end of Phase 1, a pop up window notified the user that the phase was complete. They then moved onto Phase 2.
 
@@ -276,9 +240,9 @@ In this section we report the results of the evaluation between the \emph{endpoi
 
 \paragraph{Subjective Results} We applied a multinomial test of significance to the results, treating all four possible answers as equally likely (with Bonferroni correction of 10). The item \emph{The interface was useful and easy to understand} with the answer of \emph{Both} was significant ($ \chi^2 $ (4, N = 12) = 9.0, p $<$ .005), as was \emph{The assistant was easy and intuitive to use} also with the answer \emph{Both} ($ \chi^2 $ (4, N = 12) = 9.0, p $<$ .005). The item \emph{I always understood what the system wanted from me} was also answered \emph{Both} significantly more times than other answers ($ \chi^2 $ (4, N = 14) = 9.0, p $<$ .005), similarly for \emph{It was sometimes unclear to me if the assistant understood me} with the answer of \emph{Both} ($ \chi^2 $ (4, N = 12) = 10.0, p $<$ .005).  These responses tell us that though the participants did not report preference for either system variant, they reported a general positive impression of the \ui\ (in both variants). This is a nice result; the \ui\ could be used in either system with benefit to the users.
 
-\paragraph{Objective Results}  The \emph{endpointed} (Phase 1) and \emph{incremental} (Phase 2) columns in Table~\ref{tab:objscores} show the results of the objective evaluation. Though the average time per task and fscore for the endpointed variant are better than those of the endpointed variant, the total number of tasks for the incremental variant was higher. 
+\paragraph{Objective Results}  The \emph{endpointed} (Phase 1) and \emph{incremental} (Phase 2) columns in Table~\ref{tab:objscores} show the results of the objective evaluation. Though the average time per task and fscore for the endpointed variant are better than those of the incremental variant, the total number of tasks for the incremental variant was higher. 
 
-Manual inspection of logs indicate that participants took advantage of the system's flexibility of understanding instalments (i.e., filling frames incrementally). This is evidenced in that participants often uttered words understood by the system as being negative (e.g., \emph{nein}/\emph{no}), either as a result of an explicit confirmation request by the system (e.g., \emph{Thai?}) or after a slot was incorrectly filled (something very easily determined through the \ui). This is a desired outcome of using our system; participants were able to repair specific areas of misunderstanding as they took place instead of needing to correct an entire intent (i.e., frame). However, we cannot fully empirically measure these tendencies given our data and metrics. 
+Manual inspection of logs indicate that participants took advantage of the system's flexibility of understanding instalments (i.e., filling frames incrementally). This is evidenced in that participants often uttered words understood by the system as being negative (e.g., \emph{nein}/\emph{no}), either as a result of an explicit confirmation request by the system (e.g., \emph{Thai?}) or after a slot was incorrectly filled (something very easily determined through the \ui). This is a desired outcome of using our system; participants were able to repair local areas of misunderstanding as they took place instead of needing to correct an entire intent (i.e., frame). However, we cannot fully empirically measure these tendencies given our data and metrics. 
 
 \begin{table}
  \begin{tabular}{|r|c|c|c|}
@@ -300,7 +264,7 @@ Manual inspection of logs indicate that participants took advantage of the syste
 
 In this section we report results for the evaluation between the \emph{incremental} (Phase 2) and \emph{incremental-adaptive} (henceforth just \emph{adaptive}; Phase 3) systems. 
 
-\paragraph{Subjective Results}  We applied the same significance test as Experiment 1 (with Bonferroni correction of 12). The item \emph{The interface was useful and easy to understand} was answered with \emph{Both} significantly  ($ \chi^2 $ (4, N = 14) = 10.0, p $<$ .0042), The item \emph{I had the feeling that the assistant attempted to learn about me} was answered with \emph{Neither} ($ \chi^2 $ (4, N = 14) = 8.0, p $<$ .0042), though the only other marked answer was \emph{Phase 3} (6 times). All other items were not significant.
+\paragraph{Subjective Results}  We applied the same significance test as Experiment 1 (with Bonferroni correction of 12). The item \emph{The interface was useful and easy to understand} was answered with \emph{Both} significantly  ($ \chi^2 $ (4, N = 14) = 10.0, p $<$ .0042), The item \emph{I had the feeling that the assistant attempted to learn about me} was answered with \emph{Neither} ($ \chi^2 $ (4, N = 14) = 8.0, p $<$ .0042), though \emph{Phase 3} was also marked (6 times). All other items were not significant.
 
 Here again we see that there is a general positive impression of the \ui\ under all conditions. If anyone noticed that a system variant was attempting to learn a user model at all, they noticed that it was in Phase 3, as expected. 
 
@@ -316,7 +280,9 @@ The open-ended questionnaire sheds additional light. Most of the suggestions for
 
 Given the results and analysis, we conclude that an intuitive presentation that signals a system's ongoing understanding benefits end users who perform simple tasks which might be performed by a \pa. The \ui\ that we provided, using a right-branching tree, worked well; indeed, the participants who used it found it intuitive and easy to understand. There are gains to be made when the system signals understanding at finer-grained levels than just at the end of a pre-formulated utterance. There are further gains to be made when a \pa\ attempts to learn (even a rudimentary) user model to predict what the user might want to do next. 
 
-For future work, we intend to provide simple authoring tools for the system to make building simple \pa s using our \ui\ easy. We want to improve the \nlu\ and scale to larger domains.\footnote{\newcite{Kennington2016} showed that our chosen \nlu\ approach can scale fairly well, but the \ui\ has some limits when applied to larger domains with thousands of items. We leave improved scaling to future work.} We also plan on implementing this as a standalone application that could be run on a mobile device, which could actually perform the tasks. Lastly, we  will investigate using touch as an additional input modality to select between possible alternatives that are offered by the system. 
+For future work, we intend to provide simple authoring tools for the system to make building simple \pa s using our \ui\ easy. We want to improve the \nlu\ and scale to larger domains.\footnote{\newcite{Kennington2016} showed that our chosen \nlu\ approach can scale fairly well, but the \ui\ has some limits when applied to larger domains with thousands of items. We leave improved scaling to future work.} We also plan on implementing this as a standalone application that could be run on a mobile device, which could actually perform the tasks. It would further be beneficial to compare the \ui\ with a system that responds with speech (i.e., without a \ui). Lastly, we  will investigate using touch as an additional input modality to select between possible alternatives that are offered by the system. 
+
+\paragraph{Acknowledgements} Thanks to the anonymous reviewers who provided useful comments and suggestions. Thanks also to Julian Hough for helping with experiments. We acknowledge support by the Cluster of Excellence ``Cognitive Interaction Technology'' (CITEC; EXC 277) at Bielefeld University, which is funded by the German Research Foundation (DFG), and the BMBF KogniHome project. 
 
 \section*{Appendix}
 
@@ -361,11 +327,7 @@ The following questions were used on the general questionnaire:
 }
 
 
-<<<<<<< HEAD
 \bibliographystyle{acl2016}
-=======
-\bibliographystyle{acl_natbib}
->>>>>>> 16fc55985b04ea47ad7bbba62655ed67f5e10eb9
 \bibliography{refs}
 
 \end{document}
