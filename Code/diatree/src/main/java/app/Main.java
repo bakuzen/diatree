@@ -46,66 +46,25 @@ public class Main {
 //	private List<PushBuffer> hypListeners;
 	List<EditMessage<IU>> edits = new ArrayList<EditMessage<IU>>();
 	
-	private void run() throws InterruptedException, PropertyException, IOException, UnsupportedAudioFileException {
-		
-//		EmbeddedTomcat tomcat = new EmbeddedTomcat();
-		
+	private void run(String apiKey) throws InterruptedException, PropertyException, IOException, UnsupportedAudioFileException {
+
 		
 		ConfigurationManager cm = new ConfigurationManager(new File("src/main/java/config/config.xml").toURI().toURL());
 //		ps = cm.getPropertySheet(PROP_CURRENT_HYPOTHESIS);
 //		hypListeners = ps.getComponentList(PROP_HYP_CHANGE_LISTENERS, PushBuffer.class);
 		
-//		INLUModule nlu = (INLUModule) cm.lookup("inlu");
-//		tomcat.addServlet("diatree", (DiaTreeServlet) cm.lookup(DIATREE_SERVLET));
-//		tomcat.start();
 		AdvancedDiaTreeCreator creator = new AdvancedDiaTreeCreator((DiaTreeSocket) cm.lookup(DIATREE_SOCKET));
 		JettyServer jetty = new JettyServer(creator);
-		
-		CustomFunctionRegistry cfr = (CustomFunctionRegistry) cm.lookup("registry");
-		
 		
 //		for Sphinx ASR
 //		SphinxASR webSpeech = (SphinxASR) cm.lookup(PROP_CURRENT_HYPOTHESIS);
 //		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M"});
 		
-		
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
-		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyCPOrPwttjs9OMBrYX6M6lFR5g5yk2Vw1Q"});
+		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", apiKey});
 		startGoogleASR(cm, rclp);
 		ClientUtils.openNewClient();
-		
-//		String[] uwords = {"route", "nein", "ehm", "ich", "route", "ehm", "ich",  "von", "ehm", "ich", "bielefeld", "ehm", "ich", "nein", "von", "hier", "ehm", "ich",  "nach", "berlin"};
-//		String[] uwords = {"essen", "typ", "franzözisch","ja","wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
-//		String[] uwords = {"essen", "und"};
-//		String[] uwords = {"essen", "typ", "franzözisch","ja","preis", "günstig", "wo", "stadtmitte", "rücksetzen", "anruf", "name", "michael",
-//				"rücksetzen","nachricht", "jana", "rücksetzen"};
-//		String[] uwords = {"nachricht",  "message", "nimm", "das", "rote", "kreuz","neben","dem","blauen","t", "ferkel", "name", "jana"};
-//		String[] uwords = {"hunger", "nein", "essen", "stadtmitte", "teuer", "nein", 
-//				           "teuer", "nein", "preis", "teuer","typ", "thai", 
-//				           "nein", "nein", "nein", "nein", "nein", "handy", "nein"};
-//		List<String> words = Arrays.asList(uwords);
-//		Thread.sleep(2000);
-////		
-//		WordIU prev = WordIU.FIRST_WORD_IU;
-//		for (String word : words) {
-//			WordIU wiu = new WordIU(word, prev, null);
-//			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-//			Thread.sleep(900);
-//			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
-//			prev = wiu;
-//		}
-//		List<String> words = Arrays.asList(uwords);
-//		Thread.sleep(2000);
-////		
-//		WordIU prev = WordIU.FIRST_WORD_IU;
-//		for (String word : words) {
-//			WordIU wiu = new WordIU(word, prev, null);
-//			edits.add(new EditMessage<IU>(EditType.ADD, wiu));
-//			Thread.sleep(400);
-//			notifyListeners(new ArrayList<PushBuffer>(webSpeech.iulisteners));
-//			prev = wiu;
-//		}
 	}
 	
 	
@@ -156,7 +115,8 @@ public class Main {
 
 	public static void main (String[] args) {
 		try {
-			new Main().run();
+			System.err.println("Using API KEY: " + args[0]);
+			new Main().run(args[0]);
 		} 
 		catch (InterruptedException e) {
 			e.printStackTrace();

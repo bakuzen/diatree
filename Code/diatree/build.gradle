@@ -111,6 +111,13 @@ dependencies {
     compile group: 'junit', name: 'junit-dep', version: '4.11'
 }
 
+task (runMain, dependsOn: 'classes', type: JavaExec) {
+	main = 'app.Main'
+	classpath = sourceSets.main.runtimeClasspath
+	systemProperty 'java.net.preferIPv4Stack', 'true'
+	args = [project.getProperty('apiKey')]
+}
+
 task(runNon, dependsOn: 'classes', type: JavaExec) {
 	main = 'app.SigDial1NonIncremental'
 	classpath = sourceSets.main.runtimeClasspath
