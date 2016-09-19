@@ -131,9 +131,9 @@ task(runAdapt, dependsOn: 'classes', type: JavaExec) {
 //--------------------------------
 // added to the end for deploying
 //--------------------------------
-buildscript{
-	apply from: "https://bitbucket.org/dsgbielefeld/dsg-repo/raw/master/buildscript.gradle", to: buildscript
-}
+//buildscript{
+//	apply from: "https://bitbucket.org/dsgbielefeld/dsg-repo/raw/master/buildscript.gradle", to: buildscript
+//}
 
 // common DSG elements, should be last line
-apply from: "https://bitbucket.org/dsgbielefeld/dsg-repo/raw/master/dsg.gradle"
+//apply from: "https://bitbucket.org/dsgbielefeld/dsg-repo/raw/master/dsg.gradle"

@@ -92,7 +92,7 @@ public class SigDial2Incremental {
 //		iuDocument.setListeners(webSpeech.iulisteners);
 //		SimpleText.createAndShowGUI(webSpeech.iulisteners, textBasedFloorTracker);
 		
-		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyAXvd3G0qj8oyeeliwctKX0EY24cQtdYvE"});
+		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "INSERT_GOOGLE_ASR_KEY_HERE"});
 		GoogleASRUtil.setVars(cm, rclp, webSpeech);
 		GoogleASRUtil.startGoogleASR();		
 //		ClientUtils.openNewClient();

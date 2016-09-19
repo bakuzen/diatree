@@ -90,7 +90,7 @@
 	    <propertylist name="hypChangeListeners">
 	        <item>dmInformer</item>
 	    	<item>tree</item> 
-	        <item>task</item>
+<!-- 	        <item>task</item> -->
 	    </propertylist>
     </component>     
     

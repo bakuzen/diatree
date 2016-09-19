@@ -76,7 +76,7 @@ public class SigDial1NonIncremental {
 		
 //		for Google ASR
 		webSpeech = (GoogleASR) cm.lookup("googleASR");
-		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "AIzaSyCoqyxVlYyZ1HZUn9T-f5b5LRJM9pAymb8"});
+		RecoCommandLineParser rclp = new RecoCommandLineParser(new String[] {"-M", "-G", "INSERT_GOOGLE_ASR_KEY_HERE"});
 		GoogleASRUtil.setVars(cm, rclp, webSpeech);
 		GoogleASRUtil.startGoogleASR();
 		
