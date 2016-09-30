@@ -9,21 +9,21 @@ Then, you need gradle....
 
 Ubuntu: 
 
-'''
+```
 sudo add-apt-repository ppa:cwchien/gradle
 sudo apt-get update
 sudo apt-get install gradle
-'''
+```
 
 MacOS: 
-'''
+```
 brew install gradle
-'''
+```
 
 Windows (follow the instructions found here:):
-'''
+```
 http://bryanlor.com/blog/gradle-tutorial-how-install-gradle-windows
-'''
+```
 
 Then, you need a Google ASR API Key. See https://www.chromium.org/developers/how-tos/api-keys
 
