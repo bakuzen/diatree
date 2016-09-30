@@ -29,8 +29,9 @@ Then, you need a Google ASR API Key. See https://www.chromium.org/developers/how
 
 
 Then from within the diatree/Code/diatree directory, run:
+```
 gradle runMain -PapiKey=INSERT_YOUR_API_KEY_HERE
-
+```
 
 Checkpoint: gradle might take a while the first time it runs (it has to download dependencies), but you should see the diatree open in your default web browser and you should be able to use your default microphone (sorry, at the moment the example diatree only runs for German)
 
